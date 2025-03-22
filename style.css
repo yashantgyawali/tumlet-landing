@@ -9,6 +9,11 @@ body {
     padding: 0;
     color: #161B32;
 }
+a{
+    text-decoration: none;
+    color: #161B32;
+    cursor: pointer;
+}
 
 .navbar {
     display: flex;
@@ -157,6 +162,13 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 142.857% */
+}
+.header{
+    text-align: center;
+}
+.youtube{
+    width: 100%;
+    aspect-ratio:  16 / 9;
 }
 
 @media (max-width: 800px) {
