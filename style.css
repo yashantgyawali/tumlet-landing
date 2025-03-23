@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Schoolbell&display=swap');
 
 *{
-    font-family: "Schoolbell", cursive;
+    line-height: 150%;
 }
 
 body {
+    font-family: "Schoolbell", cursive;
     margin: 0;
     padding: 0;
     color: #161B32;
@@ -100,6 +101,11 @@ a{
     font-size: 24px;
 }
 
+.body-text{
+    font-family: 'Inter';
+    line-height: 150%;
+}
+
 .cta-button{
     display: flex;
     transform: rotate(-0.88deg);
@@ -166,9 +172,22 @@ a{
 .header{
     text-align: center;
 }
+
+.font-inter{
+    font-family: "inter";
+}
+
+.header2{
+    font-family: "inter";  
+}
+
 .youtube{
     width: 100%;
     aspect-ratio:  16 / 9;
+}
+
+.rule-table{
+    width: 100%;
 }
 
 @media (max-width: 800px) {
