@@ -190,6 +190,9 @@ a{
     width: 100%;
 }
 
+.link-underline{
+    text-decoration: underline;
+}
 @media (max-width: 800px) {
     .navbar {
         padding: 24px 48px;
