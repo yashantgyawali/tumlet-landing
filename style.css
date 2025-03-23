@@ -245,6 +245,13 @@ a{
         align-items: center;
         gap: 8px;
     }
+    .header{
+        text-align: left;
+    }
+    .body-text{
+        text-align: left;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -286,5 +293,10 @@ a{
     .game-item{
         flex-direction: column;
     }
-
+    .header{
+        text-align: left;
+    }
+    .body-text{
+        text-align: left;
+    }
 }
