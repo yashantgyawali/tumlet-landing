@@ -259,11 +259,16 @@ a{
         border-radius: 0;
         border: none;
 }
-    
     .container{
+        padding: 24px 24px;
+    }
+    .hero-container{
         padding: 24px 0;
     }
 
+    .full-width{
+    }
+    
     .logo {
         width: 120px;
     }
