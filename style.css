@@ -68,14 +68,27 @@ a{
     padding: 96px;
     align-items: center;
     gap: 48px;
-    overflow: hidden;
     border-radius: 40px;
     border: 4px solid #364587;
-    background: url(./assets/pattern.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    overflow: hidden;
 }
 
+.bluff-background{
+    background: url(./assets/pattern.webp);
+    background-position: center;
+
+}
+
+.ganthan-background{
+    background: url(./assets/pattern2.png);
+    background-position: center;
+
+}
 .game-logo{
     width: 224px;
 }
@@ -83,6 +96,12 @@ a{
 .cards-images{
     align-self: center;
     width: 120%;
+    border-radius: 16px;
+}
+
+.cards-images-low{
+    align-self: center;
+    width: 30%;
     border-radius: 16px;
 }
 
@@ -100,6 +119,9 @@ a{
 .hero-text{
     text-align: center;
     font-size: 24px;
+}
+.white-text{
+    color: white;
 }
 
 .body-text{
@@ -129,6 +151,12 @@ a{
 .cta-button:active {
     transform: translate(-0px,-0px);
     box-shadow: 2px 2px 0px 0px #7A6719;
+}
+
+.color-black{
+    background: #F4615F;
+    color:white;
+    box-shadow: 8px 8px 0px 0px #A42726;
 }
 
 .footer-left{
@@ -239,6 +267,9 @@ a{
         line-height: 20px; /* 142.857% */
     }
 
+    .cards-images-low{
+        width: 75%;
+    }
     .footer-left{
         display: flex;
         flex-direction: column;
@@ -299,4 +330,8 @@ a{
     .body-text{
         text-align: left;
     }
+    .cards-images-low{
+        width: 80%;
+    }
+
 }
