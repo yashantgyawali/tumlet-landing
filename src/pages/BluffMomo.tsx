@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 interface CharacterInfo {
   id: string;
   name: string;
-  image: string;
   action: string;
   blocks: string;
 }
@@ -30,35 +29,30 @@ const BluffMomo = () => {
     {
       id: "hante",
       name: "हन्ते",
-      image: "/lovable-uploads/820e9c64-f18f-4dfc-a9ef-091726d1108a.png",
       action: "Take 3 momo from the middle pile in one move",
       blocks: "X",
     },
     {
       id: "chor",
       name: "चोर",
-      image: "/lovable-uploads/820e9c64-f18f-4dfc-a9ef-091726d1108a.png",
       action: "Steal 2 momo from any player",
       blocks: "Blocks चोर's attempt to steal your momo",
     },
     {
       id: "bhattiko-dai",
       name: "भट्टीको दाई",
-      image: "/lovable-uploads/820e9c64-f18f-4dfc-a9ef-091726d1108a.png",
       action: "Use 3 momo to poison any player (They lose one card)",
       blocks: "X",
     },
     {
       id: "aama",
       name: "आमा",
-      image: "/lovable-uploads/820e9c64-f18f-4dfc-a9ef-091726d1108a.png",
       action: "X",
       blocks: "Blocks भट्टीको दाई's poison attempt",
     },
     {
       id: "mantri",
       name: "मन्त्री",
-      image: "/lovable-uploads/820e9c64-f18f-4dfc-a9ef-091726d1108a.png",
       action: "Force any player to show one of their cards OR draw a new card from the deck, look at it, and put back any 1 of your cards",
       blocks: "Blocks चोर's attempt to steal your momo and मन्त्री's attempt to look at your card",
     }
