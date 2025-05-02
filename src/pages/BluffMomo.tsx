@@ -73,7 +73,7 @@ const BluffMomo = () => {
       </nav>
       
       <div className="px-6 md:px-12 lg:px-36 py-6">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center">Bluff Momo—The Rule Book</h1>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 lg:text-center">Bluff Momo—The Rule Book</h1>
         
         <div className="text-lg mb-8">
           You are walking in the ancient streets of Kathmandu craving some delicious momo. 

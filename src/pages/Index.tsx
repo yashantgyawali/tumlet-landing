@@ -23,7 +23,7 @@ const Index = () => {
           imageClass="w-[120%] self-center rounded-2xl"
           description="bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
           metaItems={bluffMomoMeta}
-          ctaLink="/bluff-momo"
+          ctaLink="/bluff-momo-rules"
           ctaText="learn how to play"
           ctaIcon="/bulb.svg"
         />
