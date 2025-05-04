@@ -26,6 +26,8 @@ const Index = () => {
           ctaLink="/bluff-momo-rules"
           ctaText="learn how to play"
           ctaIcon="/bulb.svg"
+          ctaColorClass="color-yellow"
+
         />
       </div>
       
@@ -40,7 +42,7 @@ const Index = () => {
           ctaLink="http://ganthan.tumlet.com/"
           ctaText="spark connection"
           ctaIcon="/spark.svg"
-          ctaColorClass="color-black"
+          ctaColorClass="color-red"
           textColorClass="text-white"
         />
       </div>

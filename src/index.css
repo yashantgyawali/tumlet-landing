@@ -120,7 +120,7 @@
   }
 
   .cta-button {
-    @apply font-baloo flex -rotate-[0.88deg] px-16 py-4 justify-center items-center gap-3 rounded-xl bg-tumlet-primaryYellow shadow-[8px_8px_0px_0px_#7A6719] cursor-pointer transition-all duration-200;
+    @apply text-white font-baloo flex -rotate-[0.88deg] px-16 py-4 justify-center items-center gap-3 rounded-xl cursor-pointer transition-all duration-200;
   }
   
   .cta-button:hover {
@@ -128,14 +128,18 @@
   }
   
   .cta-button:active {
-    @apply translate-x-0 translate-y-0 shadow-[2px_2px_0px_0px_#7A6719];
+    @apply translate-x-0 translate-y-0;
   }
-
-  .cta-button.color-black {
+  .cta-button.color-yellow{
+    @apply bg-[#62221F] shadow-[8px_8px_0px_0px_#D68057];
+  }
+  .cta-button.color-red {
     @apply bg-tumlet-primaryRed text-white shadow-[8px_8px_0px_0px_#A42726];
   }
-  
-  .cta-button.color-black:active {
+  .cta-button.color-red:active {
+    @apply shadow-[2px_2px_0px_0px_#7A6719];
+  }
+  .cta-button.color-red:active {
     @apply shadow-[2px_2px_0px_0px_#A42726];
   }
 
