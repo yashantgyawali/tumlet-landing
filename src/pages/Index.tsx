@@ -20,7 +20,7 @@ const Index = () => {
           backgroundClass="bluff-background"
           logoSrc="/bluff-momo-logo.png"
           imageSrc="/char-combined.webp"
-          imageClass="w-[120%] self-center rounded-2xl"
+          imageClass=" w-[145%] self-center rounded-2xl"
           description="bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
           metaItems={bluffMomoMeta}
           ctaLink="/bluff-momo-rules"
@@ -36,7 +36,7 @@ const Index = () => {
           backgroundClass="ganthan-background"
           logoSrc="/ganthan.svg"
           imageSrc="/questions.png"
-          imageClass="w-[30%] md:w-[30%] sm:w-[75%] self-center rounded-2xl"
+          imageClass=" w-[75%] md:w-[48%] self-center rounded-2xl"
           description="ganthan is a nudge for you and your friends to dive into conversations that truly connect. we are talking about the chats that spark unexpected laughter, and bring out thoughts you didn't even know you had."
           metaItems={[]}
           ctaLink="http://ganthan.tumlet.com/"
