@@ -131,7 +131,7 @@
     @apply translate-x-0 translate-y-0;
   }
   .cta-button.color-yellow{
-    @apply bg-[#62221F] shadow-[8px_8px_0px_0px_#D68057];
+    @apply text-black bg-tumlet-primaryYellow shadow-[8px_8px_0px_0px_#D68057];
   }
   .cta-button.color-red {
     @apply bg-tumlet-primaryRed text-white shadow-[8px_8px_0px_0px_#A42726];
