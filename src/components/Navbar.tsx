@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
         <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet Logo" />
       </Link>
       <Link to="mailto:yashantgyawali@gmail.com" target="_blank" rel="noopener noreferrer">
-       <Button className="nav-button"> 
+       <Button className='nav-button'> 
           get in touch
         </Button>
       </Link>

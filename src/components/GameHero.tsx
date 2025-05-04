@@ -39,7 +39,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   
   return (
     <div className="w-full">
-      <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 border-tumlet-darkBlue ${backgroundClass}`}>
+      <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 ${backgroundClass}`}>
         <img className="w-[224px]" src={logoSrc} alt="Game Logo" />
         <img className={imageClass} src={imageSrc} alt="Game Cards" />
         

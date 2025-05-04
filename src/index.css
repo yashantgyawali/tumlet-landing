@@ -108,15 +108,15 @@
 
 @layer components {
   .nav-button {
-    @apply font-baloo flex -rotate-[0.88deg] px-16 py-4 justify-center items-center gap-3 cursor-pointer rounded-xl border border-tumlet-blue bg-white shadow-[8px_8px_0px_0px_#F69A89] transition-all duration-300;
+    @apply font-baloo  bg-[#F16147] flex -rotate-[0.88deg] px-16 py-4 justify-center bg-[#F16147] items-center gap-3 cursor-pointer rounded-xl border border-tumlet-yellow shadow-[8px_8px_0px_0px_#F3B952] transition-all duration-300;
   }
   
   .nav-button:hover {
-    @apply -translate-x-1 -translate-y-1 bg-[#fbfcff];
+    @apply -translate-x-1 -translate-y-1 bg-[#F16147];
   }
   
   .nav-button:active {
-    @apply translate-x-0 translate-y-0 shadow-[2px_2px_0px_0px_#BAC1E1];
+    @apply translate-x-0 translate-y-0 shadow-[2px_2px_0px_0px_#F16147];
   }
 
   .cta-button {
@@ -154,10 +154,12 @@
   .bluff-background {
     background: url('/pattern.webp');
     background-position: center;
+    border-color:#F3B952;
   }
 
   .ganthan-background {
     background: url('/pattern2.png');
     background-position: center;
+    border-color:#F16147;
   }
 }
