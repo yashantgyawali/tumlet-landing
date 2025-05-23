@@ -12,8 +12,12 @@ const Footer: React.FC = () => {
         <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer">
           <img className="footer-svg hover:scale-110 transition-transform" src="/insta.svg" alt="Instagram" />
         </a>
-        <a href="mailto:yashantgyawali@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:tumletgames@gmail.com" target="_blank" rel="noopener noreferrer">
           <img className="footer-svg hover:scale-110 transition-transform" src="/email.svg" alt="Email" />
+        </a>
+
+         <a href="https://www.youtube.com/@tumlet.boardgames" target="_blank" rel="noopener noreferrer">
+          <img className="footer-svg hover:scale-110 transition-transform" src="/youtube.svg" alt="YouTube" />
         </a>
       </div>
     </footer>

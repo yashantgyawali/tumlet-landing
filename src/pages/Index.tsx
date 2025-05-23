@@ -27,11 +27,11 @@ const Index = () => {
           ctaText="learn how to play"
           ctaIcon="/bulb.svg"
           ctaColorClass="color-yellow"
-
+          youtubeEmbedUrl='https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc'
         />
       </div>
       
-      <div className="container mx-auto px-4 md:px-12 mt-8">
+      {/* <div className="container mx-auto px-4 md:px-12 mt-8">
         <GameHero 
           backgroundClass="ganthan-background"
           logoSrc="/ganthan.svg"
@@ -46,7 +46,7 @@ const Index = () => {
           textColorClass="text-white"
         />
       </div>
-      
+       */}
       <Footer />
     </div>
   );

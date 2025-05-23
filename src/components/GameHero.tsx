@@ -19,6 +19,7 @@ interface GameHeroProps {
   ctaIcon: string;
   ctaColorClass?: string;
   textColorClass?: string;
+  youtubeEmbedUrl?: string;
 }
 
 const GameHero: React.FC<GameHeroProps> = ({
@@ -31,6 +32,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   ctaLink,
   ctaText,
   ctaIcon,
+  youtubeEmbedUrl,
   ctaColorClass = '',
   textColorClass = '',
 }) => {
@@ -72,6 +74,18 @@ const GameHero: React.FC<GameHeroProps> = ({
               {ctaText}
             </button>
           </Link>
+        )}
+          {youtubeEmbedUrl && (
+          <div className="w-full aspect-video mt-8">
+            <iframe
+              className="w-full h-full rounded-xl"
+              src={youtubeEmbedUrl}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         )}
       </div>
     </div>
