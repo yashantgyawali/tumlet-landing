@@ -134,7 +134,7 @@
     @apply text-black bg-tumlet-primaryYellow shadow-[8px_8px_0px_0px_#D68057];
   }
   .cta-button.color-red {
-    @apply bg-tumlet-primaryRed text-white shadow-[8px_8px_0px_0px_#A42726];
+    @apply bg-tumlet-primaryRed text-white shadow-[8px_8px_0px_0px_#F3B952];
   }
   .cta-button.color-red:active {
     @apply shadow-[2px_2px_0px_0px_#7A6719];

@@ -24,9 +24,9 @@ const Index = () => {
           description="bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
           metaItems={bluffMomoMeta}
           ctaLink="/bluff-momo-rules"
-          ctaText="learn how to play"
-          ctaIcon="/bulb.svg"
-          ctaColorClass="color-yellow"
+          ctaText="DM us to order"
+          ctaIcon="/insta-draw-white.svg"
+          ctaColorClass="color-red"
           youtubeEmbedUrl='https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc'
         />
       </div>
