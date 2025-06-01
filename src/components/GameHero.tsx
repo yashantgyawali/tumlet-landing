@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 interface GameMetaItem {
   icon: string;
@@ -62,10 +63,10 @@ const GameHero: React.FC<GameHeroProps> = ({
         
         {isExternalLink ? (
           <a href={ctaLink} target="_blank" rel="noopener noreferrer">
-            <button className={`cta-button ${ctaColorClass}`}>
+            <Button className={`cta-button ${ctaColorClass}`}>
               <img className="icon" src={ctaIcon} alt="Icon" /> 
               {ctaText}
-            </button>
+            </Button>
           </a>
         ) : (
           <Link to={ctaLink}>
