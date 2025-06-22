@@ -54,26 +54,26 @@ const BlogPost = () => {
   useEffect(() => {
     if (post) {
       document.title = `${post.title} | Tumlet Blog`;
-      setMetaTag('description', post.excerpt + ' Read about the best Nepali Board Games, including Bluff Momo, Samrajya, Baag Chal, and Marriage.');
+      setMetaTag('description', post.excerpt);
       setCanonical(`https://tumlet.com/blog/${post.slug}`);
-      setPropertyTag('og:title', `${post.title} | Nepali Board Games | Tumlet Blog`);
-      setPropertyTag('og:description', post.excerpt + ' Read about the best Nepali Board Games, including Bluff Momo, Samrajya, Baag Chal, and Marriage.');
+      setPropertyTag('og:title', post.title);
+      setPropertyTag('og:description', post.excerpt);
       setPropertyTag('og:type', 'article');
       setPropertyTag('og:url', `https://tumlet.com/blog/${post.slug}`);
-      const defaultUnfurl = post.slug === 'best-nepali-board-games'
-        ? '/blogs/best-nepali-board-games/unfurl.png'
-        : '/unfurl.png';
-      setPropertyTag('og:image', post.coverImage ? post.coverImage : defaultUnfurl);
+      const ogImage = post.slug === 'best-nepali-board-games'
+        ? 'https://tumlet.com/blogs/best-nepali-board-games/unfurl.png'
+        : (post.coverImage ? `https://tumlet.com${post.coverImage}` : 'https://tumlet.com/unfurl.png');
+      setPropertyTag('og:image', ogImage);
       setMetaTag('twitter:card', 'summary_large_image');
-      setMetaTag('twitter:title', `${post.title} | Nepali Board Games | Tumlet Blog`);
-      setMetaTag('twitter:description', post.excerpt + ' Read about the best Nepali Board Games, including Bluff Momo, Samrajya, Baag Chal, and Marriage.');
-      setMetaTag('twitter:image', post.coverImage ? post.coverImage : defaultUnfurl);
+      setMetaTag('twitter:title', post.title);
+      setMetaTag('twitter:description', post.excerpt);
+      setMetaTag('twitter:image', ogImage);
       setJsonLd({
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: post.title,
-        description: post.excerpt + ' Read about the best Nepali Board Games, including Bluff Momo, Samrajya, Baag Chal, and Marriage.',
-        image: post.coverImage ? `https://tumlet.com${post.coverImage}` : `https://tumlet.com${defaultUnfurl}`,
+        description: post.excerpt,
+        image: ogImage,
         author: {
           '@type': 'Person',
           name: post.author,
@@ -89,10 +89,10 @@ const BlogPost = () => {
           name: 'Tumlet',
           logo: {
             '@type': 'ImageObject',
-            url: `https://tumlet.com${defaultUnfurl}`,
+            url: ogImage,
           },
         },
-        keywords: 'Nepali Board Games, Board Games Nepal, Bluff Momo, Samrajya, Baag Chal, Marriage, Tumlet',
+        keywords: post.tags ? post.tags.join(', ') : '',
       });
     }
   }, [post]);
