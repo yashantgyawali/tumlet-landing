@@ -7,7 +7,7 @@ interface BlogTypographyProps {
 
 export const BlogTypography: React.FC<BlogTypographyProps> = ({ children, className = '' }) => {
   return (
-    <div className={`blog-typography ${className}`}>
+    <div className={`blog-typography ${className} mdx-outer`}>
       <div className="mdx-content">
         {children}
       </div>
@@ -259,10 +259,10 @@ export const blogTypographyStyles = `
   .mdx-content p,
   .mdx-content ul,
   .mdx-content ol {
-    font-size: 1.1rem;
-    margin-top: 0.25rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.75rem;
+    line-height: 1.85;
   }
 
   .mdx-content ul,
@@ -306,6 +306,16 @@ export const blogTypographyStyles = `
   }
   .mdx-content a:hover {
     color: #F16146;
+  }
+
+  .mdx-outer {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 `;
 
