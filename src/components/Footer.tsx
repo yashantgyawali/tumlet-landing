@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <img className="w-24" src="/tumlet-logo.png" alt="Tumlet Logo" />
         <span className="text-tumlet-footerText text-sm sm:text-lg">on a mission to spread playfulness amongst nepali youths</span>
       </div>
-      <div className="flex flex-col items-end gap-2">
+      <div className="flex flex-col items-center md:items-end gap-2">
         <div className="flex flex-row items-center gap-6">
           <a href="mailto:hello@tumlet.com">
             <img className="footer-svg hover:scale-110 transition-transform" src="/email.svg" alt="Email" />
