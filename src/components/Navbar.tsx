@@ -30,6 +30,9 @@ const Navbar: React.FC = () => {
             </a>
           </div>
         </div>
+        <Link to="/about" className="font-medium text-gray-800 hover:text-black">
+          about us
+        </Link>
         <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer" className='flex flex-row justify-center gap-4 items-center'>
           <Button className="nav-button">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,6 +64,9 @@ const Navbar: React.FC = () => {
             <h3 className="font-medium text-gray-800 text-lg">our online games</h3>
             <Link to="/bichitra" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
               bichitra
+            </Link>
+            <Link to="/about" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
+              about us
             </Link>
             <a href="https://ganthan.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
               ganthan
