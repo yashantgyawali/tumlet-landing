@@ -7,7 +7,7 @@ const aboutText = [
   "And is it only during festivals? Not really.",
   "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. “Kati games ko ta slangs pani bujdaina and can’t really relate to them.” Because it was not made for Nepali people.",
   "This is where we see the gap.",
-  "Where are the Nepali board games? They’re almost non-existent. There are a few options, but they are targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
+  "Where are the Nepali board games? They’re almost non-existent. There are a few options, but they are not targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
   "So when it comes to board games, we hit a wall.",
   "And we want to change that.",
   "",
