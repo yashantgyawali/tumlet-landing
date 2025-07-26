@@ -40,10 +40,10 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col bg-tumlet-beige px-4 pt-2 pb-24">
       <Navbar />
-      <div className="flex-1 flex flex-col items-center justify-center">
+      <div className="flex-1 flex flex-col items-center justify-center mt-16">
         <div className="max-w-3xl w-full">
-          <h1 className="text-5xl md:text-6xl font-outfit font-bold uppercase tracking-wide text-tumlet-text mb-16 text-center">
-            We’re Tumlet.
+          <h1 className="text-5xl md:text-6xl font-outfit font-bold uppercase tracking-wide text-tumlet-text mb-16">
+            We're Tumlet.
           </h1>
           {aboutText.map((line, i) => {
             if (line.trim() === "") {
