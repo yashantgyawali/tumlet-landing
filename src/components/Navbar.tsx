@@ -22,9 +22,9 @@ const Navbar: React.FC = () => {
             <Link to="/bichitra" className="block px-4 py-2 hover:bg-gray-100">
               bichitra
             </Link>
-            <a href="https://ganthan.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
+            <Link to="/ganthan" className="block px-4 py-2 hover:bg-gray-100">
               ganthan
-            </a>
+            </Link>
             <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
               kobadi
             </a>
@@ -70,15 +70,15 @@ const Navbar: React.FC = () => {
             <Link to="/bichitra" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
               bichitra
             </Link>
-            <a href="https://ganthan.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
+            <Link to="/ganthan" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
               ganthan
-            </a>
-            <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
-              kobadi
-            </a>
+            </Link>
           </div>
           <Link to="/about" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg mt-4">
             about us
+          </Link>
+          <Link to="/ganthan" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg mt-4">
+            ganthan
           </Link>
           <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer" className="mt-8">
             <Button className="w-full nav-button text-lg py-4">
