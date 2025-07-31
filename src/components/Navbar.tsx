@@ -73,13 +73,12 @@ const Navbar: React.FC = () => {
             <Link to="/ganthan" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg">
               ganthan
             </Link>
+            <Link to="https://kobadi.tumlet.com/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg mt-4">
+            kobadi
+          </Link>
           </div>
-          <Link to="/about" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg mt-4">
-            about us
-          </Link>
-          <Link to="/ganthan" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg mt-4">
-            ganthan
-          </Link>
+         
+          
           <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer" className="mt-8">
             <Button className="w-full nav-button text-lg py-4">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
