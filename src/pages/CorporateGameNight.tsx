@@ -91,7 +91,7 @@ Preferred date and time: [Please specify]
 
 Looking forward to hearing from you!`);
     
-    window.location.href = `mailto:hello@tumlet.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:tumletgames@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
