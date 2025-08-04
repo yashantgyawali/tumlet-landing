@@ -6,6 +6,14 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Users, Clock, Gamepad2, Star } from 'lucide-react';
+import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
+
+type MediaItem = {
+  type: 'image' | 'video';
+  src: string;
+  alt?: string;
+  poster?: string;
+};
 
 const games = [
   {
@@ -85,6 +93,18 @@ const games = [
   }
 ];
 
+const sampleMedia: MediaItem[] = [
+  { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Photo 1' },
+  { type: 'video', src: '/blogs/corporate-game-night/2.mp4' },
+  { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Photo 2' },
+  { type: 'video', src: '/blogs/corporate-game-night/4.mp4' },
+  { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Photo 3' },
+  { type: 'video', src: '/blogs/corporate-game-night/6.mov', alt: 'Photo 4' },
+  { type: 'image', src: '/blogs/corporate-game-night/7.jpg' },
+  { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Photo 5' },
+  { type: 'image', src: '/blogs/corporate-game-night/9.jpg' },
+];
+
 const CorporateGameNight = () => {
   useEffect(() => {
     document.title = "Corporate Game Night | Tumlet - Team Building with Board Games";
@@ -99,22 +119,15 @@ const CorporateGameNight = () => {
     const subject = encodeURIComponent("Corporate Game Night Inquiry");
     const body = encodeURIComponent(`Hi Tumlet team,
 
-I'm interested in hosting a corporate game night for our team.
+I am interested in hosting a corporate game night for my team. Please provide more details.
 
-Name of the office and location: [Please spevify]
-Approximate number of people: [Please specify]
-Preferred date and time: [Please specify]
-
-
-Looking forward to hearing from you!`);
-    
-    window.location.href = `mailto:tumletgames@gmail.com?subject=${subject}&body=${body}`;
+Thanks!`);
+    window.open(`mailto:hello@tumlet.com?subject=${subject}&body=${body}`);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-tumlet-beige">
       <Navbar />
-      
       {/* Hero Section */}
       <section className="px-4 pt-16 pb-12 md:px-12 lg:px-36">
         <div className="max-w-4xl mx-auto text-center">
@@ -135,10 +148,13 @@ Looking forward to hearing from you!`);
           </Button>
         </div>
       </section>
-
+      {/* Marquee Gallery Proof Section */}
+      <div className="my-8">
+        <MarqueeGallery items={sampleMedia} height={200} />
+      </div>
       {/* How It Works Section */}
       <section className="px-4 py-12 md:px-12 lg:px-36 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto">
           <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text text-center mb-12">
             How It Works
           </h2>
