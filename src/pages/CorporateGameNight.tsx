@@ -49,16 +49,33 @@ const games = [
     availableForSale: false,
     category: "Creative"
   },
-//   {
-//     id: 6,
-//     name: "Firiri",
-//     description: "Early-stage prototype, Cards Against Humanity meets Nepali songs. For the playlist peeps who know every Nepali lyric that exists.",
-//     videoUrl: "https://www.youtube.com/watch?v=Uyciy8LmmXg",
-//     availableForSale: false,
-//     category: "Songs"
-//   },
-{
+  {
+    id: 6,
+    name: "Firiri",
+    description: "Cards Against Humanity meets Nepali songs. For the playlist peeps who know every Nepali lyric that exists.",
+    videoUrl: "",
+    availableForSale: false,
+    category: "Songs"
+  },
+  {
     id: 7,
+    name: "Codenames",
+    description: "Say one word. Hope your team gets all. A classic for smart chaos and sly smiles.",
+    videoUrl: "",
+    availableForSale: false,
+    category: "Wordplay"
+  },
+  {
+    id: 8,
+    name: "Ticket to Ride",
+    description: "Plan routes, claim tracks, block your frenemies. The perfect mix of chill and sneaky.",
+    videoUrl: "",
+    availableForSale: false,
+    category: "Strategy"
+  },
+
+  {
+    id: 9,
     name: "Guess the Price - Nepali Edition",
     description: "Add-on game where we buy everyday Nepali items and have people guess the price. The closest takes it home.",
     videoUrl: null,
