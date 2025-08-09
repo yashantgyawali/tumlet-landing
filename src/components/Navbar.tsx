@@ -7,10 +7,11 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex flex-row justify-between items-center px-6 md:px-12 lg:px-36 py-6 relative">
-      <Link to="/">
-        <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet Logo" />
-      </Link>
+    <header>
+      <nav className="flex flex-row justify-between items-center px-6 md:px-12 lg:px-36 py-6 relative" role="navigation" aria-label="Main navigation">
+        <Link to="/" aria-label="Tumlet Homepage">
+          <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet - Nepali Board Games Company" />
+        </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-6 items-center">
@@ -90,6 +91,7 @@ const Navbar: React.FC = () => {
         </div>
       )}
     </nav>
+    </header>
   );
 };
 

@@ -1,10 +1,56 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getAllBlogPosts } from '../data/blogPosts';
 
+function setMetaTag(name: string, content: string) {
+  let tag = document.querySelector(`meta[name='${name}']`);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('name', name);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
+}
+
+function setPropertyTag(property: string, content: string) {
+  let tag = document.querySelector(`meta[property='${property}']`);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('property', property);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
+}
+
+function setCanonical(url: string) {
+  let link = document.querySelector("link[rel='canonical']");
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', url);
+}
+
 const BlogIndex = () => {
   const blogPosts = getAllBlogPosts();
+
+  useEffect(() => {
+    document.title = 'Tumlet Blog | Stories from Nepal\'s board game scene';
+    setMetaTag('description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setCanonical('https://tumlet.com/blog');
+    setPropertyTag('og:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
+    setPropertyTag('og:description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setPropertyTag('og:type', 'website');
+    setPropertyTag('og:url', 'https://tumlet.com/blog');
+    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
+    setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
+    setMetaTag('twitter:description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
+  }, []);
 
   return (
     <div className="min-h-screen bg-tumlet-beige">
