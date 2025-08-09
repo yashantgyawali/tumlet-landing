@@ -115,9 +115,8 @@ export default {
 				},
 			},
 			fontFamily: {
+				sans: ['"Outfit"', 'system-ui', 'sans-serif'],
 				outfit: ['"Outfit"', 'sans-serif'],
-				inter: ['"Inter"', 'sans-serif'],
-				schoolbell: ['"Schoolbell"', 'cursive'],
 				baloo: ['"Baloo 2"', 'cursive'],
 			},
 			borderRadius: {

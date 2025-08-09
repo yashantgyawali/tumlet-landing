@@ -18,7 +18,7 @@ export const BlogTypography: React.FC<BlogTypographyProps> = ({ children, classN
 // Blog typography styles
 export const blogTypographyStyles = `
   .blog-typography {
-    font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+    font-family: var(--font-sans, 'Outfit', system-ui, sans-serif);
     color: var(--color-text, #161B32);
     background: var(--color-background, #F9F3E5);
     max-width: 66ch;
