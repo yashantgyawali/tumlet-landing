@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import GameHero from '../components/GameHero';
@@ -66,21 +65,23 @@ const Index = () => {
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
     
     setJsonLd({
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Tumlet',
-  description: 'Nepali board game company spreading playfulness across Nepal',
-  url: 'https://tumlet.com',
-  logo: 'https://tumlet.com/tumlet-logo.png',
-  sameAs: [
-    'https://www.instagram.com/tumlet.boardgames/'
-  ],
-  foundingDate: '2022',
-  foundingLocation: {
-    '@type': 'Place',
-    name: 'Kathmandu, Nepal'
-  }
-});
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Tumlet',
+      description: 'Nepali board game company spreading playfulness across Nepal',
+      url: 'https://tumlet.com',
+      logo: 'https://tumlet.com/tumlet-logo.png',
+      sameAs: [
+        'https://www.instagram.com/tumlet.boardgames/'
+      ],
+      foundingDate: '2022',
+      foundingLocation: {
+        '@type': 'Place',
+        name: 'Kathmandu, Nepal'
+      }
+    });
+  }, []); // Added empty dependency array
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
