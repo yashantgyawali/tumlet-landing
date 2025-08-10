@@ -66,31 +66,21 @@ const Index = () => {
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
     
     setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Tumlet',
-      description: 'Nepali board game company spreading playfulness across Nepal',
-      url: 'https://tumlet.com',
-      logo: 'https://tumlet.com/tumlet-logo.png',
-      sameAs: [
-        'https://www.instagram.com/tumlet.boardgames/'
-      ],
-      foundingDate: '2022',
-      foundingLocation: {
-        '@type': 'Place',
-        name: 'Kathmandu, Nepal'
-      },
-      makesOffer: {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Product',
-          name: 'Nepali Board Games',
-          category: 'Board Games'
-        }
-      }
-    });
-  }, []);
-
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tumlet',
+  description: 'Nepali board game company spreading playfulness across Nepal',
+  url: 'https://tumlet.com',
+  logo: 'https://tumlet.com/tumlet-logo.png',
+  sameAs: [
+    'https://www.instagram.com/tumlet.boardgames/'
+  ],
+  foundingDate: '2022',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Kathmandu, Nepal'
+  }
+});
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
