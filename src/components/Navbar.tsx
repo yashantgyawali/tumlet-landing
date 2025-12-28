@@ -26,9 +26,9 @@ const Navbar: React.FC = () => {
             <Link to="/ganthan" className="block px-4 py-2 hover:bg-gray-100">
               ganthan
             </Link>     
-            <a href="https://thug.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
+            <Link to="/thug" className="block px-4 py-2 hover:bg-gray-100">
               thug
-            </a>        
+            </Link>     
             <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
               kobadi
             </a>
