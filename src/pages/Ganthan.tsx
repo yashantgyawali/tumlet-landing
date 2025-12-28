@@ -63,7 +63,7 @@ const Ganthan = () => {
           rel="noopener noreferrer"
           className="cta-button color-yellow mt-8"
         >
-          Try Ganthan Now
+          try ganthan now
         </a>
       </main>
       <Footer />

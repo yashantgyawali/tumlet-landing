@@ -64,7 +64,7 @@ const Thug = () => {
           rel="noopener noreferrer"
           className="cta-button color-yellow mt-8"
         >
-          Try Thug Now
+          try thug now
         </a>
       </main>
       <Footer />

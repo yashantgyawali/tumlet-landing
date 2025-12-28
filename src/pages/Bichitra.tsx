@@ -63,7 +63,7 @@ const Bichitra = () => {
           rel="noopener noreferrer"
           className="cta-button color-yellow mt-8"
         >
-          Try Bichitra Now
+          try bichitra now
         </a>
       </main>
       <Footer />
