@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import GameHero from '../components/GameHero';
 import Footer from '../components/Footer';
@@ -93,14 +94,27 @@ const Index = () => {
             logoSrc="/bluff-momo-logo.png"
             imageSrc="/char-combined.webp"
             imageClass=" w-[145%] self-center rounded-2xl"
-            description="bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
+            description="Bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
             metaItems={bluffMomoMeta}
             ctaLink="https://www.instagram.com/tumlet.boardgames/"
-            ctaText="dm us to order"
+            ctaText="DM us to order"
             ctaIcon="/insta-draw-white.svg"
             ctaColorClass="color-red"
             youtubeEmbedUrl='https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc'
+            h1Title="Bluff momo - Board game for Nepali adults"
+            secondaryLink={{
+              text: "Learn who we are",
+              href: "/about"
+            }}
           />
+        </section>
+        
+        <section className="container mx-auto px-4 md:px-12 mt-12 mb-16">
+          <div className="text-center">
+            <p className="text-lg md:text-xl text-gray-700 mb-4">
+              Explore our online games: <Link to="/bichitra" className="underline hover:text-tumlet-text/80 text-tumlet-text">bichitra</Link>, <Link to="/ganthan" className="underline hover:text-tumlet-text/80 text-tumlet-text">ganthan</Link>, <Link to="/thug" className="underline hover:text-tumlet-text/80 text-tumlet-text">thug</Link>, and <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-tumlet-text/80 text-tumlet-text">kobadi</a>.
+            </p>
+          </div>
         </section>
         
         {/* <section className="container mx-auto px-4 md:px-12 mt-8">

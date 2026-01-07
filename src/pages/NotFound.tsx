@@ -151,7 +151,7 @@ const NotFound = () => {
         {/* Text content */}
         <div className="mb-8">
           <h1 className="font-outfit text-3xl font-bold text-tumlet-text mb-4">
-            Page Not Found
+            Page not found
           </h1>
         </div>
 

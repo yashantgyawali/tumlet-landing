@@ -103,7 +103,7 @@ const BlogPost = () => {
         <Navbar />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-tumlet-text mb-4">Blog Post Not Found</h1>
+            <h1 className="text-4xl font-bold text-tumlet-text mb-4">Blog post not found</h1>
             <p className="text-lg text-gray-600">The blog post you're looking for doesn't exist.</p>
           </div>
         </div>

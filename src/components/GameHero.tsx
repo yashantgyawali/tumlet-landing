@@ -21,6 +21,11 @@ interface GameHeroProps {
   ctaColorClass?: string;
   textColorClass?: string;
   youtubeEmbedUrl?: string;
+  h1Title?: string;
+  secondaryLink?: {
+    text: string;
+    href: string;
+  };
 }
 
 const GameHero: React.FC<GameHeroProps> = ({
@@ -36,6 +41,8 @@ const GameHero: React.FC<GameHeroProps> = ({
   youtubeEmbedUrl,
   ctaColorClass = '',
   textColorClass = '',
+  h1Title,
+  secondaryLink,
 }) => {
   // Check if link is external
   const isExternalLink = ctaLink.startsWith('http');
@@ -43,6 +50,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   return (
     <div className="w-full">
       <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 ${backgroundClass}`}>
+      
         <img className="w-[224px]" src={logoSrc} alt="Game Logo" />
         <img className={imageClass} src={imageSrc} alt="Game Cards" />
         
@@ -56,26 +64,38 @@ const GameHero: React.FC<GameHeroProps> = ({
             ))}
           </div>
         )}
-
+ 
         <div className={`text-center text-2xl ${textColorClass}`}>
+        {h1Title && (
+          <h1 className="text-center text-3xl md:text-4xl font-bold text-tumlet-text mb-8">
+            {h1Title}
+          </h1>
+        )}
           {description}
         </div>
         
-        {isExternalLink ? (
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer">
-            <Button className={`cta-button ${ctaColorClass}`}>
-              <img className="icon" src={ctaIcon} alt="Icon" /> 
-              {ctaText}
-            </Button>
-          </a>
-        ) : (
-          <Link to={ctaLink}>
-            <button className={`cta-button ${ctaColorClass}`}>
-              <img className="icon" src={ctaIcon} alt="Icon" /> 
-              {ctaText}
-            </button>
-          </Link>
-        )}
+        <div className="flex flex-row items-center gap-8">
+          {isExternalLink ? (
+            <a href={ctaLink} target="_blank" rel="noopener noreferrer">
+              <Button className={`cta-button ${ctaColorClass}`}>
+                <img className="icon" src={ctaIcon} alt="Icon" /> 
+                {ctaText}
+              </Button>
+            </a>
+          ) : (
+            <Link to={ctaLink}>
+              <button className={`cta-button ${ctaColorClass}`}>
+                <img className="icon" src={ctaIcon} alt="Icon" /> 
+                {ctaText}
+              </button>
+            </Link>
+          )}
+          {secondaryLink && (
+            <Link to={secondaryLink.href} className="underline text-tumlet-text text-base hover:text-[#F16146]">
+              {secondaryLink.text}
+            </Link>
+          )}
+        </div>
           {youtubeEmbedUrl && (
           <div className="w-full aspect-video mt-8">
             <iframe

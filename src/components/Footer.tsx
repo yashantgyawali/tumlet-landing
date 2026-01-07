@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="mt-12 border-t border-[#E5E7EB] flex flex-col sm:flex-row justify-between items-center px-6 py-12 md:px-24">
       <div className="flex flex-col items-center sm:items-start gap-2 mb-6 sm:mb-0">
         <img className="w-24" src="/tumlet-logo.png" alt="Tumlet Logo" />
-        <span className="text-tumlet-footerText text-sm sm:text-lg">on a mission to spread playfulness amongst nepali youths</span>
+        <span className="text-tumlet-footerText text-sm sm:text-lg">On a mission to spread playfulness amongst nepali youths</span>
       </div>
       <div className="flex flex-col items-center md:items-end gap-2">
         <div className="flex flex-row items-center gap-6">

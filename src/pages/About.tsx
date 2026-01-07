@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -12,7 +13,8 @@ const aboutText = [
   "And we want to change that.",
   "",
   "We are a Nepali board game company, plain and simple.",
-  "We’re from here. Our games are too.",
+  "We're from here. Our games are too.",
+  "We also bring games to offices and host corporate game nights for teams who want to connect and have fun together.",
   "We pull from the way we joke. The way we argue. The way we play. We put it into cards, pieces, rules, and laughter.",
   "We’re not perfect. We don’t want to be.",
   "",
@@ -73,12 +75,38 @@ const About = () => {
       <Navbar />
       <div className="flex-1 flex flex-col items-center justify-center mt-16">
         <div className="max-w-3xl w-full">
-          <h1 className="text-5xl md:text-6xl font-outfit font-bold uppercase tracking-wide text-tumlet-text mb-16">
+          <h1 className="text-5xl md:text-6xl font-outfit font-bold tracking-wide text-tumlet-text mb-16">
             We're Tumlet.
           </h1>
           {aboutText.map((line, i) => {
             if (line.trim() === "") {
               return <div key={i} className="my-12" />;
+            }
+            // Add link to "Nepali board games" in the specific sentence
+            if (line.includes("Where are the Nepali board games?")) {
+              const parts = line.split("Nepali board games");
+              return (
+                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                  {parts[0]}
+                  <Link to="/blog/best-nepali-board-games" className="underline hover:text-tumlet-text/80">
+                    Nepali board games
+                  </Link>
+                  {parts[1]}
+                </p>
+              );
+            }
+            // Add link to "corporate game nights" in the specific sentence
+            if (line.includes("corporate game nights")) {
+              const parts = line.split("corporate game nights");
+              return (
+                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                  {parts[0]}
+                  <Link to="/corporate-game-night" className="underline hover:text-tumlet-text/80">
+                    corporate game nights
+                  </Link>
+                  {parts[1]}
+                </p>
+              );
             }
             return (
               <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">

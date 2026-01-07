@@ -53,18 +53,23 @@ const Bichitra = () => {
       <Navbar />
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold text-tumlet-text mb-4 text-center">Bichitra</h1>
-        <h2 className="text-xl md:text-2xl text-gray-700 mb-8 text-center font-medium">Guess the Nepali Last Name just from an image</h2>
+        <h2 className="text-xl md:text-2xl text-gray-700 mb-8 text-center font-medium">Guess the Nepali last name just from an image</h2>
         <p className="max-w-2xl text-lg md:text-xl text-gray-800 mb-8 text-center">
           Although I hate the word vibe-coding, I love creating things and AI has enabled me to work on my crazy ideas and made it easier to share them with the world. What started with a simple idea while on a scooter, I was able to use prompts and share playfulness amongst Nepali young adults.
         </p>
-        <a
-          href="https://bichitra.tumlet.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button color-yellow mt-8"
-        >
-          try bichitra now
-        </a>
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <a
+            href="https://bichitra.tumlet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button color-yellow"
+          >
+            Try Bichitra now
+          </a>
+          <a href="/" className="underline text-tumlet-text text-base">
+            Go back home
+          </a>
+        </div>
       </main>
       <Footer />
     </div>
