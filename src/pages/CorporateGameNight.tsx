@@ -20,7 +20,7 @@ const games = [
     id: 1,
     name: "Bluff Momo",
     description: "For people who like mind games, reading others, and bluffing.",
-    videoUrl: "https://www.youtube.com/watch?v=di6Ek8Nf4mQ",
+    videoUrl: "/bluff-momo-rules",
     availableForSale: true,
     price: "Rs. 1,490",
     category: "Bluffing and deception"
@@ -132,8 +132,8 @@ Thanks!`);
       <section className="px-4 pt-16 pb-12 md:px-12 lg:px-36">
         <div className="max-w-4xl mx-auto text-center">
             <div className='mb-2 font-medium'>Break the routine. Bond over board games.</div>
-          <h1 className="text-4xl md:text-6xl font-outfit font-bold uppercase tracking-wide text-tumlet-text mb-6">
-            Corporate Game Night
+          <h1 className="text-4xl md:text-6xl font-outfit font-bold tracking-wide text-tumlet-text mb-6">
+            Corporate game night
           </h1>
           <p className="text-xl md:text-2xl font-outfit text-tumlet-text mb-8 leading-relaxed">
             We host Game Nights at offices where we come in with a bunch of board games, 
@@ -156,7 +156,7 @@ Thanks!`);
       <section className="px-4 py-12 md:px-12 lg:px-36 bg-white">
         <div className="mx-auto">
           <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text text-center mb-12">
-            How It Works
+            How it works
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center border-2 border-tumlet-beige">
@@ -164,7 +164,7 @@ Thanks!`);
                 <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
                   <Gamepad2 className="w-8 h-8 text-tumlet-text" />
                 </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">You Choose</CardTitle>
+                <CardTitle className="text-xl font-outfit text-tumlet-text">You choose</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
@@ -179,7 +179,7 @@ Thanks!`);
                 <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
                   <Star className="w-8 h-8 text-tumlet-text" />
                 </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">We Host</CardTitle>
+                <CardTitle className="text-xl font-outfit text-tumlet-text">We host</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
@@ -194,7 +194,7 @@ Thanks!`);
                 <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-tumlet-text" />
                 </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">You Play</CardTitle>
+                <CardTitle className="text-xl font-outfit text-tumlet-text">You play</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
@@ -214,7 +214,7 @@ Thanks!`);
           </h2>
           <Card className="max-w-md mx-auto border-2 border-tumlet-text">
             <CardHeader className="bg-tumlet-text text-tumlet-beige">
-              <CardTitle className="text-2xl font-outfit">Standard Package</CardTitle>
+              <CardTitle className="text-2xl font-outfit">Standard package</CardTitle>
             </CardHeader>
             <CardContent className="p-8">
               <div className="text-4xl font-bold text-tumlet-text mb-4">
@@ -239,7 +239,7 @@ Thanks!`);
       <section className="px-4 py-12 md:px-12 lg:px-36 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text text-center mb-4">
-            Our Game Collection
+            Our game collection
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg">
             Pick around 3 games for your game night. We'll explain all the rules in person!
@@ -281,7 +281,7 @@ Thanks!`);
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm text-tumlet-text hover:underline"
                     >
-                      Watch Demo <ExternalLink className="w-4 h-4" />
+                      Watch demo <ExternalLink className="w-4 h-4" />
                     </a>
                   )}
                 </CardContent>
@@ -295,7 +295,7 @@ Thanks!`);
       <section className="px-4 py-16 md:px-12 lg:px-36">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text mb-6">
-             Ready to Play?
+             Ready to play?
           </h2>
           <p className="text-xl text-gray-700 mb-8">
             Just email us at tumletgames@gmail.com with your office name, location, number of people and a preferred date and time. 

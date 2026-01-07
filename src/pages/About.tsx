@@ -75,7 +75,7 @@ const About = () => {
       <Navbar />
       <div className="flex-1 flex flex-col items-center justify-center mt-16">
         <div className="max-w-3xl w-full">
-          <h1 className="text-5xl md:text-6xl font-outfit font-bold uppercase tracking-wide text-tumlet-text mb-16">
+          <h1 className="text-5xl md:text-6xl font-outfit font-bold tracking-wide text-tumlet-text mb-16">
             We're Tumlet.
           </h1>
           {aboutText.map((line, i) => {

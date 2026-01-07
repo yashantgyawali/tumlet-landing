@@ -64,10 +64,10 @@ const Ganthan = () => {
             rel="noopener noreferrer"
             className="cta-button color-yellow"
           >
-            try ganthan now
+            Try Ganthan now
           </a>
           <a href="/" className="underline text-tumlet-text text-base">
-            go back home
+            Go back home
           </a>
         </div>
       </main>

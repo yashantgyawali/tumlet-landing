@@ -29,32 +29,32 @@ const BluffMomo = () => {
     {
       id: "hante",
       name: "हन्ते",
-      action: "take 3 momo from the middle pile in one move",
+      action: "Take 3 momo from the middle pile in one move",
       blocks: "X",
     },
     {
       id: "chor",
       name: "चोर",
-      action: "steal 2 momo from any player",
-      blocks: "blocks चोर's attempt to steal your momo",
+      action: "Steal 2 momo from any player",
+      blocks: "Blocks चोर's attempt to steal your momo",
     },
     {
       id: "bhattiko-dai",
       name: "भट्टीको दाई",
-      action: "use 3 momo to poison any player (They lose one card)",
+      action: "Use 3 momo to poison any player (They lose one card)",
       blocks: "X",
     },
     {
       id: "aama",
       name: "आमा",
       action: "X",
-      blocks: "blocks भट्टीको दाई's poison attempt",
+      blocks: "Blocks भट्टीको दाई's poison attempt",
     },
     {
       id: "mantri",
       name: "मन्त्री",
-      action: "force any player to show one of their cards or draw a new card from the deck, look at it, and put back any 1 of your cards",
-      blocks: "blocks चोर's attempt to steal your momo and मन्त्री's attempt to look at your card",
+      action: "Force any player to show one of their cards or draw a new card from the deck, look at it, and put back any 1 of your cards",
+      blocks: "Blocks चोर's attempt to steal your momo and मन्त्री's attempt to look at your card",
     }
   ];
 
@@ -68,13 +68,13 @@ const BluffMomo = () => {
           onClick={scrollToTable}
           className="nav-button"
         >
-          character reference
+          Character Reference
         </Button>
       </nav>
       
       <div className="px-6 md:px-12 lg:px-36 py-6">
         <div className='flex flex-col gap-4 justify-center h-[600px] mb-[48px]'>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 lg:text-center">how to play bluff momo?</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 lg:text-center">How to play bluff momo?</h1>
            <iframe
               className="w-full h-full rounded-xl"
               src="https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc"
@@ -85,26 +85,26 @@ const BluffMomo = () => {
             />
         </div>
         
-        <h2 className="text-xl md:text-2xl font-bold mb-4">character reference table</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-4">Character reference table</h2>
         <div className="overflow-x-auto" ref={tableRef}>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="font-bold">character</TableHead>
-                <TableHead className="font-bold">action</TableHead>
-                <TableHead className="font-bold">blocks</TableHead>
+                <TableHead className="font-bold">Character</TableHead>
+                <TableHead className="font-bold">Action</TableHead>
+                <TableHead className="font-bold">Blocks</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow>
                 <TableCell className="font-medium">—</TableCell>
-                <TableCell>take 1 momo from the middle</TableCell>
-                <TableCell>cannot be blocked or challenged</TableCell>
+                <TableCell>Take 1 momo from the middle</TableCell>
+                <TableCell>Cannot be blocked or challenged</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">—</TableCell>
-                <TableCell>use 7 momo to food-poison another player (they lose one card)</TableCell>
-                <TableCell>cannot be blocked or challenged</TableCell>
+                <TableCell>Use 7 momo to food-poison another player (they lose one card)</TableCell>
+                <TableCell>Cannot be blocked or challenged</TableCell>
               </TableRow>
               {characters.map((char) => (
                 <TableRow key={char.id}>
@@ -115,6 +115,12 @@ const BluffMomo = () => {
               ))}
             </TableBody>
           </Table>
+        </div>
+        
+        <div className="mt-12 text-center">
+          <p className="text-lg md:text-xl text-gray-700 mb-4">
+            Want to play Bluff Momo with your team? We host <Link to="/corporate-game-night" className="underline hover:text-tumlet-text/80 text-tumlet-text">corporate game nights</Link> where we bring games to your office and run the entire session.
+          </p>
         </div>
       </div>
       
