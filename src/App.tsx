@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Analytics from "./components/Analytics";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import BluffMomo from "./pages/BluffMomo";
 import BlogIndex from "./pages/BlogIndex";
@@ -26,6 +27,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Analytics trackingId={GA_TRACKING_ID} />
         <Routes>
           <Route path="/" element={<Index />} />
