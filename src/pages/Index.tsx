@@ -100,6 +100,7 @@ const Index = () => {
             ctaIcon="/insta-draw-white.svg"
             ctaColorClass="color-red"
             youtubeEmbedUrl='https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc'
+            h1Title="Bluff momo - Board game for Nepali Adults"
           />
         </section>
         

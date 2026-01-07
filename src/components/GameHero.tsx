@@ -21,6 +21,7 @@ interface GameHeroProps {
   ctaColorClass?: string;
   textColorClass?: string;
   youtubeEmbedUrl?: string;
+  h1Title?: string;
 }
 
 const GameHero: React.FC<GameHeroProps> = ({
@@ -36,6 +37,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   youtubeEmbedUrl,
   ctaColorClass = '',
   textColorClass = '',
+  h1Title,
 }) => {
   // Check if link is external
   const isExternalLink = ctaLink.startsWith('http');
@@ -43,6 +45,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   return (
     <div className="w-full">
       <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 ${backgroundClass}`}>
+      
         <img className="w-[224px]" src={logoSrc} alt="Game Logo" />
         <img className={imageClass} src={imageSrc} alt="Game Cards" />
         
@@ -56,8 +59,13 @@ const GameHero: React.FC<GameHeroProps> = ({
             ))}
           </div>
         )}
-
+ 
         <div className={`text-center text-2xl ${textColorClass}`}>
+        {h1Title && (
+          <h1 className="text-center text-3xl md:text-4xl font-bold text-tumlet-text mb-8">
+            {h1Title}
+          </h1>
+        )}
           {description}
         </div>
         
