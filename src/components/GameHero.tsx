@@ -22,6 +22,10 @@ interface GameHeroProps {
   textColorClass?: string;
   youtubeEmbedUrl?: string;
   h1Title?: string;
+  secondaryLink?: {
+    text: string;
+    href: string;
+  };
 }
 
 const GameHero: React.FC<GameHeroProps> = ({
@@ -38,6 +42,7 @@ const GameHero: React.FC<GameHeroProps> = ({
   ctaColorClass = '',
   textColorClass = '',
   h1Title,
+  secondaryLink,
 }) => {
   // Check if link is external
   const isExternalLink = ctaLink.startsWith('http');
@@ -69,21 +74,28 @@ const GameHero: React.FC<GameHeroProps> = ({
           {description}
         </div>
         
-        {isExternalLink ? (
-          <a href={ctaLink} target="_blank" rel="noopener noreferrer">
-            <Button className={`cta-button ${ctaColorClass}`}>
-              <img className="icon" src={ctaIcon} alt="Icon" /> 
-              {ctaText}
-            </Button>
-          </a>
-        ) : (
-          <Link to={ctaLink}>
-            <button className={`cta-button ${ctaColorClass}`}>
-              <img className="icon" src={ctaIcon} alt="Icon" /> 
-              {ctaText}
-            </button>
-          </Link>
-        )}
+        <div className="flex flex-row items-center gap-8">
+          {isExternalLink ? (
+            <a href={ctaLink} target="_blank" rel="noopener noreferrer">
+              <Button className={`cta-button ${ctaColorClass}`}>
+                <img className="icon" src={ctaIcon} alt="Icon" /> 
+                {ctaText}
+              </Button>
+            </a>
+          ) : (
+            <Link to={ctaLink}>
+              <button className={`cta-button ${ctaColorClass}`}>
+                <img className="icon" src={ctaIcon} alt="Icon" /> 
+                {ctaText}
+              </button>
+            </Link>
+          )}
+          {secondaryLink && (
+            <Link to={secondaryLink.href} className="underline text-tumlet-text text-base hover:text-[#F16146]">
+              {secondaryLink.text}
+            </Link>
+          )}
+        </div>
           {youtubeEmbedUrl && (
           <div className="w-full aspect-video mt-8">
             <iframe
