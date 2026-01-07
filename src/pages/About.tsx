@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -79,6 +80,19 @@ const About = () => {
           {aboutText.map((line, i) => {
             if (line.trim() === "") {
               return <div key={i} className="my-12" />;
+            }
+            // Add link to "Nepali board games" in the specific sentence
+            if (line.includes("Where are the Nepali board games?")) {
+              const parts = line.split("Nepali board games");
+              return (
+                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                  {parts[0]}
+                  <Link to="/blog/best-nepali-board-games" className="underline hover:text-tumlet-text/80">
+                    Nepali board games
+                  </Link>
+                  {parts[1]}
+                </p>
+              );
             }
             return (
               <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">

@@ -57,14 +57,19 @@ const Ganthan = () => {
         <p className="max-w-2xl text-lg md:text-xl text-gray-800 mb-8 text-center leading-relaxed">
           This little app is for those quiet phone calls and video chats with home — the ones where you want to go beyond daily check-ins. Ganthan gives you questions that open up memories, feelings, and stories you didn't know you'd hear. Made for families, across generations, in Nepali and English. Just press call, pick a question, and see where the conversation goes.
         </p>
-        <a
-          href="https://ganthan.tumlet.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button color-yellow mt-8"
-        >
-          try ganthan now
-        </a>
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <a
+            href="https://ganthan.tumlet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button color-yellow"
+          >
+            try ganthan now
+          </a>
+          <a href="/" className="underline text-tumlet-text text-base">
+            go back home
+          </a>
+        </div>
       </main>
       <Footer />
     </div>

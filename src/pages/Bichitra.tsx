@@ -57,14 +57,19 @@ const Bichitra = () => {
         <p className="max-w-2xl text-lg md:text-xl text-gray-800 mb-8 text-center">
           Although I hate the word vibe-coding, I love creating things and AI has enabled me to work on my crazy ideas and made it easier to share them with the world. What started with a simple idea while on a scooter, I was able to use prompts and share playfulness amongst Nepali young adults.
         </p>
-        <a
-          href="https://bichitra.tumlet.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button color-yellow mt-8"
-        >
-          try bichitra now
-        </a>
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <a
+            href="https://bichitra.tumlet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button color-yellow"
+          >
+            try bichitra now
+          </a>
+          <a href="/" className="underline text-tumlet-text text-base">
+            go back home
+          </a>
+        </div>
       </main>
       <Footer />
     </div>

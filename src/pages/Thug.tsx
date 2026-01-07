@@ -58,14 +58,19 @@ const Thug = () => {
           Everyone gets a word from a Nepali category you instantly recognize. Last names, foods, places, brands. One person becomes the Thug and doesn't see the word. Your job is to figure out who it is before they quietly blend in.<br />
           You talk. You point fingers. You defend yourself a little too hard. Someone smiles at the wrong time. Simple, offline, and rooted in Nepali culture. 
         </p>
-        <a
-          href="https://thug.tumlet.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cta-button color-yellow mt-8"
-        >
-          try thug now
-        </a>
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <a
+            href="https://thug.tumlet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-button color-yellow"
+          >
+            try thug now
+          </a>
+          <a href="/" className="underline text-tumlet-text text-base">
+            go back home
+          </a>
+        </div>
       </main>
       <Footer />
     </div>
