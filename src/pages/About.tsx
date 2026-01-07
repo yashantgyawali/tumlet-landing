@@ -13,7 +13,8 @@ const aboutText = [
   "And we want to change that.",
   "",
   "We are a Nepali board game company, plain and simple.",
-  "We’re from here. Our games are too.",
+  "We're from here. Our games are too.",
+  "We also bring games to offices and host corporate game nights for teams who want to connect and have fun together.",
   "We pull from the way we joke. The way we argue. The way we play. We put it into cards, pieces, rules, and laughter.",
   "We’re not perfect. We don’t want to be.",
   "",
@@ -89,6 +90,19 @@ const About = () => {
                   {parts[0]}
                   <Link to="/blog/best-nepali-board-games" className="underline hover:text-tumlet-text/80">
                     Nepali board games
+                  </Link>
+                  {parts[1]}
+                </p>
+              );
+            }
+            // Add link to "corporate game nights" in the specific sentence
+            if (line.includes("corporate game nights")) {
+              const parts = line.split("corporate game nights");
+              return (
+                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                  {parts[0]}
+                  <Link to="/corporate-game-night" className="underline hover:text-tumlet-text/80">
+                    corporate game nights
                   </Link>
                   {parts[1]}
                 </p>
