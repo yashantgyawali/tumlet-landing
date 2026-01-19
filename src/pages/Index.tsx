@@ -112,7 +112,7 @@ const Index = () => {
         <section className="container mx-auto px-4 md:px-12 mt-12 mb-16">
           <div className="text-center">
             <p className="text-lg md:text-xl text-gray-700 mb-4">
-              Explore our online games: <Link to="/bichitra" className="underline hover:text-tumlet-text/80 text-tumlet-text">bichitra</Link>, <Link to="/ganthan" className="underline hover:text-tumlet-text/80 text-tumlet-text">ganthan</Link>, <Link to="/thug" className="underline hover:text-tumlet-text/80 text-tumlet-text">thug</Link>, and <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-tumlet-text/80 text-tumlet-text">kobadi</a>.
+              Explore our online games: <Link to="/bichitra" className="underline hover:text-tumlet-text/80 text-tumlet-text">bichitra</Link>, <Link to="/farak" className="underline hover:text-tumlet-text/80 text-tumlet-text">farak</Link>, <Link to="/ganthan" className="underline hover:text-tumlet-text/80 text-tumlet-text">ganthan</Link>, <Link to="/thug" className="underline hover:text-tumlet-text/80 text-tumlet-text">thug</Link>, and <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-tumlet-text/80 text-tumlet-text">kobadi</a>.
             </p>
           </div>
         </section>
