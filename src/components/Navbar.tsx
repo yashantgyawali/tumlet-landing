@@ -23,12 +23,15 @@ const Navbar: React.FC = () => {
             <Link to="/bichitra" className="block px-4 py-2 hover:bg-gray-100">
               Bichitra
             </Link>
+            <Link to="/farak" className="block px-4 py-2 hover:bg-gray-100">
+              Farak
+            </Link>
             <Link to="/ganthan" className="block px-4 py-2 hover:bg-gray-100">
               Ganthan
-            </Link>     
+            </Link>
             <Link to="/thug" className="block px-4 py-2 hover:bg-gray-100">
               Thug
-            </Link>     
+            </Link>
             <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
               Kobadi
             </a>
@@ -76,6 +79,9 @@ const Navbar: React.FC = () => {
             </div>
             <Link to="/bichitra" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Bichitra
+            </Link>
+            <Link to="/farak" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
+              Farak
             </Link>
             <Link to="/ganthan" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Ganthan
