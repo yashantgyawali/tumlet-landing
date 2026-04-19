@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import GameHero from '../components/GameHero';
+import LandingHero from '../components/LandingHero';
 import Footer from '../components/Footer';
 
 function setMetaTag(name: string, content: string) {
@@ -44,11 +44,51 @@ function setJsonLd(structuredData: object) {
   script.textContent = JSON.stringify(structuredData);
 }
 
+const games = [
+  {
+    name: 'Bluff Momo',
+    coverClass: 'bg-[#F3B952] text-[#130D01]',
+    description: 'Kathmandu streets. Bluff your way to the biggest momo pile.',
+    href: '/bluff-momo-rules',
+  },
+  {
+    name: 'Ganthan',
+    coverClass: 'bg-[#F16147] text-white',
+    description: 'For the family group chat. Questions that spark more than "khanu bhayo?"',
+    href: '/ganthan',
+  },
+  {
+    name: 'Bichitra',
+    coverClass: 'bg-[#FAF1E4] text-[#130D01] border-b-2 border-[#130D01]',
+    description: 'A Nepali quiz game. How well do you know your own culture?',
+    href: '/bichitra',
+  },
+  {
+    name: 'Farak',
+    coverClass: 'bg-[#130D01] text-white',
+    description: 'Spot the odd one out — before someone spots you.',
+    href: '/farak',
+  },
+  {
+    name: 'Thug',
+    coverClass: 'bg-[#4a6a3e] text-white',
+    description: 'Social deduction, rooted in Nepali categories. Who\'s the thug?',
+    href: '/thug',
+  },
+  {
+    name: 'Kobadi',
+    coverClass: 'bg-[#7184BE] text-white',
+    description: 'The classic Nepali team sport, now a card game.',
+    href: 'https://kobadi.tumlet.com/',
+    external: true,
+  },
+];
+
 const Index = () => {
   const bluffMomoMeta = [
-    { icon: "/player.svg", text: "2-6 players" },
-    { icon: "/age.svg", text: "age 13+" },
-    { icon: "/time.svg", text: "11 minutes" }
+    { icon: '/player.svg', text: '2–6 players' },
+    { icon: '/age.svg',    text: 'age 13+' },
+    { icon: '/time.svg',   text: '11 minutes' },
   ];
 
   useEffect(() => {
@@ -64,7 +104,7 @@ const Index = () => {
     setMetaTag('twitter:title', 'Tumlet | Spreading Playfulness Across Nepal');
     setMetaTag('twitter:description', 'Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-    
+
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -72,69 +112,111 @@ const Index = () => {
       description: 'Nepali board game company spreading playfulness across Nepal',
       url: 'https://tumlet.com',
       logo: 'https://tumlet.com/tumlet-logo.png',
-      sameAs: [
-        'https://www.instagram.com/tumlet.boardgames/'
-      ],
+      sameAs: ['https://www.instagram.com/tumlet.boardgames/'],
       foundingDate: '2022',
-      foundingLocation: {
-        '@type': 'Place',
-        name: 'Kathmandu, Nepal'
-      }
+      foundingLocation: { '@type': 'Place', name: 'Kathmandu, Nepal' },
     });
-  }, []); // Added empty dependency array
+  }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-tumlet-beige">
       <Navbar />
-      
+
       <main className="flex-1">
+        {/* Hero */}
         <section className="container mx-auto px-4 md:px-12">
-          <GameHero 
-            backgroundClass="bluff-background"
-            logoSrc="/bluff-momo-logo.png"
-            imageSrc="/char-combined.webp"
-            imageClass=" w-[145%] self-center rounded-2xl"
-            description="Bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
+          <LandingHero
+            plateLabel="Bluff Momo"
+            description="A card game set in the streets of Kathmandu, where players bluff, deceive and outsmart their friends to steal the most momo."
             metaItems={bluffMomoMeta}
             ctaLink="https://www.instagram.com/tumlet.boardgames/"
             ctaText="DM us to order"
             ctaIcon="/insta-draw-white.svg"
-            ctaColorClass="color-red"
-            youtubeEmbedUrl='https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc'
-            h1Title="Bluff momo - Board game for Nepali adults"
-            secondaryLink={{
-              text: "Learn who we are",
-              href: "/about"
-            }}
+            secondaryLink={{ text: 'Learn who we are', href: '/about' }}
+            imageSrc="/char-combined.webp"
+            imageAlt="Bluff Momo characters"
+            priceTag="Rs. 1490"
+            cardCaption={"five characters.\none winner."}
           />
         </section>
-        
-        <section className="container mx-auto px-4 md:px-12 mt-12 mb-16">
-          <div className="text-center">
-            <p className="text-lg md:text-xl text-gray-700 mb-4">
-              Explore our online games: <Link to="/bichitra" className="underline hover:text-tumlet-text/80 text-tumlet-text">bichitra</Link>, <Link to="/farak" className="underline hover:text-tumlet-text/80 text-tumlet-text">farak</Link>, <Link to="/ganthan" className="underline hover:text-tumlet-text/80 text-tumlet-text">ganthan</Link>, <Link to="/thug" className="underline hover:text-tumlet-text/80 text-tumlet-text">thug</Link>, and <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-tumlet-text/80 text-tumlet-text">kobadi</a>.
-            </p>
+
+        {/* Our games */}
+        <section className="container mx-auto px-4 md:px-12 mt-14">
+          <h2
+            className="text-sm font-bold uppercase tracking-widest border-t-2 border-[#130D01] pt-7 mb-6"
+            style={{ fontFamily: '"Manrope", sans-serif', letterSpacing: '0.12em' }}
+          >
+            Our games
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {games.map((game) => {
+              const card = (
+                <div
+                  key={game.name}
+                  className="border-2 border-[#130D01] rounded-2xl bg-white overflow-hidden flex flex-col hover:shadow-[4px_4px_0px_0px_#130D01] transition-shadow"
+                >
+                  <div className={`h-40 flex items-center justify-center ${game.coverClass}`}
+                    style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 800, fontSize: '28px', letterSpacing: '0.04em' }}
+                  >
+                    {game.name}
+                  </div>
+                  <div className="p-5">
+                    <h3
+                      className="mb-2 text-xl font-bold"
+                      style={{ fontFamily: '"Manrope", sans-serif' }}
+                    >
+                      {game.name}
+                    </h3>
+                    <p className="text-sm" style={{ color: '#4a4338' }}>{game.description}</p>
+                  </div>
+                </div>
+              );
+
+              return game.external ? (
+                <a key={game.name} href={game.href} target="_blank" rel="noopener noreferrer">
+                  {card}
+                </a>
+              ) : (
+                <Link key={game.name} to={game.href}>
+                  {card}
+                </Link>
+              );
+            })}
           </div>
         </section>
-        
-        {/* <section className="container mx-auto px-4 md:px-12 mt-8">
-          <GameHero 
-            backgroundClass="ganthan-background"
-            logoSrc="/ganthan.svg"
-            imageSrc="/questions.png"
-            imageClass="w-[75%] md:w-[36%] self-center rounded-2xl"
-            description="ganthan is a nudge for you and your friends to dive into conversations that truly connect. we are talking about the chats that spark unexpected laughter, and bring out thoughts you didn't even know you had."
-            metaItems={[]}
-            ctaLink="http://ganthan.tumlet.com/"
-            ctaText="spark connection"
-            ctaIcon="/spark.svg"
-            ctaColorClass="color-red"
-            textColorClass="text-white"
-          />
+
+        {/* Quote */}
+        <section className="container mx-auto px-4 md:px-12 mt-14 mb-4">
+          <div
+            className="rounded-2xl px-8 py-12 text-center"
+            style={{ background: '#F16147', color: 'white' }}
+          >
+            <p
+              className="mx-auto mb-4 max-w-2xl"
+              style={{
+                fontFamily: '"Manrope", sans-serif',
+                fontWeight: 700,
+                fontSize: 'clamp(24px, 3.5vw, 40px)',
+                lineHeight: 1.15,
+              }}
+            >
+              Play, laugh, repeat. Every game night, every momo order, every group chat that finally turns into a hangout.
+            </p>
+            <span
+              style={{
+                fontFamily: '"Patrick Hand", cursive',
+                fontSize: '26px',
+                display: 'inline-block',
+                transform: 'rotate(-2deg)',
+                marginTop: '8px',
+              }}
+            >
+              — Sarina &amp; Yashant
+            </span>
+          </div>
         </section>
-         */}
       </main>
-      
+
       <Footer />
     </div>
   );

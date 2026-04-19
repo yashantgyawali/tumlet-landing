@@ -97,27 +97,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Tumlet custom colors
+				// Tumlet custom colors — aligned with design system tokens
 				tumlet: {
-					blue: '#7184BE',
+					blue: '#7184BE',        // ganthan purple
 					darkBlue: '#364587',
 					lightBlue: '#BAC1E1',
 					yellow: '#FFE26A',
 					yellowShadow: '#7A6719',
 					red: '#F4615F',
 					redShadow: '#A42726',
-					text: '#161B32',
-					footerText: 'rgba(75, 85, 99, 0.72)',
-					beige: '#F9F3E5',
-					brown: '#6B4226',
-					primaryYellow: '#F3B952',
-					primaryRed: '#F16146',
+					text: '#130D01',         // --tumlet-ink: warm near-black
+					footerText: '#6B6B6B',   // --tumlet-footer
+					beige: '#FAF1E4',        // --tumlet-beige: the plate
+					brown: '#5A3A1F',        // --tumlet-brown: the ghee
+					primaryYellow: '#F3B952', // --tumlet-yellow: the dalle
+					primaryRed: '#F16147',   // --tumlet-red: the momo chilli
 				},
 			},
 			fontFamily: {
-				sans: ['"Outfit"', 'system-ui', 'sans-serif'],
-				outfit: ['"Outfit"', 'sans-serif'],
-				baloo: ['"Baloo 2"', 'cursive'],
+				sans: ['"Atkinson Hyperlegible"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				display: ['"Manrope"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				hand: ['"Patrick Hand"', 'cursive'],
+				baloo: ['"Baloo 2"', 'sans-serif'], // Devanagari / Nepali text
+				// Legacy aliases kept for backward compat with game pages
+				outfit: ['"Manrope"', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
