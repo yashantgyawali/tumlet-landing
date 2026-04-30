@@ -95,7 +95,7 @@ const Farak = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#FAF1E4', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
+    <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
       <Navbar />
 
       <main className="flex-1">
