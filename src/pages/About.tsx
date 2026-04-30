@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const aboutText = [
   "Play runs deep in our culture. We see it during Holi when we're throwing colors, in card games during Dashain, in playing Bhailo in Tihar. It's there.",
   "And is it only during festivals? Not really.",
-  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. "कति गेम्सको त slangs पनि बुझ्दैन and can't really relate to them." Because it was not made for Nepali people.",
+  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. “कति गेम्सको त slangs पनि बुझ्दैन and can't really relate to them.” Because it was not made for Nepali people.",
   "This is where we see the gap.",
   "Where are the Nepali board games? They're almost non-existent. There are a few options, but they are targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
   "So when it comes to board games, we hit a wall  🚧",
