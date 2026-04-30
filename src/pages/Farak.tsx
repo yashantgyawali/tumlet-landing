@@ -128,18 +128,6 @@ const Farak = () => {
             One person got a completely different question. They don't know it. You have to find them.
           </p>
 
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Farak is built on one cruel twist. Everyone opens the same game. Most players see the same "who's most likely to" question. But one person — chosen randomly, silently — gets something different. They don't know they're the odd one out. They just answer their question and hope the gap isn't visible.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            It usually is. When the real question is revealed and everyone's explaining their answer, the imposter has to reverse-engineer a reason that fits — fast, under pressure, in front of people who know them. The explanation will be a half-beat off. That's the crack. That's the game.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Picture this: the question is <em style={{ fontWeight: 600 }}>"who's most likely to make out with a stranger at a party?"</em> Most players point at the same person. The imposter got <em style={{ fontWeight: 600 }}>"who's most likely to die a virgin?"</em> and pointed at someone completely different. Their logic makes perfect sense — for a question nobody else saw. The room goes quiet. Then it gets loud.
-          </p>
-
           <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
             <a
               href="https://farak.tumlet.com/"
