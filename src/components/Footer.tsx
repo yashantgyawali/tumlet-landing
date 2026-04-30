@@ -93,11 +93,8 @@ const Footer: React.FC = () => {
             <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F16147', marginBottom: 16 }}>
               Get in touch
             </div>
-            <p style={{ fontSize: 15, color: '#130D01', marginBottom: 8, fontWeight: 500 }}>
-              tumletgames@gmail.com
-            </p>
             <p style={{ fontSize: 15, color: '#130D01', marginBottom: 24, fontWeight: 500 }}>
-              9851312103
+              tumletgames@gmail.com
             </p>
             <a
               href="https://www.instagram.com/tumlet.boardgames/"
