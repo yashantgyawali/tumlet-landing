@@ -45,47 +45,52 @@ function setJsonLd(structuredData: object) {
 const STEPS = [
   {
     icon: '1',
-    title: 'A face appears on screen.',
-    body: 'Each round shows you a photo. Could be anyone — a celebrity, a public figure, a random Nepali face. Your job is to look closely and trust your gut.',
+    title: 'An image appears.',
+    body: 'Something in it is the last name. Look closely. It might be obvious. It might take a minute. That's the whole game.',
   },
   {
     icon: '2',
-    title: 'Pick the थर from the options.',
-    body: 'Choose from a set of Nepali last names. Thapa? Shrestha? Rai? Tamang? You have one shot. Pick what feels right.',
+    title: 'Type the थर.',
+    body: 'No options. No hints to start. Just you and the image. Trust what you see — or think you see.',
   },
   {
     icon: '3',
-    title: 'Find out how your guess compares.',
-    body: 'After you answer, see what everyone else guessed. The distribution is the real game — are you in the majority, or hilariously alone in your read?',
+    title: 'Getting close?',
+    body: 'You'll get a nudge. Still stuck? Three wrong guesses unlocks an extra hint — but by then your pride is already on the line.',
   },
   {
     icon: '4',
-    title: 'Share your score and challenge friends.',
-    body: 'Post your results. Drop it in the group chat. Find out who among your friends is the true connoisseur of Nepali थर.',
+    title: 'Can\'t move on until you crack it.',
+    body: 'That's the rule. That's also why people finish every round.',
+  },
+  {
+    icon: '5',
+    title: 'Six packs to play.',
+    body: 'Different themes, same satisfying click when it lands.',
   },
 ];
 
 const Bichitra = () => {
   useEffect(() => {
-    document.title = 'Bichitra | Guess the Nepali Last Name — Viral Quiz by Tumlet';
-    setMetaTag('description', 'Bichitra is the viral Nepali last name quiz from Tumlet. Look at a face and guess the थर. Can you tell a Thapa from a Shrestha? Play free online now.');
-    setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar quiz, thapa shrestha quiz, tumlet, nepali game online');
+    document.title = 'Bichitra | Guess the Nepali Last Name';
+    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it — can you find it? No options, no shortcuts. Play free online now.');
+    setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar puzzle, tumlet, nepali game online, guess nepali last name');
     setCanonical('https://tumlet.com/bichitra');
-    setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name — Viral Quiz by Tumlet');
-    setPropertyTag('og:description', 'Bichitra is the viral Nepali last name quiz from Tumlet. Look at a face and guess the थर. Can you tell a Thapa from a Shrestha? Play free online now.');
+    setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name');
+    setPropertyTag('og:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options — just you and the image. Play free online.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/bichitra');
-    setPropertyTag('og:image', 'https://tumlet.com/og-bichitra.png');
+    setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name — Viral Quiz by Tumlet');
-    setMetaTag('twitter:description', 'Bichitra is the viral Nepali last name quiz from Tumlet. Look at a face and guess the थर. Can you tell a Thapa from a Shrestha? Play free online now.');
-    setMetaTag('twitter:image', 'https://tumlet.com/og-bichitra.png');
+    setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name');
+    setMetaTag('twitter:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options — just you and the image. Play free online.');
+    setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Bichitra',
-      description: 'A viral Nepali last name quiz from Tumlet. Look at a face and guess the थर.',
+      description: 'A Nepali last name puzzle. A photo hides a थर somewhere inside it — no options, type your guess and find it.',
       url: 'https://bichitra.tumlet.com/',
       applicationCategory: 'Game',
       operatingSystem: 'Web',
@@ -113,22 +118,14 @@ const Bichitra = () => {
             className="font-extrabold mb-5 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
           >
-            Bichitra — the Nepali last name quiz
+            Bichitra — Guess the Nepali Last Name
           </h1>
 
           <p
             className="font-semibold mb-7 leading-snug"
             style={{ color: '#364587', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
-            Look at a face. Guess the थर. It sounds easy — until it isn't.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Every Nepali knows the feeling. You see someone — at a party, in your class, across the room at a wedding — and before you even know their name, your brain is already running the calculation. <em style={{ color: '#364587', fontWeight: 600 }}>Thapa? Shrestha? Tamang?</em> We've all done it. We've all been wrong. Bichitra turns that very human instinct into a game.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-9" style={{ color: '#2a241a' }}>
-            Built in a weekend on a hunch, Bichitra went viral almost immediately — shared across group chats, reposted on TikTok, debated in comment sections. It hit a nerve because it's not really about guessing right. It's about the collective delusion that we all share: the idea that we can read a face and know the थर behind it. Spoiler: most of us can't.
+            It's not about reading faces. The थर is hiding somewhere in the image — you just have to find it.
           </p>
 
           <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
@@ -147,7 +144,7 @@ const Bichitra = () => {
               onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
             >
-              Try Bichitra now
+              Play Bichitra free →
             </a>
             <a href="#how-it-works" className="underline font-medium text-base" style={{ color: '#364587' }}>
               How it works →
@@ -162,7 +159,7 @@ const Bichitra = () => {
             style={{ border: '3px solid #7184BE', background: '#FAF1E4' }}
           >
             {[
-              { num: '1 face', lbl: 'per round' },
+              { num: '6', lbl: 'packs' },
               { num: 'Free', lbl: 'to play' },
               { num: 'Viral', lbl: 'in Nepal' },
             ].map(({ num, lbl }, i) => (
@@ -178,31 +175,27 @@ const Bichitra = () => {
           </div>
         </section>
 
-        {/* ── WHY NEPALIS LOVE IT ── */}
+        {/* ── WHY IT'S ADDICTIVE ── */}
         <article className="max-w-[760px] mx-auto px-6 mb-24">
           <span
             className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
             style={{ fontFamily: "'Outfit', sans-serif", color: '#364587', background: '#BAC1E1', letterSpacing: '0.18em' }}
           >
-            Why Nepalis love it
+            Why it's addictive
           </span>
           <h2
             className="font-extrabold mb-6 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
           >
-            It taps into something we all carry.
+            The moment it clicks, you can't unsee it.
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            There's a particular kind of social intelligence that Nepalis develop growing up — an awareness of caste markers, regional features, family names, and the unspoken categories we're sorted into before we can object. <em style={{ color: '#364587', fontWeight: 600 }}>Yo Brahmin ho ki Chettri?</em> It's a question that hangs in the air at every family gathering, every first meeting, every new classroom. Bichitra doesn't invent this curiosity. It just gives it a shape.
+            Each image hides a Nepali last name inside it — visually, cleverly, sometimes maddeningly. Type your guess. Too far off? You're stuck. Getting warm? You'll know. Three wrong answers and you earn a hint — but by then your pride is already on the line.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            What makes the game stick is the reveal. Not whether you were right — but seeing what everyone else guessed. The distribution is the real joke. When 60% of players are convinced a face is a Rai and 30% say Magar and 8% say Shrestha, that disagreement is the whole experience. It's a mirror held up to collective assumptions, and it's funny and uncomfortable in equal measure.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Young Nepalis shared it because it felt like an inside joke — the kind you can only get if you grew up navigating the same social terrain. And then it spread beyond that, because the gut feeling of guessing and being wrong is universal enough that even the diaspora, even people who'd never set foot in Nepal, wanted to play.
+            It's the kind of puzzle that makes you feel genius when you crack it and unreasonably frustrated when you don't. Nepalis have been dropping it in group chats with zero context and watching friends spiral.
           </p>
         </article>
 
@@ -219,7 +212,7 @@ const Bichitra = () => {
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              Four rounds. Zero excuses.
+              Simple rules. Maddening puzzles.
             </h2>
           </div>
 
@@ -232,7 +225,7 @@ const Bichitra = () => {
                 key={i}
                 className="flex gap-5 items-start p-8"
                 style={{
-                  borderBottom: i < 2 ? '2px solid #7184BE' : undefined,
+                  borderBottom: i < STEPS.length - 2 ? '2px solid #7184BE' : undefined,
                   borderRight: i % 2 === 0 ? '2px solid #7184BE' : undefined,
                 }}
               >
@@ -267,10 +260,10 @@ const Bichitra = () => {
               className="font-extrabold leading-tight mb-4"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              Think you can read a face?
+              Think you can guess the Nepali last name?
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              Thousands of Nepalis have tried. Most were overconfident. All had opinions. Come find out where you land.
+              Most people need at least one hint. Prove them wrong.
             </p>
             <a
               href="https://bichitra.tumlet.com/"
@@ -287,7 +280,7 @@ const Bichitra = () => {
               onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
             >
-              Try Bichitra now
+              Play Bichitra free →
             </a>
           </div>
         </section>
