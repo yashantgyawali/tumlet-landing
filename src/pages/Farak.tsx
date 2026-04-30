@@ -45,47 +45,52 @@ function setJsonLd(structuredData: object) {
 const STEPS = [
   {
     icon: '1',
-    title: 'Everyone secretly reads their question.',
-    body: 'All players open the app on their phone. Most see the same question. One player — chosen at random — sees something different. Nobody knows who.',
+    title: 'Everyone opens the app.',
+    body: "All players open Farak on their phone. Most see the same question. One person — picked at random — sees something completely different. Nobody knows who got the different one.",
   },
   {
     icon: '2',
-    title: 'All point at the person who fits.',
-    body: 'On the count of three, everyone points at whoever best fits their question. Fingers go up. Directions diverge. The room gets loud.',
+    title: 'Everyone points at someone.',
+    body: "On three, everyone points at the person who best fits their question. Fingers go up at the same time. Most fingers will go in similar directions. One set might not.",
   },
   {
     icon: '3',
     title: 'The real question is revealed.',
-    body: 'The original question appears for all to see. One person\'s answer won\'t quite make sense. Their reasoning will have a strange edge to it. Find them.',
+    body: "The original question appears for everyone to see. Now someone's logic starts to sound strange. Their answer made sense for a different question. The crack is there — you just have to find it.",
   },
   {
     icon: '4',
-    title: 'Debate, defend, vote — catch the Farak.',
-    body: 'Everyone explains their answer. The imposter has to bluff. The group votes on who they think got the different question. Catch them before they catch you.',
+    title: 'Everyone defends their answer.',
+    body: "Each person explains who they pointed at and why. The imposter has to lie. They heard a different question, so their reasoning will have a strange edge. They have to make it sound normal.",
+  },
+  {
+    icon: '5',
+    title: 'Vote on who got the different question.',
+    body: "The group votes. If you catch the imposter, they lose. If they bluff well enough to avoid the vote, they win. Simple. Brutal. Extremely revealing.",
   },
 ];
 
 const Farak = () => {
   useEffect(() => {
-    document.title = 'Farak | Who\'s Most Likely To — With an Imposter Twist';
-    setMetaTag('description', 'Farak is the imposter edition of Who\'s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.');
+    document.title = "Farak | Who's Most Likely To — With an Imposter Twist";
+    setMetaTag('description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
     setMetaTag('keywords', 'farak, whos most likely to, imposter game, party game online, nepali party game, tumlet');
     setCanonical('https://tumlet.com/farak');
-    setPropertyTag('og:title', 'Farak | Who\'s Most Likely To — With an Imposter Twist');
-    setPropertyTag('og:description', 'Farak is the imposter edition of Who\'s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.');
+    setPropertyTag('og:title', "Farak | Who's Most Likely To — With an Imposter Twist");
+    setPropertyTag('og:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/farak');
     setPropertyTag('og:image', 'https://tumlet.com/og-farak.png');
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Farak | Who\'s Most Likely To — With an Imposter Twist');
-    setMetaTag('twitter:description', 'Farak is the imposter edition of Who\'s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.');
+    setMetaTag('twitter:title', "Farak | Who's Most Likely To — With an Imposter Twist");
+    setMetaTag('twitter:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
     setMetaTag('twitter:image', 'https://tumlet.com/og-farak.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Farak',
-      description: 'The imposter edition of Who\'s Most Likely To. Everyone gets the same question — except one player who gets something different.',
+      description: "The imposter edition of Who's Most Likely To. Everyone gets the same question — except one player who gets something different.",
       url: 'https://farak.tumlet.com/',
       applicationCategory: 'Game',
       operatingSystem: 'Web',
@@ -113,22 +118,26 @@ const Farak = () => {
             className="font-extrabold mb-5 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
           >
-            Farak — Who's Most Likely To, with an imposter
+            Farak — Who's Most Likely To, but with an imposter
           </h1>
 
           <p
             className="font-semibold mb-7 leading-snug"
-            style={{ color: '#F16147', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
+            style={{ color: '#4B5563', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
-            Everyone gets the same question. Except one person. Can you catch them?
+            One person got a completely different question. They don't know it. You have to find them.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            "Farak" means difference in Nepali — and that's exactly what this game is built on. You know the classic "who's most likely to" format: everyone points at the person who fits the question. Farak adds one twist. One person in the group secretly gets a <em style={{ color: '#F16147', fontWeight: 600 }}>different</em> question. They don't know they're the odd one out. They just answer theirs — and hope nobody notices the farak.
+            Farak is built on one cruel twist. Everyone opens the same game. Most players see the same "who's most likely to" question. But one person — chosen randomly, silently — gets something different. They don't know they're the odd one out. They just answer their question and hope the gap isn't visible.
           </p>
 
-          <p className="text-lg leading-relaxed mb-9" style={{ color: '#2a241a' }}>
-            The genius of the game is that the imposter doesn't know they have a different question, so they have to bluff their way through the reasoning. They might point at the right person — but their explanation will be subtly, tellingly off. The group's job is to find the crack before it closes.
+          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
+            It usually is. When the real question is revealed and everyone's explaining their answer, the imposter has to reverse-engineer a reason that fits — fast, under pressure, in front of people who know them. The explanation will be a half-beat off. That's the crack. That's the game.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
+            Picture this: the question is <em style={{ fontWeight: 600 }}>"who's most likely to make out with a stranger at a party?"</em> Most players point at the same person. The imposter got <em style={{ fontWeight: 600 }}>"who's most likely to die a virgin?"</em> and pointed at someone completely different. Their logic makes perfect sense — for a question nobody else saw. The room goes quiet. Then it gets loud.
           </p>
 
           <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
@@ -147,7 +156,7 @@ const Farak = () => {
               onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
             >
-              Play Farak
+              Play Farak free →
             </a>
             <a href="#how-it-works" className="underline font-medium text-base" style={{ color: '#F16147' }}>
               How it works →
@@ -190,19 +199,19 @@ const Farak = () => {
             className="font-extrabold mb-6 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
           >
-            The tension is the game.
+            The tension is instant.
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            The moment after the question is revealed — when everyone's explanation hangs in the air — that's where Farak lives. One person's answer will have a slightly different shape. Maybe they pointed at the same person as everyone else, but for a reason that lands a half-step off. Maybe they hesitated a beat too long. The group feels it before they can name it.
+            The moment the real question drops and everyone starts explaining their answer — that's where Farak lives. One person's reasoning will have a slightly different shape. Not wrong exactly, just angled differently. The group feels it before they can name it.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Farak rewards social intelligence. Reading people. Noticing what's slightly wrong about a confident answer. It's also, inevitably, a test of how well you know the people you're playing with — because a good imposter doesn't get caught by hiding. They get caught by people who know them well enough to notice that something is <em style={{ color: '#F16147', fontWeight: 600 }}>off</em>.
+            Farak rewards people who read people. It's also a test of how well you know the group you're with — because a good imposter doesn't get caught by hiding. They get caught by someone who knows them well enough to notice that something is <em style={{ color: '#F16147', fontWeight: 600 }}>off</em>.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            It works best with groups who already know each other. The more history in the room, the sharper the reads, the better the bluffs, the louder the reveal. It's a party game for the second or third hour of the night, when the conversation is already going and everyone's ready to turn on each other in the most affectionate way possible.
+            It works best with groups who already have history. The more you know each other, the sharper the reads, the better the bluffs, the louder the reveal. It's a second-or-third-hour-of-the-night game. When everyone's already talking and ready to turn on each other in the most affectionate way possible.
           </p>
         </article>
 
@@ -219,7 +228,7 @@ const Farak = () => {
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              One different question. One imposter. Can you find them?
+              One different question. One imposter. Five steps.
             </h2>
           </div>
 
@@ -232,7 +241,7 @@ const Farak = () => {
                 key={i}
                 className="flex gap-5 items-start p-8"
                 style={{
-                  borderBottom: i < 2 ? '2px solid #F16147' : undefined,
+                  borderBottom: i < STEPS.length - 2 ? '2px solid #F16147' : undefined,
                   borderRight: i % 2 === 0 ? '2px solid #F16147' : undefined,
                 }}
               >
@@ -267,10 +276,10 @@ const Farak = () => {
               className="font-extrabold leading-tight mb-4"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              One of you has a different question. Find out who.
+              One of you is already lying. Find out who.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              Open it on your phone, pass it around, and let the pointing begin. Takes five minutes. Creates stories that last longer.
+              No signup. Open it, pass it around, play.
             </p>
             <a
               href="https://farak.tumlet.com/"
@@ -287,7 +296,7 @@ const Farak = () => {
               onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
               onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
             >
-              Play Farak
+              Play Farak free →
             </a>
           </div>
         </section>
