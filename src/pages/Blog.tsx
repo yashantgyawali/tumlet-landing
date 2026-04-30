@@ -127,67 +127,94 @@ const BlogPost = () => {
       {/* Article */}
       <main className="flex-1">
         <article style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 96px' }}>
-          {/* Meta strip */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '14px',
-            fontFamily: "'Outfit', system-ui, sans-serif",
-            fontSize: '13px',
-            color: '#6B6B6B',
-            marginBottom: '28px',
-            flexWrap: 'wrap',
-          }}>
+          {/* Eyebrow pill */}
+          <div style={{ textAlign: 'center', marginBottom: '28px' }}>
             <span style={{
+              display: 'inline-block',
               fontFamily: "'Outfit', system-ui, sans-serif",
               fontWeight: 700,
               fontSize: '13px',
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: '#F16147',
-              background: '#FDE8E4',
-              padding: '6px 14px',
+              color: '#2D7A4F',
+              background: '#EDF5DD',
+              padding: '6px 18px',
               borderRadius: '999px',
+              border: '1.5px solid #2D7A4F',
             }}>
-              {post.category}
+              Field Notes · {post.category}
             </span>
-            <Dot />
-            <span style={{ fontWeight: 600, color: '#130D01' }}>By {post.author}</span>
-            <Dot />
-            <span>{new Date(post.publishedAt).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}</span>
-            <Dot />
-            <span>{post.readTime}</span>
           </div>
 
-          {/* Title */}
+          {/* Title — centered, large, dark green */}
           <h1 style={{
             fontFamily: "'Baloo 2', system-ui, sans-serif",
             fontWeight: 800,
-            fontSize: 'clamp(36px, 5vw, 56px)',
+            fontSize: 'clamp(40px, 6vw, 64px)',
             lineHeight: 1.1,
-            color: '#130D01',
-            marginBottom: '24px',
+            color: '#1F5F3A',
+            marginBottom: '28px',
             letterSpacing: '-0.01em',
             marginTop: 0,
+            textAlign: 'center',
           }}>
             {post.title}
           </h1>
 
-          {/* Deck / lede */}
+          {/* Deck / lede — centered */}
           <p style={{
             fontSize: '21px',
             lineHeight: 1.55,
             color: '#2a241a',
-            marginBottom: '36px',
+            marginBottom: '40px',
             fontWeight: 500,
             marginTop: 0,
+            textAlign: 'center',
+            maxWidth: '580px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
           }}>
             {post.excerpt}
           </p>
+
+          {/* Author pill card */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '64px' }}>
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '12px',
+              border: '2px solid #130D01',
+              borderRadius: '999px',
+              boxShadow: '4px 4px 0 #130D01',
+              padding: '8px 20px 8px 8px',
+              background: '#ffffff',
+            }}>
+              <div style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                background: '#2D7A4F',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontWeight: 700,
+                fontSize: '16px',
+                fontFamily: "'Outfit', sans-serif",
+                flexShrink: 0,
+              }}>
+                {post.author[0]}
+              </div>
+              <div>
+                <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 700, fontSize: '15px', color: '#130D01', lineHeight: 1.2 }}>
+                  {post.author} · Tumlet
+                </div>
+                <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '12px', color: '#6B6B6B', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} · {post.readTime}
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* MDX content */}
           <BlogTypography>

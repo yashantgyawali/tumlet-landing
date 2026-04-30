@@ -60,7 +60,7 @@ export const blogTypographyStyles = `
     font-family: 'Baloo 2', system-ui, sans-serif;
     font-weight: 800;
     font-size: clamp(32px, 4vw, 40px);
-    color: #130D01;
+    color: #1F5F3A;
     margin-top: 56px;
     margin-bottom: 18px;
     line-height: 1.15;
@@ -71,7 +71,7 @@ export const blogTypographyStyles = `
     font-family: 'Baloo 2', system-ui, sans-serif;
     font-weight: 700;
     font-size: 22px;
-    color: #130D01;
+    color: #1F5F3A;
     margin-top: 36px;
     margin-bottom: 12px;
     line-height: 1.2;
@@ -208,7 +208,6 @@ export const blogTypographyStyles = `
     width: 100%;
     border-radius: 14px;
     margin: 36px 0;
-    border: 2px solid #130D01;
     display: block;
   }
 
