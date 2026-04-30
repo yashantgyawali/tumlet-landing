@@ -53,21 +53,6 @@ const STEPS = [
     title: 'Type the थर.',
     body: "No options. No hints to start. Just you and the image. Trust what you see — or think you see.",
   },
-  {
-    icon: '3',
-    title: 'Getting close?',
-    body: "You'll get a nudge. Still stuck? Three wrong guesses unlocks an extra hint — but by then your pride is already on the line.",
-  },
-  {
-    icon: '4',
-    title: "Can't move on until you crack it.",
-    body: "That's the rule. That's also why people finish every round.",
-  },
-  {
-    icon: '5',
-    title: 'Six packs to play.',
-    body: 'Different themes, same satisfying click when it lands.',
-  },
 ];
 
 const Bichitra = () => {
@@ -212,7 +197,7 @@ const Bichitra = () => {
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              Simple rules. 2 maddening puzzles.
+              Simple rules. Maddening puzzles.
             </h2>
           </div>
 
