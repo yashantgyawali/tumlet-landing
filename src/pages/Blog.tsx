@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -47,9 +47,14 @@ function setJsonLd(structuredData: object) {
   script.textContent = JSON.stringify(structuredData);
 }
 
+const Dot = () => (
+  <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#cbcbcb', display: 'inline-block', flexShrink: 0 }} />
+);
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPost(slug) : undefined;
+  const [ctaHovered, setCtaHovered] = useState(false);
 
   useEffect(() => {
     if (post) {
@@ -99,7 +104,7 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-tumlet-beige">
+      <div className="min-h-screen flex flex-col" style={{ background: '#ffffff' }}>
         <Navbar />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -115,53 +120,157 @@ const BlogPost = () => {
   const MDXContent = post.component;
 
   return (
-    <div className="min-h-screen bg-tumlet-beige">
+    <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
       <style>{blogTypographyStyles}</style>
       <Navbar />
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-tumlet-blue/10 to-tumlet-yellow/10 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <span className="inline-block bg-tumlet-yellow text-tumlet-text px-3 py-1 rounded-full text-sm font-medium mb-4">
-                {post.category}
-              </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-tumlet-text leading-tight mb-6">
-                {post.title}
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
-                {post.excerpt}
-              </p>
-              <div className="flex items-center gap-6 text-sm text-gray-600">
-                <span>By {post.author}</span>
-                <span>•</span>
-                <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}</span>
-                <span>•</span>
-                <span>{post.readTime}</span>
-              </div>
+
+      {/* Article */}
+      <main className="flex-1">
+        <article style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 96px' }}>
+          {/* Meta strip */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '14px',
+            fontFamily: "'Outfit', system-ui, sans-serif",
+            fontSize: '13px',
+            color: '#6B6B6B',
+            marginBottom: '28px',
+            flexWrap: 'wrap',
+          }}>
+            <span style={{
+              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontWeight: 700,
+              fontSize: '13px',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#F16147',
+              background: '#FDE8E4',
+              padding: '6px 14px',
+              borderRadius: '999px',
+            }}>
+              {post.category}
+            </span>
+            <Dot />
+            <span style={{ fontWeight: 600, color: '#130D01' }}>By {post.author}</span>
+            <Dot />
+            <span>{new Date(post.publishedAt).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}</span>
+            <Dot />
+            <span>{post.readTime}</span>
+          </div>
+
+          {/* Title */}
+          <h1 style={{
+            fontFamily: "'Baloo 2', system-ui, sans-serif",
+            fontWeight: 800,
+            fontSize: 'clamp(36px, 5vw, 56px)',
+            lineHeight: 1.1,
+            color: '#130D01',
+            marginBottom: '24px',
+            letterSpacing: '-0.01em',
+            marginTop: 0,
+          }}>
+            {post.title}
+          </h1>
+
+          {/* Deck / lede */}
+          <p style={{
+            fontSize: '21px',
+            lineHeight: 1.55,
+            color: '#2a241a',
+            marginBottom: '36px',
+            fontWeight: 500,
+            marginTop: 0,
+          }}>
+            {post.excerpt}
+          </p>
+
+          {/* MDX content */}
+          <BlogTypography>
+            <MDXProvider>
+              <MDXContent />
+            </MDXProvider>
+          </BlogTypography>
+        </article>
+
+        {/* End-of-post CTA */}
+        <section style={{ maxWidth: 760, margin: '0 auto 96px', padding: '0 24px' }}>
+          <div style={{
+            background: '#F3B952',
+            border: '3px solid #130D01',
+            boxShadow: '12px 12px 0 #130D01',
+            transform: 'rotate(-0.5deg)',
+            borderRadius: '20px',
+            textAlign: 'center',
+            padding: '48px 32px',
+          }}>
+            <div style={{
+              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontSize: '13px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.16em',
+              color: '#130D01',
+              marginBottom: '14px',
+            }}>
+              From the makers
             </div>
+            <h3 style={{
+              fontFamily: "'Baloo 2', system-ui, sans-serif",
+              fontWeight: 800,
+              fontSize: '30px',
+              color: '#130D01',
+              marginBottom: '14px',
+              lineHeight: 1.1,
+              marginTop: 0,
+            }}>
+              Tumlet makes Nepali board games — for Nepalis, by Nepalis.
+            </h3>
+            <p style={{
+              fontSize: '17px',
+              lineHeight: 1.5,
+              color: '#130D01',
+              marginBottom: '22px',
+              marginTop: 0,
+            }}>
+              If this resonated, follow us. We hand-pack and sign the first run of every game.
+            </p>
+            <a
+              href="https://www.instagram.com/tumlet.boardgames/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '12px',
+                background: '#130D01',
+                color: '#ffffff',
+                fontFamily: "'Baloo 2', system-ui, sans-serif",
+                fontWeight: 500,
+                fontSize: '16px',
+                padding: '14px 40px',
+                borderRadius: '12px',
+                boxShadow: '8px 8px 0 #F16147',
+                transform: ctaHovered ? 'rotate(-0.88deg) translateY(-4px)' : 'rotate(-0.88deg)',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={() => setCtaHovered(true)}
+              onMouseLeave={() => setCtaHovered(false)}
+            >
+              Follow @tumlet.boardgames
+            </a>
           </div>
-        </div>
-      </div>
-      {/* Article Content */}
-      <article className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <BlogTypography>
-              <MDXProvider>
-                <MDXContent />
-              </MDXProvider>
-            </BlogTypography>
-          </div>
-        </div>
-      </article>
+        </section>
+      </main>
+
       <Footer />
     </div>
   );
 };
 
-export default BlogPost; 
+export default BlogPost;

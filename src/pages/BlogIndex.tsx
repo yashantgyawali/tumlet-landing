@@ -53,100 +53,149 @@ const BlogIndex = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-tumlet-beige">
+    <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
       <Navbar />
-      
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-tumlet-blue/10 to-tumlet-yellow/10 py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-tumlet-text leading-tight mb-6">
-              Tumlet Blog
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-              Stories, insights, and discoveries from the world of Nepali games and play
-            </p>
-          </div>
-        </div>
-      </div>
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="max-w-[760px] mx-auto px-6 pt-16 pb-12">
+          <span style={{
+            display: 'inline-block',
+            fontFamily: "'Outfit', system-ui, sans-serif",
+            fontWeight: 700,
+            fontSize: '12px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#F16147',
+            background: '#FDE8E4',
+            padding: '6px 14px',
+            borderRadius: '999px',
+            marginBottom: '20px',
+          }}>
+            Tumlet · Stories
+          </span>
+          <h1 style={{
+            fontFamily: "'Baloo 2', system-ui, sans-serif",
+            fontWeight: 800,
+            fontSize: 'clamp(36px, 5vw, 60px)',
+            color: '#130D01',
+            lineHeight: 1.1,
+            margin: '0 0 16px 0',
+          }}>
+            The Blog
+          </h1>
+          <p style={{
+            fontFamily: "'Outfit', system-ui, sans-serif",
+            fontSize: '20px',
+            color: '#4B5563',
+            lineHeight: 1.5,
+            margin: 0,
+          }}>
+            Stories, insights, and discoveries from the world of Nepali games and play.
+          </p>
+        </section>
 
-      {/* Blog Posts */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {blogPosts.map((post, index) => (
-              <article 
-                key={post.slug} 
-                className={`mb-12 pb-12 ${
-                  index !== blogPosts.length - 1 ? 'border-b border-gray-200' : ''
-                }`}
-              >
-                <div className="mb-4">
-                  <span className="inline-block bg-tumlet-yellow text-tumlet-text px-3 py-1 rounded-full text-sm font-medium">
-                    {post.category}
-                  </span>
-                </div>
-                
-                <Link 
-                  to={`/blog/${post.slug}`}
-                  className="group block"
-                >
-                  <h2 className="text-3xl md:text-4xl font-bold text-tumlet-text leading-tight mb-4 group-hover:text-tumlet-blue transition-colors">
-                    {post.title}
-                  </h2>
-                </Link>
-                
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-                  {post.excerpt}
-                </p>
-                
-                <div className="flex items-center gap-6 text-sm text-gray-600 mb-4">
-                  <span>By {post.author}</span>
-                  <span>•</span>
-                  <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </div>
-                
-                <Link 
-                  to={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-tumlet-blue font-medium hover:text-tumlet-darkBlue transition-colors"
-                >
-                  Read more
-                  <svg 
-                    className="ml-2 w-4 h-4" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M9 5l7 7-7 7" 
-                    />
-                  </svg>
-                </Link>
-              </article>
-            ))}
-            
-            {blogPosts.length === 0 && (
-              <div className="text-center py-16">
-                <h2 className="text-2xl font-bold text-tumlet-text mb-4">No blog posts yet</h2>
-                <p className="text-gray-600">Check back soon for our first articles!</p>
+        {/* Post list */}
+        <section className="max-w-[760px] mx-auto px-6 pb-24">
+          {blogPosts.map((post, index) => (
+            <article
+              key={post.slug}
+              style={{
+                paddingBottom: '40px',
+                marginBottom: '40px',
+                borderBottom: index !== blogPosts.length - 1 ? '1px solid #f3f4f6' : 'none',
+              }}
+            >
+              <div style={{ marginBottom: '12px' }}>
+                <span style={{
+                  fontFamily: "'Outfit', system-ui, sans-serif",
+                  fontWeight: 700,
+                  fontSize: '12px',
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase' as const,
+                  color: '#F16147',
+                  background: '#FDE8E4',
+                  padding: '4px 12px',
+                  borderRadius: '999px',
+                }}>
+                  {post.category}
+                </span>
               </div>
-            )}
-          </div>
-        </div>
-      </div>
 
+              <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+                <h2 style={{
+                  fontFamily: "'Baloo 2', system-ui, sans-serif",
+                  fontWeight: 700,
+                  fontSize: 'clamp(28px, 3.5vw, 36px)',
+                  color: '#130D01',
+                  lineHeight: 1.15,
+                  margin: '0 0 12px 0',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                }}
+                onMouseEnter={e => (e.currentTarget.style.textDecoration = 'underline')}
+                onMouseLeave={e => (e.currentTarget.style.textDecoration = 'none')}
+                >
+                  {post.title}
+                </h2>
+              </Link>
+
+              <p style={{
+                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontSize: '18px',
+                color: '#4B5563',
+                lineHeight: 1.6,
+                margin: '0 0 16px 0',
+              }}>
+                {post.excerpt}
+              </p>
+
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontSize: '13px',
+                color: '#6B6B6B',
+                marginBottom: '16px',
+              }}>
+                <span>By {post.author}</span>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#cbcbcb', display: 'inline-block', flexShrink: 0 }} />
+                <span>{new Date(post.publishedAt).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}</span>
+                <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#cbcbcb', display: 'inline-block', flexShrink: 0 }} />
+                <span>{post.readTime}</span>
+              </div>
+
+              <Link
+                to={`/blog/${post.slug}`}
+                style={{
+                  fontFamily: "'Outfit', system-ui, sans-serif",
+                  fontWeight: 500,
+                  fontSize: '15px',
+                  color: '#F16147',
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '3px',
+                }}
+              >
+                Read →
+              </Link>
+            </article>
+          ))}
+
+          {blogPosts.length === 0 && (
+            <div style={{ textAlign: 'center', padding: '64px 0' }}>
+              <h2 style={{ fontFamily: "'Baloo 2', system-ui, sans-serif", fontWeight: 700, fontSize: '24px', color: '#130D01', marginBottom: '16px' }}>No blog posts yet</h2>
+              <p style={{ fontFamily: "'Outfit', system-ui, sans-serif", color: '#6B6B6B' }}>Check back soon for our first articles!</p>
+            </div>
+          )}
+        </section>
+      </main>
       <Footer />
     </div>
   );
 };
 
-export default BlogIndex; 
+export default BlogIndex;
