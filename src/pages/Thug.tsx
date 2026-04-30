@@ -139,14 +139,6 @@ const Thug = () => {
                 There is a Thug among you. They're hiding in plain sight.
               </p>
 
-              <p className="text-lg max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#2a241a' }}>
-                Everyone gets a word from a distinctly Nepali category — maybe it's Nepali दाल types, maybe it's cities in the Terai, maybe it's Nepali last names everyone in the room will recognize. Everyone sees the same word. Everyone except one person: the Thug. They see nothing. They have to fake it.
-              </p>
-
-              <p className="text-lg max-w-2xl mx-auto mb-11 leading-relaxed" style={{ color: '#2a241a' }}>
-                The group talks, gives clues, and tries to catch who's bluffing. It's pure social intelligence, and it feels very familiar to anyone who grew up with Nepali pop culture and the particular tension of a room full of people who know each other very well.
-              </p>
-
               <div className="flex justify-center items-center gap-8 flex-wrap">
                 <a
                   href="https://thug.tumlet.com/"
@@ -174,7 +166,7 @@ const Thug = () => {
             {/* Stats strip */}
             <div className="grid grid-cols-3 border-t-2" style={{ background: '#FAF1E4', borderColor: ACCENT }}>
               {[
-                { num: '3–10', lbl: 'players' },
+                { num: '3–99+', lbl: 'players' },
                 { num: 'Free', lbl: 'to play' },
                 { num: '10 min', lbl: 'a round' },
               ].map(({ num, lbl }, i) => (
@@ -190,30 +182,6 @@ const Thug = () => {
             </div>
           </div>
         </section>
-
-        {/* ── STORY ── */}
-        <article className="max-w-[760px] mx-auto px-6 mb-24">
-          <span
-            className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-            style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT, background: '#EDF5E8', letterSpacing: '0.18em' }}
-          >
-            The game
-          </span>
-          <h2
-            className="font-extrabold mb-6 leading-tight"
-            style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
-          >
-            One group. One word. One person who has absolutely no idea what it is.
-          </h2>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Thug works because of how it uses shared Nepali knowledge as the playing field. When the category is "Nepali last names" and everyone in the room grew up in Nepal, giving a clue is hard — you have to say something true enough that the real players nod, but not so obvious that the Thug can steal it. The Thug's job is to listen to every clue, piece together what the word might be, and then offer their own clue that sounds like they knew all along.
-          </p>
-
-          <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            What makes it work is the cultural specificity. Generic social deduction games use "animals" or "countries." Thug uses things you only know if you're from here — the texture of those categories is the whole game. When someone gives a clue that's technically valid but feels slightly off, that's the tell. And the best Thugs are the ones who've listened the most carefully.
-          </p>
-        </article>
 
         {/* ── HOW IT WORKS ── */}
         <section id="how-it-works" className="max-w-[1180px] mx-auto px-6 mb-24">
@@ -289,8 +257,8 @@ const Thug = () => {
                 },
                 {
                   num: '03',
-                  title: 'Works with any group size 3–10',
-                  body: 'Three friends at a hostel or ten people at a family gathering — Thug scales. Any age that knows their Nepali culture can play. That\'s most of the table.',
+                  title: 'Works with any group size 3–99+',
+                  body: 'Three friends at a hostel or a huge family gathering — Thug scales. Any age that knows their Nepali culture can play. That\'s most of the table.',
                 },
               ].map(({ num, title, body }) => (
                 <div
@@ -335,14 +303,12 @@ const Thug = () => {
 
           <div className="flex flex-wrap gap-3">
             {[
-              'Nepali last names',
-              'दाल types',
-              'Cities in Nepal',
-              'प्रसाद names',
-              'Nepali snacks',
-              'Kathmandu landmarks',
-              'Nepali brands',
-              'Terai places',
+              'Food · खाना',
+              'Location · स्थान',
+              'Brands',
+              'Lastname · थर',
+              'KTM Cafés',
+              'Animals · जनावर',
             ].map((cat) => (
               <span
                 key={cat}
@@ -375,7 +341,7 @@ const Thug = () => {
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ fontFamily: "'Outfit', sans-serif", color: '#130D01', letterSpacing: '0.16em' }}
             >
-              Free · No login · 3–10 players
+              Free · No login · 3–99+ players
             </div>
             <h2
               className="font-extrabold leading-tight mb-4"
