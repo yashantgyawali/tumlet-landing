@@ -212,7 +212,7 @@ const Bichitra = () => {
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              Simple rules. Maddening puzzles.
+              Simple rules. 2 maddening puzzles.
             </h2>
           </div>
 
