@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -55,6 +55,7 @@ function setCanonical(url: string) {
 }
 
 const About = () => {
+  const [hoveredCard, setHoveredCard] = useState(null);
   useEffect(() => {
     document.title = "About Us | Tumlet - Nepali board game company";
     setMetaTag('description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
@@ -78,13 +79,21 @@ const About = () => {
 
         {/* ── FOUNDER CARDS ── */}
         <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+          <div className="founder-cards-row" style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end', position: 'relative' }}>
 
             {/* Yashant card */}
-            <div style={{
-              transform: 'rotate(-2deg)',
-              flexShrink: 0,
-            }}>
+                <div
+                  className={`founder-card-yashant${hoveredCard === 'yashant' ? ' founder-card-top' : ''}`}
+                  style={{
+                    transform: 'rotate(-2deg)',
+                    flexShrink: 0,
+                    zIndex: hoveredCard === 'yashant' ? 10 : 2,
+                    position: 'relative',
+                    transition: 'margin 0.2s',
+                  }}
+                  onMouseEnter={() => setHoveredCard('yashant')}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
               <div style={{
                 width: 240,
                 border: '3px solid #130D01',
@@ -100,7 +109,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/yashant.jpg"
+                    src="/about/yashant.png"
                     alt="Yashant Gyawali"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -114,11 +123,19 @@ const About = () => {
             </div>
 
             {/* Sarina card */}
-            <div style={{
-              transform: 'rotate(1.5deg)',
-              flexShrink: 0,
-              marginBottom: 24,
-            }}>
+                <div
+                  className={`founder-card-sarina${hoveredCard === 'sarina' ? ' founder-card-top' : ''}`}
+                  style={{
+                    transform: 'rotate(1.5deg)',
+                    flexShrink: 0,
+                    marginBottom: 24,
+                    zIndex: hoveredCard === 'sarina' ? 10 : 1,
+                    position: 'relative',
+                    transition: 'margin 0.2s',
+                  }}
+                  onMouseEnter={() => setHoveredCard('sarina')}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
               <div style={{
                 width: 240,
                 border: '3px solid #130D01',
@@ -134,7 +151,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/sarina.jpg"
+                    src="/about/sarina.png"
                     alt="Sarina Pantha"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -148,6 +165,31 @@ const About = () => {
             </div>
 
           </div>
+          {/* Responsive style for founder cards overlap on mobile */}
+              <style>{`
+                .founder-card-top {
+                  z-index: 10 !important;
+                  box-shadow: 0 8px 32px #0002 !important;
+                }
+                @media (max-width: 700px) {
+                  .founder-cards-row {
+                    flex-wrap: nowrap !important;
+                    justify-content: center !important;
+                    gap: 0 !important;
+                  }
+                  .founder-card-yashant {
+                    margin-right: -60px !important;
+                    z-index: 2;
+                  }
+                  .founder-card-sarina {
+                    margin-left: -60px !important;
+                    z-index: 1;
+                  }
+                  .founder-card-top {
+                    z-index: 10 !important;
+                  }
+                }
+              `}</style>
         </section>
 
         {/* ── STORY TEXT ── */}
@@ -272,3 +314,4 @@ const About = () => {
 };
 
 export default About;
+
