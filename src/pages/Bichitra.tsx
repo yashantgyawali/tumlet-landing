@@ -123,7 +123,7 @@ const Bichitra = () => {
 
           <p
             className="font-semibold mb-7 leading-snug"
-            style={{ color: '#364587', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
+            style={{ color: '#4B5563', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
             It's not about reading faces. The थर is hiding somewhere in the image — you just have to find it.
           </p>
