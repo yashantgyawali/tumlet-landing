@@ -46,22 +46,22 @@ const STEPS = [
   {
     icon: '1',
     title: 'An image appears.',
-    body: 'Something in it is the last name. Look closely. It might be obvious. It might take a minute. That's the whole game.',
+    body: "Something in it is the last name. Look closely. It might be obvious. It might take a minute. That's the whole game.",
   },
   {
     icon: '2',
     title: 'Type the थर.',
-    body: 'No options. No hints to start. Just you and the image. Trust what you see — or think you see.',
+    body: "No options. No hints to start. Just you and the image. Trust what you see — or think you see.",
   },
   {
     icon: '3',
     title: 'Getting close?',
-    body: 'You'll get a nudge. Still stuck? Three wrong guesses unlocks an extra hint — but by then your pride is already on the line.',
+    body: "You'll get a nudge. Still stuck? Three wrong guesses unlocks an extra hint — but by then your pride is already on the line.",
   },
   {
     icon: '4',
-    title: 'Can\'t move on until you crack it.',
-    body: 'That's the rule. That's also why people finish every round.',
+    title: "Can't move on until you crack it.",
+    body: "That's the rule. That's also why people finish every round.",
   },
   {
     icon: '5',
