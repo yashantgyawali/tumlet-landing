@@ -133,15 +133,7 @@ const Ganthan = () => {
                 Because "k khanu bhayo?" shouldn't be the only question.
               </p>
 
-              <p className="text-lg max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#2a241a' }}>
-                A lot of Nepalis live far from the people they grew up with. Maybe you're in Kathmandu while baba is in Pokhara. Maybe you're in Australia and aama is back home. The calls happen — sometimes every day — but after a while, they start to sound the same. How's the weather. What did you eat. Sleep well.
-              </p>
-
-              <p className="text-lg max-w-2xl mx-auto mb-11 leading-relaxed" style={{ color: '#2a241a' }}>
-                Ganthan was made to break that routine. You open the app, get a question, and ask it. That's all. Some questions are light. Some go deep. All of them are more interesting than the weather.
-              </p>
-
-              <div className="flex justify-center items-center gap-8 flex-wrap">
+              <div className="flex justify-center items-center gap-8 flex-wrap mb-11">
                 <a
                   href="https://ganthan.tumlet.com/"
                   target="_blank"
@@ -163,6 +155,14 @@ const Ganthan = () => {
                   See how it works →
                 </a>
               </div>
+
+              <p className="text-lg max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#2a241a' }}>
+                A lot of Nepalis live far from the people they grew up with. Maybe you're in Kathmandu while baba is in Pokhara. Maybe you're in Australia and aama is back home. The calls happen — sometimes every day — but after a while, they start to sound the same. How's the weather. What did you eat. Sleep well.
+              </p>
+
+              <p className="text-lg max-w-2xl mx-auto mb-11 leading-relaxed" style={{ color: '#2a241a' }}>
+                Ganthan was made to break that routine. You open the app, get a question, and ask it. That's all. Some questions are light. Some go deep. All of them are more interesting than the weather.
+              </p>
             </div>
 
             {/* Stats strip */}
