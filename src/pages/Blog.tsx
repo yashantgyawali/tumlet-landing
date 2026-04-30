@@ -216,6 +216,25 @@ const BlogPost = () => {
             </div>
           </div>
 
+          {/* Cover image card */}
+          {(post.coverImage || post.images?.[0]) && (
+            <div style={{ marginBottom: '56px' }}>
+              <img
+                src={post.coverImage || post.images![0]}
+                alt={post.title}
+                style={{
+                  width: '100%',
+                  aspectRatio: '16 / 9',
+                  objectFit: 'cover',
+                  borderRadius: '16px',
+                  border: '3px solid #1F5F3A',
+                  boxShadow: '8px 8px 0 #1F5F3A',
+                  display: 'block',
+                }}
+              />
+            </div>
+          )}
+
           {/* MDX content */}
           <BlogTypography>
             <MDXProvider>
