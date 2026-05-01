@@ -77,13 +77,31 @@ const About = () => {
       <main className="flex-1">
 
         {/* ── FOUNDER CARDS ── */}
+        <style>{`
+          .founder-cards {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+          }
+          @media (max-width: 540px) {
+            .founder-cards {
+              gap: 0px;
+            }
+            .founder-cards .founder-card-sarina {
+              margin-top: -40px;
+            }
+          }
+        `}</style>
         <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end' }}>
+          <div className="founder-cards">
 
             {/* Yashant card */}
             <div style={{
               transform: 'rotate(-2deg)',
               flexShrink: 0,
+              zIndex: 1,
             }}>
               <div style={{
                 width: 240,
@@ -114,10 +132,11 @@ const About = () => {
             </div>
 
             {/* Sarina card */}
-            <div style={{
+            <div className="founder-card-sarina" style={{
               transform: 'rotate(1.5deg)',
               flexShrink: 0,
               marginBottom: 24,
+              zIndex: 2,
             }}>
               <div style={{
                 width: 240,
