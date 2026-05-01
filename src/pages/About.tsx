@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const aboutText = [
-  "Play runs deep in our culture. We see it during Holi when we’re throwing colors, in card games during Dashain, in playing Bhailo in Tihar. It's there.",
+  "Play runs deep in our culture. We see it during Holi when we're throwing colors, in card games during Dashain, in playing Bhailo in Tihar. It's there.",
   "And is it only during festivals? Not really.",
-  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. “कति गेम्सको त slangs पनि बुझ्दैन and can’t really relate to them.” Because it was not made for Nepali people.",
+  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. “कति गेम्सको त slangs पनि बुझ्दैन and can't really relate to them.” Because it was not made for Nepali people.",
   "This is where we see the gap.",
-  "Where are the Nepali board games? They’re almost non-existent. There are a few options, but they are targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
+  "Where are the Nepali board games? They're almost non-existent. There are a few options, but they are targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
   "So when it comes to board games, we hit a wall  🚧",
   "And we want to change that.",
   "",
@@ -16,11 +16,11 @@ const aboutText = [
   "We're from here. Our games are too.",
   "We also bring games to offices and host corporate game nights for teams who want to connect and have fun together.",
   "We pull from the way we joke. The way we argue. The way we play. We put it into cards, pieces, rules, and laughter.",
-  "We’re not perfect. We don’t want to be.",
+  "We're not perfect. We don't want to be.",
   "",
   "We just want to make something that feels like home.",
   "",
-  "That’s Tumlet.",
+  "That's Tumlet.",
   "A Nepali board game company, trying to take you back to your childhood."
 ];
 
@@ -55,6 +55,7 @@ function setCanonical(url: string) {
 }
 
 const About = () => {
+  const [hoveredCard, setHoveredCard] = useState(null);
   useEffect(() => {
     document.title = "About Us | Tumlet - Nepali board game company";
     setMetaTag('description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
@@ -71,37 +72,154 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-tumlet-beige px-4 pt-2 pb-24">
+    <div className="min-h-screen flex flex-col bg-white" style={{ fontFamily: "'Baloo 2', system-ui, sans-serif", color: '#130D01' }}>
       <Navbar />
-      <div className="flex-1 flex flex-col items-center justify-center mt-16">
-        <div className="max-w-3xl w-full">
-          <h1 className="text-5xl md:text-6xl font-outfit font-bold tracking-wide text-tumlet-text mb-16">
+
+      <main className="flex-1">
+
+        {/* ── FOUNDER CARDS ── */}
+        <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
+          <div className="founder-cards-row" style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end', position: 'relative' }}>
+
+            {/* Yashant card */}
+                <div
+                  className={`founder-card-yashant${hoveredCard === 'yashant' ? ' founder-card-top' : ''}`}
+                  style={{
+                    transform: 'rotate(-2deg)',
+                    flexShrink: 0,
+                    zIndex: hoveredCard === 'yashant' ? 10 : 2,
+                    position: 'relative',
+                    transition: 'margin 0.2s',
+                  }}
+                  onMouseEnter={() => setHoveredCard('yashant')}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+              <div style={{
+                width: 240,
+                border: '3px solid #130D01',
+                borderRadius: 20,
+                boxShadow: '8px 8px 0 #F3B952',
+                overflow: 'hidden',
+                background: '#FAF1E4',
+              }}>
+                <div style={{
+                  width: '100%',
+                  aspectRatio: '3/4',
+                  background: '#E5E7EB',
+                  overflow: 'hidden',
+                }}>
+                  <img
+                    src="/about/yashant.png"
+                    alt="Yashant Gyawali"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+                <div style={{ padding: '16px 18px 18px' }}>
+                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 18, color: '#130D01' }}>Yashant Gyawali</div>
+                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sarina card */}
+                <div
+                  className={`founder-card-sarina${hoveredCard === 'sarina' ? ' founder-card-top' : ''}`}
+                  style={{
+                    transform: 'rotate(1.5deg)',
+                    flexShrink: 0,
+                    marginBottom: 24,
+                    zIndex: hoveredCard === 'sarina' ? 10 : 1,
+                    position: 'relative',
+                    transition: 'margin 0.2s',
+                  }}
+                  onMouseEnter={() => setHoveredCard('sarina')}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+              <div style={{
+                width: 240,
+                border: '3px solid #130D01',
+                borderRadius: 20,
+                boxShadow: '8px 8px 0 #F16147',
+                overflow: 'hidden',
+                background: '#FAF1E4',
+              }}>
+                <div style={{
+                  width: '100%',
+                  aspectRatio: '3/4',
+                  background: '#E5E7EB',
+                  overflow: 'hidden',
+                }}>
+                  <img
+                    src="/about/sarina.png"
+                    alt="Sarina Pantha"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+                <div style={{ padding: '16px 18px 18px' }}>
+                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 18, color: '#130D01' }}>Sarina Pantha</div>
+                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          {/* Responsive style for founder cards overlap on mobile */}
+              <style>{`
+                .founder-card-top {
+                  z-index: 10 !important;
+                  box-shadow: 0 8px 32px #0002 !important;
+                }
+                @media (max-width: 700px) {
+                  .founder-cards-row {
+                    flex-wrap: nowrap !important;
+                    justify-content: center !important;
+                    gap: 0 !important;
+                  }
+                  .founder-card-yashant {
+                    margin-right: -60px !important;
+                    z-index: 2;
+                  }
+                  .founder-card-sarina {
+                    margin-left: -60px !important;
+                    z-index: 1;
+                  }
+                  .founder-card-top {
+                    z-index: 10 !important;
+                  }
+                }
+              `}</style>
+        </section>
+
+        {/* ── STORY TEXT ── */}
+        <section style={{ maxWidth: 760, margin: '0 auto', padding: '80px 24px 0' }}>
+          <h1 style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 'clamp(40px, 6vw, 60px)', letterSpacing: '-0.01em', color: '#130D01', marginBottom: 56, marginTop: 0 }}>
             We're Tumlet.
           </h1>
+
           {aboutText.map((line, i) => {
             if (line.trim() === "") {
-              return <div key={i} className="my-12" />;
+              return <div key={i} style={{ height: 40 }} />;
             }
-            // Add link to "Nepali board games" in the specific sentence
             if (line.includes("Where are the Nepali board games?")) {
               const parts = line.split("Nepali board games");
               return (
-                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                <p key={i} style={{ fontSize: 'clamp(20px, 2.5vw, 26px)', lineHeight: 1.65, color: '#130D01', marginBottom: 32, marginTop: 0 }}>
                   {parts[0]}
-                  <Link to="/blog/best-nepali-board-games" className="underline hover:text-tumlet-text/80">
+                  <Link to="/blog/best-nepali-board-games" style={{ textDecoration: 'underline', color: '#F16147' }}>
                     Nepali board games
                   </Link>
                   {parts[1]}
                 </p>
               );
             }
-            // Add link to "corporate game nights" in the specific sentence
             if (line.includes("corporate game nights")) {
               const parts = line.split("corporate game nights");
               return (
-                <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+                <p key={i} style={{ fontSize: 'clamp(20px, 2.5vw, 26px)', lineHeight: 1.65, color: '#130D01', marginBottom: 32, marginTop: 0 }}>
                   {parts[0]}
-                  <Link to="/corporate-game-night" className="underline hover:text-tumlet-text/80">
+                  <Link to="/corporate-game-night" style={{ textDecoration: 'underline', color: '#F16147' }}>
                     corporate game nights
                   </Link>
                   {parts[1]}
@@ -109,16 +227,91 @@ const About = () => {
               );
             }
             return (
-              <p key={i} className="text-2xl md:text-3xl font-outfit text-tumlet-text !leading-[1.6] mb-12">
+              <p key={i} style={{ fontSize: 'clamp(20px, 2.5vw, 26px)', lineHeight: 1.65, color: '#130D01', marginBottom: 32, marginTop: 0 }}>
                 {line}
               </p>
             );
           })}
-        </div>
-      </div>
+
+          <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, color: '#6B6B6B', marginTop: 48 }}>
+            — Sarina Pantha &amp; Yashant Gyawali
+          </p>
+        </section>
+
+        {/* ── PODCAST SECTION ── */}
+        <section style={{ maxWidth: 760, margin: '80px auto 96px', padding: '0 24px' }}>
+          <div style={{ marginBottom: 24 }}>
+            <span style={{
+              display: 'inline-block',
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 700,
+              fontSize: 12,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#F16147',
+              background: '#FDE8E4',
+              padding: '6px 14px',
+              borderRadius: 999,
+              marginBottom: 16,
+            }}>
+              Watch us
+            </span>
+            <h2 style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 'clamp(24px, 3vw, 36px)', color: '#130D01', margin: 0, lineHeight: 1.2 }}>
+              Catch us on a podcast.
+            </h2>
+          </div>
+
+          <a
+            href="https://www.youtube.com/watch?v=3YyEpIA8FfY&t=597s"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'block', textDecoration: 'none' }}
+          >
+            <div style={{
+              border: '3px solid #130D01',
+              borderRadius: 16,
+              boxShadow: '8px 8px 0 #130D01',
+              overflow: 'hidden',
+              transform: 'rotate(-0.5deg)',
+              transition: 'transform 0.2s',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.5deg) translate(-4px,-4px)')}
+              onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.5deg)')}
+            >
+              <img
+                src="https://img.youtube.com/vi/3YyEpIA8FfY/maxresdefault.jpg"
+                alt="Bluff or Not? — Tumlet on YouTube"
+                style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover' }}
+              />
+              <div style={{ background: '#FAF1E4', padding: '16px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                <div>
+                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 700, fontSize: 16, color: '#130D01' }}>Bluff or Not?</div>
+                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B' }}>Watch on YouTube →</div>
+                </div>
+                <div style={{
+                  background: '#F16147',
+                  color: 'white',
+                  fontFamily: "'Baloo 2', sans-serif",
+                  fontWeight: 700,
+                  fontSize: 13,
+                  padding: '8px 16px',
+                  borderRadius: 8,
+                  boxShadow: '3px 3px 0 #130D01',
+                  flexShrink: 0,
+                }}>
+                  ▶ Watch
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+
+      </main>
+
       <Footer />
     </div>
   );
 };
 
-export default About; 
+export default About;
+
