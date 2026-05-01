@@ -86,12 +86,12 @@ const About = () => {
             align-items: flex-end;
           }
           .founder-cards .f-card {
-            width: 280px;
+            width: 220px;
             flex-shrink: 0;
           }
           @media (min-width: 640px) {
             .founder-cards .f-card {
-              width: 320px;
+              width: 250px;
             }
           }
           @media (max-width: 639px) {
@@ -103,7 +103,7 @@ const About = () => {
             }
           }
         `}</style>
-        <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
+        <section style={{ maxWidth: 900, margin: '0 auto', padding: '40px 24px 0' }}>
           <div className="founder-cards">
 
             {/* Yashant card */}
@@ -168,7 +168,7 @@ const About = () => {
         </section>
 
         {/* ── STORY TEXT ── */}
-        <section style={{ maxWidth: 760, margin: '0 auto', padding: '80px 24px 0' }}>
+        <section style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 0' }}>
           <h1 style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 'clamp(40px, 6vw, 60px)', letterSpacing: '-0.01em', color: '#130D01', marginBottom: 56, marginTop: 0 }}>
             We're Tumlet.
           </h1>
