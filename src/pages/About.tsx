@@ -79,34 +79,83 @@ const About = () => {
 
         {/* ── FOUNDER CARDS ── */}
         <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
-          <div className="founder-cards-row" style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap', alignItems: 'flex-end', position: 'relative' }}>
+          <style>{`
+            .founder-cards-row {
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              gap: 32px;
+            }
+            .founder-card {
+              width: 260px;
+              flex-shrink: 0;
+              position: relative;
+              cursor: default;
+              transition: z-index 0s;
+            }
+            .founder-card-yashant {
+              transform: rotate(-2deg);
+              z-index: 2;
+            }
+            .founder-card-sarina {
+              transform: rotate(1.5deg);
+              margin-bottom: 24px;
+              z-index: 1;
+            }
+            .founder-card:hover {
+              z-index: 10;
+            }
+            .founder-card .card-inner {
+              border: 3px solid #130D01;
+              border-radius: 20px;
+              overflow: hidden;
+              background: #FAF1E4;
+              transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .founder-card-yashant .card-inner {
+              box-shadow: 8px 8px 0 #F3B952;
+            }
+            .founder-card-sarina .card-inner {
+              box-shadow: 8px 8px 0 #F16147;
+            }
+            .founder-card:hover .card-inner {
+              transform: translate(-3px, -3px);
+            }
+            .founder-card-yashant:hover .card-inner {
+              box-shadow: 11px 11px 0 #F3B952;
+            }
+            .founder-card-sarina:hover .card-inner {
+              box-shadow: 11px 11px 0 #F16147;
+            }
+            @media (max-width: 600px) {
+              .founder-cards-row {
+                gap: 0;
+                justify-content: center;
+              }
+              .founder-card {
+                width: 52vw;
+              }
+              .founder-card-yashant {
+                margin-right: -18vw;
+                z-index: 2;
+              }
+              .founder-card-sarina {
+                z-index: 1;
+              }
+              .founder-card-yashant:hover {
+                z-index: 10;
+              }
+              .founder-card-sarina:hover {
+                z-index: 10;
+              }
+            }
+          `}</style>
+          <div className="founder-cards-row">
 
             {/* Yashant card */}
-                <div
-                  className={`founder-card-yashant${hoveredCard === 'yashant' ? ' founder-card-top' : ''}`}
-                  style={{
-                    transform: 'rotate(-2deg)',
-                    flexShrink: 0,
-                    zIndex: hoveredCard === 'yashant' ? 10 : 2,
-                    position: 'relative',
-                    transition: 'margin 0.2s',
-                  }}
-                  onMouseEnter={() => setHoveredCard('yashant')}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-              <div style={{
-                border: '3px solid #130D01',
-                borderRadius: 20,
-                boxShadow: '8px 8px 0 #F3B952',
-                overflow: 'hidden',
-                background: '#FAF1E4',
-              }}>
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '3/4',
-                  background: '#E5E7EB',
-                  overflow: 'hidden',
-                }}>
+            <div className="founder-card founder-card-yashant">
+              <div className="card-inner">
+                <div style={{ width: '100%', aspectRatio: '3/4', background: '#E5E7EB', overflow: 'hidden' }}>
                   <img
                     src="/about/yashant.webp"
                     alt="Yashant Gyawali"
@@ -114,40 +163,17 @@ const About = () => {
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
                 </div>
-                <div style={{ padding: '16px 18px 18px' }}>
-                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 18, color: '#130D01' }}>Yashant Gyawali</div>
-                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
+                <div style={{ padding: '14px 16px 16px' }}>
+                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: '#130D01' }}>Yashant Gyawali</div>
+                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 12, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
                 </div>
               </div>
             </div>
 
             {/* Sarina card */}
-                <div
-                  className={`founder-card-sarina${hoveredCard === 'sarina' ? ' founder-card-top' : ''}`}
-                  style={{
-                    transform: 'rotate(1.5deg)',
-                    flexShrink: 0,
-                    marginBottom: 24,
-                    zIndex: hoveredCard === 'sarina' ? 10 : 1,
-                    position: 'relative',
-                    transition: 'margin 0.2s',
-                  }}
-                  onMouseEnter={() => setHoveredCard('sarina')}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-              <div style={{
-                border: '3px solid #130D01',
-                borderRadius: 20,
-                boxShadow: '8px 8px 0 #F16147',
-                overflow: 'hidden',
-                background: '#FAF1E4',
-              }}>
-                <div style={{
-                  width: '100%',
-                  aspectRatio: '3/4',
-                  background: '#E5E7EB',
-                  overflow: 'hidden',
-                }}>
+            <div className="founder-card founder-card-sarina">
+              <div className="card-inner">
+                <div style={{ width: '100%', aspectRatio: '3/4', background: '#E5E7EB', overflow: 'hidden' }}>
                   <img
                     src="/about/sarina.webp"
                     alt="Sarina Pantha"
@@ -155,39 +181,14 @@ const About = () => {
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
                 </div>
-                <div style={{ padding: '16px 18px 18px' }}>
-                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 18, color: '#130D01' }}>Sarina Pantha</div>
-                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
+                <div style={{ padding: '14px 16px 16px' }}>
+                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: '#130D01' }}>Sarina Pantha</div>
+                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 12, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
                 </div>
               </div>
             </div>
 
           </div>
-          {/* Responsive style for founder cards overlap on mobile */}
-              <style>{`
-                .founder-card-top {
-                  z-index: 10 !important;
-                  box-shadow: 0 8px 32px #0002 !important;
-                }
-                @media (max-width: 700px) {
-                  .founder-cards-row {
-                    flex-wrap: nowrap !important;
-                    justify-content: center !important;
-                    gap: 0 !important;
-                  }
-                  .founder-card-yashant {
-                    margin-right: -60px !important;
-                    z-index: 2;
-                  }
-                  .founder-card-sarina {
-                    margin-left: -60px !important;
-                    z-index: 1;
-                  }
-                  .founder-card-top {
-                    z-index: 10 !important;
-                  }
-                }
-              `}</style>
         </section>
 
         {/* ── STORY TEXT ── */}
