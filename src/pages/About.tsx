@@ -109,7 +109,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/yashant.png"
+                    src="/about/yashant.webp"
                     alt="Yashant Gyawali"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -151,7 +151,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/sarina.png"
+                    src="/about/sarina.webp"
                     alt="Sarina Pantha"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -193,7 +193,7 @@ const About = () => {
         </section>
 
         {/* ── STORY TEXT ── */}
-        <section style={{ maxWidth: 760, margin: '0 auto', padding: '80px 24px 0' }}>
+        <section style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 0' }}>
           <h1 style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 'clamp(40px, 6vw, 60px)', letterSpacing: '-0.01em', color: '#130D01', marginBottom: 56, marginTop: 0 }}>
             We're Tumlet.
           </h1>

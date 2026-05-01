@@ -18,294 +18,12 @@ export const BlogTypography: React.FC<BlogTypographyProps> = ({ children, classN
 // Blog typography styles
 export const blogTypographyStyles = `
   .blog-typography {
-    font-family: var(--font-sans, 'Outfit', system-ui, sans-serif);
-    color: var(--color-text, #161B32);
-    background: var(--color-background, #F9F3E5);
-    max-width: 66ch;
-    margin: 0 auto;
-    font-size: 1.125rem;
+    background: transparent;
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-size: 19px;
     line-height: 1.7;
-    letter-spacing: 0.01em;
+    color: #2a241a;
     word-break: break-word;
-    padding: 2.5rem 0;
-  }
-
-  .blog-typography h1 {
-    font-family: var(--font-display, 'Outfit', sans-serif);
-    font-size: 2.441rem;
-    line-height: 1.1;
-    font-weight: 700;
-    margin: 3.5rem 0 2.5rem 0;
-    color: var(--color-text, #161B32);
-  }
-
-  .blog-typography h2 {
-    font-size: 1.953rem;
-    line-height: 1.2;
-    font-weight: 700;
-    margin: 3rem 0 2rem 0;
-    color: var(--color-text, #161B32);
-  }
-
-  .blog-typography h2:first-child {
-    margin-top: 0.5rem;
-  }
-
-  .blog-typography h3 {
-    font-size: 1.563rem;
-    line-height: 1.3;
-    font-weight: 700;
-    margin: 2.5rem 0 1.5rem 0;
-    color: var(--color-text, #161B32);
-  }
-
-  .blog-typography h4 {
-    font-size: 1.25rem;
-    line-height: 1.4;
-    font-weight: 700;
-    margin: 2rem 0 1rem 0;
-    color: var(--color-text, #161B32);
-  }
-
-  .blog-typography p {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    margin: 0 0 2.25rem 0;
-    color: var(--color-text, #161B32);
-  }
-
-  .blog-typography p:first-child {
-    margin-top: 0.5rem;
-  }
-
-  .blog-typography ul, .blog-typography ol {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    margin: 0 0 2.25rem 2.5rem;
-    padding-left: 2rem;
-  }
-
-  .blog-typography li {
-    margin-bottom: 1rem;
-  }
-
-  .blog-typography blockquote {
-    font-size: 1.125rem;
-    font-style: italic;
-    line-height: 1.7;
-    margin: 3rem 0;
-    padding: 1.5rem 2rem;
-    border-left: 4px solid var(--color-accent, #364587);
-    background: #f4f6fa;
-    color: var(--color-muted, #374151);
-  }
-
-  .blog-typography img {
-    display: block;
-    max-width: 100%;
-    margin: 3rem auto;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  }
-
-  .blog-typography code {
-    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
-    font-size: 1em;
-    background: #f1f5f9;
-    padding: 0.2em 0.5em;
-    border-radius: 0.3em;
-    color: #dc2626;
-  }
-
-  .blog-typography pre {
-    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
-    font-size: 1em;
-    line-height: 1.5;
-    background: #1e293b;
-    color: #e2e8f0;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    overflow-x: auto;
-    margin: 2.5rem 0;
-  }
-
-  .blog-typography a {
-    color: var(--color-accent, #364587);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color 0.2s;
-  }
-
-  .blog-typography a:hover {
-    color: #161B32;
-  }
-
-  .blog-typography strong {
-    font-weight: 600;
-    color: var(--color-accent, #364587);
-  }
-
-  .blog-typography em {
-    font-style: italic;
-  }
-
-  /* Responsive typography */
-  @media (max-width: 768px) {
-    .blog-typography {
-      font-size: 1rem;
-      padding: 0 1rem 2rem 1rem;
-    }
-    
-    .blog-typography h1 {
-      font-size: 1.953rem;
-      margin: 2.5rem 0 1.5rem 0;
-    }
-    
-    .blog-typography h2 {
-      font-size: 1.563rem;
-      margin: 2rem 0 1.25rem 0;
-    }
-    
-    .blog-typography h2:first-child {
-      margin-top: 0.5rem;
-    }
-    
-    .blog-typography h3 {
-      font-size: 1.25rem;
-      margin: 1.5rem 0 1rem 0;
-    }
-    
-    .blog-typography p, .blog-typography ul, .blog-typography ol {
-      font-size: 1rem;
-      margin-bottom: 1.25rem;
-    }
-    
-    .blog-typography p:first-child {
-      margin-top: 0.5rem;
-    }
-    
-    .blog-typography img {
-      margin: 2rem auto;
-    }
-    
-    .blog-typography blockquote {
-      margin: 2rem 0;
-      padding: 1rem 1.25rem;
-    }
-    
-    .blog-typography pre {
-      padding: 1rem;
-      margin: 1.5rem 0;
-    }
-  }
-
-  /* Print styles */
-  @media print {
-    .blog-typography {
-      font-size: 12pt;
-      line-height: 1.6;
-    }
-    
-    .blog-typography h1, .blog-typography h2, .blog-typography h3 {
-      page-break-after: avoid;
-    }
-    
-    .blog-typography p, .blog-typography blockquote {
-      orphans: 3;
-      widows: 3;
-    }
-  }
-
-  .mdx-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #23242A;
-    margin-top: 3rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.15;
-  }
-  .mdx-content h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #23242A;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-  .mdx-content h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #23242A;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.25;
-  }
-  .mdx-content h4 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #23242A;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.3;
-  }
-  .mdx-content h5 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #23242A;
-    margin-top: 1.25rem;
-    margin-bottom: 0.4rem;
-    line-height: 1.35;
-  }
-  .mdx-content p,
-  .mdx-content ul,
-  .mdx-content ol {
-    font-size: 1.15rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1.75rem;
-    line-height: 1.85;
-  }
-
-  .mdx-content ul,
-  .mdx-content ol {
-    padding-left: 1.5rem;
-    list-style-position: inside;
-  }
-
-  .mdx-content li {
-    margin-bottom: 0.25rem;
-  }
-
-  .mdx-content ul {
-    list-style-type: disc !important;
-    list-style-position: inside;
-    margin-left: 1.5rem;
-    padding-left: 0;
-  }
-  .mdx-content ol {
-    list-style-type: decimal !important;
-    list-style-position: inside;
-    margin-left: 1.5rem;
-    padding-left: 0;
-  }
-  .mdx-content li {
-    margin-bottom: 0.25rem;
-  }
-
-  .mdx-content hr {
-    margin: 2.5rem 0;
-    border: none;
-    border-top: 1.5px solid #e0e0e0;
-  }
-
-  .mdx-content a {
-    color: #23242A;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-weight: 500;
-    transition: color 0.15s;
-  }
-  .mdx-content a:hover {
-    color: #F16146;
   }
 
   .mdx-outer {
@@ -317,6 +35,253 @@ export const blogTypographyStyles = `
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  .mdx-content {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #2a241a;
+  }
+
+  .blog-typography h1,
+  .mdx-content h1 {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 56px);
+    color: #130D01;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    margin-top: 0;
+    line-height: 1.1;
+  }
+
+  .blog-typography h2,
+  .mdx-content h2 {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4vw, 40px);
+    color: #1F5F3A;
+    margin-top: 56px;
+    margin-bottom: 18px;
+    line-height: 1.15;
+  }
+
+  .blog-typography h3,
+  .mdx-content h3 {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1F5F3A;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .blog-typography h4,
+  .mdx-content h4 {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #130D01;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .blog-typography p,
+  .mdx-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #2a241a;
+    margin-bottom: 22px;
+    margin-top: 0;
+  }
+
+  .blog-typography p strong,
+  .mdx-content p strong {
+    color: #130D01;
+    font-weight: 700;
+  }
+
+  .blog-typography p em,
+  .mdx-content p em {
+    font-style: italic;
+    color: #F16147;
+    font-weight: 600;
+  }
+
+  .blog-typography a,
+  .mdx-content a {
+    color: #F16147;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .blog-typography a:hover,
+  .mdx-content a:hover {
+    color: #c94f3a;
+  }
+
+  .blog-typography ul,
+  .mdx-content ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 19px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+
+  .blog-typography ul li,
+  .mdx-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+  }
+
+  .blog-typography ul li::before,
+  .mdx-content ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 14px;
+    height: 3px;
+    background: #F16147;
+    border-radius: 2px;
+  }
+
+  .blog-typography ol,
+  .mdx-content ol {
+    font-size: 19px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding-left: 28px;
+  }
+
+  .blog-typography ol li::marker,
+  .mdx-content ol li::marker {
+    color: #F16147;
+    font-weight: 700;
+  }
+
+  .blog-typography blockquote,
+  .mdx-content blockquote {
+    font-family: 'Baloo 2', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #130D01;
+    border-left: 6px solid #F3B952;
+    padding: 10px 0 10px 28px;
+    margin: 40px 0;
+  }
+
+  .blog-typography blockquote p,
+  .mdx-content blockquote p {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+  }
+
+  .blog-typography hr,
+  .mdx-content hr {
+    border: 0;
+    margin: 64px 0;
+    text-align: center;
+  }
+
+  .blog-typography hr::after,
+  .mdx-content hr::after {
+    content: "✦  ✦  ✦";
+    color: #F16147;
+    letter-spacing: 0.5em;
+    font-size: 14px;
+  }
+
+  .blog-typography img,
+  .mdx-content img {
+    width: 100%;
+    border-radius: 14px;
+    margin: 36px 0;
+    display: block;
+  }
+
+  .blog-typography code,
+  .mdx-content code {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9em;
+    background: #f1f5f9;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    color: #dc2626;
+  }
+
+  .blog-typography pre,
+  .mdx-content pre {
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 1em;
+    line-height: 1.5;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    margin: 2.5rem 0;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    .blog-typography,
+    .mdx-content {
+      font-size: 17px;
+    }
+
+    .blog-typography p,
+    .mdx-content p,
+    .blog-typography ul,
+    .mdx-content ul,
+    .blog-typography ol,
+    .mdx-content ol {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .blog-typography blockquote,
+    .mdx-content blockquote {
+      font-size: 22px;
+      padding: 8px 0 8px 20px;
+    }
+
+    .blog-typography img,
+    .mdx-content img {
+      margin: 24px 0;
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    .blog-typography,
+    .mdx-content {
+      font-size: 12pt;
+      line-height: 1.6;
+    }
+
+    .blog-typography h1, .blog-typography h2, .blog-typography h3,
+    .mdx-content h1, .mdx-content h2, .mdx-content h3 {
+      page-break-after: avoid;
+    }
+
+    .blog-typography p, .blog-typography blockquote,
+    .mdx-content p, .mdx-content blockquote {
+      orphans: 3;
+      widows: 3;
+    }
+  }
 `;
 
-export default BlogTypography; 
+export default BlogTypography;

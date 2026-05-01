@@ -113,6 +113,17 @@ export default {
 					primaryYellow: '#F3B952', // --tumlet-yellow: the dalle
 					primaryRed: '#F16147',   // --tumlet-red: the momo chilli
 				},
+				// Race to Tundikhel green system
+				tk: {
+					greenDeep:  '#1F5F3A',
+					green:      '#2D7A4F',
+					greenMid:   '#66A878',
+					greenSoft:  '#C8E2B4',
+					greenPale:  '#EDF5DD',
+					yellow:     '#F3B952',
+					red:        '#F16147',
+					cream:      '#FAF1E4',
+				},
 			},
 			fontFamily: {
 				sans: ['"Atkinson Hyperlegible"', 'ui-sans-serif', 'system-ui', 'sans-serif'],

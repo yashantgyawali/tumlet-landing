@@ -123,11 +123,13 @@ const Index = () => {
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero */}
-        <section className="container mx-auto px-4 md:px-12">
-          <LandingHero
-            plateLabel="Bluff Momo"
-            description="A card game set in the streets of Kathmandu, where players bluff, deceive and outsmart their friends to steal the most momo."
+        <section className="container mx-auto px-4 md:px-12 pt-8 md:pt-14">
+          <GameHero
+            backgroundClass="bluff-background"
+            logoSrc="/bluff-momo-logo.png"
+            imageSrc="/char-combined.webp"
+            imageClass=" w-[145%] self-center rounded-2xl"
+            description="Bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
             metaItems={bluffMomoMeta}
             ctaLink="https://www.instagram.com/tumlet.boardgames/"
             ctaText="DM us to order"
@@ -139,49 +141,12 @@ const Index = () => {
             cardCaption={"five characters.\none winner."}
           />
         </section>
-
-        {/* Our games */}
-        <section className="container mx-auto px-4 md:px-12 mt-14">
-          <h2
-            className="text-sm font-bold uppercase tracking-widest border-t-2 border-[#130D01] pt-7 mb-6"
-            style={{ fontFamily: '"Manrope", sans-serif', letterSpacing: '0.12em' }}
-          >
-            Our games
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {games.map((game) => {
-              const card = (
-                <div
-                  key={game.name}
-                  className="border-2 border-[#130D01] rounded-2xl bg-white overflow-hidden flex flex-col hover:shadow-[4px_4px_0px_0px_#130D01] transition-shadow"
-                >
-                  <div className={`h-40 flex items-center justify-center ${game.coverClass}`}
-                    style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 800, fontSize: '28px', letterSpacing: '0.04em' }}
-                  >
-                    {game.name}
-                  </div>
-                  <div className="p-5">
-                    <h3
-                      className="mb-2 text-xl font-bold"
-                      style={{ fontFamily: '"Manrope", sans-serif' }}
-                    >
-                      {game.name}
-                    </h3>
-                    <p className="text-sm" style={{ color: '#4a4338' }}>{game.description}</p>
-                  </div>
-                </div>
-              );
-
-              return game.external ? (
-                <a key={game.name} href={game.href} target="_blank" rel="noopener noreferrer">
-                  {card}
-                </a>
-              ) : (
-                <Link key={game.name} to={game.href}>
-                  {card}
-                </Link>
-              );
-            })}
+        
+        <section className="container mx-auto px-4 md:px-12 mt-12 mb-16">
+          <div className="text-center">
+            <p className="text-lg md:text-xl text-gray-700 mb-4">
+              Explore our online games: <Link to="/bichitra" className="underline hover:text-tumlet-text/80 text-tumlet-text">bichitra</Link>, <Link to="/farak" className="underline hover:text-tumlet-text/80 text-tumlet-text">farak</Link>, <Link to="/ganthan" className="underline hover:text-tumlet-text/80 text-tumlet-text">ganthan</Link>, <Link to="/thug" className="underline hover:text-tumlet-text/80 text-tumlet-text">thug</Link>, and <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-tumlet-text/80 text-tumlet-text">kobadi</a>. Or race through Kathmandu with <Link to="/tundikhel" className="underline hover:text-tumlet-text/80 text-tumlet-text">race to tundikhel</Link>.
+            </p>
           </div>
         </section>
 
