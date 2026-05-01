@@ -88,8 +88,8 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-1">
-        <section className="container mx-auto px-4 md:px-12">
-          <GameHero 
+        <section className="container mx-auto px-4 md:px-12 pt-8 md:pt-14">
+          <GameHero
             backgroundClass="bluff-background"
             logoSrc="/bluff-momo-logo.png"
             imageSrc="/char-combined.webp"
