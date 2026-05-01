@@ -164,7 +164,7 @@
     inset: 0;
     background: url('/pattern.webp');
     background-position: center;
-    opacity: 0.18;
+    opacity: 0.35;
     border-radius: inherit;
     pointer-events: none;
     z-index: 0;

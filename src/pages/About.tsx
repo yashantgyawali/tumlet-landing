@@ -100,7 +100,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/yashant.jpg"
+                    src="/about/yashant.webp"
                     alt="Yashant Gyawali"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -134,7 +134,7 @@ const About = () => {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/about/sarina.jpg"
+                    src="/about/sarina.webp"
                     alt="Sarina Pantha"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
