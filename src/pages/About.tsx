@@ -78,33 +78,62 @@ const About = () => {
 
         {/* ── FOUNDER CARDS ── */}
         <style>{`
-          .founder-cards {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            flex-wrap: wrap;
-            align-items: flex-end;
+          .founder-stack {
+            position: relative;
+            width: 340px;
+            height: 520px;
+            margin: 0 auto;
           }
-          @media (max-width: 540px) {
-            .founder-cards {
-              gap: 0px;
+          @media (min-width: 500px) {
+            .founder-stack {
+              width: 420px;
+              height: 620px;
             }
-            .founder-cards .founder-card-sarina {
-              margin-top: -40px;
+          }
+          .founder-stack .f-card {
+            position: absolute;
+            width: 300px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+          }
+          @media (min-width: 500px) {
+            .founder-stack .f-card {
+              width: 360px;
             }
+          }
+          /* Yashant: front by default */
+          .founder-stack .f-card-yashant {
+            z-index: 2;
+            top: 0;
+            left: 0;
+            transform: rotate(-3deg);
+          }
+          /* Sarina: behind + offset right */
+          .founder-stack .f-card-sarina {
+            z-index: 1;
+            top: 20px;
+            right: 0;
+            left: auto;
+            transform: rotate(3deg);
+          }
+          /* On hover/tap of the stack, swap z-index + bring Sarina forward */
+          .founder-stack:hover .f-card-yashant,
+          .founder-stack.tapped .f-card-yashant {
+            z-index: 1;
+            transform: rotate(-5deg) translate(-20px, 10px);
+          }
+          .founder-stack:hover .f-card-sarina,
+          .founder-stack.tapped .f-card-sarina {
+            z-index: 2;
+            transform: rotate(-1deg) translate(-30px, -10px);
           }
         `}</style>
         <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
-          <div className="founder-cards">
+          <div className="founder-stack" onClick={e => e.currentTarget.classList.toggle('tapped')}>
 
-            {/* Yashant card */}
-            <div style={{
-              transform: 'rotate(-2deg)',
-              flexShrink: 0,
-              zIndex: 1,
-            }}>
+            {/* Yashant card (front) */}
+            <div className="f-card f-card-yashant">
               <div style={{
-                width: 240,
                 border: '3px solid #130D01',
                 borderRadius: 20,
                 boxShadow: '8px 8px 0 #F3B952',
@@ -131,15 +160,9 @@ const About = () => {
               </div>
             </div>
 
-            {/* Sarina card */}
-            <div className="founder-card-sarina" style={{
-              transform: 'rotate(1.5deg)',
-              flexShrink: 0,
-              marginBottom: 24,
-              zIndex: 2,
-            }}>
+            {/* Sarina card (behind) */}
+            <div className="f-card f-card-sarina">
               <div style={{
-                width: 240,
                 border: '3px solid #130D01',
                 borderRadius: 20,
                 boxShadow: '8px 8px 0 #F16147',
