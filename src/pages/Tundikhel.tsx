@@ -120,7 +120,7 @@ const Tundikhel = () => {
       <main className="flex-1">
 
         {/* ── HERO ── */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-12 mb-20">
+        <section className="max-w-[1280px] mx-auto px-6 md:px-12 pt-8 md:pt-14 mb-20">
           <div
             className="relative rounded-[20px] overflow-hidden border-4"
             style={{ background: '#EDF5DD', borderColor: '#1F5F3A' }}
