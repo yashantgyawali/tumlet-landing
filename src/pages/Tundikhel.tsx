@@ -45,18 +45,18 @@ function setJsonLd(structuredData: object) {
 const PRINCIPLES = [
   {
     num: '01',
-    title: 'Every Nepali should recognize the world.',
-    body: 'Not the rules — the world. Microbuses, potholes, Dharahara, the Khaldo, cows on the road, sawari traffic. The board should feel like Tundikhel before you\'ve even read the manual.',
+    title: 'Familiar world first',
+    body: 'Before learning the rules, players should recognize the setting. Microbuses, traffic, potholes, landmarks. It should feel like a real place.',
   },
   {
     num: '02',
-    title: 'No dice. No luck.',
-    body: 'Dice make every move a coin-flip. We wanted you to feel responsible for what happens. So every move is a card you chose, a bluff you read, a charge you saved. The board is chaos — but you\'re not.',
+    title: 'Control over chance',
+    body: 'Players should feel responsible for their moves. The board has chaos, but the decisions are yours.',
   },
   {
     num: '03',
-    title: 'Race to the finish — that\'s the whole game.',
-    body: 'Simple to learn, hard to master. First driver to loop Tundikhel wins. That\'s it. Three minutes to teach. Fifteen minutes to play. A lifetime of fights about who actually saw whose battery card.',
+    title: 'Fast and replayable',
+    body: 'Quick to learn. Quick to play. Enough interaction to create tension every round.',
   },
 ];
 
@@ -64,22 +64,22 @@ const STEPS = [
   {
     icon: '1',
     title: 'Pick your charge.',
-    body: 'Every driver secretly turns their battery dial to a number 1–6. Big number = fast move. Small number = saving for later.',
+    body: 'Each player chooses a card in secret. Higher numbers move you farther. Lower numbers help you stay flexible.',
   },
   {
     icon: '2',
-    title: 'Reveal together.',
-    body: 'Everyone flips at once. Same number? Both drivers stay still — and bluff harder next round. Different numbers? You move that many blocks.',
+    title: 'Reveal at the same time.',
+    body: 'If two players choose the same number, they both stay where they are. If not, everyone moves based on their card.',
   },
   {
     icon: '3',
-    title: 'Pull a road card.',
-    body: 'Land on a special block? Draw. Maybe it\'s a Sawari boost. Maybe it\'s a Khaldo and your tire\'s gone. Maybe it\'s a cow.',
+    title: 'Resolve the road.',
+    body: 'Landing on certain spaces triggers events. You might get a boost. You might hit a pothole. You might get blocked.',
   },
   {
     icon: '4',
-    title: 'First around Tundikhel wins.',
-    body: 'One full loop. Land exactly on the finish — overshoot and you keep racing. The race to Tundikhel ends when one driver crosses the line.',
+    title: 'Complete one loop to win.',
+    body: 'First player to go around Tundikhel wins.',
   },
 ];
 
@@ -114,7 +114,7 @@ const Tundikhel = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#FAF1E4', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
+    <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
       <Navbar />
 
       <main className="flex-1">
@@ -232,42 +232,33 @@ const Tundikhel = () => {
             className="font-extrabold mb-6 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#1F5F3A', fontSize: 'clamp(32px, 5vw, 52px)', letterSpacing: '-0.01em' }}
           >
-            How we made <em style={{ color: '#2D7A4F' }}>Race to Tundikhel</em> — and why we left the dice at home.
+            Race to Tundikhel
           </h2>
 
           {[
-            <>We started with one rule: <strong style={{ color: '#1F5F3A' }}>every Nepali should be able to look at this game and instantly know the world.</strong> Not the rules — the <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>world</em>. The traffic, the potholes, the cows in the road, the smell of momo from a side gully, the conductor leaning out yelling "Ratnapark, Ratnapark, Ratnapark!" That place. The place every Nepali has been in or has tried to escape from.</>,
-            <>So we picked the most universal stage we could think of: <strong style={{ color: '#1F5F3A' }}>the race to Tundikhel.</strong> Everyone in Kathmandu has, at some point, been in a vehicle trying to get to Tundikhel. Stuck. Honking. Inching. We wanted to bottle that feeling — the chaos, the close-calls, the small wins — and turn it into a game you can actually <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>win</em>.</>,
+            <>We started with one rule: every Nepali should recognize the world instantly.</>,
+            <>The traffic. The potholes. The cows blocking the road. The smell of momo from a side gully. The conductor leaning out shouting "Ratnapark!"</>,
+            <>That everyday Kathmandu experience became the setting.</>,
+            <>So we chose a simple goal: race to Tundikhel.</>,
+            <>Everyone has been stuck on that route at some point. Honking. Waiting. Moving inch by inch. We turned that shared experience into a game you can actually win.</>,
           ].map((content, i) => (
             <p key={i} className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>{content}</p>
           ))}
 
-          <blockquote
-            className="font-bold leading-snug my-9 pl-7"
-            style={{
-              fontFamily: "'Baloo 2', sans-serif",
-              fontSize: 'clamp(24px, 3vw, 34px)',
-              color: '#1F5F3A',
-              borderLeft: '6px solid #2D7A4F',
-              padding: '10px 0 10px 28px',
-            }}
-          >
-            "We didn't want a game that punished you for rolling badly. We wanted a game that rewarded you for thinking sharply."
-          </blockquote>
+          <h3 className="font-extrabold text-3xl mb-5 mt-10 leading-tight" style={{ color: '#1F5F3A' }}>
+            What makes it different
+          </h3>
 
           {[
-            <>That's why <strong style={{ color: '#1F5F3A' }}>Race to Tundikhel has no dice.</strong> Not one. We thought a lot about this. Dice are the easy way out — they make a game feel like a game. But they also turn every move into a coin-flip. You roll a six and you're a genius; you roll a one and you're a victim. We didn't want that. We wanted you to feel <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>in control</em> — and to feel <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>responsible</em> for the chaos around you.</>,
-            <>Instead of dice, every driver gets a hand of <strong style={{ color: '#1F5F3A' }}>battery cards</strong>. Each round, you secretly pick how much charge you want to burn. Pick big and you'll move fast — but everyone else can predict you. Pick small and you'll save power for the final stretch — but you might fall behind. The reveal happens at the same time. Suddenly the table is alive. <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>Did Roshan really play a 6? Or is he bluffing again?</em></>,
-            <>The other rule we wrote on day one: <strong style={{ color: '#1F5F3A' }}>simple to learn.</strong> If your aama can't pick it up in three minutes, we wrote it wrong. So the core mechanic is the most universal one in human play: <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>race to the finish.</em> First micro-driver to make a full loop around Tundikhel wins. That's it. The depth is in the <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>how</em> — the bluffs, the read, the battery management — not in the rules sheet.</>,
-            <>The theme came last, but it was always going to be this. Microbuses. Khalasis. Dharahara in the skyline. The Khaldo on the road that swallows your tire. Sawari traffic. Cows. The old Bagmati bridge. Every Nepali who plays this is going to point at the board and say <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>"oi yo ta hamro bato ho ni!"</em> — and that's the whole point.</>,
-            <>We're still finishing the game. Last playtests are happening at our friends' flats every weekend. But we wanted to plant a flag — to start telling the story now — because <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>Race to Tundikhel</em> isn't just our next game. It's the most <em style={{ fontStyle: 'italic', color: '#2D7A4F', fontWeight: 600 }}>us</em> thing we've ever made.</>,
+            <><strong style={{ color: '#1F5F3A' }}>No dice. No luck.</strong><br />Every move is a decision. You choose how far to go. You decide when to push and when to hold back. If something goes wrong, it's not random. It's because of the choices on the table.</>,
+            <><strong style={{ color: '#1F5F3A' }}>Simple to learn.</strong><br />The goal is clear: complete one loop around Tundikhel and win. Most players understand the rules in a few minutes.</>,
+            <><strong style={{ color: '#1F5F3A' }}>Depth comes from players.</strong><br />The strategy is in reading others, timing your moves, and managing your cards. Not in memorizing rules.</>,
           ].map((content, i) => (
             <p key={i} className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>{content}</p>
           ))}
 
-          <p className="mt-9 font-bold text-xl" style={{ color: '#1F5F3A' }}>
-            — Sarina &amp; Yashant<br />
-            <span className="font-normal text-base" style={{ color: '#3a3225' }}>Tumlet · Kathmandu · 2026</span>
+          <p className="mt-9 text-lg leading-relaxed" style={{ color: '#2a241a' }}>
+            We are still playtesting and refining. But this is the core of the game.
           </p>
         </article>
 
@@ -278,13 +269,13 @@ const Tundikhel = () => {
               className="inline-block text-xs font-bold uppercase tracking-widest mb-3"
               style={{ fontFamily: "'Outfit', sans-serif", color: '#2D7A4F', letterSpacing: '0.18em' }}
             >
-              What we wanted
+              What we focused on
             </span>
             <h2
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#1F5F3A', fontSize: 'clamp(32px, 4vw, 48px)', letterSpacing: '-0.01em' }}
             >
-              Three rules we wrote on day one
+              What we focused on
             </h2>
           </div>
 
@@ -400,13 +391,13 @@ const Tundikhel = () => {
               className="inline-block text-xs font-bold uppercase tracking-widest mb-3"
               style={{ fontFamily: "'Outfit', sans-serif", color: '#2D7A4F', letterSpacing: '0.18em' }}
             >
-              How a round works
+              How the game works
             </span>
             <h2
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#1F5F3A', fontSize: 'clamp(32px, 4vw, 48px)', letterSpacing: '-0.01em' }}
             >
-              The shortest rules sheet you'll ever read.
+              How the game works
             </h2>
           </div>
 
