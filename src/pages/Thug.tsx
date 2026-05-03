@@ -202,7 +202,7 @@ const Thug = () => {
 
           <div style={{ border: `3px solid ${ACCENT}`, background: '#FAF1E4', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }} className="rounded-2xl overflow-hidden">
             {STEPS.map(({ icon, title, body }, i) => (
-              <div key={i} className="flex gap-5 items-start p-8" style={{ borderBottom: i < 2 ? `2px solid ${ACCENT}` : undefined, borderRight: i % 2 === 0 ? `2px solid ${ACCENT}` : undefined }}>
+              <div key={i} className="flex gap-5 items-start p-8" style={{ borderRight: `2px solid ${ACCENT}`, borderBottom: `2px solid ${ACCENT}` }}>
                 <div className="flex-shrink-0 flex items-center justify-center font-extrabold text-xl rounded-xl" style={{ width: 56, height: 56, fontFamily: "'Outfit', sans-serif", background: SOFT_BG, border: `2px solid ${ACCENT}`, color: ACCENT }}>
                   {icon}
                 </div>
