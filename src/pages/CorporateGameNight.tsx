@@ -17,6 +17,7 @@ const games = [
     description: "Bluff, deceive, and outsmart your way to victory. Based in the streets of Kathmandu.",
     category: "Bluffing",
     bestFor: "Competitive groups",
+    videoUrl: "https://www.youtube.com/watch?v=di6Ek8Nf4mQ",
   },
   {
     name: "Race to Tundikhel",
@@ -24,6 +25,7 @@ const games = [
     description: "Think Ludo but psychological. Less luck, more mind games and chaos.",
     category: "Mind Games",
     bestFor: "Thinkers",
+    videoUrl: "https://drive.google.com/file/d/1TdYXJFCyP2mrr9zSUOmOFdj7bRrK7Gps/view?usp=drive_link",
   },
   {
     name: "Danger Danger",
@@ -31,6 +33,7 @@ const games = [
     description: "Think fast, act faster. High-pressure rounds that get everyone screaming.",
     category: "Fast-paced",
     bestFor: "High-energy groups",
+    videoUrl: "https://www.youtube.com/watch?v=IRk1hsFjlww",
   },
   {
     name: "Cluedo",
@@ -38,6 +41,7 @@ const games = [
     description: "Solve a murder mystery. Deduce the weapon, location, and culprit before anyone else.",
     category: "Mystery",
     bestFor: "Wannabe detectives",
+    videoUrl: "https://www.youtube.com/watch?v=LTUFY0URGQo",
   },
   {
     name: "Dixit",
@@ -45,6 +49,7 @@ const games = [
     description: "Tell stories through surreal art. Be creative enough to fool some, but not all.",
     category: "Creative",
     bestFor: "Imaginative teams",
+    videoUrl: "https://www.youtube.com/watch?v=Qi4MoW6NuaQ&t=15s",
   },
   {
     name: "Firiri",
@@ -52,6 +57,7 @@ const games = [
     description: "Cards Against Humanity meets Nepali songs. For the playlist lovers who know every lyric.",
     category: "Music",
     bestFor: "Nepali music fans",
+    videoUrl: "https://www.youtube.com/watch?v=Uyciy8LmmXg",
   },
   {
     name: "Codenames",
@@ -621,14 +627,33 @@ function GameCard({ game, index }: { game: typeof games[number]; index: number }
         {game.description}
       </p>
 
-      {/* Best-for tag */}
-      <div style={{
-        fontFamily: "'Outfit', sans-serif",
-        fontSize: 12,
-        color: '#9CA3AF',
-        fontWeight: 600,
-      }}>
-        Best for: {game.bestFor}
+      {/* Best-for tag + video link */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+        <div style={{
+          fontFamily: "'Outfit', sans-serif",
+          fontSize: 12,
+          color: '#9CA3AF',
+          fontWeight: 600,
+        }}>
+          Best for: {game.bestFor}
+        </div>
+        {game.videoUrl && (
+          <a
+            href={game.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 12,
+              fontWeight: 700,
+              color: '#F16147',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Watch how to play →
+          </a>
+        )}
       </div>
     </div>
   );
