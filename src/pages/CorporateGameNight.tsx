@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Users, Clock, Gamepad2, Star } from 'lucide-react';
 import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
 
 type MediaItem = {
@@ -17,303 +12,651 @@ type MediaItem = {
 
 const games = [
   {
-    id: 1,
     name: "Bluff Momo",
-    description: "For people who like mind games, reading others, and bluffing.",
-    videoUrl: "/bluff-momo-rules",
-    availableForSale: true,
-    price: "Rs. 1,490",
-    category: "Bluffing and deception"
+    emoji: "🥟",
+    description: "Bluff, deceive, and outsmart your way to victory. Based in the streets of Kathmandu.",
+    category: "Bluffing",
+    bestFor: "Competitive groups",
+    videoUrl: "https://www.youtube.com/watch?v=di6Ek8Nf4mQ",
   },
   {
-    id: 2,
     name: "Race to Tundikhel",
-    description: "Think of it as Ludo but with less luck, pure psychological and chaotic.",
+    emoji: "🏁",
+    description: "Think Ludo but psychological. Less luck, more mind games and chaos.",
+    category: "Mind Games",
+    bestFor: "Thinkers",
     videoUrl: "https://drive.google.com/file/d/1TdYXJFCyP2mrr9zSUOmOFdj7bRrK7Gps/view?usp=drive_link",
-    availableForSale: false,
-    category: "Mind games"
   },
   {
-    id: 3,
     name: "Danger Danger",
-    description: "For someone who can think and act too fast under time pressure.",
+    emoji: "⚡",
+    description: "Think fast, act faster. High-pressure rounds that get everyone screaming.",
+    category: "Fast-paced",
+    bestFor: "High-energy groups",
     videoUrl: "https://www.youtube.com/watch?v=IRk1hsFjlww",
-    availableForSale: false,
-    category: "Fast-paced"
   },
   {
-    id: 4,
     name: "Cluedo",
-    description: "For wannabe detectives who love solving murder mysteries.",
+    emoji: "🔍",
+    description: "Solve a murder mystery. Deduce the weapon, location, and culprit before anyone else.",
+    category: "Mystery",
+    bestFor: "Wannabe detectives",
     videoUrl: "https://www.youtube.com/watch?v=LTUFY0URGQo",
-    availableForSale: false,
-    category: "Mystery"
   },
   {
-    id: 5,
     name: "Dixit",
-    description: "For the visual thinker who can speak fluent imagination.",
+    emoji: "🎨",
+    description: "Tell stories through surreal art. Be creative enough to fool some, but not all.",
+    category: "Creative",
+    bestFor: "Imaginative teams",
     videoUrl: "https://www.youtube.com/watch?v=Qi4MoW6NuaQ&t=15s",
-    availableForSale: false,
-    category: "Creative"
   },
   {
-    id: 6,
     name: "Firiri",
-    description: "Cards Against Humanity meets Nepali songs. For the playlist peeps who know every Nepali lyric that exists.",
-    videoUrl: "",
-    availableForSale: false,
-    category: "Songs"
+    emoji: "🎵",
+    description: "Cards Against Humanity meets Nepali songs. For the playlist lovers who know every lyric.",
+    category: "Music",
+    bestFor: "Nepali music fans",
+    videoUrl: "https://www.youtube.com/watch?v=Uyciy8LmmXg",
   },
   {
-    id: 7,
     name: "Codenames",
-    description: "Say one word. Hope your team gets all. A classic for smart chaos and sly smiles.",
-    videoUrl: "",
-    availableForSale: false,
-    category: "Wordplay"
+    emoji: "🕵️",
+    description: "Give one-word clues. Hope your team gets all your words. Classic smart chaos.",
+    category: "Wordplay",
+    bestFor: "Wordsmiths",
   },
   {
-    id: 8,
     name: "Ticket to Ride",
-    description: "Plan routes, claim tracks, block your frenemies. The perfect mix of chill and sneaky.",
-    videoUrl: "",
-    availableForSale: false,
-    category: "Strategy"
+    emoji: "🚂",
+    description: "Claim train routes across the map. Block your frenemies. Chill but sneaky.",
+    category: "Strategy",
+    bestFor: "Planners",
   },
-
   {
-    id: 9,
-    name: "Guess the Price - Nepali Edition",
-    description: "Add-on game where we buy everyday Nepali items and have people guess the price. The closest takes it home.",
-    videoUrl: null,
-    availableForSale: false,
+    name: "That's Not a Hat",
+    emoji: "🎩",
+    description: "Remember what gift you got? No? Bluff anyway. A hilarious memory game.",
+    category: "Memory",
+    bestFor: "Forgetful friends",
+  },
+  {
+    name: "Carcassonne",
+    emoji: "🏰",
+    description: "Build medieval landscapes tile by tile. Claim cities, roads, and monasteries.",
+    category: "Tile Placement",
+    bestFor: "Strategic builders",
+  },
+  {
+    name: "Catan",
+    emoji: "🌾",
+    description: "Trade resources, build settlements, and negotiate like your career depends on it.",
+    category: "Trading",
+    bestFor: "Deal-makers",
+  },
+  {
+    name: "Flip 7",
+    emoji: "🃏",
+    description: "Keep flipping cards. Push your luck. Hit 8 and you're out. Simple, addictive, ruthless.",
+    category: "Push Your Luck",
+    bestFor: "Risk-takers",
+  },
+  {
+    name: "Secret Hitler",
+    emoji: "🗳️",
+    description: "Liberals vs fascists. Trust no one. Find the hidden threat before it's too late.",
+    category: "Social Deduction",
+    bestFor: "Paranoid groups",
+  },
+  {
+    name: "Scout",
+    emoji: "🔭",
+    description: "Your hand stays as dealt — no rearranging. Recruit cards and build combos to win.",
+    category: "Card Climbing",
+    bestFor: "Quick learners",
+  },
+  {
+    name: "Startup",
+    emoji: "🚀",
+    description: "Build your company from nothing, raise funds, hire talent, and crush rival founders.",
+    category: "Business",
+    bestFor: "Ambitious teams",
+  },
+  {
+    name: "Guess the Price",
+    emoji: "🏷️",
+    description: "We buy everyday Nepali items. You guess the price. Closest guess wins the item.",
     category: "Add-on",
-    budget: "Rs. 1,000 - 2,000"
-  }
+    bestFor: "Everyone",
+  },
+];
+
+const steps = [
+  {
+    num: "01",
+    title: "You pick",
+    desc: "Choose games from our collection. Or let us surprise you with a curated mix.",
+    accent: "#F3B952",
+  },
+  {
+    num: "02",
+    title: "We set up",
+    desc: "We show up, bring everything, explain the rules, and host the full session.",
+    accent: "#F16147",
+  },
+  {
+    num: "03",
+    title: "You play",
+    desc: "Your team bonds, competes, laughs, and forgets about Jira for two hours.",
+    accent: "#2D7A4F",
+  },
 ];
 
 const sampleMedia: MediaItem[] = [
-  { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Photo 1' },
+  { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Game night photo' },
   { type: 'video', src: '/blogs/corporate-game-night/2.mp4' },
-  { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Photo 2' },
+  { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Game night photo' },
   { type: 'video', src: '/blogs/corporate-game-night/4.mp4' },
-  { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Photo 3' },
-  { type: 'video', src: '/blogs/corporate-game-night/6.mov', alt: 'Photo 4' },
+  { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Game night photo' },
+  { type: 'video', src: '/blogs/corporate-game-night/6.mov' },
   { type: 'image', src: '/blogs/corporate-game-night/7.jpg' },
-  { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Photo 5' },
+  { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Game night photo' },
   { type: 'image', src: '/blogs/corporate-game-night/9.jpg' },
 ];
 
 const CorporateGameNight = () => {
+  const [ctaHovered, setCtaHovered] = useState(false);
+  const [ctaBottomHovered, setCtaBottomHovered] = useState(false);
+
   useEffect(() => {
     document.title = "Corporate Game Night | Tumlet - Team Building with Board Games";
-    const meta = document.createElement('meta');
-    meta.name = "description";
-    meta.content = "Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 2-hour session for your team.";
-    document.head.appendChild(meta);
-    return () => { document.head.removeChild(meta); };
+    let meta = document.querySelector("meta[name='description']");
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', 'Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 2-hour session for your team.');
   }, []);
 
   const handleContact = () => {
     const subject = encodeURIComponent("Corporate Game Night Inquiry");
-    const body = encodeURIComponent(`Hi Tumlet team,
-
-I am interested in hosting a corporate game night for my team. Please provide more details.
-
-Thanks!`);
-    window.open(`mailto:hello@tumlet.com?subject=${subject}&body=${body}`);
+    const body = encodeURIComponent(`Hi Tumlet team,\n\nI am interested in hosting a corporate game night for my team. Please provide more details.\n\nThanks!`);
+    window.open(`mailto:tumletgames@gmail.com?subject=${subject}&body=${body}`);
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-tumlet-beige">
+    <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', fontFamily: "'Baloo 2', system-ui, sans-serif", color: '#130D01' }}>
       <Navbar />
-      {/* Hero Section */}
-      <section className="px-4 pt-16 pb-12 md:px-12 lg:px-36">
-        <div className="max-w-4xl mx-auto text-center">
-            <div className='mb-2 font-medium'>Break the routine. Bond over board games.</div>
-          <h1 className="text-4xl md:text-6xl font-outfit font-bold tracking-wide text-tumlet-text mb-6">
-            Corporate game night
+
+      <main className="flex-1">
+
+        {/* ── HERO ── */}
+        <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0', textAlign: 'center' }}>
+          <span style={{
+            display: 'inline-block',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: 700,
+            fontSize: 12,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#F16147',
+            background: '#FDE8E4',
+            padding: '6px 16px',
+            borderRadius: 999,
+            marginBottom: 24,
+          }}>
+            Team bonding · Kathmandu
+          </span>
+
+          <h1 style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 'clamp(36px, 6vw, 64px)',
+            lineHeight: 1.08,
+            letterSpacing: '-0.01em',
+            color: '#130D01',
+            marginTop: 0,
+            marginBottom: 20,
+          }}>
+            We bring the games.<br />You bring the team.
           </h1>
-          <p className="text-xl md:text-2xl font-outfit text-tumlet-text mb-8 leading-relaxed">
-            We host Game Nights at offices where we come in with a bunch of board games, 
-            set everything up, and run the whole session. The idea is to help teams take 
-            a break, connect, and just have a good time together.
+
+          <p style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontSize: 'clamp(18px, 2.5vw, 22px)',
+            lineHeight: 1.55,
+            color: '#4B5563',
+            maxWidth: 580,
+            margin: '0 auto 40px',
+          }}>
+            We show up at your office with a bunch of board games, set everything up, explain all the rules, and host the entire session. Your team just has to show up and have fun.
           </p>
-          <Button
+
+          <button
             onClick={handleContact}
-            className="bg-tumlet-text text-tumlet-beige hover:bg-tumlet-text/90 text-lg px-8 py-4"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 700,
+              fontSize: 17,
+              color: '#ffffff',
+              background: '#F16147',
+              padding: '14px 36px',
+              borderRadius: 12,
+              border: 'none',
+              boxShadow: '8px 8px 0 #F3B952',
+              transform: ctaHovered ? 'rotate(-0.88deg) translate(-3px,-3px)' : 'rotate(-0.88deg)',
+              cursor: 'pointer',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={() => setCtaHovered(true)}
+            onMouseLeave={() => setCtaHovered(false)}
           >
-            Book your game night
-          </Button>
+            Book your game night →
+          </button>
+        </section>
+
+        {/* ── MARQUEE GALLERY ── */}
+        <div style={{ margin: '64px 0 0' }}>
+          <MarqueeGallery items={sampleMedia} height={220} />
         </div>
-      </section>
-      {/* Marquee Gallery Proof Section */}
-      <div className="my-8">
-        <MarqueeGallery items={sampleMedia} height={200} />
-      </div>
-      {/* How It Works Section */}
-      <section className="px-4 py-12 md:px-12 lg:px-36 bg-white">
-        <div className="mx-auto">
-          <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text text-center mb-12">
-            How it works
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center border-2 border-tumlet-beige">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
-                  <Gamepad2 className="w-8 h-8 text-tumlet-text" />
-                </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">You choose</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  Select the board games from our curated list, or let us bring a mix 
-                  that we know your team will love.
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="text-center border-2 border-tumlet-beige">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
-                  <Star className="w-8 h-8 text-tumlet-text" />
-                </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">We host</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  We'll bring all the games, explain the rules, and host the entire 
-                  2-hour session for you.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-tumlet-beige">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-tumlet-beige rounded-full flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-tumlet-text" />
-                </div>
-                <CardTitle className="text-xl font-outfit text-tumlet-text">You play</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  Your team gets to unwind, connect, and have fun together!
-                </p>
-              </CardContent>
-            </Card>
+        {/* ── HOW IT WORKS ── */}
+        <section style={{ maxWidth: 1000, margin: '0 auto', padding: '80px 24px 0' }}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <span style={{
+              display: 'inline-block',
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 700,
+              fontSize: 12,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#2D7A4F',
+              background: '#EDF5DD',
+              padding: '6px 14px',
+              borderRadius: 999,
+              marginBottom: 16,
+            }}>
+              How it works
+            </span>
+            <h2 style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(28px, 4vw, 42px)',
+              color: '#130D01',
+              margin: 0,
+            }}>
+              Three steps. Zero effort from you.
+            </h2>
           </div>
-        </div>
-      </section>
 
-      {/* Pricing Section */}
-      <section className="px-4 py-12 md:px-12 lg:px-36">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text mb-8">
-            Pricing
-          </h2>
-          <Card className="max-w-md mx-auto border-2 border-tumlet-text">
-            <CardHeader className="bg-tumlet-text text-tumlet-beige">
-              <CardTitle className="text-2xl font-outfit">Standard package</CardTitle>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="text-4xl font-bold text-tumlet-text mb-4">
-                Rs. 10,000
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
+            {steps.map((step) => (
+              <div
+                key={step.num}
+                style={{
+                  background: '#FAF1E4',
+                  border: '3px solid #130D01',
+                  borderRadius: 16,
+                  boxShadow: `6px 6px 0 ${step.accent}`,
+                  padding: '32px 28px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                <div style={{
+                  fontFamily: "'Outfit', sans-serif",
+                  fontWeight: 800,
+                  fontSize: 48,
+                  color: step.accent,
+                  opacity: 0.25,
+                  position: 'absolute',
+                  top: 12,
+                  right: 18,
+                  lineHeight: 1,
+                }}>
+                  {step.num}
+                </div>
+                <h3 style={{
+                  fontFamily: "'Baloo 2', sans-serif",
+                  fontWeight: 800,
+                  fontSize: 24,
+                  color: '#130D01',
+                  marginTop: 0,
+                  marginBottom: 8,
+                }}>
+                  {step.title}
+                </h3>
+                <p style={{
+                  fontFamily: "'Baloo 2', sans-serif",
+                  fontSize: 16,
+                  lineHeight: 1.55,
+                  color: '#4B5563',
+                  margin: 0,
+                }}>
+                  {step.desc}
+                </p>
               </div>
-              <p className="text-lg text-gray-700 mb-6">
-                for up to 20 people
-              </p>
-              <div className="flex items-center justify-center gap-2 text-gray-600 mb-6">
-                <Clock className="w-5 h-5" />
-                <span>2-hour session</span>
-              </div>
-              <p className="text-sm text-gray-600">
-                Got a bigger team? Send us an email for a custom quote.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Games Section */}
-      <section className="px-4 py-12 md:px-12 lg:px-36 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text text-center mb-4">
-            Our game collection
-          </h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">
-            Pick around 3 games for your game night. We'll explain all the rules in person!
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {games.map((game) => (
-              <Card key={game.id} className="border-2 border-tumlet-beige hover:border-tumlet-text transition-colors">
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <CardTitle className="text-xl font-outfit text-tumlet-text">
-                      {game.name}
-                    </CardTitle>
-                    {game.availableForSale && (
-                      <Badge className="bg-green-100 text-green-800">
-                        Available for Sale @ {game.price}
-                      </Badge>
-                    )}
-                  </div>
-                  <Badge variant="outline" className="w-fit">
-                    {game.category}
-                  </Badge>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">
-                    {game.description}
-                  </p>
-                  
-                  {game.availableForSale && (
-                    <p className="text-sm text-green-600 font-medium mb-3">
-                    
-                    </p>
-                  )}
-                                  
-                  {game.videoUrl && (
-                    <a 
-                      href={game.videoUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm text-tumlet-text hover:underline"
-                    >
-                      Watch demo <ExternalLink className="w-4 h-4" />
-                    </a>
-                  )}
-                </CardContent>
-              </Card>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="px-4 py-16 md:px-12 lg:px-36">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-outfit font-bold text-tumlet-text mb-6">
-             Ready to play?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8">
-            Just email us at tumletgames@gmail.com with your office name, location, number of people and a preferred date and time. 
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              onClick={handleContact}
-              className="bg-tumlet-text text-tumlet-beige hover:bg-tumlet-text/90 text-lg px-8 py-4"
-            >
-              Email us to book
-            </Button>
+        {/* ── PRICING ── */}
+        <section style={{ maxWidth: 520, margin: '0 auto', padding: '80px 24px 0', textAlign: 'center' }}>
+          <div style={{
+            background: '#130D01',
+            border: '3px solid #130D01',
+            borderRadius: 20,
+            boxShadow: '10px 10px 0 #F3B952',
+            padding: '48px 36px',
+            transform: 'rotate(-0.5deg)',
+            color: '#FAF1E4',
+          }}>
+            <div style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 700,
+              fontSize: 12,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#F3B952',
+              marginBottom: 16,
+            }}>
+              Pricing
             </div>
-        </div>
-      </section>
+            <div style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(40px, 5vw, 56px)',
+              lineHeight: 1,
+              marginBottom: 8,
+            }}>
+              Rs. 10,000
+            </div>
+            <p style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontSize: 18,
+              color: '#d4c9b5',
+              margin: '0 0 24px',
+            }}>
+              for up to 20 people · 2-hour session
+            </p>
+            <div style={{
+              display: 'inline-flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: 10,
+            }}>
+              {['We bring the games', 'We explain the rules', 'We host the session'].map((item) => (
+                <span key={item} style={{
+                  fontFamily: "'Outfit', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  padding: '6px 14px',
+                  borderRadius: 999,
+                  background: 'rgba(243,185,82,0.15)',
+                  color: '#F3B952',
+                }}>
+                  ✓ {item}
+                </span>
+              ))}
+            </div>
+            <p style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 13,
+              color: '#8a8070',
+              marginTop: 24,
+              marginBottom: 0,
+            }}>
+              Got a bigger team? Email us for a custom quote.
+            </p>
+          </div>
+        </section>
+
+        {/* ── GAMES COLLECTION ── */}
+        <section style={{ maxWidth: 1100, margin: '0 auto', padding: '80px 24px 0' }}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <span style={{
+              display: 'inline-block',
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 700,
+              fontSize: 12,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#F16147',
+              background: '#FDE8E4',
+              padding: '6px 14px',
+              borderRadius: 999,
+              marginBottom: 16,
+            }}>
+              Pick your lineup
+            </span>
+            <h2 style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(28px, 4vw, 42px)',
+              color: '#130D01',
+              margin: '0 0 8px',
+            }}>
+              Our game collection
+            </h2>
+            <p style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontSize: 17,
+              color: '#6B6B6B',
+              margin: 0,
+            }}>
+              Pick ~3 games for your night. We'll teach all the rules in person.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: 20,
+          }}>
+            {games.map((game, i) => (
+              <GameCard key={game.name} game={game} index={i} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── BOTTOM CTA ── */}
+        <section style={{ maxWidth: 760, margin: '80px auto 96px', padding: '0 24px' }}>
+          <div style={{
+            background: '#F3B952',
+            border: '3px solid #130D01',
+            boxShadow: '12px 12px 0 #130D01',
+            transform: 'rotate(-0.5deg)',
+            borderRadius: 20,
+            textAlign: 'center',
+            padding: '48px 32px',
+          }}>
+            <div style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 13,
+              textTransform: 'uppercase',
+              letterSpacing: '0.16em',
+              color: '#130D01',
+              marginBottom: 14,
+            }}>
+              Ready to play?
+            </div>
+            <h3 style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(24px, 3.5vw, 34px)',
+              color: '#130D01',
+              marginTop: 0,
+              marginBottom: 14,
+              lineHeight: 1.15,
+            }}>
+              Email us. Pick a date. We'll handle the rest.
+            </h3>
+            <p style={{
+              fontSize: 17,
+              lineHeight: 1.5,
+              color: '#130D01',
+              marginBottom: 24,
+              marginTop: 0,
+            }}>
+              tumletgames@gmail.com — include your office name, team size, and preferred date.
+            </p>
+            <button
+              onClick={handleContact}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 10,
+                background: '#130D01',
+                color: '#ffffff',
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 700,
+                fontSize: 16,
+                padding: '14px 36px',
+                borderRadius: 12,
+                border: 'none',
+                boxShadow: '8px 8px 0 #F16147',
+                transform: ctaBottomHovered ? 'rotate(-0.88deg) translateY(-4px)' : 'rotate(-0.88deg)',
+                cursor: 'pointer',
+                transition: 'all 0.2s',
+              }}
+              onMouseEnter={() => setCtaBottomHovered(true)}
+              onMouseLeave={() => setCtaBottomHovered(false)}
+            >
+              Book your game night →
+            </button>
+          </div>
+        </section>
+
+      </main>
 
       <Footer />
     </div>
   );
 };
 
-export default CorporateGameNight; 
+/* ── GAME CARD ── */
+
+const categoryColors: Record<string, { bg: string; text: string }> = {
+  Bluffing: { bg: '#FDE8E4', text: '#F16147' },
+  'Mind Games': { bg: '#FFF3D6', text: '#B8860B' },
+  'Fast-paced': { bg: '#FFE8D6', text: '#D2691E' },
+  Mystery: { bg: '#E8E0F0', text: '#6A0DAD' },
+  Creative: { bg: '#EDF5DD', text: '#2D7A4F' },
+  Music: { bg: '#FFF3D6', text: '#B8860B' },
+  Wordplay: { bg: '#E8E0F0', text: '#6A0DAD' },
+  Strategy: { bg: '#D6EEFF', text: '#1565C0' },
+  Memory: { bg: '#FFE8F0', text: '#C2185B' },
+  'Tile Placement': { bg: '#E0D6C0', text: '#5D4037' },
+  Trading: { bg: '#EDF5DD', text: '#2D7A4F' },
+  'Push Your Luck': { bg: '#FDE8E4', text: '#F16147' },
+  'Social Deduction': { bg: '#E8E0F0', text: '#6A0DAD' },
+  'Card Climbing': { bg: '#D6EEFF', text: '#1565C0' },
+  Business: { bg: '#D6EEFF', text: '#1565C0' },
+  'Add-on': { bg: '#F0F0F0', text: '#666666' },
+};
+
+const rotations = [-0.8, 0.5, -0.3, 0.7, -0.6, 0.4, -0.5, 0.8, -0.4, 0.6, -0.7, 0.3, -0.9, 0.5, -0.2, 0.9];
+
+function GameCard({ game, index }: { game: typeof games[number]; index: number }) {
+  const [hovered, setHovered] = useState(false);
+  const cat = categoryColors[game.category] || { bg: '#F0F0F0', text: '#666' };
+  const rot = rotations[index % rotations.length];
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: '#FAF1E4',
+        border: '2.5px solid #130D01',
+        borderRadius: 14,
+        boxShadow: hovered ? '8px 8px 0 #130D01' : '5px 5px 0 #130D01',
+        padding: '24px 22px',
+        transform: hovered ? `rotate(${rot}deg) translate(-3px,-3px)` : `rotate(${rot}deg)`,
+        transition: 'all 0.2s',
+        cursor: 'default',
+        display: 'flex',
+        flexDirection: 'column' as const,
+        gap: 10,
+      }}
+    >
+      {/* Emoji + Name */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        <span style={{ fontSize: 28 }}>{game.emoji}</span>
+        <h3 style={{
+          fontFamily: "'Baloo 2', sans-serif",
+          fontWeight: 800,
+          fontSize: 19,
+          color: '#130D01',
+          margin: 0,
+        }}>
+          {game.name}
+        </h3>
+      </div>
+
+      {/* Category pill */}
+      <span style={{
+        display: 'inline-block',
+        alignSelf: 'flex-start',
+        fontFamily: "'Outfit', sans-serif",
+        fontWeight: 700,
+        fontSize: 11,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        color: cat.text,
+        background: cat.bg,
+        padding: '3px 10px',
+        borderRadius: 999,
+      }}>
+        {game.category}
+      </span>
+
+      {/* Description */}
+      <p style={{
+        fontFamily: "'Baloo 2', sans-serif",
+        fontSize: 15,
+        lineHeight: 1.5,
+        color: '#4B5563',
+        margin: 0,
+        flex: 1,
+      }}>
+        {game.description}
+      </p>
+
+      {/* Best-for tag + video link */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+        <div style={{
+          fontFamily: "'Outfit', sans-serif",
+          fontSize: 12,
+          color: '#9CA3AF',
+          fontWeight: 600,
+        }}>
+          Best for: {game.bestFor}
+        </div>
+        {game.videoUrl && (
+          <a
+            href={game.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 12,
+              fontWeight: 700,
+              color: '#F16147',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Watch how to play →
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default CorporateGameNight;

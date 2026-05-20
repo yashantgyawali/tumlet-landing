@@ -120,7 +120,7 @@ const Tundikhel = () => {
       <main className="flex-1">
 
         {/* ── HERO ── */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-12 mb-20">
+        <section className="max-w-[1280px] mx-auto px-6 md:px-12 pt-8 md:pt-14 mb-20">
           <div
             className="relative rounded-[20px] overflow-hidden border-4"
             style={{ background: '#EDF5DD', borderColor: '#1F5F3A' }}
@@ -406,15 +406,13 @@ const Tundikhel = () => {
             style={{ border: '3px solid #1F5F3A', background: '#FAF1E4', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
           >
             {STEPS.map(({ icon, title, body }, i) => {
-              const isLastRow = i >= 2;
-              const isOdd = i % 2 === 0;
               return (
                 <div
                   key={i}
                   className="flex gap-5 items-start p-8"
                   style={{
-                    borderBottom: !isLastRow ? '2px solid #1F5F3A' : undefined,
-                    borderRight: isOdd ? '2px solid #1F5F3A' : undefined,
+                    borderRight: '2px solid #1F5F3A',
+                    borderBottom: '2px solid #1F5F3A',
                   }}
                 >
                   <div

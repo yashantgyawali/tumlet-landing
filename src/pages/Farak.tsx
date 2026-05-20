@@ -229,8 +229,8 @@ const Farak = () => {
                 key={i}
                 className="flex gap-5 items-start p-8"
                 style={{
-                  borderBottom: i < STEPS.length - 2 ? '2px solid #F16147' : undefined,
-                  borderRight: i % 2 === 0 ? '2px solid #F16147' : undefined,
+                  borderRight: '2px solid #F16147',
+                  borderBottom: '2px solid #F16147',
                 }}
               >
                 <div

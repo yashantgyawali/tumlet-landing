@@ -152,9 +152,27 @@
   }
 
   .bluff-background {
+    position: relative;
+    background-color: #FAF1E4;
+    border-color: #F3B952;
+    overflow: hidden;
+  }
+
+  .bluff-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: url('/pattern.webp');
     background-position: center;
-    border-color:#F3B952;
+    opacity: 0.35;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .bluff-background > * {
+    position: relative;
+    z-index: 1;
   }
 
   .ganthan-background {
