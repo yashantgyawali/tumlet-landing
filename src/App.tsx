@@ -17,6 +17,7 @@ import CorporateGameNight from "./pages/CorporateGameNight";
 import Thug from "./pages/Thug";
 import Farak from "./pages/Farak";
 import Tundikhel from "./pages/Tundikhel";
+import TundikhElHow from "./pages/TundikhElHow";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/thug" element={<Thug />} />
           <Route path="/farak" element={<Farak />} />
           <Route path="/tundikhel" element={<Tundikhel />} />
+          <Route path="/tundikhel-how" element={<TundikhElHow />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
