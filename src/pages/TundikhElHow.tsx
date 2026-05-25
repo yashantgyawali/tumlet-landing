@@ -102,7 +102,7 @@ const TundikhElHow = () => {
       <main className="flex-1 px-6 md:px-12 lg:px-24 py-10">
 
         {/* ── HEADING ── */}
-        <div className="max-w-3xl mb-8">
+        <div className="max-w-3xl mx-auto mb-8 text-center">
           <span
             className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4"
             style={{ fontFamily: "'Outfit', sans-serif", color: '#2D7A4F', background: '#EDF5DD', letterSpacing: '0.16em' }}
@@ -121,7 +121,7 @@ const TundikhElHow = () => {
         </div>
 
         {/* ── VIDEO ── */}
-        <div className="max-w-4xl mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <div
             className="rounded-2xl overflow-hidden"
             style={{ border: '3px solid #1F5F3A', boxShadow: '8px 8px 0 #F3B952', aspectRatio: '16/9' }}
@@ -137,8 +137,8 @@ const TundikhElHow = () => {
         </div>
 
         {/* ── HOW TO PLAY ── */}
-        <div ref={rulesRef} className="max-w-5xl mb-16">
-          <div className="mb-8">
+        <div ref={rulesRef} className="max-w-5xl mx-auto mb-16">
+          <div className="mb-8 text-center">
             <span
               className="inline-block text-xs font-bold uppercase tracking-widest mb-3"
               style={{ fontFamily: "'Outfit', sans-serif", color: '#2D7A4F', letterSpacing: '0.18em' }}
@@ -181,7 +181,7 @@ const TundikhElHow = () => {
         </div>
 
         {/* ── CTA ── */}
-        <div className="max-w-2xl mb-10">
+        <div className="max-w-2xl mx-auto mb-10">
           <div
             className="px-8 py-10 rounded-[20px] text-center"
             style={{
