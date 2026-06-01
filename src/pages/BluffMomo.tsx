@@ -53,11 +53,11 @@ const BluffMomo = () => {
     document.title = 'Bluff Momo Rules | How to Play the Nepali Card Game';
     setMetaTag('description', 'Learn how to play Bluff Momo — the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
     setMetaTag('keywords', 'bluff momo rules, how to play bluff momo, nepali card game, tumlet bluff momo');
-    setCanonical('https://tumlet.com/bluff-momo-rules');
+    setCanonical('https://tumlet.com/bluff-momo-rules/');
     setPropertyTag('og:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
     setPropertyTag('og:description', 'Learn how to play Bluff Momo — the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/bluff-momo-rules');
+    setPropertyTag('og:url', 'https://tumlet.com/bluff-momo-rules/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
@@ -165,7 +165,7 @@ const BluffMomo = () => {
         
         <div className="mt-12 text-center">
           <p className="text-lg md:text-xl text-gray-700 mb-4">
-            Want to play Bluff Momo with your team? We host <Link to="/corporate-game-night" className="underline hover:text-tumlet-text/80 text-tumlet-text">corporate game nights</Link> where we bring games to your office and run the entire session.
+            Want to play Bluff Momo with your team? We host <Link to="/corporate-game-night/" className="underline hover:text-tumlet-text/80 text-tumlet-text">corporate game nights</Link> where we bring games to your office and run the entire session.
           </p>
         </div>
       </div>

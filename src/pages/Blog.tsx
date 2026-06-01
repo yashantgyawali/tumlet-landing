@@ -60,11 +60,11 @@ const BlogPost = () => {
     if (post) {
       document.title = `${post.title} | Tumlet Blog`;
       setMetaTag('description', post.excerpt);
-      setCanonical(`https://tumlet.com/blog/${post.slug}`);
+      setCanonical(`https://tumlet.com/blog/${post.slug}/`);
       setPropertyTag('og:title', post.title);
       setPropertyTag('og:description', post.excerpt);
       setPropertyTag('og:type', 'article');
-      setPropertyTag('og:url', `https://tumlet.com/blog/${post.slug}`);
+      setPropertyTag('og:url', `https://tumlet.com/blog/${post.slug}/`);
       const ogImage = post.slug === 'best-nepali-board-games'
         ? 'https://tumlet.com/blogs/best-nepali-board-games/unfurl.png'
         : (post.coverImage ? `https://tumlet.com${post.coverImage}` : 'https://tumlet.com/unfurl.png');
@@ -86,9 +86,9 @@ const BlogPost = () => {
         datePublished: post.publishedAt,
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': `https://tumlet.com/blog/${post.slug}`,
+          '@id': `https://tumlet.com/blog/${post.slug}/`,
         },
-        url: `https://tumlet.com/blog/${post.slug}`,
+        url: `https://tumlet.com/blog/${post.slug}/`,
         publisher: {
           '@type': 'Organization',
           name: 'Tumlet',

@@ -50,7 +50,7 @@ const routes = [
     path: '/ganthan',
     title: 'Ganthan | Meaningful Conversation Prompts for Nepali Families',
     description:
-      'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories, stories, and more. Free, bilingual, and made with love.',
+      'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.',
     ogImage: 'https://tumlet.com/tumlet-logo.png',
   },
   {
@@ -64,14 +64,14 @@ const routes = [
     path: '/thug',
     title: 'Thug | Social Deduction Game for Nepali Friend Groups',
     description:
-      'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture, last names, places, and foods.',
+      'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.',
     ogImage: 'https://tumlet.com/tumlet-logo.png',
   },
   {
     path: '/farak',
     title: "Farak | Who’s Most Likely To — With an Imposter Twist",
     description:
-      "Farak is the imposter edition of Who’s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.",
+      'Farak is the imposter edition of Who’s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.',
     ogImage: 'https://tumlet.com/og-farak.png',
   },
   {
@@ -191,7 +191,10 @@ fs.writeFileSync(templatePath, fixedRoot, 'utf-8');
 console.log('  ✓ dist/index.html (homepage)');
 
 for (const route of routes) {
-  const canonicalUrl = `https://tumlet.com${route.path}`;
+  // Netlify serves directory index files at their trailing-slash URL and
+  // 301-redirects the non-slash form, so the canonical (and og:url) must use
+  // the trailing slash to avoid "canonical points to redirect".
+  const canonicalUrl = `https://tumlet.com${route.path}/`;
   const html = injectMeta(rootTemplate, { ...route, canonicalUrl });
 
   const routeDir = path.join(distDir, route.path);

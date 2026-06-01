@@ -73,17 +73,17 @@ const STEPS = [
 const Farak = () => {
   useEffect(() => {
     document.title = "Farak | Who's Most Likely To — With an Imposter Twist";
-    setMetaTag('description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
+    setMetaTag('description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
     setMetaTag('keywords', 'farak, whos most likely to, imposter game, party game online, nepali party game, tumlet');
-    setCanonical('https://tumlet.com/farak');
+    setCanonical('https://tumlet.com/farak/');
     setPropertyTag('og:title', "Farak | Who's Most Likely To — With an Imposter Twist");
-    setPropertyTag('og:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
+    setPropertyTag('og:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/farak');
+    setPropertyTag('og:url', 'https://tumlet.com/farak/');
     setPropertyTag('og:image', 'https://tumlet.com/og-farak.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', "Farak | Who's Most Likely To — With an Imposter Twist");
-    setMetaTag('twitter:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online with friends.");
+    setMetaTag('twitter:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
     setMetaTag('twitter:image', 'https://tumlet.com/og-farak.png');
 
     setJsonLd({

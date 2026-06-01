@@ -67,17 +67,17 @@ const STEPS = [
 const Ganthan = () => {
   useEffect(() => {
     document.title = 'Ganthan | Meaningful Conversation Prompts for Nepali Families';
-    setMetaTag('description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories, stories, and more. Free, bilingual, and made with love.');
+    setMetaTag('description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
     setMetaTag('keywords', 'ganthan, nepali family conversations, conversation prompts, nepali diaspora, bilingual questions, tumlet');
-    setCanonical('https://tumlet.com/ganthan');
+    setCanonical('https://tumlet.com/ganthan/');
     setPropertyTag('og:title', 'Ganthan | Meaningful Conversation Prompts for Nepali Families');
-    setPropertyTag('og:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories, stories, and more. Free, bilingual, and made with love.');
+    setPropertyTag('og:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/ganthan');
+    setPropertyTag('og:url', 'https://tumlet.com/ganthan/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Ganthan | Meaningful Conversation Prompts for Nepali Families');
-    setMetaTag('twitter:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories, stories, and more. Free, bilingual, and made with love.');
+    setMetaTag('twitter:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({

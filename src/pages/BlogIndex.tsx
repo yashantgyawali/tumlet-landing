@@ -40,11 +40,11 @@ const BlogIndex = () => {
   useEffect(() => {
     document.title = 'Tumlet Blog | Stories from Nepal\'s board game scene';
     setMetaTag('description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
-    setCanonical('https://tumlet.com/blog');
+    setCanonical('https://tumlet.com/blog/');
     setPropertyTag('og:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
     setPropertyTag('og:description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/blog');
+    setPropertyTag('og:url', 'https://tumlet.com/blog/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
@@ -121,7 +121,7 @@ const BlogIndex = () => {
                 </span>
               </div>
 
-              <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+              <Link to={`/blog/${post.slug}/`} style={{ textDecoration: 'none' }}>
                 <h2 style={{
                   fontFamily: "'Baloo 2', system-ui, sans-serif",
                   fontWeight: 700,
@@ -170,7 +170,7 @@ const BlogIndex = () => {
               </div>
 
               <Link
-                to={`/blog/${post.slug}`}
+                to={`/blog/${post.slug}/`}
                 style={{
                   fontFamily: "'Outfit', system-ui, sans-serif",
                   fontWeight: 500,

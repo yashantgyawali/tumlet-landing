@@ -59,11 +59,11 @@ const About = () => {
   useEffect(() => {
     document.title = "About Us | Tumlet - Nepali board game company";
     setMetaTag('description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
-    setCanonical('https://tumlet.com/about');
+    setCanonical('https://tumlet.com/about/');
     setPropertyTag('og:title', 'About Us | Tumlet - Nepali board game company');
     setPropertyTag('og:description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/about');
+    setPropertyTag('og:url', 'https://tumlet.com/about/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'About Us | Tumlet - Nepali board game company');
@@ -206,7 +206,7 @@ const About = () => {
               return (
                 <p key={i} style={{ fontSize: 'clamp(20px, 2.5vw, 26px)', lineHeight: 1.65, color: '#130D01', marginBottom: 32, marginTop: 0 }}>
                   {parts[0]}
-                  <Link to="/blog/best-nepali-board-games" style={{ textDecoration: 'underline', color: '#F16147' }}>
+                  <Link to="/blog/best-nepali-board-games/" style={{ textDecoration: 'underline', color: '#F16147' }}>
                     Nepali board games
                   </Link>
                   {parts[1]}
@@ -218,7 +218,7 @@ const About = () => {
               return (
                 <p key={i} style={{ fontSize: 'clamp(20px, 2.5vw, 26px)', lineHeight: 1.65, color: '#130D01', marginBottom: 32, marginTop: 0 }}>
                   {parts[0]}
-                  <Link to="/corporate-game-night" style={{ textDecoration: 'underline', color: '#F16147' }}>
+                  <Link to="/corporate-game-night/" style={{ textDecoration: 'underline', color: '#F16147' }}>
                     corporate game nights
                   </Link>
                   {parts[1]}

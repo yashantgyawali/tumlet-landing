@@ -45,10 +45,10 @@ const Footer: React.FC = () => {
               Online games
             </div>
             {[
-              { label: 'Bichitra', to: '/bichitra' },
-              { label: 'Farak', to: '/farak' },
-              { label: 'Ganthan', to: '/ganthan' },
-              { label: 'Thug', to: '/thug' },
+              { label: 'Bichitra', to: '/bichitra/' },
+              { label: 'Farak', to: '/farak/' },
+              { label: 'Ganthan', to: '/ganthan/' },
+              { label: 'Thug', to: '/thug/' },
               { label: 'Kobadi', href: 'https://kobadi.tumlet.com/' },
             ].map(({ label, to, href }) =>
               to ? (
@@ -75,9 +75,9 @@ const Footer: React.FC = () => {
               Company
             </div>
             {[
-              { label: 'About us', to: '/about' },
-              { label: 'Blog', to: '/blog' },
-              { label: 'Corporate game nights', to: '/corporate-game-night' },
+              { label: 'About us', to: '/about/' },
+              { label: 'Blog', to: '/blog/' },
+              { label: 'Corporate game nights', to: '/corporate-game-night/' },
             ].map(({ label, to }) => (
               <Link key={label} to={to} style={{ display: 'block', color: '#130D01', fontSize: 15, fontWeight: 500, marginBottom: 10, textDecoration: 'none', opacity: 0.8, transition: 'opacity 0.2s' }}
                 onMouseEnter={e => (e.currentTarget.style.opacity = '1')}

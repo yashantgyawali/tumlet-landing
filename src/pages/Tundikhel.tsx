@@ -88,11 +88,11 @@ const Tundikhel = () => {
     document.title = 'Race to Tundikhel — A new board game from Tumlet | tumlet.com/tundikhel';
     setMetaTag('description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.');
     setMetaTag('keywords', 'race to tundikhel, tundikhel board game, nepali board game, kathmandu game, tumlet');
-    setCanonical('https://tumlet.com/tundikhel');
+    setCanonical('https://tumlet.com/tundikhel/');
     setPropertyTag('og:title', 'Race to Tundikhel — A new board game from Tumlet');
     setPropertyTag('og:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/tundikhel');
+    setPropertyTag('og:url', 'https://tumlet.com/tundikhel/');
     setPropertyTag('og:image', 'https://tumlet.com/tundikhel/hero-art.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Race to Tundikhel — A new board game from Tumlet');
@@ -104,7 +104,7 @@ const Tundikhel = () => {
       '@type': 'Game',
       name: 'Race to Tundikhel',
       description: 'A Nepali board game where players race micro-buses through the streets of Kathmandu to reach Tundikhel first. No dice — pure bluff and battery management.',
-      url: 'https://tumlet.com/tundikhel',
+      url: 'https://tumlet.com/tundikhel/',
       image: 'https://tumlet.com/tundikhel/hero-art.png',
       numberOfPlayers: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 6 },
       typicalAgeRange: '10+',
