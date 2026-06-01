@@ -60,11 +60,11 @@ const Bichitra = () => {
     document.title = 'Bichitra | Guess the Nepali Last Name';
     setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it — can you find it? No options, no shortcuts. Play free online now.');
     setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar puzzle, tumlet, nepali game online, guess nepali last name');
-    setCanonical('https://tumlet.com/bichitra');
+    setCanonical('https://tumlet.com/bichitra/');
     setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name');
     setPropertyTag('og:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options — just you and the image. Play free online.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/bichitra');
+    setPropertyTag('og:url', 'https://tumlet.com/bichitra/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name');

@@ -72,17 +72,17 @@ const STEPS = [
 const Thug = () => {
   useEffect(() => {
     document.title = 'Thug | Social Deduction Game for Nepali Friend Groups';
-    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture, last names, places, and foods.');
+    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
     setMetaTag('keywords', 'thug game, nepali social deduction game, nepali party game, tumlet, nepali friend groups');
-    setCanonical('https://tumlet.com/thug');
+    setCanonical('https://tumlet.com/thug/');
     setPropertyTag('og:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture, last names, places, and foods.');
+    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/thug');
+    setPropertyTag('og:url', 'https://tumlet.com/thug/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture, last names, places, and foods.');
+    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
