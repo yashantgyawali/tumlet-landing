@@ -62,11 +62,11 @@ const TundikhElHow = () => {
     document.title = 'How to Play Race to Tundikhel | Instruction Video & Rules';
     setMetaTag('description', 'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.');
     setMetaTag('keywords', 'how to play race to tundikhel, tundikhel rules, nepali board game instructions, tumlet');
-    setCanonical('https://tumlet.com/tundikhel-how');
+    setCanonical('https://tumlet.com/tundikhel-how/');
     setPropertyTag('og:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
     setPropertyTag('og:description', 'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet.');
     setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/tundikhel-how');
+    setPropertyTag('og:url', 'https://tumlet.com/tundikhel-how/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
