@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
             <Link to="/thug/" className="block px-4 py-2 hover:bg-gray-100">
               Thug
             </Link>
-            <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
-              Kobadi
+            <a href="https://wavelength.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
+              Wavelength
             </a>
           </div>
         </div>
@@ -89,8 +89,8 @@ const Navbar: React.FC = () => {
             <Link to="/thug/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Thug
             </Link>
-            <a href="https://kobadi.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
-            Kobadi
+            <a href="https://wavelength.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
+            Wavelength
             </a>
           </div>
           
