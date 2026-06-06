@@ -219,7 +219,7 @@ const Wavelength: React.FC = () => {
 
       <main className="flex-1">
         {/* ── HERO ── */}
-        <section className="max-w-[1180px] mx-auto px-6 md:px-12">
+        <section className="max-w-[1180px] mx-auto px-6 md:px-12 pt-8 md:pt-14">
           <div
             className="flex flex-col items-center gap-6 rounded-[20px] sm:rounded-3xl py-8 px-5 sm:p-12 lg:flex-row lg:items-center lg:gap-12 lg:py-14 lg:px-[60px] relative overflow-hidden"
             style={{
