@@ -72,11 +72,12 @@ type DialOpts = {
   poleR?: string;
   score?: number | null;
   spin?: boolean;
+  mini?: boolean;
 };
 
 function dialSvg(opts: DialOpts): string {
-  const o = { needle: null as number | null, mystery: false, poleL: '', poleR: '', score: null as number | null, spin: false, ...opts };
-  const W = 400, H = 250;
+  const o = { needle: null as number | null, mystery: false, poleL: '', poleR: '', score: null as number | null, spin: false, mini: false, ...opts };
+  const W = 400, H = o.mini ? 232 : 250;
   const cx = 200, cy = 214, R = 178;
   let s = '';
 
@@ -138,12 +139,16 @@ function dialSvg(opts: DialOpts): string {
   if (o.poleL) s += `<text x="6" y="${H - 6}" font-family="Baloo 2, sans-serif" font-weight="700" font-size="17" fill="${BROWN}" text-anchor="start">◄ ${o.poleL}</text>`;
   if (o.poleR) s += `<text x="${W - 6}" y="${H - 6}" font-family="Baloo 2, sans-serif" font-weight="700" font-size="17" fill="${TEAL_DEEP}" text-anchor="end">${o.poleR} ►</text>`;
 
-  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wavelength dial">${s}</svg>`;
+  const svgStyle = o.mini ? 'display:block;height:100%;width:auto' : 'display:block;width:100%;height:auto';
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wavelength dial" style="${svgStyle}">${s}</svg>`;
 }
 
-const Dial: React.FC<DialOpts> = (opts) => (
-  <div style={{ width: '100%' }} dangerouslySetInnerHTML={{ __html: dialSvg(opts) }} />
-);
+const Dial: React.FC<DialOpts> = (opts) => {
+  const wrapperStyle: React.CSSProperties = opts.mini
+    ? { height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }
+    : { width: '100%' };
+  return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: dialSvg(opts) }} />;
+};
 
 const SPECS = [
   { subj: 'an umbrella in monsoon', note: 'is it though?', l: 'pointless', r: 'life-saving', pos: 90 },
@@ -207,9 +212,7 @@ const Wavelength: React.FC = () => {
         }
         .wl-final::before { width: 240px; height: 240px; top: -120px; left: -60px; }
         .wl-final::after  { width: 320px; height: 320px; bottom: -200px; right: -60px; }
-        .wl-mini { height: 132px; display: grid; place-items: center; }
-        .wl-mini > div { height: 100%; }
-        .wl-mini svg { height: 100%; width: auto; }
+        .wl-mini { height: 132px; display: flex; align-items: center; justify-content: center; }
       `}</style>
 
       <Navbar />
@@ -337,7 +340,7 @@ const Wavelength: React.FC = () => {
             {[
               {
                 shadow: TEAL_SOFT,
-                visual: <Dial target={70} mystery poleL="" poleR="" />,
+                visual: <Dial mini target={70} mystery poleL="" poleR="" />,
                 title: 'One player gets a secret',
                 body: (<>The dial shows a spectrum — like <b style={{ color: TEAL_DEEP }}>overrated ↔ underrated</b>. One teammate, the <b style={{ color: TEAL_DEEP }}>Psychic</b>, secretly sees where the target sits. Nobody else can.</>),
               },
@@ -373,7 +376,7 @@ const Wavelength: React.FC = () => {
               },
               {
                 shadow: '#F4C0B4',
-                visual: <Dial target={70} needle={78} score={3} />,
+                visual: <Dial mini target={70} needle={78} score={3} />,
                 title: 'The team spins & guesses',
                 body: (<>Everyone debates the clue and turns the dial together. Land <b style={{ color: TEAL_DEEP }}>bang on the target</b> for 4 points, close for 2 or 3. Then you swap and do it again.</>),
               },
