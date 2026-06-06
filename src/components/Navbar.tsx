@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-6 items-center">
         <div className="relative group">
-          <button className="flex items-center gap-1 font-medium text-gray-800 hover:text-black">
+          <button className="flex items-center gap-1 font-medium text-gray-800 hover:text-black cursor-pointer">
             Our online games <ChevronDown size={16} />
           </button>
           <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 min-w-[160px]">
@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
             <Link to="/thug/" className="block px-4 py-2 hover:bg-gray-100">
               Thug
             </Link>
-            <a href="https://wavelength.tumlet.com/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-100">
+            <Link to="/wavelength/" className="block px-4 py-2 hover:bg-gray-100">
               Wavelength
-            </a>
+            </Link>
           </div>
         </div>
         <Link to="/about/" className="font-medium text-gray-800 hover:text-black">
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Hamburger Icon */}
-      <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+      <button className="md:hidden cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
           {/* Header with logo and close button */}
           <div className="flex justify-between items-center mb-8">
             <img className="w-[120px]" src="/tumlet-logo.png" alt="Tumlet Logo" />
-            <button onClick={() => setMenuOpen(false)}>
+            <button className="cursor-pointer" onClick={() => setMenuOpen(false)}>
               <X size={28} />
             </button>
           </div>
@@ -89,9 +89,9 @@ const Navbar: React.FC = () => {
             <Link to="/thug/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Thug
             </Link>
-            <a href="https://wavelength.tumlet.com/" target="_blank" rel="noopener noreferrer" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
+            <Link to="/wavelength/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
             Wavelength
-            </a>
+            </Link>
           </div>
           
           <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer" className="mt-8">

@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               { label: 'Farak', to: '/farak/' },
               { label: 'Ganthan', to: '/ganthan/' },
               { label: 'Thug', to: '/thug/' },
-              { label: 'Wavelength', href: 'https://wavelength.tumlet.com/' },
+              { label: 'Wavelength', to: '/wavelength/' },
             ].map(({ label, to, href }) =>
               to ? (
                 <Link key={label} to={to} style={{ display: 'block', color: '#130D01', fontSize: 15, fontWeight: 500, marginBottom: 10, textDecoration: 'none', opacity: 0.8, transition: 'opacity 0.2s' }}
