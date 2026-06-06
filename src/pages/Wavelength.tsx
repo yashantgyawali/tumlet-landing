@@ -145,7 +145,7 @@ function dialSvg(opts: DialOpts): string {
 
 const Dial: React.FC<DialOpts> = (opts) => {
   const wrapperStyle: React.CSSProperties = opts.mini
-    ? { height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }
+    ? { height: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }
     : { width: '100%' };
   return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: dialSvg(opts) }} />;
 };
@@ -212,7 +212,7 @@ const Wavelength: React.FC = () => {
         }
         .wl-final::before { width: 240px; height: 240px; top: -120px; left: -60px; }
         .wl-final::after  { width: 320px; height: 320px; bottom: -200px; right: -60px; }
-        .wl-mini { height: 132px; display: flex; align-items: center; justify-content: center; }
+        .wl-mini { height: 132px; display: flex; align-items: center; justify-content: flex-start; }
       `}</style>
 
       <Navbar />
