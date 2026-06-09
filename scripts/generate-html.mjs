@@ -146,6 +146,14 @@ const routes = [
     ogImage: 'https://tumlet.com/unfurl.png',
     h1: 'Board Games in Nepal — A Quick Guide',
   },
+  {
+    path: '/wavelength',
+    title: "Wavelength | Read your friends' minds | Tumlet",
+    description:
+      'Wavelength is a Tumlet party game about getting on the same wavelength as your friends. One player gives a clue, the rest spin the dial to guess. Free to play online.',
+    ogImage: 'https://tumlet.com/tumlet-logo.png',
+    h1: 'wavelength',
+  },
 ];
 
 // ─── Site-wide links ───────────────────────────────────────────────────────────
@@ -160,6 +168,7 @@ const PRIMARY_LINKS = [
   { href: '/farak/', label: 'Farak' },
   { href: '/ganthan/', label: 'Ganthan' },
   { href: '/thug/', label: 'Thug' },
+  { href: '/wavelength/', label: 'Wavelength' },
   { href: '/bluff-momo-rules/', label: 'Bluff Momo Rules' },
   { href: '/tundikhel/', label: 'Race to Tundikhel' },
   { href: '/about/', label: 'About Us' },

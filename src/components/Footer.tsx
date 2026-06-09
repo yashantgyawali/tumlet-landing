@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid #E5C97E', paddingTop: 24, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
           <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B' }}>
-            © 2025 Tumlet. All rights reserved.
+            © 2026 Tumlet. All rights reserved.
           </span>
           <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#6B6B6B' }}>
             Made with ♥ in Kathmandu
