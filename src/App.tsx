@@ -19,6 +19,7 @@ import Farak from "./pages/Farak";
 import Tundikhel from "./pages/Tundikhel";
 import TundikhElHow from "./pages/TundikhElHow";
 import Wavelength from "./pages/Wavelength";
+import GameNight from "./pages/GameNight";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/tundikhel" element={<Tundikhel />} />
           <Route path="/tundikhel-how" element={<TundikhElHow />} />
           <Route path="/wavelength" element={<Wavelength />} />
+          <Route path="/game-night" element={<GameNight />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

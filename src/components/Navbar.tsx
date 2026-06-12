@@ -37,9 +37,19 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
         </div>
-        <Link to="/about/" className="font-medium text-gray-800 hover:text-black">
-          About us
-        </Link>
+        <div className="relative group">
+          <button className="flex items-center gap-1 font-medium text-gray-800 hover:text-black cursor-pointer">
+            Our vibe <ChevronDown size={16} />
+          </button>
+          <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 min-w-[160px]">
+            <Link to="/about/" className="block px-4 py-2 hover:bg-gray-100">
+              About us
+            </Link>
+            <Link to="/game-night/" className="block px-4 py-2 hover:bg-gray-100">
+              Game nights
+            </Link>
+          </div>
+        </div>
         <a href="https://www.instagram.com/tumlet.boardgames/" target="_blank" rel="noopener noreferrer" className='flex flex-row justify-center gap-4 items-center'>
           <Button className="nav-button">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,8 +81,14 @@ const Navbar: React.FC = () => {
           </div>
           {/* Menu Content */}
           <div className="flex flex-col gap-6">
-            <Link to="/about/" className="font-medium text-gray-800 text-lg px-4 py-3 hover:bg-gray-100 rounded-lg">
+            <div className="font-medium text-gray-800 text-lg px-4 py-3">
+              Our vibe
+            </div>
+            <Link to="/about/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               About us
+            </Link>
+            <Link to="/game-night/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
+              Game nights
             </Link>
             <div className="font-medium text-gray-800 text-lg px-4 py-3">
               Our online games
