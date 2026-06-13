@@ -10,48 +10,17 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   </svg>
 );
 
-/* PAST NIGHTS DATA — uncomment when events are ready
 const pastNights = [
   {
-    id: 'ev-1',
-    href: '#',
+    id: 'ev-misfits-jun-2026',
+    href: '/game-night/misfits-june-2026',
     isLink: true,
-    when: 'May 2026 · Jhamsikhel',
-    title: 'The night Bluff Momo got loud',
-    desc: "38 players, three tables, one heated argument about whether चोर counts as cheating. (It doesn't. It's the whole game.)",
-  },
-  {
-    id: 'ev-2',
-    when: 'Apr 2026 · Thamel',
-    title: 'Codenames vs. the language barrier',
-    desc: 'Half-Nepali, half-English clues turned every round into beautiful confusion. New record turnout.',
-  },
-  {
-    id: 'ev-3',
-    when: 'Mar 2026 · Pulchowk',
-    title: 'Rainy night, full house',
-    desc: 'Monsoon showed up early; so did 40 of you. Carrom boards out till midnight.',
-  },
-  {
-    id: 'ev-4',
-    when: 'Feb 2026 · Boudha',
-    title: 'The Catan marathon',
-    desc: 'One game ran two and a half hours. Nobody traded sheep. Friendships tested.',
-  },
-  {
-    id: 'ev-5',
-    when: 'Jan 2026 · Baluwatar',
-    title: 'New year, new bluffers',
-    desc: 'A dozen first-timers, a teaching table that never emptied, and a lot of momo.',
-  },
-  {
-    id: 'ev-6',
-    when: 'Dec 2025 · Kupondole',
-    title: 'The very first game night',
-    desc: 'Two friends, one borrowed table, eleven brave strangers. This is where it all started.',
+    when: 'Jun 2026 · Kanti Path',
+    title: "The place with a door that isn't a door",
+    desc: "Misfits Kathmandu. A crazy door, intentional drinks, and 40+ players who stayed till the venue pulled the lights.",
+    thumbnail: '/misfits-june-2026-thumb.png',
   },
 ];
-*/
 
 const tickerItems = [
   'Free entry ✦',
@@ -300,11 +269,9 @@ const GameNight = () => {
                   <WaIcon />
                   Join the WhatsApp community
                 </CtaButton>
-                {/* See past nights link — uncomment when past nights section is ready
                 <a href="#nights" style={{ textDecoration: 'underline', color: '#130D01', fontSize: 16, fontWeight: 500 }}>
                   See past nights →
                 </a>
-                */}
               </div>
             </div>
 
@@ -467,7 +434,7 @@ const GameNight = () => {
           </div>
         </section>
 
-        {/* ===== PAST NIGHTS — uncomment when event recaps are ready =====
+        {/* ===== PAST NIGHTS ===== */}
         <section id="nights" style={{ maxWidth: 1180, margin: '0 auto 96px', padding: '0 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             <div style={{ marginBottom: 16 }}><EyebrowPill>The growing scrapbook</EyebrowPill></div>
@@ -483,7 +450,10 @@ const GameNight = () => {
             {pastNights.map((night) => {
               const cardContent = (
                 <>
-                  <PhotoSlot height={185} />
+                  {night.thumbnail
+                    ? <img src={night.thumbnail} alt={night.title} style={{ width: '100%', height: 185, objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
+                    : <PhotoSlot height={185} />
+                  }
                   <div style={{ padding: '20px 22px 24px', display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
                     <span style={{
                       display: 'inline-flex', alignSelf: 'flex-start', gap: 8, alignItems: 'center',
@@ -526,7 +496,6 @@ const GameNight = () => {
             </div>
           </div>
         </section>
-        ===== END PAST NIGHTS ===== */}
 
         {/* ===== FOR BRANDS ===== */}
         <section id="brands" style={{ maxWidth: 880, margin: '0 auto 96px', padding: '0 24px' }}>
