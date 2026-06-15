@@ -21,6 +21,7 @@ import TundikhElHow from "./pages/TundikhElHow";
 import Wavelength from "./pages/Wavelength";
 import GameNight from "./pages/GameNight";
 import MisfitsGameNight from "./pages/MisfitsGameNight";
+import Five10GameNight from "./pages/Five10GameNight";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/wavelength" element={<Wavelength />} />
           <Route path="/game-night" element={<GameNight />} />
           <Route path="/game-night/misfits-june-2026" element={<MisfitsGameNight />} />
+          <Route path="/game-night/five10-april-2026" element={<Five10GameNight />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

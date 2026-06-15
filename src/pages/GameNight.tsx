@@ -20,6 +20,15 @@ const pastNights = [
     desc: "Misfits Kathmandu. A crazy door, intentional drinks, and 40+ players who stayed till the venue pulled the lights.",
     thumbnail: '/misfits-june-2026-thumb.png',
   },
+  {
+    id: 'ev-five10-apr-2026',
+    href: '/game-night/five10-april-2026',
+    isLink: true,
+    when: 'Apr 2026 · Thamel',
+    title: "The hidden gem with the hidden parking in Thamel",
+    desc: "Five10, Thamel. Matcha, momo, and a 35-person Beast Games tournament — ending in the most intense Bluff Momo final we've ever seen.",
+    thumbnail: '/five10-april-2026-thumb.png',
+  },
 ];
 
 const tickerItems = [

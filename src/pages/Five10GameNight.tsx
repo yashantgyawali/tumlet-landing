@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 
 const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
 
+const FIVE10_BLUE = '#F16147';
+
 const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true" style={{ flex: 'none' }}>
     <path fill={color} d="M16.01 4C9.4 4 4.03 9.36 4.03 15.96c0 2.11.55 4.16 1.6 5.98L4 28l6.23-1.63a11.96 11.96 0 0 0 5.78 1.47h.01c6.6 0 11.97-5.36 11.97-11.96 0-3.2-1.25-6.2-3.5-8.46A11.9 11.9 0 0 0 16.01 4Zm5.46 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z" />
@@ -12,17 +14,13 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 );
 
 const PolaroidSlot = ({
-  gridArea,
   rotation,
-  shadowColor,
   caption,
   dark = true,
   src,
   alt,
 }: {
-  gridArea?: string;
   rotation: string;
-  shadowColor: string;
   caption: string;
   dark?: boolean;
   src?: string;
@@ -36,9 +34,7 @@ const PolaroidSlot = ({
         background: '#f5f1ea',
         padding: '10px 10px 48px',
         boxShadow: '0 2px 10px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.09)',
-        transform: hovered
-          ? 'rotate(0deg) scale(1.03)'
-          : `rotate(${rotation})`,
+        transform: hovered ? 'rotate(0deg) scale(1.03)' : `rotate(${rotation})`,
         transition: 'transform 0.22s ease, box-shadow 0.2s ease',
         display: 'flex',
         flexDirection: 'column',
@@ -92,9 +88,9 @@ const PolaroidSlot = ({
   );
 };
 
-const MisfitsGameNight = () => {
+const Five10GameNight = () => {
   useEffect(() => {
-    document.title = "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night";
+    document.title = "The Hidden Gem with the Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night";
 
     let meta = document.querySelector("meta[name='description']");
     if (!meta) {
@@ -102,7 +98,7 @@ const MisfitsGameNight = () => {
       meta.setAttribute('name', 'description');
       document.head.appendChild(meta);
     }
-    meta.setAttribute('content', 'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.');
+    meta.setAttribute('content', 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.');
 
     let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement | null;
     let created = false;
@@ -112,7 +108,7 @@ const MisfitsGameNight = () => {
       document.head.appendChild(canonical);
       created = true;
     }
-    canonical.setAttribute('href', 'https://www.tumlet.com/game-night/misfits-june-2026');
+    canonical.setAttribute('href', 'https://www.tumlet.com/game-night/five10-april-2026');
 
     return () => {
       if (created && canonical) canonical.remove();
@@ -129,7 +125,6 @@ const MisfitsGameNight = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-        /* Drop cap */
         .gn-drop::first-letter {
           font-family: 'Baloo 2', sans-serif;
           font-weight: 800;
@@ -137,10 +132,9 @@ const MisfitsGameNight = () => {
           font-size: 72px;
           line-height: 0.82;
           padding: 6px 10px 0 0;
-          color: #F16147;
+          color: ${FIVE10_BLUE};
         }
 
-        /* Gallery — simple polaroid row */
         @media (min-width: 700px) {
           .gn-gallery {
             display: flex !important;
@@ -165,7 +159,7 @@ const MisfitsGameNight = () => {
           }
         }
 
-        .gn-back:hover { color: #F16147 !important; }
+        .gn-back:hover { color: ${FIVE10_BLUE} !important; }
         .gn-cta-btn:hover {
           transform: translate(-3px, -3px) !important;
           box-shadow: 9px 9px 0 0 #130D01 !important;
@@ -202,8 +196,8 @@ const MisfitsGameNight = () => {
         <header style={{ padding: '28px 0 0', maxWidth: 740, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
             {[
-              { label: 'June 2026', filled: true },
-              { label: 'Misfits, Kathmandu', filled: false },
+              { label: 'April 2026', filled: true },
+              { label: 'Five10, Thamel', filled: false },
               { label: 'Recap', filled: false },
             ].map(tag => (
               <span key={tag.label} style={{
@@ -231,7 +225,7 @@ const MisfitsGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — Behind the Door That Isn't a Door
+            Tumlet Game Night — The Hidden Gem with the Hidden Parking in Thamel
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -252,7 +246,7 @@ const MisfitsGameNight = () => {
             <div>
               <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14 }}>Tumlet</div>
               <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#7a6e60', marginTop: 2 }}>
-                3 June 2026 · 3 min read
+                1 April 2026 · 4 min read
               </div>
             </div>
           </div>
@@ -265,12 +259,12 @@ const MisfitsGameNight = () => {
             height: 'clamp(240px, 44vw, 500px)',
             border: '3px solid #130D01',
             borderRadius: 16,
-            boxShadow: '10px 10px 0 0 #F3B952',
+            boxShadow: `10px 10px 0 0 ${FIVE10_BLUE}`,
             overflow: 'hidden',
           }}>
             <img
-              src="/misfits-june-2026-thumb.png"
-              alt="Game night at Misfits Kathmandu, June 2026"
+              src="/five10-april-2026-thumb.png"
+              alt="Game night at Five10, Thamel — April 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
           </div>
@@ -290,9 +284,9 @@ const MisfitsGameNight = () => {
           maxWidth: 680,
         }}>
           {[
-            { k: 'Date', v: 'Tue, 3 Jun 2026' },
-            { k: 'Where', v: 'Misfits, Kanti Path' },
-            { k: 'Turnout', v: '40+ players' },
+            { k: 'Date', v: 'Tue, 1 Apr 2026' },
+            { k: 'Where', v: 'Five10, Thamel' },
+            { k: 'Turnout', v: '35+ players' },
             { k: 'Entry', v: 'Free, as always' },
           ].map(item => (
             <div key={item.k} style={{ display: 'flex', gap: 10, alignItems: 'baseline', padding: '7px 0' }}>
@@ -310,12 +304,13 @@ const MisfitsGameNight = () => {
                 fontFamily: "'Baloo 2', sans-serif",
                 fontWeight: 700,
                 fontSize: 16,
+                color: '#130D01',
               }}>{item.v}</span>
             </div>
           ))}
           <div style={{ gridColumn: '1 / -1', borderTop: '1.5px solid rgba(19,13,1,0.18)', marginTop: 8, paddingTop: 14 }}>
             <a
-              href="https://www.instagram.com/misfits.ktm/"
+              href="https://www.instagram.com/five10.np/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -338,44 +333,85 @@ const MisfitsGameNight = () => {
                 <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2"/>
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
               </svg>
-              Follow @misfits.ktm
+              Follow @five10.np
             </a>
           </div>
         </div>
 
-        {/* ── Article body — lean ── */}
+        {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p className="gn-drop" style={{ marginBottom: 20 }}>
-            Nobody walks past Misfits by accident.
+            It's funny how the best things start so randomly.
           </p>
           <p style={{ marginBottom: 20 }}>
-            The entrance isn't exactly a door. It's the kind that makes you stop and wonder — wait, is this the place? We're not going to ruin it for you. But once you figure it out, pushing through feels like being let in on something.
+            Rohil was a friend of a friend, one we'd first met at a game night, funnily enough. He'd ordered a copy of Bluff Momo, loved it, and reached out asking if we'd want our game in his new café. We said yes without much deliberation. You just know.
           </p>
           <p style={{ marginBottom: 20 }}>
-            That's the energy we look for when we choose where to host game nights. Once you're inside, nothing about Misfits is accidental — not the lights, the seating, the drinks, or the bathrooms. It's a space that was thought about.
+            We went to meet him at Five10. Walking in felt intentional in a way most cafés in Kathmandu don't. Cozy, considered, and on a street you've probably walked past a hundred times.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames, and Cluedo took over the tables. Then for the second half of the night, we ran something we'd been cooking — Almosttt Misfit.
+            We pitched the idea: a game night at Five10. Rohil and the team were immediately in. So we decided to do it properly.
           </p>
+
+          <h2 style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 28,
+            margin: '44px 0 16px',
+            color: '#130D01',
+            letterSpacing: '-0.01em',
+          }}>The Open Floor</h2>
+
           <p style={{ marginBottom: 20 }}>
-            It's a twist on herd mentality. You're trying to pick the least common answer — but not so uncommon you're the only one. Write something too unique? –1. Most common answer in the room? –3. Land in the sweet spot of least common? +2.
+            The first half was chaos in the best way. Race to Tundikhel drew a crowd from the start. Flip 7 had players lining up in waves, round after round, nobody wanted to stop. Firiri started quietly in a corner of the room, then became the loudest corner in Five10. Bluff Momo was everywhere, at every table, all night.
           </p>
+
+          <h2 style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 28,
+            margin: '44px 0 16px',
+            color: '#130D01',
+            letterSpacing: '-0.01em',
+          }}>The Tumlet Beast Games</h2>
+
           <p style={{ marginBottom: 20 }}>
-            Easy to learn. Surprisingly hard to play. Exactly the kind of game that makes you second-guess everyone at your table — including yourself.
+            For the second half, we ran something different: a Tumlet-style tournament we'd been building in our heads for a while. Thirty-five players. One winner. We had to get there.
           </p>
+
+          <p style={{ marginBottom: 8 }}>
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 1: The Chip Game.</strong> Something we made up that morning. Every team starts with 20 poker chips. Each round, you secretly bet however many chips you want. The team that bets the most wins the round. First to 2 points moves on. Six rounds total. Only the top 3 teams advanced.
+          </p>
+
+          <p style={{ marginBottom: 8 }}>
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 2: That's Not a Hat.</strong> The surviving teams played in groups. Within each group, half the players were eliminated.
+          </p>
+
+          <p style={{ marginBottom: 20 }}>
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 3: Poker Drink.</strong> Two shot glasses, one matcha, one water. Player 1 looks at a glass and says "matcha" or "water." Truth or bluff, their call. Player 2 picks which glass they drink. Simple format, nerve-wracking in practice.
+          </p>
+
+          <p style={{ marginBottom: 20 }}>
+            We had our final six. And we made them play Bluff Momo.
+          </p>
+
+          <p style={{ marginBottom: 20 }}>
+            It was the most intense round we've ever witnessed. Six people who'd survived three rounds of elimination, sitting around a table, knowing exactly what was at stake. Dead silent between turns. Everyone reading everyone.
+          </p>
+
           <p>
-            Big thanks to the Misfits crew for keeping the drinks coming, and to the incredible Rituza for making the night unforgettable.
+            Five10 were incredible hosts throughout: a curated food menu, the right space, the right energy. The matcha, the team, the vibe — everything came together. We can't wait to go back.
           </p>
         </div>
 
         {/* ── Why it worked ── */}
         <div style={{ maxWidth: 680, margin: '56px auto 0' }}>
           <div style={{
-            background: '#FAF1E4',
+            background: '#EEF3FF',
             border: '2px solid #130D01',
             borderRadius: 16,
             padding: '28px 32px',
-            boxShadow: '6px 6px 0 0 #F3B952',
+            boxShadow: `6px 6px 0 0 ${FIVE10_BLUE}`,
           }}>
             <h3 style={{
               fontFamily: "'Baloo 2', sans-serif",
@@ -383,20 +419,19 @@ const MisfitsGameNight = () => {
               fontSize: 21,
               margin: '0 0 18px',
               color: '#130D01',
-            }}>Why Misfits worked</h3>
+            }}>Why Five10 worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The entry door.', rest: " Genuinely wild. Sets the tone before you've sat down." },
-                { num: '02', strong: 'The drinks.', rest: " Actually good. Players were ordering rounds, not nursing one drink all night." },
-                { num: '03', strong: 'Everything is intentional.', rest: " Designed, not decorated. Board games belong somewhere that someone thought about." },
-                { num: '04', strong: 'The staff.', rest: " Present without being overbearing. By the end they were rooting for tables." },
+                { num: '01', strong: 'The matcha.', rest: " Cloud Coconut Matcha. You will not regret it." },
+                { num: '02', strong: 'Hidden in plain sight.', rest: " The kind of place you walk past for months before someone finally tells you about it." },
+                { num: '03', strong: 'Rohil and the team.', rest: " Genuinely warm. By the end, they were cheering for the final table along with everyone else." },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
                     fontFamily: "'Outfit', sans-serif",
                     fontWeight: 900,
                     fontSize: 17,
-                    color: '#F16147',
+                    color: FIVE10_BLUE,
                     lineHeight: 1.5,
                     flex: 'none',
                     width: 26,
@@ -430,45 +465,41 @@ const MisfitsGameNight = () => {
               textTransform: 'uppercase',
               color: '#7a6e60',
               whiteSpace: 'nowrap',
-            }}>Jun 3, 2026</span>
+            }}>Apr 1, 2026</span>
           </div>
 
           <div className="gn-gallery" style={{ gap: 18 }}>
             <PolaroidSlot
-              gridArea="g1"
-              rotation="0deg"
-              shadowColor="#F3B952"
-              src="/misfits/misfits-g1.jpg"
-              caption="We took off our shoes and took over the floor."
-            />
-            <PolaroidSlot
-              gridArea="g2"
               rotation="1.8deg"
-              shadowColor="#F16147"
-              src="/misfits/misfits-g2.jpg"
-              caption="Pushing luck to its limit."
-            />
-            <PolaroidSlot
-              gridArea="g3"
-              rotation="-2.4deg"
-              shadowColor="#130D01"
-              src="/misfits/misfits-g3.jpg"
-              caption="I will take all the time in the world."
+              src="/five10/five10-g2.jpg"
+              alt="Three people holding Bluff Momo games at Five10"
+              caption="The smile, the competitiveness, all in one"
               dark={false}
             />
             <PolaroidSlot
-              gridArea="g4"
-              rotation="1.4deg"
-              shadowColor="#F3B952"
-              src="/misfits/misfits-g4.jpg"
-              caption="Oh god, how do I lie."
+              rotation="-0.6deg"
+              src="/five10/five10-g3.jpg"
+              alt="Players chatting and playing board games at Five10"
+              caption="Tundikhellllll"
             />
             <PolaroidSlot
-              gridArea="g5"
-              rotation="0.5deg"
-              shadowColor="#F16147"
-              src="/misfits/misfits-g5.jpg"
-              caption="Wait. I just met all these people."
+              rotation="2.2deg"
+              src="/five10/five10-g4.jpg"
+              alt="Race to Tundikhel board and Farak cards on the table"
+              caption="Flip 7 doing it's tinggg."
+              dark={false}
+            />
+            <PolaroidSlot
+              rotation="-1.8deg"
+              src="/five10/five10-g5.jpg"
+              alt="Player concentrating during the Beast Games tournament"
+              caption="Laughing our guts out."
+            />
+            <PolaroidSlot
+              rotation="1.0deg"
+              src="/five10/five10-g6.jpg"
+              alt="Player in bucket hat laughing at Five10 game night"
+              caption="And the winner is..."
               dark={false}
             />
           </div>
@@ -476,12 +507,12 @@ const MisfitsGameNight = () => {
 
         {/* ── CTA ── */}
         <section style={{
-          background: '#F16147',
+          background: FIVE10_BLUE,
           border: '3px solid #130D01',
           borderRadius: 20,
           padding: '44px 36px',
           textAlign: 'center',
-          boxShadow: '10px 10px 0 0 #F3B952',
+          boxShadow: '10px 10px 0 0 #130D01',
           margin: '72px 0 0',
         }}>
           <h2 style={{
@@ -494,7 +525,7 @@ const MisfitsGameNight = () => {
           }}>
             Next one's already being planned.
           </h2>
-          <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
+          <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.9 }}>
             Join the WhatsApp community — that's where the next date and venue drop first, and nowhere else.
           </p>
           <a
@@ -532,7 +563,7 @@ const MisfitsGameNight = () => {
               fontFamily: "'Outfit', sans-serif",
               fontWeight: 700,
               fontSize: 14,
-              color: '#F16147',
+              color: FIVE10_BLUE,
               textDecoration: 'underline',
               letterSpacing: '0.02em',
             }}
@@ -548,4 +579,4 @@ const MisfitsGameNight = () => {
   );
 };
 
-export default MisfitsGameNight;
+export default Five10GameNight;
