@@ -90,7 +90,7 @@ const PolaroidSlot = ({
 
 const Five10GameNight = () => {
   useEffect(() => {
-    document.title = "The Hidden Gem with the Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night";
+    document.title = "The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night";
 
     let meta = document.querySelector("meta[name='description']");
     if (!meta) {
@@ -225,7 +225,7 @@ const Five10GameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — The Hidden Gem with the Hidden Parking in Thamel
+            Tumlet Game Night — The Hidden Gem with a Hidden Parking in Thamel
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -353,6 +353,45 @@ const Five10GameNight = () => {
             We pitched the idea: a game night at Five10. Rohil and the team were immediately in. So we decided to do it properly.
           </p>
 
+          {/* ── YouTube video ── */}
+          <div style={{ margin: '44px 0' }}>
+            <p style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 700,
+              fontSize: 17,
+              color: '#130D01',
+              margin: '0 0 16px',
+              lineHeight: 1.4,
+            }}>
+              The Five10 team came up with this banger just to promote the game night.
+            </p>
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%',
+              height: 0,
+              border: '3px solid #130D01',
+              borderRadius: 14,
+              boxShadow: `8px 8px 0 0 ${FIVE10_BLUE}`,
+              overflow: 'hidden',
+            }}>
+              <iframe
+                src="https://www.youtube.com/embed/p6eOBsjCgxk"
+                title="Five10 Game Night Promo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  display: 'block',
+                }}
+              />
+            </div>
+          </div>
+
           <h2 style={{
             fontFamily: "'Baloo 2', sans-serif",
             fontWeight: 800,
@@ -363,7 +402,7 @@ const Five10GameNight = () => {
           }}>The Open Floor</h2>
 
           <p style={{ marginBottom: 20 }}>
-            The first half was chaos in the best way. Race to Tundikhel drew a crowd from the start. Flip 7 had players lining up in waves, round after round, nobody wanted to stop. Firiri started quietly in a corner of the room, then became the loudest corner in Five10. Bluff Momo was everywhere, at every table, all night.
+            The first half was chaos in the best way. Race to Tundikhel drew a crowd from the start. Flip 7 had players lining up in waves, round after round, and nobody wanted to stop. Firiri started quietly in a corner of the room, then became the loudest corner in Five10. Bluff Momo was everywhere, at every table, all night.
           </p>
 
           <h2 style={{
@@ -388,7 +427,7 @@ const Five10GameNight = () => {
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 3: Poker Drink.</strong> Two shot glasses, one matcha, one water. Player 1 looks at a glass and says "matcha" or "water." Truth or bluff, their call. Player 2 picks which glass they drink. Simple format, nerve-wracking in practice.
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 3: Poker Drink.</strong> Two shot glasses, one matcha, one water. Player 1 looks at a glass and says "matcha" or "water." Truth or bluff, their call. Player 2 picks which glass to drink from. It was nerve-wracking in practice.
           </p>
 
           <p style={{ marginBottom: 20 }}>
@@ -396,7 +435,7 @@ const Five10GameNight = () => {
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            It was the most intense round we've ever witnessed. Six people who'd survived three rounds of elimination, sitting around a table, knowing exactly what was at stake. Dead silent between turns. Everyone reading everyone.
+            It was the most intense round we've ever witnessed. Six people who'd survived three rounds of elimination, sitting around a table, knowing exactly what was at stake. It was dead silent between turns. No smiles whatsoever.
           </p>
 
           <p>
