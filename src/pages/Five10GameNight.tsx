@@ -353,6 +353,45 @@ const Five10GameNight = () => {
             We pitched the idea: a game night at Five10. Rohil and the team were immediately in. So we decided to do it properly.
           </p>
 
+          {/* ── YouTube video ── */}
+          <div style={{ margin: '44px 0' }}>
+            <p style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 700,
+              fontSize: 17,
+              color: '#130D01',
+              margin: '0 0 16px',
+              lineHeight: 1.4,
+            }}>
+              The Five10 team came up with this banger just to promote the game night.
+            </p>
+            <div style={{
+              position: 'relative',
+              paddingBottom: '56.25%',
+              height: 0,
+              border: '3px solid #130D01',
+              borderRadius: 14,
+              boxShadow: `8px 8px 0 0 ${FIVE10_BLUE}`,
+              overflow: 'hidden',
+            }}>
+              <iframe
+                src="https://www.youtube.com/embed/p6eOBsjCgxk"
+                title="Five10 Game Night Promo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                  display: 'block',
+                }}
+              />
+            </div>
+          </div>
+
           <h2 style={{
             fontFamily: "'Baloo 2', sans-serif",
             fontWeight: 800,
