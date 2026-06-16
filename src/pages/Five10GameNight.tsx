@@ -7,6 +7,36 @@ const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
 
 const FIVE10_BLUE = '#F16147';
 
+function setMetaTag(name: string, content: string) {
+  let tag = document.querySelector(`meta[name='${name}']`);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('name', name);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
+}
+
+function setPropertyTag(property: string, content: string) {
+  let tag = document.querySelector(`meta[property='${property}']`);
+  if (!tag) {
+    tag = document.createElement('meta');
+    tag.setAttribute('property', property);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute('content', content);
+}
+
+function setCanonical(url: string) {
+  let link = document.querySelector("link[rel='canonical']");
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+  link.setAttribute('href', url);
+}
+
 const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true" style={{ flex: 'none' }}>
     <path fill={color} d="M16.01 4C9.4 4 4.03 9.36 4.03 15.96c0 2.11.55 4.16 1.6 5.98L4 28l6.23-1.63a11.96 11.96 0 0 0 5.78 1.47h.01c6.6 0 11.97-5.36 11.97-11.96 0-3.2-1.25-6.2-3.5-8.46A11.9 11.9 0 0 0 16.01 4Zm5.46 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z" />
@@ -90,29 +120,23 @@ const PolaroidSlot = ({
 
 const Five10GameNight = () => {
   useEffect(() => {
-    document.title = "The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night";
+    const title = 'The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night';
+    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.';
+    const image = 'https://tumlet.com/five10-april-2026-thumb.png';
+    const url = 'https://tumlet.com/game-night/five10-april-2026';
 
-    let meta = document.querySelector("meta[name='description']");
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.');
-
-    let canonical = document.querySelector("link[rel='canonical']") as HTMLLinkElement | null;
-    let created = false;
-    if (!canonical) {
-      canonical = document.createElement('link') as HTMLLinkElement;
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-      created = true;
-    }
-    canonical.setAttribute('href', 'https://www.tumlet.com/game-night/five10-april-2026');
-
-    return () => {
-      if (created && canonical) canonical.remove();
-    };
+    document.title = title;
+    setMetaTag('description', description);
+    setCanonical(url);
+    setPropertyTag('og:title', title);
+    setPropertyTag('og:description', description);
+    setPropertyTag('og:type', 'article');
+    setPropertyTag('og:url', url);
+    setPropertyTag('og:image', image);
+    setMetaTag('twitter:card', 'summary_large_image');
+    setMetaTag('twitter:title', title);
+    setMetaTag('twitter:description', description);
+    setMetaTag('twitter:image', image);
   }, []);
 
   return (
@@ -124,16 +148,6 @@ const Five10GameNight = () => {
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-        .gn-drop::first-letter {
-          font-family: 'Baloo 2', sans-serif;
-          font-weight: 800;
-          float: left;
-          font-size: 72px;
-          line-height: 0.82;
-          padding: 6px 10px 0 0;
-          color: ${FIVE10_BLUE};
-        }
 
         @media (min-width: 700px) {
           .gn-gallery {
@@ -340,7 +354,7 @@ const Five10GameNight = () => {
 
         {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
-          <p className="gn-drop" style={{ marginBottom: 20 }}>
+          <p style={{ marginBottom: 20 }}>
             It's funny how the best things start so randomly.
           </p>
           <p style={{ marginBottom: 20 }}>
