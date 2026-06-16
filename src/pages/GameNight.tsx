@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-watering-hole-jun-2026',
+    href: '/game-night/watering-hole-may-2026',
+    isLink: true,
+    when: 'May 2026 · Jhamsikhel',
+    title: "At the Heart of Jhamsikhel",
+    desc: "The Watering Hole. Record turnout, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close the night.",
+    thumbnail: '/watering-hole-may-2026-thumb.webp',
+  },
+  {
     id: 'ev-misfits-jun-2026',
     href: '/game-night/misfits-june-2026',
     isLink: true,

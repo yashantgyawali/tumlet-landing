@@ -149,16 +149,6 @@ const Five10GameNight = () => {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-        .gn-drop::first-letter {
-          font-family: 'Baloo 2', sans-serif;
-          font-weight: 800;
-          float: left;
-          font-size: 72px;
-          line-height: 0.82;
-          padding: 6px 10px 0 0;
-          color: ${FIVE10_BLUE};
-        }
-
         @media (min-width: 700px) {
           .gn-gallery {
             display: flex !important;
@@ -364,7 +354,7 @@ const Five10GameNight = () => {
 
         {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
-          <p className="gn-drop" style={{ marginBottom: 20 }}>
+          <p style={{ marginBottom: 20 }}>
             It's funny how the best things start so randomly.
           </p>
           <p style={{ marginBottom: 20 }}>

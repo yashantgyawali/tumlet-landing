@@ -154,16 +154,6 @@ const MisfitsGameNight = () => {
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
         /* Drop cap */
-        .gn-drop::first-letter {
-          font-family: 'Baloo 2', sans-serif;
-          font-weight: 800;
-          float: left;
-          font-size: 72px;
-          line-height: 0.82;
-          padding: 6px 10px 0 0;
-          color: #F16147;
-        }
-
         /* Gallery — simple polaroid row */
         @media (min-width: 700px) {
           .gn-gallery {
@@ -369,7 +359,7 @@ const MisfitsGameNight = () => {
 
         {/* ── Article body — lean ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
-          <p className="gn-drop" style={{ marginBottom: 20 }}>
+          <p style={{ marginBottom: 20 }}>
             Nobody walks past Misfits by accident.
           </p>
           <p style={{ marginBottom: 20 }}>
