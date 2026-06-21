@@ -23,6 +23,7 @@ import GameNight from "./pages/GameNight";
 import MisfitsGameNight from "./pages/MisfitsGameNight";
 import Five10GameNight from "./pages/Five10GameNight";
 import WateringHoleGameNight from "./pages/WateringHoleGameNight";
+import BetterCoffeeGameNight from "./pages/BetterCoffeeGameNight";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/game-night/watering-hole-may-2026" element={<WateringHoleGameNight />} />
           <Route path="/game-night/misfits-june-2026" element={<MisfitsGameNight />} />
           <Route path="/game-night/five10-april-2026" element={<Five10GameNight />} />
+          <Route path="/game-night/bettercoffee-february-2026" element={<BetterCoffeeGameNight />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
