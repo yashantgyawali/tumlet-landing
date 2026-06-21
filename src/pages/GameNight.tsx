@@ -68,6 +68,15 @@ const pastNights = [
     desc: "Five10, Thamel. Matcha, momo, and a 35-person Beast Games tournament — ending in the most intense Bluff Momo final we've ever seen.",
     thumbnail: '/five10-april-2026-thumb.png',
   },
+  {
+    id: 'ev-bettercoffee-feb-2026',
+    href: '/game-night/bettercoffee-february-2026',
+    isLink: true,
+    when: 'Feb 2026 · Sanepa',
+    title: 'Coffee, connection, and chaos',
+    desc: "Better Coffee, Sanepa. Our first Beast-style elimination tournament — 30+ players, Valentine's chaos, and one Bluff Momo champion.",
+    thumbnail: '/bettercoffee-february-2026-thumb.png',
+  },
 ];
 
 const tickerItems = [
