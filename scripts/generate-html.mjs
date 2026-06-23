@@ -154,6 +154,46 @@ const routes = [
     ogImage: 'https://tumlet.com/tumlet-logo.png',
     h1: 'wavelength',
   },
+  {
+    path: '/game-night',
+    title: 'Board Game Night: free, every month, all around Kathmandu | Tumlet',
+    description:
+      'Tumlet hosts a free board game night every month, somewhere new in Kathmandu. No tickets, no experience needed. We teach the rules. Join the WhatsApp community to catch the next one.',
+    ogImage: 'https://tumlet.com/game-night-1.jpg',
+    h1: 'A free board game night, every month, somewhere new in Kathmandu.',
+  },
+  {
+    path: '/game-night/watering-hole-may-2026',
+    title: 'At the Heart of Jhamsikhel · The Watering Hole, May 2026 | Tumlet Game Night',
+    description:
+      'Our highest attendance yet — 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.',
+    ogImage: 'https://tumlet.com/watering-hole-may-2026-thumb.webp',
+    h1: 'Tumlet Game Night — At the Heart of Jhamsikhel',
+  },
+  {
+    path: '/game-night/bettercoffee-february-2026',
+    title: 'Coffee, Connection, and Chaos · Better Coffee, February 2026 | Tumlet Game Night',
+    description:
+      "Game night at a coffee shop? At Better Coffee Sanepa it worked. Skull, Codenames, CATAN — and our first Beast-style elimination tournament on Valentine's Day, February 2026.",
+    ogImage: 'https://tumlet.com/bettercoffee-february-2026-thumb.png',
+    h1: 'Tumlet Game Night — Coffee, Connection, and Chaos',
+  },
+  {
+    path: '/game-night/misfits-june-2026',
+    title: "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night",
+    description:
+      'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.',
+    ogImage: 'https://tumlet.com/misfits-june-2026-thumb.png',
+    h1: "Tumlet Game Night — Behind the Door That Isn't a Door",
+  },
+  {
+    path: '/game-night/five10-april-2026',
+    title: 'The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night',
+    description:
+      'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.',
+    ogImage: 'https://tumlet.com/five10-april-2026-thumb.png',
+    h1: 'Tumlet Game Night — The Hidden Gem with a Hidden Parking in Thamel',
+  },
 ];
 
 // ─── Site-wide links ───────────────────────────────────────────────────────────

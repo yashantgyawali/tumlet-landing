@@ -123,7 +123,7 @@ const BetterCoffeeGameNight = () => {
     const title = 'Coffee, Connection, and Chaos · Better Coffee, February 2026 | Tumlet Game Night';
     const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked. Skull, Codenames, CATAN — and our first Beast-style elimination tournament on Valentine\'s Day, February 2026.';
     const image = 'https://tumlet.com/bettercoffee-february-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/bettercoffee-february-2026';
+    const url = 'https://tumlet.com/game-night/bettercoffee-february-2026/';
 
     document.title = title;
     setMetaTag('description', description);

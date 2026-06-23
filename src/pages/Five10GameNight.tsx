@@ -123,7 +123,7 @@ const Five10GameNight = () => {
     const title = 'The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night';
     const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.';
     const image = 'https://tumlet.com/five10-april-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/five10-april-2026';
+    const url = 'https://tumlet.com/game-night/five10-april-2026/';
 
     document.title = title;
     setMetaTag('description', description);
