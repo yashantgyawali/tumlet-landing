@@ -162,7 +162,7 @@ const SPECS = [
 const Wavelength: React.FC = () => {
   useEffect(() => {
     document.title = "Wavelength | Read your friends' minds | Tumlet";
-    setMetaTag('description', "Wavelength is a Tumlet party game about getting on the same wavelength as your friends. One player gives a clue, the rest spin the dial to guess. Free to play online.");
+    setMetaTag('description', "One player gives a clue, the rest spin the dial to guess. A free Tumlet party game for reading your friends' minds. Play online.");
     setMetaTag('keywords', 'wavelength, tumlet party game, nepali party game, board game online, dial game, group game nepal');
     setCanonical('https://tumlet.com/wavelength/');
     setPropertyTag('og:title', "Wavelength | Read your friends' minds | Tumlet");

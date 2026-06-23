@@ -150,7 +150,7 @@ const routes = [
     path: '/wavelength',
     title: "Wavelength | Read your friends' minds | Tumlet",
     description:
-      'Wavelength is a Tumlet party game about getting on the same wavelength as your friends. One player gives a clue, the rest spin the dial to guess. Free to play online.',
+      "One player gives a clue, the rest spin the dial to guess. A free Tumlet party game for reading your friends' minds. Play online.",
     ogImage: 'https://tumlet.com/tumlet-logo.png',
     h1: 'wavelength',
   },
@@ -161,6 +161,12 @@ const routes = [
       'Tumlet hosts a free board game night every month, somewhere new in Kathmandu. No tickets, no experience needed. We teach the rules. Join the WhatsApp community to catch the next one.',
     ogImage: 'https://tumlet.com/game-night-1.jpg',
     h1: 'A free board game night, every month, somewhere new in Kathmandu.',
+    relatedLinks: [
+      { href: '/game-night/misfits-june-2026/', label: 'Game Night at Misfits, June 2026' },
+      { href: '/game-night/watering-hole-may-2026/', label: 'Game Night at The Watering Hole, May 2026' },
+      { href: '/game-night/five10-april-2026/', label: 'Game Night at Five10, April 2026' },
+      { href: '/game-night/bettercoffee-february-2026/', label: 'Game Night at Better Coffee, February 2026' },
+    ],
   },
   {
     path: '/game-night/watering-hole-may-2026',
@@ -211,6 +217,7 @@ const PRIMARY_LINKS = [
   { href: '/wavelength/', label: 'Wavelength' },
   { href: '/bluff-momo-rules/', label: 'Bluff Momo Rules' },
   { href: '/tundikhel/', label: 'Race to Tundikhel' },
+  { href: '/game-night/', label: 'Game Night' },
   { href: '/about/', label: 'About Us' },
   { href: '/blog/', label: 'Blog' },
 ];
@@ -308,10 +315,18 @@ function injectMeta(template, { title, description, ogImage, canonicalUrl }) {
  * React replaces this entirely on mount (createRoot), so it only ever serves
  * non-JS crawlers and the very first paint.
  */
-function renderSeoBody({ h1, description }) {
+function renderSeoBody({ h1, description, relatedLinks = [] }) {
   const navLinkStyle =
     'color:#F16147;font-weight:600;text-decoration:none;white-space:nowrap;';
   const footerLinkStyle = 'color:#6B6B6B;text-decoration:underline;white-space:nowrap;';
+
+  const relatedSection = relatedLinks.length > 0 ? `
+        <section style="margin-top:32px;">
+          <h2 style="font-size:18px;font-weight:700;color:#130D01;margin:0 0 12px;">Recent game nights</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+            ${relatedLinks.map(l => `<li><a href="${escapeAttr(l.href)}" style="color:#F16147;text-decoration:underline;">${escapeHtml(l.label)}</a></li>`).join('\n            ')}
+          </ul>
+        </section>` : '';
 
   return `
     <div style="max-width:880px;margin:0 auto;padding:40px 24px;font-family:'Baloo 2',system-ui,sans-serif;color:#130D01;line-height:1.5;">
@@ -334,7 +349,7 @@ function renderSeoBody({ h1, description }) {
           <a href="/ganthan/" style="color:#F16147;">Ganthan</a> and
           <a href="/thug/" style="color:#F16147;">Thug</a> — or race through Kathmandu with
           <a href="/tundikhel/" style="color:#F16147;">Race to Tundikhel</a>.
-        </p>
+        </p>${relatedSection}
       </main>
       <footer style="margin-top:56px;padding-top:24px;border-top:1px solid #E5C97E;color:#6B6B6B;font-size:14px;">
         <p style="max-width:560px;margin:0 0 16px;">

@@ -39,10 +39,10 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Online games */}
+          {/* Our games */}
           <div>
             <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F16147', marginBottom: 16 }}>
-              Online games
+              Our games
             </div>
             {[
               { label: 'Bichitra', to: '/bichitra/' },
@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
               { label: 'Ganthan', to: '/ganthan/' },
               { label: 'Thug', to: '/thug/' },
               { label: 'Wavelength', to: '/wavelength/' },
+              { label: 'Race to Tundikhel', to: '/tundikhel/' },
             ].map(({ label, to, href }) =>
               to ? (
                 <Link key={label} to={to} style={{ display: 'block', color: '#130D01', fontSize: 15, fontWeight: 500, marginBottom: 10, textDecoration: 'none', opacity: 0.8, transition: 'opacity 0.2s' }}
