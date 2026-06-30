@@ -127,7 +127,7 @@ const MisfitsGameNight = () => {
     const title = "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night";
     const description = 'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.';
     const image = 'https://tumlet.com/misfits-june-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/misfits-june-2026';
+    const url = 'https://tumlet.com/game-night/misfits-june-2026/';
 
     document.title = title;
     setMetaTag('description', description);

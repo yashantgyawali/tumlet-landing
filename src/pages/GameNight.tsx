@@ -201,7 +201,7 @@ const GameNight = () => {
     const title = 'Board Game Night: free, every month, all around Kathmandu | Tumlet';
     const description = 'Tumlet hosts a free board game night every month, somewhere new in Kathmandu. No tickets, no experience needed. We teach the rules. Join the WhatsApp community to catch the next one.';
     const image = 'https://tumlet.com/game-night-1.jpg';
-    const url = 'https://tumlet.com/game-night';
+    const url = 'https://tumlet.com/game-night/';
 
     document.title = title;
     setMetaTag('description', description);
