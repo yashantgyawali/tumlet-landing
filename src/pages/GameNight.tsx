@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-terrys-jul-2026',
+    href: '/game-night/terrys-july-2026',
+    isLink: true,
+    when: 'Jul 2026 · Terry\'s Pub & Bistro',
+    title: 'The Whole Roof Was Ours',
+    desc: "Terry's Pub & Bistro. Record 50+ turnout, the debut of Momo Psychi, and Saboteur crowned best game of the night.",
+    thumbnail: '/terrys-july-2026-thumb.png',
+  },
+  {
     id: 'ev-watering-hole-jun-2026',
     href: '/game-night/watering-hole-may-2026',
     isLink: true,

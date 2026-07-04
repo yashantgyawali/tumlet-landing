@@ -162,11 +162,20 @@ const routes = [
     ogImage: 'https://tumlet.com/game-night-1.jpg',
     h1: 'A free board game night, every month, somewhere new in Kathmandu.',
     relatedLinks: [
+      { href: '/game-night/terrys-july-2026/', label: "Game Night at Terry's Pub & Bistro, July 2026" },
       { href: '/game-night/misfits-june-2026/', label: 'Game Night at Misfits, June 2026' },
       { href: '/game-night/watering-hole-may-2026/', label: 'Game Night at The Watering Hole, May 2026' },
       { href: '/game-night/five10-april-2026/', label: 'Game Night at Five10, April 2026' },
       { href: '/game-night/bettercoffee-february-2026/', label: 'Game Night at Better Coffee, February 2026' },
     ],
+  },
+  {
+    path: '/game-night/terrys-july-2026',
+    title: "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night",
+    description:
+      "Our biggest turnout yet — 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.",
+    ogImage: 'https://tumlet.com/terrys-july-2026-thumb.png',
+    h1: 'Tumlet Game Night — The Whole Roof Was Ours',
   },
   {
     path: '/game-night/watering-hole-may-2026',
