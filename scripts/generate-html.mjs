@@ -147,6 +147,14 @@ const routes = [
     h1: 'Board Games in Nepal — A Quick Guide',
   },
   {
+    path: '/blog/best-souvenirs-nepal',
+    title: "Best Souvenirs From Nepal: Thoughtful Gifts I Wish I'd Known About",
+    description:
+      "Two years ago I panic-bought pashmina shawls for an Australian summer. Since then I've kept a running list of the best souvenirs from Nepal — mostly from small local brands worth knowing about.",
+    ogImage: 'https://tumlet.com/blogs/best-souvenirs-nepal/unfurl.jpg',
+    h1: "Best Souvenirs From Nepal: Thoughtful Gifts I Wish I'd Known About",
+  },
+  {
     path: '/wavelength',
     title: "Wavelength | Read your friends' minds | Tumlet",
     description:
@@ -236,6 +244,7 @@ const FOOTER_LINKS = [
   { href: '/tundikhel-how/', label: 'How to Play Race to Tundikhel' },
   { href: '/blog/best-nepali-board-games/', label: 'Best Nepali Board Games' },
   { href: '/blog/board-game-nepal/', label: 'Board Games in Nepal' },
+  { href: '/blog/best-souvenirs-nepal/', label: 'Best Souvenirs From Nepal' },
   { href: 'https://kobadi.tumlet.com/', label: 'Kobadi', external: true },
   { href: 'https://www.instagram.com/tumlet.boardgames/', label: 'Instagram', external: true },
 ];

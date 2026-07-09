@@ -167,6 +167,9 @@ const BluffMomo = () => {
           <p className="text-lg md:text-xl text-gray-700 mb-4">
             Want to play Bluff Momo with your team? We host <Link to="/corporate-game-night/" className="underline hover:text-tumlet-text/80 text-tumlet-text">corporate game nights</Link> where we bring games to your office and run the entire session.
           </p>
+          <p className="text-lg md:text-xl text-gray-700">
+            Flying out of Nepal soon? Bluff Momo packs flat and travels well — see why it made our list of the <Link to="/blog/best-souvenirs-nepal/" className="underline hover:text-tumlet-text/80 text-tumlet-text">best souvenirs to bring home from Nepal</Link>.
+          </p>
         </div>
       </div>
       
