@@ -30,8 +30,6 @@ export const blogTypographyStyles = `
     max-width: 760px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
@@ -260,6 +258,12 @@ export const blogTypographyStyles = `
     .blog-typography img,
     .mdx-content img {
       margin: 24px 0;
+    }
+
+    .note-card {
+      padding: 20px 24px !important;
+      margin-left: -12px !important;
+      margin-right: -12px !important;
     }
   }
 
