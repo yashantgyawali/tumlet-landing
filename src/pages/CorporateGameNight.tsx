@@ -511,6 +511,72 @@ const CorporateGameNight = () => {
           </div>
         </section>
 
+        {/* ── FOUNDER'S NOTE ── */}
+        <section style={{ maxWidth: 760, margin: '96px auto 0', padding: '0 24px' }}>
+          <span style={{
+            display: 'inline-block',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: 700,
+            fontSize: 12,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#2D7A4F',
+            background: '#EDF5DD',
+            padding: '6px 14px',
+            borderRadius: 999,
+            marginBottom: 16,
+          }}>
+            From the founders
+          </span>
+
+          <h2 style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 'clamp(32px, 4.4vw, 46px)',
+            lineHeight: 1.1,
+            letterSpacing: '-0.01em',
+            color: '#130D01',
+            marginTop: 0,
+            marginBottom: 24,
+          }}>
+            Founder's note
+          </h2>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We love hosting game nights. We genuinely believe games are one of the best ways for people to connect — and we've seen teams open up, build real psychological safety, and learn more about their teammates just by sharing a table and playing together.
+          </p>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We create intentional, inclusive spaces where everyone gets a voice. There's a loud table, a table full of introverts, a table of pure strategists, and a table that would rather just talk. No matter who's in the room, we make sure everyone has fun in their own way.
+          </p>
+
+          <blockquote style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 700,
+            fontSize: 'clamp(24px, 3vw, 30px)',
+            lineHeight: 1.3,
+            color: '#130D01',
+            borderLeft: '6px solid #F16147',
+            padding: '10px 0 10px 28px',
+            margin: '36px 0',
+          }}>
+            "No matter who's at the table, everyone leaves having had fun in their own way."
+          </blockquote>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We end every night with a curated experience where every single person plays one game, all together — sometimes a friendly competition, sometimes a team game they have to work together to complete.
+          </p>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 0 }}>
+            Either way, we design the night so your team can cool off and build real psychological safety together.
+          </p>
+
+          <p style={{ marginTop: 36, color: '#130D01', fontWeight: 700, fontSize: 19, marginBottom: 0, fontFamily: "'Baloo 2', sans-serif" }}>
+            — Sarina Pantha &amp; Yashant Gyawali<br />
+            <span style={{ fontWeight: 500, color: '#3a3225', fontSize: 15 }}>Tumlet · Kathmandu</span>
+          </p>
+        </section>
+
         {/* ── BOTTOM CTA ── */}
         <section style={{ maxWidth: 760, margin: '80px auto 96px', padding: '0 24px' }}>
           <div style={{
