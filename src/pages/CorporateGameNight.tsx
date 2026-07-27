@@ -155,8 +155,8 @@ const games = [
   {
     name: "Guess the Price",
     emoji: "🏷️",
-    description: "We buy everyday Nepali items. You guess the price. Closest guess wins the item.",
-    category: "Add-on",
+    description: "We buy everyday Nepali items. Everyone guesses the price together — closest guess takes it home. Our usual second-half closer.",
+    category: "Grand Finale",
     bestFor: "Everyone",
   },
 ];
@@ -171,7 +171,7 @@ const steps = [
   {
     num: "02",
     title: "We set up",
-    desc: "We show up, bring everything, explain the rules, and host the full session.",
+    desc: "We show up, bring everything, and run the full session — board games first, one big group game to close it out.",
     accent: "#F16147",
   },
   {
@@ -269,7 +269,7 @@ const CorporateGameNight = () => {
             maxWidth: 580,
             margin: '0 auto 40px',
           }}>
-            We show up at your office with a bunch of board games, set everything up, explain all the rules, and host the entire session. Your team just has to show up and have fun.
+            We show up at your office with a bunch of board games, set everything up, and explain all the rules. Board games first, then one big group game — like Guess the Price — that gets everyone playing together. Your team just has to show up and have fun.
           </p>
 
           <button
@@ -496,7 +496,7 @@ const CorporateGameNight = () => {
               color: '#6B6B6B',
               margin: 0,
             }}>
-              Pick ~3 games for your night. We'll teach all the rules in person.
+              Pick ~3 board games for the first half. We close every session with one big whole-team game — like Guess the Price — so nobody just watches.
             </p>
           </div>
 
@@ -604,7 +604,7 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
   'Social Deduction': { bg: '#E8E0F0', text: '#6A0DAD' },
   'Card Climbing': { bg: '#D6EEFF', text: '#1565C0' },
   Business: { bg: '#D6EEFF', text: '#1565C0' },
-  'Add-on': { bg: '#F0F0F0', text: '#666666' },
+  'Grand Finale': { bg: '#FFF3D6', text: '#B8860B' },
 };
 
 const rotations = [-0.8, 0.5, -0.3, 0.7, -0.6, 0.4, -0.5, 0.8, -0.4, 0.6, -0.7, 0.3, -0.9, 0.5, -0.2, 0.9];
