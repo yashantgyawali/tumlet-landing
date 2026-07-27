@@ -119,7 +119,7 @@ const PolaroidSlot = ({
 const TerrysGameNight = () => {
   React.useEffect(() => {
     const title = "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night";
-    const description = "Our biggest turnout yet — 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.";
+    const description = "Our biggest turnout yet: 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.";
     const image = 'https://tumlet.com/terrys-july-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/terrys-july-2026/';
 
@@ -237,7 +237,7 @@ const TerrysGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — The Whole Roof Was Ours
+            Tumlet Game Night: The Whole Roof Was Ours
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -327,7 +327,7 @@ const TerrysGameNight = () => {
             Open air, string lights, and for one Friday night, the entire Terry's roof was ours.
           </p>
           <p style={{ marginBottom: 20 }}>
-            No other crowd on the side judging us this time — Terry's Pub & Bistro handed over the whole roof, and we filled it with everything we could carry up the stairs.
+            No other crowd on the side judging us this time. Terry's Pub & Bistro handed over the whole roof, and we filled it with everything we could carry up the stairs.
           </p>
           <p style={{ marginBottom: 20 }}>
             Fifty-plus people showed up. Yep, that's not a typo. It's the biggest crowd we've pulled to a game night yet, comfortably past our previous record at The Watering Hole. And yet we had to say no to so many people.
@@ -343,7 +343,7 @@ const TerrysGameNight = () => {
           }}>The games that made it to the night</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Herd Mentality, Deep Sea Adventure, Secret Hitler, Codenames, Bluff Momo, Tundikhel, Dixit, Scout, and Saboteur were all on the tables. We gauged the room, and the Saboteur table was the loudest all night — with the biggest gasp every now and then.
+            Herd Mentality, Deep Sea Adventure, Secret Hitler, Codenames, Bluff Momo, Tundikhel, Dixit, Scout, and Saboteur were all on the tables. We gauged the room, and the Saboteur table was the loudest all night, with the biggest gasp every now and then.
           </p>
 
           <h2 style={{
@@ -388,7 +388,7 @@ const TerrysGameNight = () => {
             }}>Why Terry's worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The whole roof, ours.', rest: ' No shared tables, no competing groups — the biggest venue we\'ve had entirely to ourselves.' },
+                { num: '01', strong: 'The whole roof, ours.', rest: ' No shared tables, no competing groups: the biggest venue we\'ve had entirely to ourselves.' },
                 { num: '02', strong: 'Fifty-plus and counting.', rest: ' A new turnout record, past our previous high at The Watering Hole.' },
                 { num: '03', strong: 'Momo Psychi debuted.', rest: ' A bidding game that punishes greed and hesitation in equal measure. Instant favorite.' },
                 { num: '04', strong: 'Saboteur was the loudest table.', rest: ' Biggest gasps of the night, every round.' },
@@ -467,7 +467,7 @@ const TerrysGameNight = () => {
               rotation="-2.2deg"
               src="/terrys/g5.jpg"
               alt="Momo Psychi bidding round at Terry's game night"
-              caption="Bidding it all away — Momo Psychi in progress."
+              caption="Bidding it all away: Momo Psychi in progress."
               dark={false}
             />
           </div>
@@ -494,7 +494,7 @@ const TerrysGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community — that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

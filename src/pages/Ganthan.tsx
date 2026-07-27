@@ -54,7 +54,7 @@ const STEPS = [
   },
   {
     icon: '2',
-    title: 'Pick a question — or let it surprise you.',
+    title: 'Pick a question, or let it surprise you.',
     body: 'Tap through until one lands. Or hit shuffle and trust the app. Every question is available in Nepali and English.',
   },
   {
@@ -123,7 +123,7 @@ const Ganthan = () => {
                 className="font-extrabold mb-5 leading-tight"
                 style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(30px, 5vw, 58px)', letterSpacing: '-0.01em' }}
               >
-                Ganthan — conversations worth having with your family
+                Ganthan: conversations worth having with your family
               </h1>
 
               <p
@@ -157,7 +157,7 @@ const Ganthan = () => {
               </div>
 
               <p className="text-lg max-w-2xl mx-auto mb-5 leading-relaxed" style={{ color: '#2a241a' }}>
-                A lot of Nepalis live far from the people they grew up with. Maybe you're in Kathmandu while baba is in Pokhara. Maybe you're in Australia and aama is back home. The calls happen — sometimes every day — but after a while, they start to sound the same. How's the weather. What did you eat. Sleep well.
+                A lot of Nepalis live far from the people they grew up with. Maybe you're in Kathmandu while baba is in Pokhara. Maybe you're in Australia and aama is back home. The calls happen (sometimes every day), but after a while, they start to sound the same. How's the weather. What did you eat. Sleep well.
               </p>
 
               <p className="text-lg max-w-2xl mx-auto mb-11 leading-relaxed" style={{ color: '#2a241a' }}>
@@ -205,7 +205,7 @@ const Ganthan = () => {
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Ganthan — गन्थन, which means "to weave" or "to connect" — is built on one belief: the right question can open up years of conversation. We wrote questions that aama can answer in Nepali and you can answer in English. Questions about childhood, about what your parents were like before they were parents, about the things that shaped your family without anyone naming them. The app is the easy part. The conversation is yours.
+            Ganthan (गन्थन, which means "to weave" or "to connect") is built on one belief: the right question can open up years of conversation. We wrote questions that aama can answer in Nepali and you can answer in English. Questions about childhood, about what your parents were like before they were parents, about the things that shaped your family without anyone naming them. The app is the easy part. The conversation is yours.
           </p>
         </article>
 
@@ -273,13 +273,13 @@ const Ganthan = () => {
               {[
                 {
                   num: '01',
-                  title: 'Bilingual — Nepali and English',
+                  title: 'Bilingual: Nepali and English',
                   body: 'Every question works in both languages so aama can answer in her words and you can answer in yours. No one gets left out of the conversation.',
                 },
                 {
                   num: '02',
                   title: 'Built for real conversations, not small talk',
-                  body: 'These aren\'t conversation starters for strangers. They\'re questions designed to help you actually know the people you love — including sides of them you\'ve never seen.',
+                  body: 'These aren\'t conversation starters for strangers. They\'re questions designed to help you actually know the people you love, including sides of them you\'ve never seen.',
                 },
                 {
                   num: '03',
@@ -327,7 +327,7 @@ const Ganthan = () => {
           <div className="flex flex-col gap-5">
             {[
               { who: 'Students abroad missing home', desc: 'You call every week and the call is fine. Ganthan helps you make it mean something.' },
-              { who: 'Couples learning each other\'s childhoods', desc: 'You know the big stories. Ganthan gets to the small ones — the ones that actually shaped who they are.' },
+              { who: 'Couples learning each other\'s childhoods', desc: 'You know the big stories. Ganthan gets to the small ones: the ones that actually shaped who they are.' },
               { who: 'Friends who want to go deeper', desc: 'Not every conversation has to be banter. Some nights you want to actually know what your people are carrying.' },
             ].map(({ who, desc }) => (
               <div

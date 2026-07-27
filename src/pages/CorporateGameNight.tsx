@@ -141,7 +141,7 @@ const games = [
   {
     name: "Scout",
     emoji: "🔭",
-    description: "Your hand stays as dealt — no rearranging. Recruit cards and build combos to win.",
+    description: "Your hand stays as dealt: no rearranging. Recruit cards and build combos to win.",
     category: "Card Climbing",
     bestFor: "Quick learners",
   },
@@ -155,8 +155,8 @@ const games = [
   {
     name: "Guess the Price",
     emoji: "🏷️",
-    description: "We buy everyday Nepali items. You guess the price. Closest guess wins the item.",
-    category: "Add-on",
+    description: "We buy everyday Nepali items. Everyone guesses the price together, closest guess takes it home. Our usual second-half closer.",
+    category: "Grand Finale",
     bestFor: "Everyone",
   },
 ];
@@ -171,7 +171,7 @@ const steps = [
   {
     num: "02",
     title: "We set up",
-    desc: "We show up, bring everything, explain the rules, and host the full session.",
+    desc: "We show up, bring everything, and run the full session: board games first, one big group game to close it out.",
     accent: "#F16147",
   },
   {
@@ -269,7 +269,7 @@ const CorporateGameNight = () => {
             maxWidth: 580,
             margin: '0 auto 40px',
           }}>
-            We show up at your office with a bunch of board games, set everything up, explain all the rules, and host the entire session. Your team just has to show up and have fun.
+            We show up at your office with a bunch of board games, set everything up, and explain all the rules. Board games first, then one big group game (like Guess the Price) that gets everyone playing together. Your team just has to show up and have fun.
           </p>
 
           <button
@@ -496,7 +496,7 @@ const CorporateGameNight = () => {
               color: '#6B6B6B',
               margin: 0,
             }}>
-              Pick ~3 games for your night. We'll teach all the rules in person.
+              Pick ~3 board games for the first half. We close every session with one big whole-team game (like Guess the Price) so nobody just watches.
             </p>
           </div>
 
@@ -509,6 +509,72 @@ const CorporateGameNight = () => {
               <GameCard key={game.name} game={game} index={i} />
             ))}
           </div>
+        </section>
+
+        {/* ── FOUNDER'S NOTE ── */}
+        <section style={{ maxWidth: 760, margin: '96px auto 0', padding: '0 24px' }}>
+          <span style={{
+            display: 'inline-block',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: 700,
+            fontSize: 12,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#2D7A4F',
+            background: '#EDF5DD',
+            padding: '6px 14px',
+            borderRadius: 999,
+            marginBottom: 16,
+          }}>
+            From the founders
+          </span>
+
+          <h2 style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 800,
+            fontSize: 'clamp(32px, 4.4vw, 46px)',
+            lineHeight: 1.1,
+            letterSpacing: '-0.01em',
+            color: '#130D01',
+            marginTop: 0,
+            marginBottom: 24,
+          }}>
+            Founder's note
+          </h2>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We love hosting game nights. We genuinely believe games are one of the best ways for people to connect, and we've seen teams open up, build real psychological safety, and learn more about their teammates just by sharing a table and playing together.
+          </p>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We create intentional, inclusive spaces where everyone gets a voice. There's a loud table, a table full of introverts, a table of pure strategists, and a table that would rather just talk. No matter who's in the room, we make sure everyone has fun in their own way.
+          </p>
+
+          <blockquote style={{
+            fontFamily: "'Baloo 2', sans-serif",
+            fontWeight: 700,
+            fontSize: 'clamp(24px, 3vw, 30px)',
+            lineHeight: 1.3,
+            color: '#130D01',
+            borderLeft: '6px solid #F16147',
+            padding: '10px 0 10px 28px',
+            margin: '36px 0',
+          }}>
+            "No matter who's at the table, everyone leaves having had fun in their own way."
+          </blockquote>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
+            We end every night with a curated experience where every single person plays one game, all together: sometimes a friendly competition, sometimes a team game they have to work together to complete.
+          </p>
+
+          <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 0 }}>
+            Either way, we design the night so your team can cool off and build real psychological safety together.
+          </p>
+
+          <p style={{ marginTop: 36, color: '#130D01', fontWeight: 700, fontSize: 19, marginBottom: 0, fontFamily: "'Baloo 2', sans-serif" }}>
+            Sarina Pantha &amp; Yashant Gyawali<br />
+            <span style={{ fontWeight: 500, color: '#3a3225', fontSize: 15 }}>Tumlet · Kathmandu</span>
+          </p>
         </section>
 
         {/* ── BOTTOM CTA ── */}
@@ -550,7 +616,7 @@ const CorporateGameNight = () => {
               marginBottom: 24,
               marginTop: 0,
             }}>
-              tumletgames@gmail.com — include your office name, team size, and preferred date.
+              tumletgames@gmail.com: include your office name, team size, and preferred date.
             </p>
             <button
               onClick={handleContact}
@@ -604,7 +670,7 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
   'Social Deduction': { bg: '#E8E0F0', text: '#6A0DAD' },
   'Card Climbing': { bg: '#D6EEFF', text: '#1565C0' },
   Business: { bg: '#D6EEFF', text: '#1565C0' },
-  'Add-on': { bg: '#F0F0F0', text: '#666666' },
+  'Grand Finale': { bg: '#FFF3D6', text: '#B8860B' },
 };
 
 const rotations = [-0.8, 0.5, -0.3, 0.7, -0.6, 0.4, -0.5, 0.8, -0.4, 0.6, -0.7, 0.3, -0.9, 0.5, -0.2, 0.9];

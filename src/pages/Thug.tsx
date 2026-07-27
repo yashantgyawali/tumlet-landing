@@ -50,21 +50,21 @@ const STEPS = [
   {
     icon: '1',
     title: 'Open Thug and pick a category.',
-    body: 'Choose from deeply Nepali categories — last names, दाल types, cities, Kathmandu landmarks, Nepali snacks. There\'s no shortage.',
+    body: 'Choose from deeply Nepali categories: last names, दाल types, cities, Kathmandu landmarks, Nepali snacks. There\'s no shortage.',
   },
   {
     icon: '2',
-    title: 'Pass the phone around — secretly.',
+    title: 'Pass the phone around, secretly.',
     body: 'Everyone reads the word in turn. Everyone except one person: they see "THUG" instead. They\'ve got nothing. They\'ve got to fake it.',
   },
   {
     icon: '3',
-    title: 'Go around — one clue each.',
+    title: 'Go around: one clue each.',
     body: 'Each player gives a single word clue about the category word. The Thug listens carefully and bluffs their way through. Watch faces. Listen closely.',
   },
   {
     icon: '4',
-    title: 'Vote — and find out who was lying.',
+    title: 'Vote, and find out who was lying.',
     body: 'If the group correctly identifies the Thug, everyone wins. If the Thug survives without being caught, they win. It\'s pure social intelligence.',
   },
 ];
@@ -72,17 +72,17 @@ const STEPS = [
 const Thug = () => {
   useEffect(() => {
     document.title = 'Thug | Social Deduction Game for Nepali Friend Groups';
-    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
+    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
     setMetaTag('keywords', 'thug game, nepali social deduction game, nepali party game, tumlet, nepali friend groups');
     setCanonical('https://tumlet.com/thug/');
     setPropertyTag('og:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
+    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/thug/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.');
+    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
@@ -129,7 +129,7 @@ const Thug = () => {
                 className="font-extrabold mb-5 leading-tight"
                 style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(30px, 5vw, 58px)', letterSpacing: '-0.01em' }}
               >
-                Thug — the social deduction game for Nepali friend groups
+                Thug: the social deduction game for Nepali friend groups
               </h1>
 
               <p
@@ -248,7 +248,7 @@ const Thug = () => {
                 {
                   num: '01',
                   title: 'All categories are deeply Nepali',
-                  body: 'No generic "animals" or "countries" lists. Every category is something that makes a Nepali person lean forward — last names, foods, places, brands, things you only know if you\'re from here.',
+                  body: 'No generic "animals" or "countries" lists. Every category is something that makes a Nepali person lean forward: last names, foods, places, brands, things you only know if you\'re from here.',
                 },
                 {
                   num: '02',
@@ -258,7 +258,7 @@ const Thug = () => {
                 {
                   num: '03',
                   title: 'Works with any group size 3–99+',
-                  body: 'Three friends at a hostel or a huge family gathering — Thug scales. Any age that knows their Nepali culture can play. That\'s most of the table.',
+                  body: 'Three friends at a hostel or a huge family gathering, Thug scales either way. Any age that knows their Nepali culture can play. That\'s most of the table.',
                 },
               ].map(({ num, title, body }) => (
                 <div
@@ -298,7 +298,7 @@ const Thug = () => {
             You'll know these. That's the whole point.
           </h2>
           <p className="text-lg leading-relaxed mb-8" style={{ color: '#2a241a' }}>
-            The categories in Thug are the reason it works. They're specific enough that everyone has an opinion, familiar enough that giving a clue should be easy — unless you're the Thug.
+            The categories in Thug are the reason it works. They're specific enough that everyone has an opinion, familiar enough that giving a clue should be easy, unless you're the Thug.
           </p>
 
           <div className="flex flex-wrap gap-3">

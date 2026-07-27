@@ -85,25 +85,25 @@ const STEPS = [
 
 const Tundikhel = () => {
   useEffect(() => {
-    document.title = 'Race to Tundikhel — A new board game from Tumlet | tumlet.com/tundikhel';
-    setMetaTag('description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.');
+    document.title = 'Race to Tundikhel: A new board game from Tumlet | tumlet.com/tundikhel';
+    setMetaTag('description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
     setMetaTag('keywords', 'race to tundikhel, tundikhel board game, nepali board game, kathmandu game, tumlet');
     setCanonical('https://tumlet.com/tundikhel/');
-    setPropertyTag('og:title', 'Race to Tundikhel — A new board game from Tumlet');
-    setPropertyTag('og:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.');
+    setPropertyTag('og:title', 'Race to Tundikhel: A new board game from Tumlet');
+    setPropertyTag('og:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/tundikhel/');
     setPropertyTag('og:image', 'https://tumlet.com/tundikhel/hero-art.png');
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Race to Tundikhel — A new board game from Tumlet');
-    setMetaTag('twitter:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.');
+    setMetaTag('twitter:title', 'Race to Tundikhel: A new board game from Tumlet');
+    setMetaTag('twitter:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
     setMetaTag('twitter:image', 'https://tumlet.com/tundikhel/hero-art.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'Game',
       name: 'Race to Tundikhel',
-      description: 'A Nepali board game where players race micro-buses through the streets of Kathmandu to reach Tundikhel first. No dice — pure bluff and battery management.',
+      description: 'A Nepali board game where players race micro-buses through the streets of Kathmandu to reach Tundikhel first. No dice: pure bluff and battery management.',
       url: 'https://tumlet.com/tundikhel/',
       image: 'https://tumlet.com/tundikhel/hero-art.png',
       numberOfPlayers: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 6 },
@@ -144,7 +144,7 @@ const Tundikhel = () => {
             <div style={{ background: '#BDE0B8' }}>
               <img
                 src="/tundikhel/hero-art.png"
-                alt="Race to Tundikhel — micro-driver racing through Kathmandu, with Dharahara tower in the background, electric microbuses dodging cones and potholes"
+                alt="Race to Tundikhel: micro-driver racing through Kathmandu, with Dharahara tower in the background, electric microbuses dodging cones and potholes"
                 className="w-full block"
               />
             </div>
@@ -168,12 +168,12 @@ const Tundikhel = () => {
                 className="font-extrabold mb-5 leading-tight"
                 style={{ fontFamily: "'Baloo 2', sans-serif", color: '#1F5F3A', fontSize: 'clamp(28px, 5vw, 56px)', letterSpacing: '-0.01em' }}
               >
-                Race to Tundikhel — A new Nepali board game from Tumlet
+                Race to Tundikhel: A new Nepali board game from Tumlet
               </h1>
 
               <p className="text-xl max-w-2xl mx-auto mb-9 leading-relaxed" style={{ color: '#2a3a2a' }}>
                 A bus race through the streets of Kathmandu. No dice. No luck. Just you, your battery, and the worst traffic in the world.{' '}
-                <em style={{ color: '#2D7A4F', fontWeight: 600 }}>Race to Tundikhel</em> is the next game from Tumlet — and we're letting you in on it early.
+                <em style={{ color: '#2D7A4F', fontWeight: 600 }}>Race to Tundikhel</em> is the next game from Tumlet, and we're letting you in on it early.
               </p>
 
               <div className="flex justify-center items-center gap-8 flex-wrap">
@@ -351,12 +351,12 @@ const Tundikhel = () => {
                   src: '/tundikhel/cards-set.png',
                   alt: 'Race to Tundikhel road cards: positive, negative, and neutral events including Khaldo Filled, Cows on Road, Sawari, Dharahara, and All Ahead +1',
                   title: 'Road cards',
-                  desc: 'Positive, negative, neutral. Sawari, cows, Khaldo, Bharaldo — every Nepali traffic moment, in your hand.',
+                  desc: 'Positive, negative, neutral. Sawari, cows, Khaldo, Bharaldo: every Nepali traffic moment, in your hand.',
                   pill: '~30 cards',
                 },
                 {
                   src: '/tundikhel/battery-charger.png',
-                  alt: 'Battery and charger tokens — six-sided dial showing 1 through 6',
+                  alt: 'Battery and charger tokens: six-sided dial showing 1 through 6',
                   title: 'Battery dials',
                   desc: 'The heart of the bluff. Pick your charge, hide your hand, reveal at the same time.',
                   pill: '1 per driver',
@@ -461,7 +461,7 @@ const Tundikhel = () => {
               Be first to know when <em>Race to Tundikhel</em> ships.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              We're following the same path we did with Bluff Momo — small batches, hand-packed, signed copies for the first run. Follow us on Instagram and you'll be in the front of the line.
+              We're following the same path we did with Bluff Momo: small batches, hand-packed, signed copies for the first run. Follow us on Instagram and you'll be in the front of the line.
             </p>
             <a
               href="https://www.instagram.com/tumlet.boardgames/"

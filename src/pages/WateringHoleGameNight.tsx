@@ -120,7 +120,7 @@ const PolaroidSlot = ({
 const WateringHoleGameNight = () => {
   useEffect(() => {
     const title = 'At the Heart of Jhamsikhel · The Watering Hole, May 2026 | Tumlet Game Night';
-    const description = "Our highest attendance yet — 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.";
+    const description = "Our highest attendance yet: 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.";
     const image = 'https://tumlet.com/watering-hole-may-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/watering-hole-may-2026/';
 
@@ -255,7 +255,7 @@ const WateringHoleGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — At the Heart of Jhamsikhel
+            Tumlet Game Night: At the Heart of Jhamsikhel
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -298,7 +298,7 @@ const WateringHoleGameNight = () => {
           }}>
             <img
               src="/watering-hole-may-2026-thumb.webp"
-              alt="Game night at The Watering Hole, Jhamsikhel — June 2026"
+              alt="Game night at The Watering Hole, Jhamsikhel, June 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
           </div>
@@ -346,7 +346,7 @@ const WateringHoleGameNight = () => {
                 Jhamsikhel has a way of hiding things in plain sight.
               </p>
               <p style={{ marginBottom: 20 }}>
-                The Watering Hole sits right at the heart of it — but the kind of place you walk past because you're looking for a sign, and the sign isn't the point. We'd been wanting to host a game night here for a while. It just felt right.
+                The Watering Hole sits right at the heart of it, but the kind of place you walk past because you're looking for a sign, and the sign isn't the point. We'd been wanting to host a game night here for a while. It just felt right.
               </p>
               <p style={{ marginBottom: 20 }}>
                 We had to move it to a Friday. The Watering Hole hosts Salsa on Wednesdays, and we weren't going to compete with that. Fridays, as it turned out, were exactly the right call.
@@ -364,13 +364,13 @@ const WateringHoleGameNight = () => {
           }}>A new crowd</h2>
 
           <p style={{ marginBottom: 20 }}>
-            This was our first time working with Keeping Up with Kathmandu, and it changed the room from the start. New faces — a lot of them. Highest attendance we've ever had at a game night. By a significant margin.
+            This was our first time working with Keeping Up with Kathmandu, and it changed the room from the start. New faces, a lot of them. Highest attendance we've ever had at a game night. By a significant margin.
           </p>
           <p style={{ marginBottom: 20 }}>
-            We were especially happy to see a group in their mid-30s who'd come specifically to play Catan. They set it up, opened the box, looked at the board — and then got drawn into Firiri, Bluff Momo, and basically everything else on the table. Catan sat there very patiently. It'll get its turn eventually.
+            We were especially happy to see a group in their mid-30s who'd come specifically to play Catan. They set it up, opened the box, looked at the board, and then got drawn into Firiri, Bluff Momo, and basically everything else on the table. Catan sat there very patiently. It'll get its turn eventually.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Bluff Momo, Tundikhel, and Firiri ran throughout the entire night — the three games that just kept pulling people back. Codenames and Dixit held their own corners of the room for hours without slowing down.
+            Bluff Momo, Tundikhel, and Firiri ran throughout the entire night: the three games that just kept pulling people back. Codenames and Dixit held their own corners of the room for hours without slowing down.
           </p>
 
           {/* ── Manang Valley sponsor callout ── */}
@@ -420,7 +420,7 @@ const WateringHoleGameNight = () => {
                     Manang Valley
                   </a>.
                 </strong>{' '}
-                And honestly? It showed. The confidence to bluff went up with every glass. We're not saying the wine won Bluff Momo — but we're not saying it didn't either.
+                And honestly? It showed. The confidence to bluff went up with every glass. We're not saying the wine won Bluff Momo, but we're not saying it didn't either.
               </p>
             </div>
           </div>
@@ -432,16 +432,16 @@ const WateringHoleGameNight = () => {
             margin: '44px 0 16px',
             color: '#130D01',
             letterSpacing: '-0.01em',
-          }}>Guess the Price — Nepali Edition</h2>
+          }}>Guess the Price: Nepali Edition</h2>
 
           <p style={{ marginBottom: 20 }}>
-            For the second half of the night, we ran Guess the Price — Nepali Edition. Turns out, people have very strong — and very wrong — opinions about what things cost in Kathmandu. The room had opinions. The room was mostly incorrect. It was chaotic and brilliant.
+            For the second half of the night, we ran Guess the Price: Nepali Edition. Turns out, people have very strong (and very wrong) opinions about what things cost in Kathmandu. The room had opinions. The room was mostly incorrect. It was chaotic and brilliant.
           </p>
           <p style={{ marginBottom: 20 }}>
             And the food. Order the mutton taas. It was cheap, it was good, and we're still thinking about it. The Watering Hole has a kitchen that clearly cares.
           </p>
           <p style={{ marginBottom: 20 }}>
-            One thing didn't go exactly as planned: another group was added to the venue at the last minute. We ended up sharing the space, the tables got tighter, and a little bit of rain didn't help either. We made it work — but there's a real difference between having the whole place and splitting it. The Watering Hole had promised us the full venue, and we'll make sure that's the case next time.
+            One thing didn't go exactly as planned: another group was added to the venue at the last minute. We ended up sharing the space, the tables got tighter, and a little bit of rain didn't help either. We made it work, but there's a real difference between having the whole place and splitting it. The Watering Hole had promised us the full venue, and we'll make sure that's the case next time.
           </p>
         </div>
 
@@ -531,7 +531,7 @@ const WateringHoleGameNight = () => {
             }}>Why The Watering Hole worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The crowd.', rest: " First time partnering with Keeping Up with Kathmandu — and the room showed it. New faces, new energy, record turnout." },
+                { num: '01', strong: 'The crowd.', rest: " First time partnering with Keeping Up with Kathmandu, and the room showed it. New faces, new energy, record turnout." },
                 { num: '02', strong: 'The mutton taas.', rest: " Order it. Just order it." },
                 { num: '03', strong: 'The Catan group.', rest: " They didn't play Catan. They played everything else instead. That's the game night doing exactly what it's supposed to." },
                 { num: '04', strong: 'Manang Valley wines.', rest: " Free-flowing and sponsored. Absolutely correlated with the bluffing getting messier and more confident." },
@@ -603,7 +603,7 @@ const WateringHoleGameNight = () => {
               rotation="1.6deg"
               src="/watering-hole/g4.jpg"
               alt="Guess the Price Nepali Edition"
-              caption="Guess the Price — and guess again."
+              caption="Guess the Price, and guess again."
               dark={false}
             />
             <PolaroidSlot
@@ -656,7 +656,7 @@ const WateringHoleGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community — that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}
