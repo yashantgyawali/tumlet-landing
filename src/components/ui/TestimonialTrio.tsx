@@ -183,6 +183,7 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
           padding: `10px ${edge}px 20px`,
           maskImage: mask,
           WebkitMaskImage: mask,
+          overflow: "hidden",
         }}
       >
         <div
