@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
-import { TestimonialTrio, MiniTestimonial } from '@/components/ui/TestimonialTrio';
+import { TestimonialCarousel, MiniTestimonial } from '@/components/ui/TestimonialTrio';
 
 function setMetaTag(name: string, content: string) {
   let tag = document.querySelector(`meta[name='${name}']`);
@@ -192,14 +192,21 @@ const testimonials: MiniTestimonial[] = [
     avatarBg: "#F3B952",
   },
   {
-    quote: "Thank you creating the community of board games in Nepal in the Nepali way ❤️",
+    quote: "Thank you for creating the community of board games in Nepal in the Nepali way ❤️",
     name: "Antovna Gyawali",
     location: "Deputy Director @ NASC",
     initials: "AG",
     avatarBg: "#F16147",
     avatarColor: "#ffffff",
   },
-  // Add the next testimonial here as it comes in.
+  {
+    quote: "The game nights are super fun and chaotic. Love the energy and variety of games they bring!",
+    name: "Yomoo Bajracharya",
+    location: "Innovations & Incubation Officer @ King's College",
+    initials: "YB",
+    avatarBg: "#5A3A1F",
+    avatarColor: "#ffffff",
+  },
 ];
 
 const sampleMedia: MediaItem[] = [
@@ -510,11 +517,11 @@ const CorporateGameNight = () => {
               color: '#130D01',
               margin: 0,
             }}>
-              Yes, we designed a bluffing game, but we swear these aren't fake. 🤭
+              Yes, we designed a bluffing game, but we swear these aren't fake 🤭
             </h2>
           </div>
 
-          <TestimonialTrio items={testimonials} />
+          <TestimonialCarousel items={testimonials} />
         </section>
 
         {/* ── GAMES COLLECTION ── */}
