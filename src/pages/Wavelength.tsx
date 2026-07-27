@@ -305,7 +305,7 @@ const Wavelength: React.FC = () => {
                     <svg width={22} height={22} viewBox="0 0 24 24" fill="white">
                       <path d="M7 5.5v13a1 1 0 0 0 1.52.86l10.5-6.5a1 1 0 0 0 0-1.72L8.52 4.64A1 1 0 0 0 7 5.5z" />
                     </svg>
-                    Play now — it's free
+                    Play now, it's free
                   </button>
                 </a>
                 <a href="#how" className="underline" style={{ fontSize: 16, fontWeight: 600 }}>
@@ -332,7 +332,7 @@ const Wavelength: React.FC = () => {
               How to play, in 3 turns
             </h2>
             <p style={{ maxWidth: 560, margin: '14px auto 0', fontSize: 18, color: '#4a423c' }}>
-              Think of the dial as a scale between two opposites. Somewhere on it is a hidden target. Your job as a team — find it.
+              Think of the dial as a scale between two opposites. Somewhere on it is a hidden target. Your job as a team: find it.
             </p>
           </div>
 
@@ -342,7 +342,7 @@ const Wavelength: React.FC = () => {
                 shadow: TEAL_SOFT,
                 visual: <Dial mini target={70} mystery poleL="" poleR="" />,
                 title: 'One player gets a secret',
-                body: (<>The dial shows a spectrum — like <b style={{ color: TEAL_DEEP }}>overrated ↔ underrated</b>. One teammate, the <b style={{ color: TEAL_DEEP }}>Psychic</b>, secretly sees where the target sits. Nobody else can.</>),
+                body: (<>The dial shows a spectrum, like <b style={{ color: TEAL_DEEP }}>overrated ↔ underrated</b>. One teammate, the <b style={{ color: TEAL_DEEP }}>Psychic</b>, secretly sees where the target sits. Nobody else can.</>),
               },
               {
                 shadow: YELLOW,
@@ -372,7 +372,7 @@ const Wavelength: React.FC = () => {
                   </div>
                 ),
                 title: 'They drop one clue',
-                body: (<>The Psychic names <b style={{ color: TEAL_DEEP }}>one thing</b> that fits that exact spot on the scale. Just a word or a phrase — no pointing, no winking.</>),
+                body: (<>The Psychic names <b style={{ color: TEAL_DEEP }}>one thing</b> that fits that exact spot on the scale. Just a word or a phrase: no pointing, no winking.</>),
               },
               {
                 shadow: '#F4C0B4',
@@ -435,7 +435,7 @@ const Wavelength: React.FC = () => {
               The spectrums you'll fight over
             </h2>
             <p style={{ maxWidth: 560, margin: '14px auto 0', fontSize: 18, color: '#4a423c' }}>
-              The dial is split between two extremes. Where does it land? Nobody agrees — that's the whole point.
+              The dial is split between two extremes. Where does it land? Nobody agrees. That's the whole point.
             </p>
           </div>
 

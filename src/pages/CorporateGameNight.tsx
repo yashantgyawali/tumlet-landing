@@ -141,7 +141,7 @@ const games = [
   {
     name: "Scout",
     emoji: "🔭",
-    description: "Your hand stays as dealt — no rearranging. Recruit cards and build combos to win.",
+    description: "Your hand stays as dealt: no rearranging. Recruit cards and build combos to win.",
     category: "Card Climbing",
     bestFor: "Quick learners",
   },
@@ -155,7 +155,7 @@ const games = [
   {
     name: "Guess the Price",
     emoji: "🏷️",
-    description: "We buy everyday Nepali items. Everyone guesses the price together — closest guess takes it home. Our usual second-half closer.",
+    description: "We buy everyday Nepali items. Everyone guesses the price together, closest guess takes it home. Our usual second-half closer.",
     category: "Grand Finale",
     bestFor: "Everyone",
   },
@@ -171,7 +171,7 @@ const steps = [
   {
     num: "02",
     title: "We set up",
-    desc: "We show up, bring everything, and run the full session — board games first, one big group game to close it out.",
+    desc: "We show up, bring everything, and run the full session: board games first, one big group game to close it out.",
     accent: "#F16147",
   },
   {
@@ -269,7 +269,7 @@ const CorporateGameNight = () => {
             maxWidth: 580,
             margin: '0 auto 40px',
           }}>
-            We show up at your office with a bunch of board games, set everything up, and explain all the rules. Board games first, then one big group game — like Guess the Price — that gets everyone playing together. Your team just has to show up and have fun.
+            We show up at your office with a bunch of board games, set everything up, and explain all the rules. Board games first, then one big group game (like Guess the Price) that gets everyone playing together. Your team just has to show up and have fun.
           </p>
 
           <button
@@ -496,7 +496,7 @@ const CorporateGameNight = () => {
               color: '#6B6B6B',
               margin: 0,
             }}>
-              Pick ~3 board games for the first half. We close every session with one big whole-team game — like Guess the Price — so nobody just watches.
+              Pick ~3 board games for the first half. We close every session with one big whole-team game (like Guess the Price) so nobody just watches.
             </p>
           </div>
 
@@ -543,7 +543,7 @@ const CorporateGameNight = () => {
           </h2>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            We love hosting game nights. We genuinely believe games are one of the best ways for people to connect — and we've seen teams open up, build real psychological safety, and learn more about their teammates just by sharing a table and playing together.
+            We love hosting game nights. We genuinely believe games are one of the best ways for people to connect, and we've seen teams open up, build real psychological safety, and learn more about their teammates just by sharing a table and playing together.
           </p>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
@@ -564,7 +564,7 @@ const CorporateGameNight = () => {
           </blockquote>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            We end every night with a curated experience where every single person plays one game, all together — sometimes a friendly competition, sometimes a team game they have to work together to complete.
+            We end every night with a curated experience where every single person plays one game, all together: sometimes a friendly competition, sometimes a team game they have to work together to complete.
           </p>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 0 }}>
@@ -572,7 +572,7 @@ const CorporateGameNight = () => {
           </p>
 
           <p style={{ marginTop: 36, color: '#130D01', fontWeight: 700, fontSize: 19, marginBottom: 0, fontFamily: "'Baloo 2', sans-serif" }}>
-            — Sarina Pantha &amp; Yashant Gyawali<br />
+            Sarina Pantha &amp; Yashant Gyawali<br />
             <span style={{ fontWeight: 500, color: '#3a3225', fontSize: 15 }}>Tumlet · Kathmandu</span>
           </p>
         </section>
@@ -616,7 +616,7 @@ const CorporateGameNight = () => {
               marginBottom: 24,
               marginTop: 0,
             }}>
-              tumletgames@gmail.com — include your office name, team size, and preferred date.
+              tumletgames@gmail.com: include your office name, team size, and preferred date.
             </p>
             <button
               onClick={handleContact}

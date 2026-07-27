@@ -46,7 +46,7 @@ const STEPS = [
   {
     num: '03',
     title: 'Finally',
-    body: 'If two or more drivers pick the same number, they\'re stuck. Only unique numbers move forward. Only yellow would move 2 steps ahead if everyone else picked the same number — they\'re stuck because their numbers clashed.',
+    body: 'If two or more drivers pick the same number, they\'re stuck. Only unique numbers move forward. Only yellow would move 2 steps ahead if everyone else picked the same number: they\'re stuck because their numbers clashed.',
   },
   {
     num: '04',
@@ -60,17 +60,17 @@ const TundikhElHow = () => {
 
   useEffect(() => {
     document.title = 'How to Play Race to Tundikhel | Instruction Video & Rules';
-    setMetaTag('description', 'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.');
+    setMetaTag('description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.');
     setMetaTag('keywords', 'how to play race to tundikhel, tundikhel rules, nepali board game instructions, tumlet');
     setCanonical('https://tumlet.com/tundikhel-how/');
     setPropertyTag('og:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
-    setPropertyTag('og:description', 'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet.');
+    setPropertyTag('og:description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/tundikhel-how/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
-    setMetaTag('twitter:description', 'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet.');
+    setMetaTag('twitter:description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
   }, []);
 
@@ -116,7 +116,7 @@ const TundikhElHow = () => {
             How to Play Race to Tundikhel
           </h1>
           <p className="text-lg leading-relaxed" style={{ color: '#3a3225' }}>
-            Watch the video below — it's the fastest way to learn. Scroll down for a quick rules reference once you're done.
+            Watch the video below. It's the fastest way to learn. Scroll down for a quick rules reference once you're done.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ const TundikhElHow = () => {
             <iframe
               className="w-full h-full"
               src="https://drive.google.com/file/d/1TdYXJFCyP2mrr9zSUOmOFdj7bRrK7Gps/preview"
-              title="How to play Race to Tundikhel — instruction video"
+              title="How to play Race to Tundikhel: instruction video"
               allow="autoplay"
               allowFullScreen
             />

@@ -154,7 +154,7 @@ const MisfitsGameNight = () => {
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
         /* Drop cap */
-        /* Gallery — simple polaroid row */
+        /* Gallery: simple polaroid row */
         @media (min-width: 700px) {
           .gn-gallery {
             display: flex !important;
@@ -245,7 +245,7 @@ const MisfitsGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — Behind the Door That Isn't a Door
+            Tumlet Game Night: Behind the Door That Isn't a Door
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -357,25 +357,25 @@ const MisfitsGameNight = () => {
           </div>
         </div>
 
-        {/* ── Article body — lean ── */}
+        {/* ── Article body: lean ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
             Nobody walks past Misfits by accident.
           </p>
           <p style={{ marginBottom: 20 }}>
-            The entrance isn't exactly a door. It's the kind that makes you stop and wonder — wait, is this the place? We're not going to ruin it for you. But once you figure it out, pushing through feels like being let in on something.
+            The entrance isn't exactly a door. It's the kind that makes you stop and wonder: wait, is this the place? We're not going to ruin it for you. But once you figure it out, pushing through feels like being let in on something.
           </p>
           <p style={{ marginBottom: 20 }}>
-            That's the energy we look for when we choose where to host game nights. Once you're inside, nothing about Misfits is accidental — not the lights, the seating, the drinks, or the bathrooms. It's a space that was thought about.
+            That's the energy we look for when we choose where to host game nights. Once you're inside, nothing about Misfits is accidental: not the lights, the seating, the drinks, or the bathrooms. It's a space that was thought about.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames, and Cluedo took over the tables. Then for the second half of the night, we ran something we'd been cooking — Almosttt Misfit.
+            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames, and Cluedo took over the tables. Then for the second half of the night, we ran something we'd been cooking: Almosttt Misfit.
           </p>
           <p style={{ marginBottom: 20 }}>
-            It's a twist on herd mentality. You're trying to pick the least common answer — but not so uncommon you're the only one. Write something too unique? –1. Most common answer in the room? –3. Land in the sweet spot of least common? +2.
+            It's a twist on herd mentality. You're trying to pick the least common answer, but not so uncommon you're the only one. Write something too unique? –1. Most common answer in the room? –3. Land in the sweet spot of least common? +2.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Easy to learn. Surprisingly hard to play. Exactly the kind of game that makes you second-guess everyone at your table — including yourself.
+            Easy to learn. Surprisingly hard to play. Exactly the kind of game that makes you second-guess everyone at your table, including yourself.
           </p>
           <p>
             Big thanks to the Misfits crew for keeping the drinks coming, and to the incredible Rituza for making the night unforgettable.
@@ -509,7 +509,7 @@ const MisfitsGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community — that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

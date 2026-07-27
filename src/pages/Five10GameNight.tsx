@@ -121,7 +121,7 @@ const PolaroidSlot = ({
 const Five10GameNight = () => {
   useEffect(() => {
     const title = 'The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night';
-    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.';
+    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever, April 1, 2026.';
     const image = 'https://tumlet.com/five10-april-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/five10-april-2026/';
 
@@ -239,7 +239,7 @@ const Five10GameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — The Hidden Gem with a Hidden Parking in Thamel
+            Tumlet Game Night: The Hidden Gem with a Hidden Parking in Thamel
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -278,7 +278,7 @@ const Five10GameNight = () => {
           }}>
             <img
               src="/five10-april-2026-thumb.png"
-              alt="Game night at Five10, Thamel — April 2026"
+              alt="Game night at Five10, Thamel (April 2026)"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
           </div>
@@ -453,7 +453,7 @@ const Five10GameNight = () => {
           </p>
 
           <p>
-            Five10 were incredible hosts throughout: a curated food menu, the right space, the right energy. The matcha, the team, the vibe — everything came together. We can't wait to go back.
+            Five10 were incredible hosts throughout: a curated food menu, the right space, the right energy. The matcha, the team, the vibe: everything came together. We can't wait to go back.
           </p>
         </div>
 
@@ -579,7 +579,7 @@ const Five10GameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.9 }}>
-            Join the WhatsApp community — that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

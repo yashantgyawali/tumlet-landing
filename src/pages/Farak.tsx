@@ -46,7 +46,7 @@ const STEPS = [
   {
     icon: '1',
     title: 'Everyone opens the app.',
-    body: "All players open Farak on their phone. Most see the same question. One person — picked at random — sees something completely different. Nobody knows who got the different one.",
+    body: "All players open Farak on their phone. Most see the same question. One person (picked at random) sees something completely different. Nobody knows who got the different one.",
   },
   {
     icon: '2',
@@ -56,7 +56,7 @@ const STEPS = [
   {
     icon: '3',
     title: 'The real question is revealed.',
-    body: "The original question appears for everyone to see. Now someone's logic starts to sound strange. Their answer made sense for a different question. The crack is there — you just have to find it.",
+    body: "The original question appears for everyone to see. Now someone's logic starts to sound strange. Their answer made sense for a different question. The crack is there. You just have to find it.",
   },
   {
     icon: '4',
@@ -72,25 +72,25 @@ const STEPS = [
 
 const Farak = () => {
   useEffect(() => {
-    document.title = "Farak | Who's Most Likely To — With an Imposter Twist";
-    setMetaTag('description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
+    document.title = "Farak | Who's Most Likely To: With an Imposter Twist";
+    setMetaTag('description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question, except one. Can you catch the odd one out? Play free online.");
     setMetaTag('keywords', 'farak, whos most likely to, imposter game, party game online, nepali party game, tumlet');
     setCanonical('https://tumlet.com/farak/');
-    setPropertyTag('og:title', "Farak | Who's Most Likely To — With an Imposter Twist");
-    setPropertyTag('og:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
+    setPropertyTag('og:title', "Farak | Who's Most Likely To: With an Imposter Twist");
+    setPropertyTag('og:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question, except one. Can you catch the odd one out? Play free online.");
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/farak/');
     setPropertyTag('og:image', 'https://tumlet.com/og-farak.png');
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', "Farak | Who's Most Likely To — With an Imposter Twist");
-    setMetaTag('twitter:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.");
+    setMetaTag('twitter:title', "Farak | Who's Most Likely To: With an Imposter Twist");
+    setMetaTag('twitter:description', "Farak is the imposter edition of Who's Most Likely To. Everyone gets the same question, except one. Can you catch the odd one out? Play free online.");
     setMetaTag('twitter:image', 'https://tumlet.com/og-farak.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Farak',
-      description: "The imposter edition of Who's Most Likely To. Everyone gets the same question — except one player who gets something different.",
+      description: "The imposter edition of Who's Most Likely To. Everyone gets the same question, except one player who gets something different.",
       url: 'https://farak.tumlet.com/',
       applicationCategory: 'Game',
       operatingSystem: 'Web',
@@ -118,7 +118,7 @@ const Farak = () => {
             className="font-extrabold mb-5 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
           >
-            Farak — Who's Most Likely To, but with an imposter
+            Farak: Who's Most Likely To, but with an imposter
           </h1>
 
           <p
@@ -191,11 +191,11 @@ const Farak = () => {
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            The moment the real question drops and everyone starts explaining their answer — that's where Farak lives. One person's reasoning will have a slightly different shape. Not wrong exactly, just angled differently. The group feels it before they can name it.
+            The moment the real question drops and everyone starts explaining their answer: that's where Farak lives. One person's reasoning will have a slightly different shape. Not wrong exactly, just angled differently. The group feels it before they can name it.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Farak rewards people who read people. It's also a test of how well you know the group you're with — because a good imposter doesn't get caught by hiding. They get caught by someone who knows them well enough to notice that something is <em style={{ color: '#F16147', fontWeight: 600 }}>off</em>.
+            Farak rewards people who read people. It's also a test of how well you know the group you're with, because a good imposter doesn't get caught by hiding. They get caught by someone who knows them well enough to notice that something is <em style={{ color: '#F16147', fontWeight: 600 }}>off</em>.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>

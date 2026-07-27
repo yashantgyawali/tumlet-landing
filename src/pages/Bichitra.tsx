@@ -51,31 +51,31 @@ const STEPS = [
   {
     icon: '2',
     title: 'Type the थर.',
-    body: "No options. No hints to start. Just you and the image. Trust what you see — or think you see.",
+    body: "No options. No hints to start. Just you and the image. Trust what you see, or think you see.",
   },
 ];
 
 const Bichitra = () => {
   useEffect(() => {
     document.title = 'Bichitra | Guess the Nepali Last Name';
-    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it — can you find it? No options, no shortcuts. Play free online now.');
+    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it. Can you find it? No options, no shortcuts. Play free online now.');
     setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar puzzle, tumlet, nepali game online, guess nepali last name');
     setCanonical('https://tumlet.com/bichitra/');
     setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name');
-    setPropertyTag('og:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options — just you and the image. Play free online.');
+    setPropertyTag('og:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options: just you and the image. Play free online.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/bichitra/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name');
-    setMetaTag('twitter:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options — just you and the image. Play free online.');
+    setMetaTag('twitter:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options: just you and the image. Play free online.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Bichitra',
-      description: 'A Nepali last name puzzle. A photo hides a थर somewhere inside it — no options, type your guess and find it.',
+      description: 'A Nepali last name puzzle. A photo hides a थर somewhere inside it: no options, type your guess and find it.',
       url: 'https://bichitra.tumlet.com/',
       applicationCategory: 'Game',
       operatingSystem: 'Web',
@@ -103,14 +103,14 @@ const Bichitra = () => {
             className="font-extrabold mb-5 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
           >
-            Bichitra — Guess the Nepali Last Name
+            Bichitra: Guess the Nepali Last Name
           </h1>
 
           <p
             className="font-semibold mb-7 leading-snug"
             style={{ color: '#4B5563', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
-            It's not about reading faces. The थर is hiding somewhere in the image — you just have to find it.
+            It's not about reading faces. The थर is hiding somewhere in the image. You just have to find it.
           </p>
 
           <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
@@ -176,7 +176,7 @@ const Bichitra = () => {
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Each image hides a Nepali last name inside it — visually, cleverly, sometimes maddeningly. Type your guess. Too far off? You're stuck. Getting warm? You'll know. Three wrong answers and you earn a hint — but by then your pride is already on the line.
+            Each image hides a Nepali last name inside it: visually, cleverly, sometimes maddeningly. Type your guess. Too far off? You're stuck. Getting warm? You'll know. Three wrong answers and you earn a hint, but by then your pride is already on the line.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>

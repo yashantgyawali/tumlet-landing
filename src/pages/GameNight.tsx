@@ -74,7 +74,7 @@ const pastNights = [
     isLink: true,
     when: 'Apr 2026 · Thamel',
     title: "The hidden gem with a hidden parking in Thamel",
-    desc: "Five10, Thamel. Matcha, momo, and a 35-person Beast Games tournament — ending in the most intense Bluff Momo final we've ever seen.",
+    desc: "Five10, Thamel. Matcha, momo, and a 35-person Beast Games tournament, ending in the most intense Bluff Momo final we've ever seen.",
     thumbnail: '/five10-april-2026-thumb.png',
   },
   {
@@ -83,7 +83,7 @@ const pastNights = [
     isLink: true,
     when: 'Feb 2026 · Sanepa',
     title: 'Coffee, connection, and chaos',
-    desc: "Better Coffee, Sanepa. Our first Beast-style elimination tournament — 30+ players, Valentine's chaos, and one Bluff Momo champion.",
+    desc: "Better Coffee, Sanepa. Our first Beast-style elimination tournament: 30+ players, Valentine's chaos, and one Bluff Momo champion.",
     thumbnail: '/bettercoffee-february-2026-thumb.png',
   },
 ];
@@ -403,7 +403,7 @@ const GameNight = () => {
           </p>
 
           <p style={{ marginTop: 36, color: '#130D01', fontWeight: 700, fontSize: 20, marginBottom: 0 }}>
-            — Sarina Pantha &amp; Yashant Gyawali<br />
+            Sarina Pantha &amp; Yashant Gyawali<br />
             <span style={{ fontWeight: 500, color: '#3a3225', fontSize: 16 }}>Tumlet · Kathmandu</span>
           </p>
         </article>

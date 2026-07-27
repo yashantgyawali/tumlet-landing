@@ -233,7 +233,7 @@ const About = () => {
           })}
 
           <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 18, color: '#6B6B6B', marginTop: 48 }}>
-            — Sarina Pantha &amp; Yashant Gyawali
+            Sarina Pantha &amp; Yashant Gyawali
           </p>
         </section>
 
@@ -279,7 +279,7 @@ const About = () => {
             >
               <img
                 src="https://img.youtube.com/vi/3YyEpIA8FfY/maxresdefault.jpg"
-                alt="Bluff or Not? — Tumlet on YouTube"
+                alt="Bluff or Not? (Tumlet on YouTube)"
                 style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover' }}
               />
               <div style={{ background: '#FAF1E4', padding: '16px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>

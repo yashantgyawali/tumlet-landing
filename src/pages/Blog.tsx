@@ -146,7 +146,7 @@ const BlogPost = () => {
             </span>
           </div>
 
-          {/* Title — centered, large, dark green */}
+          {/* Title, centered, large, dark green */}
           <h1 style={{
             fontFamily: "'Baloo 2', system-ui, sans-serif",
             fontWeight: 800,
@@ -161,7 +161,7 @@ const BlogPost = () => {
             {post.title}
           </h1>
 
-          {/* Deck / lede — centered */}
+          {/* Deck / lede, centered */}
           <p style={{
             fontSize: '21px',
             lineHeight: 1.55,
@@ -273,7 +273,7 @@ const BlogPost = () => {
               lineHeight: 1.1,
               marginTop: 0,
             }}>
-              Tumlet makes Nepali board games — for Nepalis, by Nepalis.
+              Tumlet makes Nepali board games: for Nepalis, by Nepalis.
             </h3>
             <p style={{
               fontSize: '17px',

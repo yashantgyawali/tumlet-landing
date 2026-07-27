@@ -121,7 +121,7 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 const BetterCoffeeGameNight = () => {
   useEffect(() => {
     const title = 'Coffee, Connection, and Chaos · Better Coffee, February 2026 | Tumlet Game Night';
-    const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked. Skull, Codenames, CATAN — and our first Beast-style elimination tournament on Valentine\'s Day, February 2026.';
+    const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked. Skull, Codenames, CATAN, and our first Beast-style elimination tournament on Valentine\'s Day, February 2026.';
     const image = 'https://tumlet.com/bettercoffee-february-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/bettercoffee-february-2026/';
 
@@ -237,7 +237,7 @@ const BetterCoffeeGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night — Coffee, Connection, and Chaos
+            Tumlet Game Night: Coffee, Connection, and Chaos
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -275,7 +275,7 @@ const BetterCoffeeGameNight = () => {
           }}>
             <img
               src="/bettercoffee-february-2026-thumb.png"
-              alt="Game night at Better Coffee, Sanepa — February 2026"
+              alt="Game night at Better Coffee, Sanepa, February 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
           </div>
@@ -402,7 +402,7 @@ const BetterCoffeeGameNight = () => {
             <li style={{ marginBottom: 8 }}><strong style={{ fontWeight: 700, color: '#130D01' }}>Gotta:</strong> Using Bluff Momo pieces to complete four rounds.</li>
           </ul>
           <p style={{ marginBottom: 20 }}>
-            It was intense—even for the judge—but it was fair and square.
+            It was intense (even for the judge), but it was fair and square.
           </p>
 
           <p style={{ marginBottom: 8 }}>
@@ -537,7 +537,7 @@ const BetterCoffeeGameNight = () => {
             Next one&apos;s already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.9 }}>
-            Join the WhatsApp community — that&apos;s where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community: that&apos;s where the next date and venue drop first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}
