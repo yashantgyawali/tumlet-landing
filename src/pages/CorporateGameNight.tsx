@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
-import { TestimonialTrio, MiniTestimonial } from '@/components/ui/TestimonialTrio';
+import { TestimonialCarousel, MiniTestimonial } from '@/components/ui/TestimonialTrio';
 
 function setMetaTag(name: string, content: string) {
   let tag = document.querySelector(`meta[name='${name}']`);
@@ -199,7 +199,14 @@ const testimonials: MiniTestimonial[] = [
     avatarBg: "#F16147",
     avatarColor: "#ffffff",
   },
-  // Add the next testimonial here as it comes in.
+  {
+    quote: "The game nights are super fun and chaotic. Love the energy and variety of games they bring!",
+    name: "Yomoo Bajracharya",
+    location: "Innovations & Incubation Officer @ King's College",
+    initials: "YB",
+    avatarBg: "#5A3A1F",
+    avatarColor: "#ffffff",
+  },
 ];
 
 const sampleMedia: MediaItem[] = [
@@ -514,7 +521,7 @@ const CorporateGameNight = () => {
             </h2>
           </div>
 
-          <TestimonialTrio items={testimonials} />
+          <TestimonialCarousel items={testimonials} />
         </section>
 
         {/* ── GAMES COLLECTION ── */}
