@@ -177,7 +177,7 @@ const steps = [
   {
     num: "03",
     title: "You play",
-    desc: "Your team bonds, competes, laughs, and forgets about Jira for two hours.",
+    desc: "Your team bonds, competes, laughs, and forgets about Jira for three hours.",
     accent: "#2D7A4F",
   },
 ];
@@ -200,7 +200,7 @@ const CorporateGameNight = () => {
 
   useEffect(() => {
     const title = 'Corporate Game Night | Tumlet - Team Building with Board Games';
-    const description = 'Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 2-hour session for your team.';
+    const description = 'Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 3-hour session for your team.';
     const image = 'https://tumlet.com/unfurl.png';
     const url = 'https://tumlet.com/corporate-game-night';
 
@@ -412,7 +412,7 @@ const CorporateGameNight = () => {
               lineHeight: 1,
               marginBottom: 8,
             }}>
-              Rs. 10,000
+              Rs. 400 <span style={{ fontSize: '0.4em', fontWeight: 600 }}>/ person</span>
             </div>
             <p style={{
               fontFamily: "'Baloo 2', sans-serif",
@@ -420,7 +420,7 @@ const CorporateGameNight = () => {
               color: '#d4c9b5',
               margin: '0 0 24px',
             }}>
-              for up to 20 people · 2-hour session
+              3-hour session
             </p>
             <div style={{
               display: 'inline-flex',
@@ -445,11 +445,20 @@ const CorporateGameNight = () => {
             <p style={{
               fontFamily: "'Outfit', sans-serif",
               fontSize: 13,
-              color: '#8a8070',
-              marginTop: 24,
+              color: '#d4c9b5',
+              marginTop: 20,
               marginBottom: 0,
             }}>
-              Got a bigger team? Email us for a custom quote.
+              Minimum booking: Rs. 5,000 per session.
+            </p>
+            <p style={{
+              fontFamily: "'Outfit', sans-serif",
+              fontSize: 13,
+              color: '#8a8070',
+              marginTop: 8,
+              marginBottom: 0,
+            }}>
+              Got a bigger team? We can give you a flat rate. Email us for a custom quote.
             </p>
           </div>
         </section>
