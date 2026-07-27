@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PersonCard from '../components/PersonCard';
 
 const aboutText = [
   "Play runs deep in our culture. We see it during Holi when we're throwing colors, in card games during Dashain, in playing Bhailo in Tihar. It's there.",
@@ -94,38 +95,14 @@ const About = () => {
               transition: z-index 0s;
             }
             .founder-card-yashant {
-              transform: rotate(-2deg);
               z-index: 2;
             }
             .founder-card-sarina {
-              transform: rotate(1.5deg);
               margin-bottom: 24px;
               z-index: 1;
             }
             .founder-card:hover {
               z-index: 10;
-            }
-            .founder-card .card-inner {
-              border: 3px solid #130D01;
-              border-radius: 20px;
-              overflow: hidden;
-              background: #FAF1E4;
-              transition: transform 0.2s, box-shadow 0.2s;
-            }
-            .founder-card-yashant .card-inner {
-              box-shadow: 8px 8px 0 #F3B952;
-            }
-            .founder-card-sarina .card-inner {
-              box-shadow: 8px 8px 0 #F16147;
-            }
-            .founder-card:hover .card-inner {
-              transform: translate(-3px, -3px);
-            }
-            .founder-card-yashant:hover .card-inner {
-              box-shadow: 11px 11px 0 #F3B952;
-            }
-            .founder-card-sarina:hover .card-inner {
-              box-shadow: 11px 11px 0 #F16147;
             }
             @media (max-width: 600px) {
               .founder-cards-row {
@@ -154,38 +131,24 @@ const About = () => {
 
             {/* Yashant card */}
             <div className="founder-card founder-card-yashant">
-              <div className="card-inner">
-                <div style={{ width: '100%', aspectRatio: '3/4', background: '#E5E7EB', overflow: 'hidden' }}>
-                  <img
-                    src="/about/yashant.webp"
-                    alt="Yashant Gyawali"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-                  />
-                </div>
-                <div style={{ padding: '14px 16px 16px' }}>
-                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: '#130D01' }}>Yashant Gyawali</div>
-                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 12, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
-                </div>
-              </div>
+              <PersonCard
+                photo="/about/yashant.webp"
+                name="Yashant Gyawali"
+                title="Co-founder · Tumlet"
+                rotate={-2}
+                shadowColor="#F3B952"
+              />
             </div>
 
             {/* Sarina card */}
             <div className="founder-card founder-card-sarina">
-              <div className="card-inner">
-                <div style={{ width: '100%', aspectRatio: '3/4', background: '#E5E7EB', overflow: 'hidden' }}>
-                  <img
-                    src="/about/sarina.webp"
-                    alt="Sarina Pantha"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                    onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-                  />
-                </div>
-                <div style={{ padding: '14px 16px 16px' }}>
-                  <div style={{ fontFamily: "'Baloo 2', sans-serif", fontWeight: 800, fontSize: 16, color: '#130D01' }}>Sarina Pantha</div>
-                  <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 12, color: '#6B6B6B', marginTop: 2 }}>Co-founder · Tumlet</div>
-                </div>
-              </div>
+              <PersonCard
+                photo="/about/sarina.webp"
+                name="Sarina Pantha"
+                title="Co-founder · Tumlet"
+                rotate={1.5}
+                shadowColor="#F16147"
+              />
             </div>
 
           </div>

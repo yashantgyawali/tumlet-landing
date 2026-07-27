@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
+import { TestimonialTrio, MiniTestimonial } from '@/components/ui/TestimonialTrio';
 
 function setMetaTag(name: string, content: string) {
   let tag = document.querySelector(`meta[name='${name}']`);
@@ -182,6 +183,25 @@ const steps = [
   },
 ];
 
+const testimonials: MiniTestimonial[] = [
+  {
+    quote: "Bluff Momo was the real MVP—turns out we work with far more convincing bluffers than we thought!",
+    name: "Shraddha Pradhan",
+    location: "HR Executive @ DHL Express",
+    initials: "SP",
+    avatarBg: "#F3B952",
+  },
+  {
+    quote: "Thank you creating the community of board games in Nepal in the Nepali way ❤️",
+    name: "Antovna Gyawali",
+    location: "Deputy Director @ NASC",
+    initials: "AG",
+    avatarBg: "#F16147",
+    avatarColor: "#ffffff",
+  },
+  // Add the next testimonial here as it comes in.
+];
+
 const sampleMedia: MediaItem[] = [
   { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Game night photo' },
   { type: 'video', src: '/blogs/corporate-game-night/2.mp4' },
@@ -332,11 +352,13 @@ const CorporateGameNight = () => {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 24 }}>
             {steps.map((step) => (
               <div
                 key={step.num}
                 style={{
+                  flex: '1 1 260px',
+                  maxWidth: 320,
                   background: '#FAF1E4',
                   border: '3px solid #130D01',
                   borderRadius: 16,
@@ -461,6 +483,38 @@ const CorporateGameNight = () => {
               Got a bigger team? We can give you a flat rate. Email us for a custom quote.
             </p>
           </div>
+        </section>
+
+        {/* ── TESTIMONIALS ── */}
+        <section style={{ maxWidth: 1000, margin: '96px auto 0', padding: '0 24px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span style={{
+              display: 'inline-block',
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: 700,
+              fontSize: 12,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#F16147',
+              background: '#FDE8E4',
+              padding: '6px 14px',
+              borderRadius: 999,
+              marginBottom: 16,
+            }}>
+              What teams say
+            </span>
+            <h2 style={{
+              fontFamily: "'Baloo 2', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(28px, 4vw, 42px)',
+              color: '#130D01',
+              margin: 0,
+            }}>
+              Yes, we designed a bluffing game, but we swear these aren't fake. 🤭
+            </h2>
+          </div>
+
+          <TestimonialTrio items={testimonials} />
         </section>
 
         {/* ── GAMES COLLECTION ── */}
