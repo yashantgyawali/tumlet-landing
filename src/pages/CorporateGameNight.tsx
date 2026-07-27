@@ -192,7 +192,7 @@ const testimonials: MiniTestimonial[] = [
     avatarBg: "#F3B952",
   },
   {
-    quote: "Thank you creating the community of board games in Nepal in the Nepali way ❤️",
+    quote: "Thank you for creating the community of board games in Nepal in the Nepali way ❤️",
     name: "Antovna Gyawali",
     location: "Deputy Director @ NASC",
     initials: "AG",
@@ -510,7 +510,7 @@ const CorporateGameNight = () => {
               color: '#130D01',
               margin: 0,
             }}>
-              Yes, we designed a bluffing game, but we swear these aren't fake. 🤭
+              Yes, we designed a bluffing game, but we swear these aren't fake 🤭
             </h2>
           </div>
 
