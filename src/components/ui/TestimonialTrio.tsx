@@ -180,6 +180,11 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
       <div
         ref={viewportRef}
         style={{
+          // The mask only hides the off-frame cards from view; the track still overflows
+          // in layout. Left unclipped that widens the mobile layout viewport to the full
+          // track, so every slide re-lays out the whole page. Clip it. The padding here is
+          // wider than the 9px hover shadow, so nothing visible gets cut off.
+          overflow: "hidden",
           padding: `10px ${edge}px 20px`,
           maskImage: mask,
           WebkitMaskImage: mask,
