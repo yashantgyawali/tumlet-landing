@@ -27,13 +27,13 @@
  *   node scripts/generate-html.mjs
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const distDir = path.resolve(__dirname, '../dist');
-const SITE = 'https://tumlet.com';
+const distDir = path.resolve(__dirname, "../dist");
+const SITE = "https://tumlet.com";
 
 // ─── Route metadata ───────────────────────────────────────────────────────────
 // Keep this list in sync with App.tsx routes and public/sitemap.xml.
@@ -41,181 +41,201 @@ const SITE = 'https://tumlet.com';
 // fallback and the hydrated app stay consistent.
 
 const HOME = {
-  path: '/',
-  title: 'Tumlet | Spreading Playfulness Across Nepal',
+  path: "/",
+  title: "Tumlet | Spreading Playfulness Across Nepal",
   description:
-    'Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.',
-  ogImage: 'https://tumlet.com/unfurl.png',
-  h1: 'Bluff momo - Board game for Nepali adults',
+    "Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.",
+  ogImage: "https://tumlet.com/unfurl.png",
+  h1: "Bluff momo - Board game for Nepali adults",
 };
 
 const routes = [
   {
-    path: '/about',
-    title: 'About Us | Tumlet — Nepali Board Game Company',
+    path: "/about",
+    title: "About Us | Tumlet — Nepali Board Game Company",
     description:
-      'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.',
-    ogImage: 'https://tumlet.com/tumlet-logo.png',
+      "Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.",
+    ogImage: "https://tumlet.com/tumlet-logo.png",
     h1: "We're Tumlet.",
   },
   {
-    path: '/bluff-momo-rules',
-    title: 'Bluff Momo Rules | How to Play the Nepali Card Game',
+    path: "/bluff-momo-rules",
+    title: "Bluff Momo Rules | How to Play the Nepali Card Game",
     description:
       "Learn how to play Bluff Momo — the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character's actions and blocks.",
-    ogImage: 'https://tumlet.com/unfurl.png',
-    h1: 'How to play bluff momo?',
+    ogImage: "https://tumlet.com/unfurl.png",
+    h1: "How to play bluff momo?",
   },
   {
-    path: '/corporate-game-night',
-    title: 'Corporate Game Night | Tumlet — Team Building with Board Games',
+    path: "/corporate-game-night",
+    title: "Corporate Game Night | Tumlet — Team Building with Board Games",
     description:
-      'Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 2-hour session for your team.',
-    ogImage: 'https://tumlet.com/unfurl.png',
-    h1: 'We bring the games. You bring the team.',
+      "Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 3-hour session for your team.",
+    ogImage: "https://tumlet.com/unfurl.png",
+    h1: "We bring the games. You bring the team.",
   },
   {
-    path: '/ganthan',
-    title: 'Ganthan | Meaningful Conversation Prompts for Nepali Families',
+    path: "/ganthan",
+    title: "Ganthan | Meaningful Conversation Prompts for Nepali Families",
     description:
-      'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.',
-    ogImage: 'https://tumlet.com/tumlet-logo.png',
-    h1: 'Ganthan — conversations worth having with your family',
+      "Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.",
+    ogImage: "https://tumlet.com/tumlet-logo.png",
+    h1: "Ganthan — conversations worth having with your family",
   },
   {
-    path: '/bichitra',
-    title: 'Bichitra | Guess the Nepali Last Name',
+    path: "/bichitra",
+    title: "Bichitra | Guess the Nepali Last Name",
     description:
-      'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it — can you find it? No options, no shortcuts. Play free online now.',
-    ogImage: 'https://tumlet.com/tumlet-logo.png',
-    h1: 'Bichitra — Guess the Nepali Last Name',
+      "Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it — can you find it? No options, no shortcuts. Play free online now.",
+    ogImage: "https://tumlet.com/tumlet-logo.png",
+    h1: "Bichitra — Guess the Nepali Last Name",
   },
   {
-    path: '/thug',
-    title: 'Thug | Social Deduction Game for Nepali Friend Groups',
+    path: "/thug",
+    title: "Thug | Social Deduction Game for Nepali Friend Groups",
     description:
-      'Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.',
-    ogImage: 'https://tumlet.com/tumlet-logo.png',
-    h1: 'Thug — the social deduction game for Nepali friend groups',
+      "Thug is a free social deduction game for Nepali friend groups. One person gets a different word — can you figure out who? Built around Nepali culture.",
+    ogImage: "https://tumlet.com/tumlet-logo.png",
+    h1: "Thug — the social deduction game for Nepali friend groups",
   },
   {
-    path: '/farak',
+    path: "/farak",
     title: "Farak | Who’s Most Likely To — With an Imposter Twist",
     description:
-      'Farak is the imposter edition of Who’s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.',
-    ogImage: 'https://tumlet.com/og-farak.png',
+      "Farak is the imposter edition of Who’s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.",
+    ogImage: "https://tumlet.com/og-farak.png",
     h1: "Farak — Who's Most Likely To, but with an imposter",
   },
   {
-    path: '/tundikhel',
-    title: 'Race to Tundikhel — A New Nepali Board Game from Tumlet',
+    path: "/tundikhel",
+    title: "Race to Tundikhel — A New Nepali Board Game from Tumlet",
     description:
-      'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.',
-    ogImage: 'https://tumlet.com/tundikhel/hero-art.png',
-    h1: 'Race to Tundikhel — A new Nepali board game from Tumlet',
+      "Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck — just micro-driver chaos through the streets of Kathmandu. Coming soon.",
+    ogImage: "https://tumlet.com/tundikhel/hero-art.png",
+    h1: "Race to Tundikhel — A new Nepali board game from Tumlet",
   },
   {
-    path: '/tundikhel-how',
-    title: 'How to Play Race to Tundikhel | Instruction Video & Rules',
+    path: "/tundikhel-how",
+    title: "How to Play Race to Tundikhel | Instruction Video & Rules",
     description:
-      'Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.',
-    ogImage: 'https://tumlet.com/unfurl.png',
-    h1: 'How to Play Race to Tundikhel',
+      "Watch the instruction video and learn how to play Race to Tundikhel — the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.",
+    ogImage: "https://tumlet.com/unfurl.png",
+    h1: "How to Play Race to Tundikhel",
   },
   {
-    path: '/blog',
+    path: "/blog",
     title: "Tumlet Blog | Stories from Nepal’s Board Game Scene",
     description:
-      'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.',
-    ogImage: 'https://tumlet.com/unfurl.png',
-    h1: 'The Blog',
+      "Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.",
+    ogImage: "https://tumlet.com/unfurl.png",
+    h1: "The Blog",
   },
   {
-    path: '/blog/best-nepali-board-games',
+    path: "/blog/best-nepali-board-games",
     title: "Best Nepali Board Games I’ve Actually Played",
     description:
       "I've been exploring Nepal's board game scene for a while now. These four games stood out after countless sessions with friends and family.",
-    ogImage: 'https://tumlet.com/blogs/best-nepali-board-games/unfurl.png',
+    ogImage: "https://tumlet.com/blogs/best-nepali-board-games/unfurl.png",
     h1: "Best Nepali Board Games I've Actually Played",
   },
   {
-    path: '/blog/board-game-nepal',
-    title: 'Board Games in Nepal – Where to Play, Events, and Local Games',
+    path: "/blog/board-game-nepal",
+    title: "Board Games in Nepal – Where to Play, Events, and Local Games",
     description:
-      'Discover board games in Nepal. Find game nights, cafés with games, and Nepali-made games like Firiri and Bagh Chal. Play, meet people, and have fun.',
-    ogImage: 'https://tumlet.com/unfurl.png',
-    h1: 'Board Games in Nepal — A Quick Guide',
+      "Discover board games in Nepal. Find game nights, cafés with games, and Nepali-made games like Firiri and Bagh Chal. Play, meet people, and have fun.",
+    ogImage: "https://tumlet.com/unfurl.png",
+    h1: "Board Games in Nepal — A Quick Guide",
   },
   {
-    path: '/blog/best-souvenirs-nepal',
+    path: "/blog/best-souvenirs-nepal",
     title: "Best Souvenirs From Nepal: Thoughtful Gifts I Wish I'd Known About",
     description:
       "Two years ago I panic-bought pashmina shawls for an Australian summer. Since then I've kept a running list of the best souvenirs from Nepal — mostly from small local brands worth knowing about.",
-    ogImage: 'https://tumlet.com/blogs/best-souvenirs-nepal/unfurl.jpg',
+    ogImage: "https://tumlet.com/blogs/best-souvenirs-nepal/unfurl.jpg",
     h1: "Best Souvenirs From Nepal: Thoughtful Gifts I Wish I'd Known About",
   },
   {
-    path: '/wavelength',
+    path: "/wavelength",
     title: "Wavelength | Read your friends' minds | Tumlet",
     description:
       "One player gives a clue, the rest spin the dial to guess. A free Tumlet party game for reading your friends' minds. Play online.",
-    ogImage: 'https://tumlet.com/tumlet-logo.png',
-    h1: 'wavelength',
+    ogImage: "https://tumlet.com/tumlet-logo.png",
+    h1: "wavelength",
   },
   {
-    path: '/game-night',
-    title: 'Board Game Night: free, every month, all around Kathmandu | Tumlet',
+    path: "/game-night",
+    title: "Board Game Night: free, every month, all around Kathmandu | Tumlet",
     description:
-      'Tumlet hosts a free board game night every month, somewhere new in Kathmandu. No tickets, no experience needed. We teach the rules. Join the WhatsApp community to catch the next one.',
-    ogImage: 'https://tumlet.com/game-night-1.jpg',
-    h1: 'A free board game night, every month, somewhere new in Kathmandu.',
+      "Tumlet hosts a free board game night every month, somewhere new in Kathmandu. No tickets, no experience needed. We teach the rules. Join the WhatsApp community to catch the next one.",
+    ogImage: "https://tumlet.com/game-night-1.jpg",
+    h1: "A free board game night, every month, somewhere new in Kathmandu.",
     relatedLinks: [
-      { href: '/game-night/terrys-july-2026/', label: "Game Night at Terry's Pub & Bistro, July 2026" },
-      { href: '/game-night/misfits-june-2026/', label: 'Game Night at Misfits, June 2026' },
-      { href: '/game-night/watering-hole-may-2026/', label: 'Game Night at The Watering Hole, May 2026' },
-      { href: '/game-night/five10-april-2026/', label: 'Game Night at Five10, April 2026' },
-      { href: '/game-night/bettercoffee-february-2026/', label: 'Game Night at Better Coffee, February 2026' },
+      {
+        href: "/game-night/terrys-july-2026/",
+        label: "Game Night at Terry's Pub & Bistro, July 2026",
+      },
+      {
+        href: "/game-night/misfits-june-2026/",
+        label: "Game Night at Misfits, June 2026",
+      },
+      {
+        href: "/game-night/watering-hole-may-2026/",
+        label: "Game Night at The Watering Hole, May 2026",
+      },
+      {
+        href: "/game-night/five10-april-2026/",
+        label: "Game Night at Five10, April 2026",
+      },
+      {
+        href: "/game-night/bettercoffee-february-2026/",
+        label: "Game Night at Better Coffee, February 2026",
+      },
     ],
   },
   {
-    path: '/game-night/terrys-july-2026',
-    title: "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night",
+    path: "/game-night/terrys-july-2026",
+    title:
+      "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night",
     description:
       "Our biggest turnout yet — 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.",
-    ogImage: 'https://tumlet.com/terrys-july-2026-thumb.png',
-    h1: 'Tumlet Game Night — The Whole Roof Was Ours',
+    ogImage: "https://tumlet.com/terrys-july-2026-thumb.png",
+    h1: "Tumlet Game Night — The Whole Roof Was Ours",
   },
   {
-    path: '/game-night/watering-hole-may-2026',
-    title: 'At the Heart of Jhamsikhel · The Watering Hole, May 2026 | Tumlet Game Night',
+    path: "/game-night/watering-hole-may-2026",
+    title:
+      "At the Heart of Jhamsikhel · The Watering Hole, May 2026 | Tumlet Game Night",
     description:
-      'Our highest attendance yet — 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.',
-    ogImage: 'https://tumlet.com/watering-hole-may-2026-thumb.webp',
-    h1: 'Tumlet Game Night — At the Heart of Jhamsikhel',
+      "Our highest attendance yet — 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.",
+    ogImage: "https://tumlet.com/watering-hole-may-2026-thumb.webp",
+    h1: "Tumlet Game Night — At the Heart of Jhamsikhel",
   },
   {
-    path: '/game-night/bettercoffee-february-2026',
-    title: 'Coffee, Connection, and Chaos · Better Coffee, February 2026 | Tumlet Game Night',
+    path: "/game-night/bettercoffee-february-2026",
+    title:
+      "Coffee, Connection, and Chaos · Better Coffee, February 2026 | Tumlet Game Night",
     description:
       "Game night at a coffee shop? At Better Coffee Sanepa it worked. Skull, Codenames, CATAN — and our first Beast-style elimination tournament on Valentine's Day, February 2026.",
-    ogImage: 'https://tumlet.com/bettercoffee-february-2026-thumb.png',
-    h1: 'Tumlet Game Night — Coffee, Connection, and Chaos',
+    ogImage: "https://tumlet.com/bettercoffee-february-2026-thumb.png",
+    h1: "Tumlet Game Night — Coffee, Connection, and Chaos",
   },
   {
-    path: '/game-night/misfits-june-2026',
-    title: "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night",
+    path: "/game-night/misfits-june-2026",
+    title:
+      "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night",
     description:
-      'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.',
-    ogImage: 'https://tumlet.com/misfits-june-2026-thumb.png',
+      "A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.",
+    ogImage: "https://tumlet.com/misfits-june-2026-thumb.png",
     h1: "Tumlet Game Night — Behind the Door That Isn't a Door",
   },
   {
-    path: '/game-night/five10-april-2026',
-    title: 'The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night',
+    path: "/game-night/five10-april-2026",
+    title:
+      "The Hidden Gem with a Hidden Parking in Thamel · Five10, April 2026 | Tumlet Game Night",
     description:
-      'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.',
-    ogImage: 'https://tumlet.com/five10-april-2026-thumb.png',
-    h1: 'Tumlet Game Night — The Hidden Gem with a Hidden Parking in Thamel',
+      "Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever — April 1, 2026.",
+    ogImage: "https://tumlet.com/five10-april-2026-thumb.png",
+    h1: "Tumlet Game Night — The Hidden Gem with a Hidden Parking in Thamel",
   },
 ];
 
@@ -226,48 +246,54 @@ const routes = [
 // slashes match the canonical URLs to avoid "link points to redirect".
 
 const PRIMARY_LINKS = [
-  { href: '/', label: 'Home' },
-  { href: '/bichitra/', label: 'Bichitra' },
-  { href: '/farak/', label: 'Farak' },
-  { href: '/ganthan/', label: 'Ganthan' },
-  { href: '/thug/', label: 'Thug' },
-  { href: '/wavelength/', label: 'Wavelength' },
-  { href: '/bluff-momo-rules/', label: 'Bluff Momo Rules' },
-  { href: '/tundikhel/', label: 'Race to Tundikhel' },
-  { href: '/game-night/', label: 'Game Night' },
-  { href: '/about/', label: 'About Us' },
-  { href: '/blog/', label: 'Blog' },
+  { href: "/", label: "Home" },
+  { href: "/bichitra/", label: "Bichitra" },
+  { href: "/farak/", label: "Farak" },
+  { href: "/ganthan/", label: "Ganthan" },
+  { href: "/thug/", label: "Thug" },
+  { href: "/wavelength/", label: "Wavelength" },
+  { href: "/bluff-momo-rules/", label: "Bluff Momo Rules" },
+  { href: "/tundikhel/", label: "Race to Tundikhel" },
+  { href: "/game-night/", label: "Game Night" },
+  { href: "/about/", label: "About Us" },
+  { href: "/blog/", label: "Blog" },
 ];
 
 const FOOTER_LINKS = [
-  { href: '/corporate-game-night/', label: 'Corporate Game Night' },
-  { href: '/tundikhel-how/', label: 'How to Play Race to Tundikhel' },
-  { href: '/blog/best-nepali-board-games/', label: 'Best Nepali Board Games' },
-  { href: '/blog/board-game-nepal/', label: 'Board Games in Nepal' },
-  { href: '/blog/best-souvenirs-nepal/', label: 'Best Souvenirs From Nepal' },
-  { href: 'https://kobadi.tumlet.com/', label: 'Kobadi', external: true },
-  { href: 'https://www.instagram.com/tumlet.boardgames/', label: 'Instagram', external: true },
+  { href: "/corporate-game-night/", label: "Corporate Game Night" },
+  { href: "/tundikhel-how/", label: "How to Play Race to Tundikhel" },
+  { href: "/blog/best-nepali-board-games/", label: "Best Nepali Board Games" },
+  { href: "/blog/board-game-nepal/", label: "Board Games in Nepal" },
+  { href: "/blog/best-souvenirs-nepal/", label: "Best Souvenirs From Nepal" },
+  { href: "https://kobadi.tumlet.com/", label: "Kobadi", external: true },
+  {
+    href: "https://www.instagram.com/tumlet.boardgames/",
+    label: "Instagram",
+    external: true,
+  },
 ];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function escapeAttr(str) {
   return str
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 // For HTML text nodes (apostrophes / em-dashes are valid as-is).
 function escapeHtml(str) {
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 function renderLinks(items, linkStyle) {
   return items
     .map((l) => {
-      const rel = l.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const rel = l.external
+        ? ' target="_blank" rel="noopener noreferrer"'
+        : "";
       return `<a href="${escapeAttr(l.href)}"${rel} style="${linkStyle}">${escapeHtml(l.label)}</a>`;
     })
     .join('<span style="color:#D9C9A3;margin:0 8px;">·</span>');
@@ -288,31 +314,31 @@ function injectMeta(template, { title, description, ogImage, canonicalUrl }) {
   // <meta name="description">
   html = html.replace(
     /<meta\s+name="description"[^>]*>/,
-    `<meta name="description" content="${d}" />`
+    `<meta name="description" content="${d}" />`,
   );
 
   // OG tags
   html = html.replace(
     /<meta\s+property="og:title"[^>]*>/,
-    `<meta property="og:title" content="${t}" />`
+    `<meta property="og:title" content="${t}" />`,
   );
   html = html.replace(
     /<meta\s+property="og:description"[^>]*>/,
-    `<meta property="og:description" content="${d}" />`
+    `<meta property="og:description" content="${d}" />`,
   );
   html = html.replace(
     /<meta\s+property="og:image"[^>]*>/,
-    `<meta property="og:image" content="${ogImage}" />`
+    `<meta property="og:image" content="${ogImage}" />`,
   );
 
   // Twitter — fix the incorrect card value in the default template too
   html = html.replace(
     /<meta\s+name="twitter:card"[^>]*>/,
-    `<meta name="twitter:card" content="summary_large_image" />`
+    `<meta name="twitter:card" content="summary_large_image" />`,
   );
   html = html.replace(
     /<meta\s+name="twitter:image"[^>]*>/,
-    `<meta name="twitter:image" content="${ogImage}" />`
+    `<meta name="twitter:image" content="${ogImage}" />`,
   );
 
   // Inject canonical, og:url, twitter title+description before </head>
@@ -321,9 +347,9 @@ function injectMeta(template, { title, description, ogImage, canonicalUrl }) {
     `  <meta property="og:url" content="${canonicalUrl}" />`,
     `  <meta name="twitter:title" content="${t}" />`,
     `  <meta name="twitter:description" content="${d}" />`,
-  ].join('\n');
+  ].join("\n");
 
-  html = html.replace('</head>', `${extra}\n</head>`);
+  html = html.replace("</head>", `${extra}\n</head>`);
 
   return html;
 }
@@ -335,16 +361,20 @@ function injectMeta(template, { title, description, ogImage, canonicalUrl }) {
  */
 function renderSeoBody({ h1, description, relatedLinks = [] }) {
   const navLinkStyle =
-    'color:#F16147;font-weight:600;text-decoration:none;white-space:nowrap;';
-  const footerLinkStyle = 'color:#6B6B6B;text-decoration:underline;white-space:nowrap;';
+    "color:#F16147;font-weight:600;text-decoration:none;white-space:nowrap;";
+  const footerLinkStyle =
+    "color:#6B6B6B;text-decoration:underline;white-space:nowrap;";
 
-  const relatedSection = relatedLinks.length > 0 ? `
+  const relatedSection =
+    relatedLinks.length > 0
+      ? `
         <section style="margin-top:32px;">
           <h2 style="font-size:18px;font-weight:700;color:#130D01;margin:0 0 12px;">Recent game nights</h2>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-            ${relatedLinks.map(l => `<li><a href="${escapeAttr(l.href)}" style="color:#F16147;text-decoration:underline;">${escapeHtml(l.label)}</a></li>`).join('\n            ')}
+            ${relatedLinks.map((l) => `<li><a href="${escapeAttr(l.href)}" style="color:#F16147;text-decoration:underline;">${escapeHtml(l.label)}</a></li>`).join("\n            ")}
           </ul>
-        </section>` : '';
+        </section>`
+      : "";
 
   return `
     <div style="max-width:880px;margin:0 auto;padding:40px 24px;font-family:'Baloo 2',system-ui,sans-serif;color:#130D01;line-height:1.5;">
@@ -356,10 +386,10 @@ function renderSeoBody({ h1, description, relatedLinks = [] }) {
       </nav>
       <main>
         <h1 style="font-size:clamp(32px,5vw,52px);font-weight:800;letter-spacing:-0.01em;margin:0 0 16px;">${escapeHtml(
-          h1
+          h1,
         )}</h1>
         <p style="font-size:18px;line-height:1.6;color:#4B5563;max-width:640px;margin:0 0 24px;">${escapeHtml(
-          description
+          description,
         )}</p>
         <p style="font-size:16px;color:#4B5563;max-width:640px;">
           Explore Tumlet's online games — <a href="/bichitra/" style="color:#F16147;">Bichitra</a>,
@@ -388,28 +418,28 @@ function renderSeoBody({ h1, description, relatedLinks = [] }) {
 function injectBody(html, route) {
   return html.replace(
     '<div id="root"></div>',
-    `<div id="root">${renderSeoBody(route)}</div>`
+    `<div id="root">${renderSeoBody(route)}</div>`,
   );
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
-const templatePath = path.join(distDir, 'index.html');
+const templatePath = path.join(distDir, "index.html");
 
 if (!fs.existsSync(templatePath)) {
-  console.error('Error: dist/index.html not found. Run `vite build` first.');
+  console.error("Error: dist/index.html not found. Run `vite build` first.");
   process.exit(1);
 }
 
 // Read the original built template ONCE (still has an empty #root), then reuse
 // it for every route — including the homepage we overwrite below.
-const rootTemplate = fs.readFileSync(templatePath, 'utf-8');
+const rootTemplate = fs.readFileSync(templatePath, "utf-8");
 
 // Homepage — fix meta + inject body, then overwrite dist/index.html.
 let homeHtml = injectMeta(rootTemplate, { ...HOME, canonicalUrl: `${SITE}/` });
 homeHtml = injectBody(homeHtml, HOME);
-fs.writeFileSync(templatePath, homeHtml, 'utf-8');
-console.log('  ✓ dist/index.html (homepage)');
+fs.writeFileSync(templatePath, homeHtml, "utf-8");
+console.log("  ✓ dist/index.html (homepage)");
 
 for (const route of routes) {
   // Netlify serves directory index files at their trailing-slash URL and
@@ -422,8 +452,8 @@ for (const route of routes) {
   const routeDir = path.join(distDir, route.path);
   fs.mkdirSync(routeDir, { recursive: true });
 
-  const outFile = path.join(routeDir, 'index.html');
-  fs.writeFileSync(outFile, html, 'utf-8');
+  const outFile = path.join(routeDir, "index.html");
+  fs.writeFileSync(outFile, html, "utf-8");
   console.log(`  ✓ dist${route.path}/index.html`);
 }
 
