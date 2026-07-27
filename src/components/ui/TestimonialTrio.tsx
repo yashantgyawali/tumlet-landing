@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export type MiniTestimonial = {
   quote: string;
@@ -113,7 +113,12 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
   );
 
   // Slot width drives the translate distance, so measure it instead of guessing.
-  useEffect(() => {
+  // useLayoutEffect (not useEffect) so the real width is committed before the
+  // browser paints — otherwise cards briefly render at their initial 0px slot
+  // width, collapsing into a tall, narrow column and pushing everything below
+  // the carousel down and then back up a moment later, which reads as the
+  // page scrolling on its own on mobile.
+  useLayoutEffect(() => {
     const el = viewportRef.current;
     if (!el) return;
     const measure = () => {
@@ -178,6 +183,7 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
           padding: `10px ${edge}px 20px`,
           maskImage: mask,
           WebkitMaskImage: mask,
+          overflow: "hidden",
         }}
       >
         <div
@@ -191,7 +197,7 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
           {track.map((t, i) => {
             const original = i % items.length;
             return (
-              <div key={i} style={{ flex: `0 0 ${slotW}px` }}>
+              <div key={i} style={{ flex: `0 0 ${slotW}px`, minWidth: 0 }}>
                 <TestimonialMiniCard
                   {...t}
                   shadowColor={shadowColors[original % 3]}

@@ -11,8 +11,12 @@ interface GameMetaItem {
 interface GameHeroProps {
   backgroundClass: string;
   logoSrc: string;
+  logoWidth?: number;
+  logoHeight?: number;
   imageSrc: string;
   imageClass: string;
+  imageWidth?: number;
+  imageHeight?: number;
   description: string;
   metaItems: GameMetaItem[];
   ctaLink: string;
@@ -31,8 +35,12 @@ interface GameHeroProps {
 const GameHero: React.FC<GameHeroProps> = ({
   backgroundClass,
   logoSrc,
+  logoWidth,
+  logoHeight,
   imageSrc,
   imageClass,
+  imageWidth,
+  imageHeight,
   description,
   metaItems,
   ctaLink,
@@ -51,14 +59,14 @@ const GameHero: React.FC<GameHeroProps> = ({
     <div className="w-full">
       <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 ${backgroundClass}`}>
       
-        <img className="w-[224px]" src={logoSrc} alt="Game Logo" />
-        <img className={imageClass} src={imageSrc} alt="Game Cards" />
-        
+        <img className="w-[224px]" src={logoSrc} alt="Game Logo" width={logoWidth} height={logoHeight} />
+        <img className={imageClass} src={imageSrc} alt="Game Cards" width={imageWidth} height={imageHeight} />
+
         {metaItems.length > 0 && (
           <div className="flex flex-wrap justify-center gap-6 sm:gap-12 -mt-12">
             {metaItems.map((item, index) => (
               <div key={index} className="flex flex-col sm:flex-row items-center gap-2">
-                <img className="w-8 sm:w-auto" src={item.icon} alt="Icon" />
+                <img className="w-8 sm:w-auto" src={item.icon} alt="Icon" width={51} height={50} />
                 <span className="text-base">{item.text}</span>
               </div>
             ))}

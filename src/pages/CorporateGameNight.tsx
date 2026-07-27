@@ -39,6 +39,7 @@ type MediaItem = {
   src: string;
   alt?: string;
   poster?: string;
+  aspectRatio?: number;
 };
 
 const games = [
@@ -209,16 +210,19 @@ const testimonials: MiniTestimonial[] = [
   },
 ];
 
+// aspectRatio = width / height of the actual source file. Passing it in lets the
+// gallery reserve the right slot width immediately instead of resizing once the
+// image/video loads, which was causing a visible layout shift.
 const sampleMedia: MediaItem[] = [
-  { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Game night photo' },
-  { type: 'video', src: '/blogs/corporate-game-night/2.mp4' },
-  { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Game night photo' },
-  { type: 'video', src: '/blogs/corporate-game-night/4.mp4' },
-  { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Game night photo' },
-  { type: 'video', src: '/blogs/corporate-game-night/6.mov' },
-  { type: 'image', src: '/blogs/corporate-game-night/7.jpg' },
-  { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Game night photo' },
-  { type: 'image', src: '/blogs/corporate-game-night/9.jpg' },
+  { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Game night photo', aspectRatio: 800 / 358 },
+  { type: 'video', src: '/blogs/corporate-game-night/2.mp4', aspectRatio: 480 / 848 },
+  { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Game night photo', aspectRatio: 1600 / 720 },
+  { type: 'video', src: '/blogs/corporate-game-night/4.mp4', aspectRatio: 480 / 848 },
+  { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Game night photo', aspectRatio: 600 / 450 },
+  { type: 'video', src: '/blogs/corporate-game-night/6.mov', aspectRatio: 1080 / 1920 },
+  { type: 'image', src: '/blogs/corporate-game-night/7.jpg', aspectRatio: 800 / 600 },
+  { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Game night photo', aspectRatio: 800 / 600 },
+  { type: 'image', src: '/blogs/corporate-game-night/9.jpg', aspectRatio: 600 / 450 },
 ];
 
 const CorporateGameNight = () => {

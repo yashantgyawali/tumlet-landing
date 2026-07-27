@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
           {/* Brand column */}
           <div>
-            <img src="/tumlet-logo.png" alt="Tumlet" style={{ width: 140, marginBottom: 16 }} />
+            <img src="/tumlet-logo.png" alt="Tumlet" width={967} height={266} style={{ width: 140, height: 'auto', marginBottom: 16 }} />
             <p style={{ fontSize: 15, lineHeight: 1.6, color: '#6B6B6B', maxWidth: 220 }}>
               On a mission to spread playfulness amongst Nepali youths.
             </p>

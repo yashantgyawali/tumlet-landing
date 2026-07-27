@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     <header>
       <nav className="flex flex-row justify-between items-center px-6 md:px-12 lg:px-24 py-6 relative" role="navigation" aria-label="Main navigation">
         <Link to="/" aria-label="Tumlet Homepage">
-          <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet - Nepali Board Games Company" />
+          <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet - Nepali Board Games Company" width={967} height={266} />
         </Link>
 
       {/* Desktop Menu */}
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
         <div className="fixed inset-0 bg-white z-50 flex flex-col p-6 md:hidden min-h-screen">
           {/* Header with logo and close button */}
           <div className="flex justify-between items-center mb-8">
-            <img className="w-[120px]" src="/tumlet-logo.png" alt="Tumlet Logo" />
+            <img className="w-[120px]" src="/tumlet-logo.png" alt="Tumlet Logo" width={967} height={266} />
             <button className="cursor-pointer" onClick={() => setMenuOpen(false)}>
               <X size={28} />
             </button>

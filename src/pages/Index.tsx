@@ -92,7 +92,11 @@ const Index = () => {
           <GameHero
             backgroundClass="bluff-background"
             logoSrc="/bluff-momo-logo.png"
+            logoWidth={1795}
+            logoHeight={863}
             imageSrc="/char-combined.webp"
+            imageWidth={1200}
+            imageHeight={382}
             imageClass=" w-[145%] self-center rounded-2xl"
             description="Bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
             metaItems={bluffMomoMeta}

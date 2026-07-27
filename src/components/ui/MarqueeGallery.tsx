@@ -5,6 +5,9 @@ type MediaItem = {
   src: string;
   alt?: string;
   poster?: string;
+  // width / height of the source file, so the slot width is known up front
+  // instead of being measured after the media loads (which shifts layout).
+  aspectRatio?: number;
 };
 
 type MarqueeGalleryProps = {
@@ -12,38 +15,16 @@ type MarqueeGalleryProps = {
   height?: number; // px
 };
 
+const FALLBACK_ASPECT_RATIO = 1.5;
+
 export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 200 }) => {
   const [paused, setPaused] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const [widths, setWidths] = useState<{ [idx: number]: number }>({});
 
-  // Helper to set width based on aspect ratio if available
-  const getWidth = (el: HTMLImageElement | HTMLVideoElement) => {
-    if (el && el.naturalWidth && el.naturalHeight) {
-      return (height * el.naturalWidth) / el.naturalHeight;
-    }
-    if (el && (el as HTMLVideoElement).videoWidth && (el as HTMLVideoElement).videoHeight) {
-      return (height * (el as HTMLVideoElement).videoWidth) / (el as HTMLVideoElement).videoHeight;
-    }
-    // fallback width
-    return height * 1.5;
-  };
+  const getWidth = (item: MediaItem) => height * (item.aspectRatio || FALLBACK_ASPECT_RATIO);
 
   // Duplicate items for seamless infinite loop
   const displayItems = [...items, ...items];
-
-  // Only set width if it hasn't been set yet
-  const handleImageLoad = (idx: number, el: HTMLImageElement) => {
-    if (el && el.naturalWidth && el.naturalHeight && !widths[idx]) {
-      setWidths(w => ({ ...w, [idx]: getWidth(el) }));
-    }
-  };
-
-  const handleVideoMetadata = (idx: number, el: HTMLVideoElement) => {
-    if (el && el.videoWidth && el.videoHeight && !widths[idx]) {
-      setWidths(w => ({ ...w, [idx]: (height * el.videoWidth) / el.videoHeight }));
-    }
-  };
 
   return (
     <div
@@ -66,7 +47,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
             className="flex-shrink-0 rounded-lg overflow-hidden"
             style={{
               height,
-              width: widths[idx] || height * 1.5,
+              width: getWidth(item),
               display: "flex",
               alignItems: "center",
               justifyContent: "center"
@@ -89,7 +70,6 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
                 alt={item.alt || ""}
                 className="object-contain w-full h-full"
                 draggable={false}
-                onLoad={e => handleImageLoad(idx, e.currentTarget)}
               />
             ) : (
               <video
@@ -102,7 +82,6 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
                 playsInline
                 preload="metadata"
                 style={{ pointerEvents: "none" }}
-                onLoadedMetadata={e => handleVideoMetadata(idx, e.currentTarget)}
               />
             )}
           </div>
