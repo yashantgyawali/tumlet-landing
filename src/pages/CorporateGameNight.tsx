@@ -215,11 +215,11 @@ const testimonials: MiniTestimonial[] = [
 // image/video loads, which was causing a visible layout shift.
 const sampleMedia: MediaItem[] = [
   { type: 'image', src: '/blogs/corporate-game-night/1.jpg', alt: 'Game night photo', aspectRatio: 800 / 358 },
-  { type: 'video', src: '/blogs/corporate-game-night/2.mp4', aspectRatio: 480 / 848 },
+  { type: 'video', src: '/blogs/corporate-game-night/2.mp4', poster: '/blogs/corporate-game-night/2-poster.jpg', aspectRatio: 480 / 848 },
   { type: 'image', src: '/blogs/corporate-game-night/3.jpg', alt: 'Game night photo', aspectRatio: 1600 / 720 },
-  { type: 'video', src: '/blogs/corporate-game-night/4.mp4', aspectRatio: 480 / 848 },
+  { type: 'video', src: '/blogs/corporate-game-night/4.mp4', poster: '/blogs/corporate-game-night/4-poster.jpg', aspectRatio: 480 / 848 },
   { type: 'image', src: '/blogs/corporate-game-night/10.jpg', alt: 'Game night photo', aspectRatio: 600 / 450 },
-  { type: 'video', src: '/blogs/corporate-game-night/6.mov', aspectRatio: 1080 / 1920 },
+  { type: 'video', src: '/blogs/corporate-game-night/6.mp4', poster: '/blogs/corporate-game-night/6-poster.jpg', aspectRatio: 720 / 1280 },
   { type: 'image', src: '/blogs/corporate-game-night/7.jpg', aspectRatio: 800 / 600 },
   { type: 'image', src: '/blogs/corporate-game-night/8.jpg', alt: 'Game night photo', aspectRatio: 800 / 600 },
   { type: 'image', src: '/blogs/corporate-game-night/9.jpg', aspectRatio: 600 / 450 },
