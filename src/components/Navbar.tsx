@@ -23,9 +23,6 @@ const Navbar: React.FC = () => {
             <Link to="/bichitra/" className="block px-4 py-2 hover:bg-gray-100">
               Bichitra
             </Link>
-            <Link to="/farak/" className="block px-4 py-2 hover:bg-gray-100">
-              Farak
-            </Link>
             <Link to="/ganthan/" className="block px-4 py-2 hover:bg-gray-100">
               Ganthan
             </Link>
@@ -95,9 +92,6 @@ const Navbar: React.FC = () => {
             </div>
             <Link to="/bichitra/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Bichitra
-            </Link>
-            <Link to="/farak/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
-              Farak
             </Link>
             <Link to="/ganthan/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Ganthan

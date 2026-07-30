@@ -46,7 +46,6 @@ const Footer: React.FC = () => {
             </div>
             {[
               { label: 'Bichitra', to: '/bichitra/' },
-              { label: 'Farak', to: '/farak/' },
               { label: 'Ganthan', to: '/ganthan/' },
               { label: 'Thug', to: '/thug/' },
               { label: 'Wavelength', to: '/wavelength/' },

@@ -42,15 +42,18 @@ function setJsonLd(structuredData: object) {
   script.textContent = JSON.stringify(structuredData);
 }
 
-const ACCENT = '#2D5A27';
-const SECONDARY = '#5A8A4A';
-const SOFT_BG = '#C8E2B4';
+const ACCENT = '#F16147';
+const INK = '#130D01';
+const CREAM = '#FAF1E4';
+const PEACH = '#FDE8E4';
+const YELLOW = '#F3B952';
+const MUTED = '#4B5563';
 
 const STEPS = [
   {
     icon: '1',
     title: 'Open Thug and pick a category.',
-    body: 'Choose from deeply Nepali categories: last names, दाल types, cities, Kathmandu landmarks, Nepali snacks. There\'s no shortage.',
+    body: 'Choose from deeply Nepali categories: थर, खाना, स्थान, brands, KTM cafés, जनावर. There\'s no shortage.',
   },
   {
     icon: '2',
@@ -106,80 +109,72 @@ const Thug = () => {
       <main className="flex-1">
 
         {/* ── HERO ── */}
-        <section className="max-w-[1280px] mx-auto px-6 md:px-12 pt-14 mb-20">
-          <div
-            className="relative rounded-[20px] overflow-hidden border-4"
-            style={{ background: '#EDF5E8', borderColor: ACCENT }}
+        <section className="max-w-[760px] mx-auto px-6 pt-16 pb-0 mb-0 text-center">
+          <span
+            className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
+            style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT, background: PEACH, letterSpacing: '0.18em' }}
           >
-            <div className="px-8 md:px-16 pt-14 pb-12 text-center">
-              <span
-                className="inline-block text-sm font-bold uppercase tracking-widest px-5 py-2 rounded-full border-2 mb-8"
-                style={{
-                  fontFamily: "'Outfit', sans-serif",
-                  background: '#FAF1E4',
-                  color: ACCENT,
-                  borderColor: ACCENT,
-                  letterSpacing: '0.1em',
-                }}
-              >
-                Thug · tumlet.com/thug
-              </span>
+            Thug · Free to play
+          </span>
 
-              <h1
-                className="font-extrabold mb-5 leading-tight"
-                style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(30px, 5vw, 58px)', letterSpacing: '-0.01em' }}
-              >
-                Thug: the social deduction game for Nepali friend groups
-              </h1>
+          <h1
+            className="font-extrabold mb-5 leading-tight"
+            style={{ fontFamily: "'Baloo 2', sans-serif", color: INK, fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
+          >
+            Thug: the social deduction game for Nepali friend groups
+          </h1>
 
-              <p
-                className="font-semibold text-2xl mb-8"
-                style={{ fontFamily: "'Outfit', sans-serif", color: SECONDARY }}
-              >
-                There is a Thug among you. They're hiding in plain sight.
-              </p>
+          <p
+            className="font-semibold mb-7 leading-snug"
+            style={{ color: MUTED, fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
+          >
+            There is a Thug among you. They're hiding in plain sight.
+          </p>
 
-              <div className="flex justify-center items-center gap-8 flex-wrap">
-                <a
-                  href="https://thug.tumlet.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 font-bold px-12 py-4 rounded-xl cursor-pointer transition-all duration-200 whitespace-nowrap text-white"
-                  style={{
-                    fontFamily: "'Baloo 2', sans-serif",
-                    background: ACCENT,
-                    boxShadow: '8px 8px 0px #130D01',
-                    transform: 'rotate(-0.88deg)',
-                    fontSize: '1.1rem',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
-                  onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
-                >
-                  Find the Thug
-                </a>
-                <a href="#how-it-works" className="underline font-medium text-base" style={{ color: ACCENT }}>
-                  See how to play →
-                </a>
+          <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
+            <a
+              href="https://thug.tumlet.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-bold px-12 py-4 rounded-xl text-white cursor-pointer transition-all duration-200 whitespace-nowrap"
+              style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontSize: '1.1rem',
+                background: ACCENT,
+                boxShadow: `8px 8px 0px ${YELLOW}`,
+                transform: 'rotate(-0.88deg)',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
+              onMouseLeave={e => (e.currentTarget.style.transform = 'rotate(-0.88deg)')}
+            >
+              Find the Thug →
+            </a>
+            <a href="#how-it-works" className="underline font-medium text-base" style={{ color: ACCENT }}>
+              See how to play →
+            </a>
+          </div>
+        </section>
+
+        {/* ── STATS STRIP ── */}
+        <section className="max-w-[760px] mx-auto px-6 mb-20">
+          <div
+            className="grid grid-cols-3 rounded-2xl overflow-hidden"
+            style={{ border: `3px solid ${ACCENT}`, background: CREAM }}
+          >
+            {[
+              { num: '3–99+', lbl: 'players' },
+              { num: 'Free', lbl: 'to play' },
+              { num: '10 min', lbl: 'a round' },
+            ].map(({ num, lbl }, i) => (
+              <div
+                key={lbl}
+                className="py-6 text-center"
+                style={{ borderRight: i < 2 ? `2px solid ${ACCENT}` : undefined }}
+              >
+                <div className="font-extrabold text-3xl leading-none" style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT }}>{num}</div>
+                <div className="text-sm font-semibold uppercase tracking-wider mt-1.5" style={{ color: '#6B6B6B', letterSpacing: '0.04em' }}>{lbl}</div>
               </div>
-            </div>
-
-            {/* Stats strip */}
-            <div className="grid grid-cols-3 border-t-2" style={{ background: '#FAF1E4', borderColor: ACCENT }}>
-              {[
-                { num: '3–99+', lbl: 'players' },
-                { num: 'Free', lbl: 'to play' },
-                { num: '10 min', lbl: 'a round' },
-              ].map(({ num, lbl }, i) => (
-                <div
-                  key={lbl}
-                  className="py-5 text-center"
-                  style={{ borderRight: i < 2 ? `2px solid ${ACCENT}` : undefined }}
-                >
-                  <div className="font-extrabold text-2xl leading-none" style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT }}>{num}</div>
-                  <div className="text-sm font-semibold uppercase tracking-wider mt-1.5" style={{ color: '#6B6B6B', letterSpacing: '0.04em' }}>{lbl}</div>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </section>
 
@@ -200,14 +195,14 @@ const Thug = () => {
             </h2>
           </div>
 
-          <div style={{ border: `3px solid ${ACCENT}`, background: '#FAF1E4', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }} className="rounded-2xl overflow-hidden">
+          <div style={{ border: `3px solid ${ACCENT}`, background: CREAM, display: 'grid' }} className="rounded-2xl overflow-hidden grid-cols-1 md:grid-cols-2">
             {STEPS.map(({ icon, title, body }, i) => (
               <div key={i} className="flex gap-5 items-start p-8" style={{ borderRight: `2px solid ${ACCENT}`, borderBottom: `2px solid ${ACCENT}` }}>
-                <div className="flex-shrink-0 flex items-center justify-center font-extrabold text-xl rounded-xl" style={{ width: 56, height: 56, fontFamily: "'Outfit', sans-serif", background: SOFT_BG, border: `2px solid ${ACCENT}`, color: ACCENT }}>
+                <div className="flex-shrink-0 flex items-center justify-center font-extrabold text-xl rounded-xl" style={{ width: 56, height: 56, fontFamily: "'Outfit', sans-serif", background: PEACH, border: `2px solid ${ACCENT}`, color: ACCENT }}>
                   {icon}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: "'Baloo 2', sans-serif", color: ACCENT }} className="font-bold text-xl mb-1.5 leading-tight">{title}</h3>
+                  <h3 style={{ fontFamily: "'Baloo 2', sans-serif", color: INK }} className="font-bold text-xl mb-1.5 leading-tight">{title}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: '#3a3225' }}>{body}</p>
                 </div>
               </div>
@@ -216,7 +211,7 @@ const Thug = () => {
         </section>
 
         {/* ── DARK FEATURE SECTION ── */}
-        <section className="py-20 mb-24 relative overflow-hidden" style={{ background: ACCENT, color: 'white' }}>
+        <section className="py-20 mb-24 relative overflow-hidden" style={{ background: INK, color: 'white' }}>
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -228,7 +223,7 @@ const Thug = () => {
             <div className="text-center mb-14">
               <span
                 className="inline-block text-xs font-bold uppercase tracking-widest mb-3"
-                style={{ fontFamily: "'Outfit', sans-serif", color: '#F3B952', letterSpacing: '0.18em' }}
+                style={{ fontFamily: "'Outfit', sans-serif", color: YELLOW, letterSpacing: '0.18em' }}
               >
                 What makes Thug different
               </span>
@@ -238,7 +233,7 @@ const Thug = () => {
               >
                 Built for people who grew up Nepali.
               </h2>
-              <p className="text-lg mt-3 max-w-lg mx-auto" style={{ color: SOFT_BG }}>
+              <p className="text-lg mt-3 max-w-lg mx-auto" style={{ color: CREAM }}>
                 The categories are the game. And these categories are ours.
               </p>
             </div>
@@ -271,12 +266,12 @@ const Thug = () => {
                 >
                   <div
                     className="font-black leading-none mb-4"
-                    style={{ fontFamily: "'Outfit', sans-serif", fontSize: 40, color: '#F3B952' }}
+                    style={{ fontFamily: "'Outfit', sans-serif", fontSize: 40, color: YELLOW }}
                   >
                     {num}
                   </div>
                   <h3 className="font-bold text-xl mb-3 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif" }}>{title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: SOFT_BG }}>{body}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: CREAM }}>{body}</p>
                 </div>
               ))}
             </div>
@@ -287,7 +282,7 @@ const Thug = () => {
         <section className="max-w-[760px] mx-auto px-6 mb-24">
           <span
             className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-            style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT, background: '#EDF5E8', letterSpacing: '0.18em' }}
+            style={{ fontFamily: "'Outfit', sans-serif", color: ACCENT, background: PEACH, letterSpacing: '0.18em' }}
           >
             The categories
           </span>
@@ -315,7 +310,7 @@ const Thug = () => {
                 className="px-5 py-2.5 rounded-full font-semibold text-sm"
                 style={{
                   fontFamily: "'Baloo 2', sans-serif",
-                  background: '#EDF5E8',
+                  background: PEACH,
                   border: `2px solid ${ACCENT}`,
                   color: ACCENT,
                 }}
@@ -331,9 +326,9 @@ const Thug = () => {
           <div
             className="text-center px-8 py-14 rounded-[20px]"
             style={{
-              background: '#F3B952',
-              border: '3px solid #130D01',
-              boxShadow: '12px 12px 0 #130D01',
+              background: YELLOW,
+              border: `3px solid ${INK}`,
+              boxShadow: `12px 12px 0 ${INK}`,
               transform: 'rotate(-0.5deg)',
             }}
           >
