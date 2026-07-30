@@ -47,11 +47,13 @@ const STEPS = [
     icon: '1',
     title: 'An image appears.',
     body: "Something in it is the last name. Look closely. It might be obvious. It might take a minute. That's the whole game.",
+    image: '/level1.webp',
   },
   {
     icon: '2',
     title: 'Type the थर.',
     body: "No options. No hints to start. Just you and the image. Trust what you see, or think you see.",
+    image: '/bichitra-quiz.png',
   },
 ];
 
@@ -94,7 +96,7 @@ const Bichitra = () => {
         <section className="max-w-[760px] mx-auto px-6 pt-16 pb-0 mb-0 text-center">
           <span
             className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-            style={{ fontFamily: "'Outfit', sans-serif", color: '#364587', background: '#BAC1E1', letterSpacing: '0.18em' }}
+            style={{ fontFamily: "'Outfit', sans-serif", color: '#F16147', background: '#FDE8E4', letterSpacing: '0.18em' }}
           >
             Tumlet · Free to play
           </span>
@@ -110,7 +112,7 @@ const Bichitra = () => {
             className="font-semibold mb-7 leading-snug"
             style={{ color: '#4B5563', fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
-            It's not about reading faces. The थर is hiding somewhere in the image. You just have to find it.
+            The थर is hiding somewhere in the image. You just have to find it.
           </p>
 
           <div className="flex justify-center items-center gap-8 flex-wrap mb-14">
@@ -122,7 +124,7 @@ const Bichitra = () => {
               style={{
                 fontFamily: "'Baloo 2', sans-serif",
                 fontSize: '1.1rem',
-                background: '#364587',
+                background: '#F16147',
                 boxShadow: '8px 8px 0px #F3B952',
                 transform: 'rotate(-0.88deg)',
               }}
@@ -131,7 +133,7 @@ const Bichitra = () => {
             >
               Play Bichitra free →
             </a>
-            <a href="#how-it-works" className="underline font-medium text-base" style={{ color: '#364587' }}>
+            <a href="#how-it-works" className="underline font-medium text-base" style={{ color: '#F16147' }}>
               How it works →
             </a>
           </div>
@@ -141,7 +143,7 @@ const Bichitra = () => {
         <section className="max-w-[760px] mx-auto px-6 mb-20">
           <div
             className="grid grid-cols-3 rounded-2xl overflow-hidden"
-            style={{ border: '3px solid #7184BE', background: '#FAF1E4' }}
+            style={{ border: '3px solid #F16147', background: '#FAF1E4' }}
           >
             {[
               { num: '6', lbl: 'packs' },
@@ -151,9 +153,9 @@ const Bichitra = () => {
               <div
                 key={lbl}
                 className="py-6 text-center"
-                style={{ borderRight: i < 2 ? '2px solid #7184BE' : undefined }}
+                style={{ borderRight: i < 2 ? '2px solid #F16147' : undefined }}
               >
-                <div className="font-extrabold text-3xl leading-none" style={{ fontFamily: "'Outfit', sans-serif", color: '#364587' }}>{num}</div>
+                <div className="font-extrabold text-3xl leading-none" style={{ fontFamily: "'Outfit', sans-serif", color: '#F16147' }}>{num}</div>
                 <div className="text-sm font-semibold uppercase tracking-wider mt-1.5" style={{ color: '#6B6B6B', letterSpacing: '0.04em' }}>{lbl}</div>
               </div>
             ))}
@@ -164,7 +166,7 @@ const Bichitra = () => {
         <article className="max-w-[760px] mx-auto px-6 mb-24">
           <span
             className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6"
-            style={{ fontFamily: "'Outfit', sans-serif", color: '#364587', background: '#BAC1E1', letterSpacing: '0.18em' }}
+            style={{ fontFamily: "'Outfit', sans-serif", color: '#F16147', background: '#FDE8E4', letterSpacing: '0.18em' }}
           >
             Why it's addictive
           </span>
@@ -176,11 +178,11 @@ const Bichitra = () => {
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Each image hides a Nepali last name inside it: visually, cleverly, sometimes maddeningly. Type your guess. Too far off? You're stuck. Getting warm? You'll know. Three wrong answers and you earn a hint, but by then your pride is already on the line.
+            Each image hides a Nepali last name in plain sight. Sometimes it's obvious. Sometimes it's ridiculously clever. Sometimes it feels impossible. Type your guess, and if you're correct you move to the next level. If you cannot figure it out, well, we question your identity.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            It's the kind of puzzle that makes you feel genius when you crack it and unreasonably frustrated when you don't. Nepalis have been dropping it in group chats with zero context and watching friends spiral.
+            It's the kind of puzzle that makes you feel like a genius when you crack it and question your nationality when you don't.
           </p>
         </article>
 
@@ -189,7 +191,7 @@ const Bichitra = () => {
           <div className="text-center mb-12">
             <span
               className="inline-block text-xs font-bold uppercase tracking-widest mb-3"
-              style={{ fontFamily: "'Outfit', sans-serif", color: '#364587', letterSpacing: '0.18em' }}
+              style={{ fontFamily: "'Outfit', sans-serif", color: '#F16147', letterSpacing: '0.18em' }}
             >
               How it works
             </span>
@@ -202,27 +204,35 @@ const Bichitra = () => {
           </div>
 
           <div
-            style={{ border: '3px solid #7184BE', background: '#FAF1E4', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
+            style={{ border: '3px solid #F16147', background: '#FAF1E4', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
             className="rounded-2xl overflow-hidden"
           >
-            {STEPS.map(({ icon, title, body }, i) => (
+            {STEPS.map(({ icon, title, body, image }, i) => (
               <div
                 key={i}
-                className="flex gap-5 items-start p-8"
+                className="flex flex-col p-8"
                 style={{
-                  borderRight: '2px solid #7184BE',
-                  borderBottom: '2px solid #7184BE',
+                  borderRight: '2px solid #F16147',
+                  borderBottom: '2px solid #F16147',
                 }}
               >
-                <div
-                  className="flex-shrink-0 flex items-center justify-center font-extrabold text-xl rounded-xl"
-                  style={{ width: 56, height: 56, fontFamily: "'Outfit', sans-serif", background: '#BAC1E1', border: '2px solid #7184BE', color: '#364587' }}
-                >
-                  {icon}
-                </div>
-                <div>
-                  <h3 className="font-bold text-xl mb-1.5 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01' }}>{title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#3a3225' }}>{body}</p>
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full rounded-xl mb-6"
+                  style={{ height: 220, objectFit: 'cover', border: '3px solid #130D01', boxShadow: '6px 6px 0px #130D01' }}
+                />
+                <div className="flex gap-5 items-start">
+                  <div
+                    className="flex-shrink-0 flex items-center justify-center font-extrabold text-xl rounded-xl"
+                    style={{ width: 56, height: 56, fontFamily: "'Outfit', sans-serif", background: '#FDE8E4', border: '2px solid #F16147', color: '#F16147' }}
+                  >
+                    {icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-1.5 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01' }}>{title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: '#3a3225' }}>{body}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -259,7 +269,7 @@ const Bichitra = () => {
                 fontFamily: "'Baloo 2', sans-serif",
                 fontSize: '1.1rem',
                 background: '#130D01',
-                boxShadow: '8px 8px 0px #364587',
+                boxShadow: '8px 8px 0px #F16147',
                 transform: 'rotate(-0.88deg)',
               }}
               onMouseEnter={e => (e.currentTarget.style.transform = 'rotate(-0.88deg) translate(-4px,-4px)')}
