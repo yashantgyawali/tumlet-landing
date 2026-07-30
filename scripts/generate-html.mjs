@@ -99,14 +99,6 @@ const routes = [
     h1: "Thug — the social deduction game for Nepali friend groups",
   },
   {
-    path: "/farak",
-    title: "Farak | Who’s Most Likely To — With an Imposter Twist",
-    description:
-      "Farak is the imposter edition of Who’s Most Likely To. Everyone gets the same question — except one. Can you catch the odd one out? Play free online.",
-    ogImage: "https://tumlet.com/og-farak.png",
-    h1: "Farak — Who's Most Likely To, but with an imposter",
-  },
-  {
     path: "/tundikhel",
     title: "Race to Tundikhel — A New Nepali Board Game from Tumlet",
     description:
@@ -248,7 +240,6 @@ const routes = [
 const PRIMARY_LINKS = [
   { href: "/", label: "Home" },
   { href: "/bichitra/", label: "Bichitra" },
-  { href: "/farak/", label: "Farak" },
   { href: "/ganthan/", label: "Ganthan" },
   { href: "/thug/", label: "Thug" },
   { href: "/wavelength/", label: "Wavelength" },
@@ -393,7 +384,6 @@ function renderSeoBody({ h1, description, relatedLinks = [] }) {
         )}</p>
         <p style="font-size:16px;color:#4B5563;max-width:640px;">
           Explore Tumlet's online games — <a href="/bichitra/" style="color:#F16147;">Bichitra</a>,
-          <a href="/farak/" style="color:#F16147;">Farak</a>,
           <a href="/ganthan/" style="color:#F16147;">Ganthan</a> and
           <a href="/thug/" style="color:#F16147;">Thug</a> — or race through Kathmandu with
           <a href="/tundikhel/" style="color:#F16147;">Race to Tundikhel</a>.

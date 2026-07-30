@@ -15,7 +15,6 @@ import About from "./pages/About";
 import Ganthan from "./pages/Ganthan";
 import CorporateGameNight from "./pages/CorporateGameNight";
 import Thug from "./pages/Thug";
-import Farak from "./pages/Farak";
 import Tundikhel from "./pages/Tundikhel";
 import TundikhElHow from "./pages/TundikhElHow";
 import Wavelength from "./pages/Wavelength";
@@ -49,7 +48,6 @@ const App = () => (
           <Route path="/ganthan" element={<Ganthan />} />
           <Route path="/corporate-game-night" element={<CorporateGameNight />} />
           <Route path="/thug" element={<Thug />} />
-          <Route path="/farak" element={<Farak />} />
           <Route path="/tundikhel" element={<Tundikhel />} />
           <Route path="/tundikhel-how" element={<TundikhElHow />} />
           <Route path="/wavelength" element={<Wavelength />} />

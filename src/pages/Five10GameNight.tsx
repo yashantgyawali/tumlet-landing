@@ -538,7 +538,7 @@ const Five10GameNight = () => {
             <PolaroidSlot
               rotation="2.2deg"
               src="/five10/five10-g4.jpg"
-              alt="Race to Tundikhel board and Farak cards on the table"
+              alt="Race to Tundikhel board and game cards on the table"
               caption="Flip 7 doing it's tinggg."
               dark={false}
             />

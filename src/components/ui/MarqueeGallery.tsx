@@ -20,8 +20,23 @@ const FALLBACK_ASPECT_RATIO = 1.5;
 export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 200 }) => {
   const [paused, setPaused] = useState(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  // A declared aspectRatio that disagrees with the file (EXIF-rotated photos are
+  // the usual culprit) would letterbox the media inside an over-wide slot and
+  // read as an uneven gap. Snap the slot to the real ratio once it's known.
+  const [measured, setMeasured] = useState<Record<number, number>>({});
 
-  const getWidth = (item: MediaItem) => height * (item.aspectRatio || FALLBACK_ASPECT_RATIO);
+  const measure = (index: number, w: number, h: number) => {
+    if (!w || !h) return;
+    const ratio = w / h;
+    setMeasured(prev => {
+      const declared = items[index].aspectRatio || FALLBACK_ASPECT_RATIO;
+      if (prev[index] || Math.abs(ratio - declared) < declared * 0.01) return prev;
+      return { ...prev, [index]: ratio };
+    });
+  };
+
+  const getWidth = (item: MediaItem, index: number) =>
+    height * (measured[index] || item.aspectRatio || FALLBACK_ASPECT_RATIO);
 
   // Duplicate items for seamless infinite loop
   const displayItems = [...items, ...items];
@@ -47,7 +62,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
             className="flex-shrink-0 rounded-lg overflow-hidden"
             style={{
               height,
-              width: getWidth(item),
+              width: getWidth(item, idx % items.length),
               display: "flex",
               alignItems: "center",
               justifyContent: "center"
@@ -70,6 +85,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
                 alt={item.alt || ""}
                 className="object-contain w-full h-full"
                 draggable={false}
+                onLoad={e => measure(idx % items.length, e.currentTarget.naturalWidth, e.currentTarget.naturalHeight)}
               />
             ) : (
               <video
@@ -82,6 +98,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
                 playsInline
                 preload="metadata"
                 style={{ pointerEvents: "none" }}
+                onLoadedMetadata={e => measure(idx % items.length, e.currentTarget.videoWidth, e.currentTarget.videoHeight)}
               />
             )}
           </div>
