@@ -7,6 +7,7 @@ import Analytics from "./components/Analytics";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import BluffMomo from "./pages/BluffMomo";
+import BluffMomoManual from "./pages/BluffMomoManual";
 import BlogIndex from "./pages/BlogIndex";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -41,6 +42,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/bluff-momo-rules" element={<BluffMomo />} />
+          <Route path="/bluff-momo-manual" element={<BluffMomoManual />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/bichitra" element={<Bichitra />} />
