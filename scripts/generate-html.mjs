@@ -163,6 +163,10 @@ const routes = [
     h1: "A free board game night, every month, somewhere new in Kathmandu.",
     relatedLinks: [
       {
+        href: "/game-night/dhokaima-august-2026/",
+        label: "Game Night at Dhokaima Cafe, August 2026",
+      },
+      {
         href: "/game-night/terrys-july-2026/",
         label: "Game Night at Terry's Pub & Bistro, July 2026",
       },
@@ -183,6 +187,15 @@ const routes = [
         label: "Game Night at Better Coffee, February 2026",
       },
     ],
+  },
+  {
+    path: "/game-night/dhokaima-august-2026",
+    title:
+      "The Place With the Best Chocolate Cake · Dhokaima Cafe, August 2026 | Tumlet Game Night",
+    description:
+      "Around 60 players filled Dhokaima Cafe beside Patan Dhoka for the last game night before the tournament. Bluff Momo took over every single table, Race to Tundikhel made its game night debut, and we opened up the conference room for the first time.",
+    ogImage: "https://tumlet.com/dhokaima-august-2026-thumb.png",
+    h1: "Tumlet Game Night: The Place With the Best Chocolate Cake",
   },
   {
     path: "/game-night/terrys-july-2026",
