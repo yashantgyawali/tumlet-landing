@@ -1,6 +1,5 @@
 import React from 'react';
-
-const ASSET = '/bluff-momo-manual';
+import { Play, Pause } from 'lucide-react';
 
 interface AudioPlayerProps {
   playing: boolean;
@@ -27,86 +26,41 @@ export default function AudioPlayer({ playing, missing, t, dur, onPlayPause, onS
     : 'About two minutes';
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 20,
-        padding: '18px 22px',
-        border: '1px solid var(--color-gray-roboflow-300)',
-        borderRadius: 16,
-        marginTop: 32,
-        maxWidth: '64ch',
-        flexWrap: 'wrap',
-      }}
-    >
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          onPlayPause();
-        }}
-        className="bmm-play-btn"
-        style={{
-          flex: 'none',
-          width: 52,
-          height: 52,
-          borderRadius: '50%',
-          background: 'var(--color-red-pushpin-450)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textDecoration: 'none',
-          transition: 'transform 200ms cubic-bezier(0,0.35,0,1.25)',
-        }}
+    <div className="flex items-center gap-4 py-3 md:py-4">
+      <button
+        type="button"
+        onClick={onPlayPause}
+        aria-label={playing ? 'Pause narration' : 'Play narration'}
+        className="flex-none w-12 h-12 rounded-full bg-tumlet-primaryRed text-white flex items-center justify-center shadow-[0_2px_6px_rgba(22,27,50,0.2)] transition-transform duration-150 hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-tumlet-primaryRed focus-visible:ring-offset-2 focus-visible:ring-offset-tumlet-beige"
       >
-        <span
-          className="g-icon"
-          style={{
-            width: 22,
-            height: 22,
-            background: '#FFFFFF',
-            maskImage: `url(${ASSET}/icons/${playing ? 'pause' : 'play'}.svg)`,
-            WebkitMaskImage: `url(${ASSET}/icons/${playing ? 'pause' : 'play'}.svg)`,
-            maskSize: 'contain',
-            WebkitMaskSize: 'contain',
-            maskRepeat: 'no-repeat',
-            WebkitMaskRepeat: 'no-repeat',
-            maskPosition: 'center',
-            WebkitMaskPosition: 'center',
-          }}
-        />
-      </a>
-      <div style={{ flex: '1 1 220px', minWidth: 200, display: 'flex', flexDirection: 'column', gap: 7 }}>
-        <div className="g-text g-text--200 g-text--ui">Hear this page in my words</div>
-        <a
-          href="#"
+        {playing ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-0.5" />}
+      </button>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-baseline justify-between gap-3">
+          <span className="font-outfit text-sm font-semibold text-tumlet-text truncate">
+            Hear this page in my words
+          </span>
+          <span className="font-outfit text-xs text-tumlet-text/60 flex-none tabular-nums">{status}</span>
+        </div>
+        <div
+          role="slider"
+          aria-label="Seek"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(ratio * 100)}
+          tabIndex={0}
           onClick={(e) => {
-            e.preventDefault();
             const r = e.currentTarget.getBoundingClientRect();
-            const ratio = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
-            onSeek(ratio);
+            onSeek(Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)));
           }}
-          style={{
-            display: 'block',
-            height: 6,
-            borderRadius: 3,
-            background: 'var(--color-gray-roboflow-200)',
-            overflow: 'hidden',
-          }}
+          className="mt-2 h-1.5 rounded-full bg-tumlet-primaryYellow/35 overflow-hidden cursor-pointer"
         >
           <span
-            style={{
-              display: 'block',
-              height: 6,
-              borderRadius: 3,
-              background: 'var(--color-red-pushpin-450)',
-              transition: 'width 120ms linear',
-              width: `${Math.round(ratio * 1000) / 10}%`,
-            }}
+            className="block h-full rounded-full bg-tumlet-primaryRed transition-[width] duration-100 ease-linear"
+            style={{ width: `${Math.round(ratio * 1000) / 10}%` }}
           />
-        </a>
-        <div className="g-text g-text--100 g-c-subtle">{status}</div>
+        </div>
       </div>
     </div>
   );
