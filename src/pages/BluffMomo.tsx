@@ -1,12 +1,8 @@
-
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { BookOpen, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 interface CharacterInfo {
   id: string;
@@ -45,9 +41,14 @@ function setCanonical(url: string) {
   link.setAttribute('href', url);
 }
 
+const VIDEO_ID = 'di6Ek8Nf4mQ';
+const SECTION = 'px-6 md:px-12 lg:px-24 max-w-5xl mx-auto';
+const H2 = 'font-baloo font-extrabold text-2xl md:text-3xl text-tumlet-text';
+const BODY = 'text-tumlet-text/80 leading-relaxed';
+
 const BluffMomo = () => {
-  const [selectedCharacter, setSelectedCharacter] = useState<string | null>(null);
-  const tableRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     document.title = 'Bluff Momo Rules | How to Play the Nepali Card Game';
@@ -64,118 +65,194 @@ const BluffMomo = () => {
     setMetaTag('twitter:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
   }, []);
-  
-  const scrollToTable = () => {
-    if (tableRef.current) {
-      tableRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+
+  const scrollToVideo = () => {
+    videoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
-  
+
   const characters: CharacterInfo[] = [
     {
-      id: "hante",
-      name: "हन्ते",
-      action: "Take 3 momo from the middle pile in one move",
-      blocks: "X",
+      id: 'hante',
+      name: 'हन्ते',
+      action: 'Take 3 momo from the middle pile in one move',
+      blocks: 'Nothing',
     },
     {
-      id: "chor",
-      name: "चोर",
-      action: "Steal 2 momo from any player",
-      blocks: "Blocks चोर's attempt to steal your momo",
+      id: 'chor',
+      name: 'चोर',
+      action: 'Steal 2 momo from any player',
+      blocks: 'चोर\'s attempt to steal your momo',
     },
     {
-      id: "bhattiko-dai",
-      name: "भट्टीको दाई",
-      action: "Use 3 momo to poison any player (They lose one card)",
-      blocks: "X",
+      id: 'bhattiko-dai',
+      name: 'भट्टीको दाई',
+      action: 'Use 3 momo to poison any player. They lose one card',
+      blocks: 'Nothing',
     },
     {
-      id: "aama",
-      name: "आमा",
-      action: "X",
-      blocks: "Blocks भट्टीको दाई's poison attempt",
+      id: 'aama',
+      name: 'आमा',
+      action: 'None',
+      blocks: 'भट्टीको दाई\'s poison attempt',
     },
     {
-      id: "mantri",
-      name: "मन्त्री",
-      action: "Force any player to show one of their cards or draw a new card from the deck, look at it, and put back any 1 of your cards",
-      blocks: "Blocks चोर's attempt to steal your momo and मन्त्री's attempt to look at your card",
-    }
+      id: 'mantri',
+      name: 'मन्त्री',
+      action: 'Force any player to show one of their cards, or draw a new card from the deck, look at it, and put back any 1 of your cards',
+      blocks: 'चोर\'s attempt to steal your momo, and मन्त्री\'s attempt to look at your card',
+    },
+  ];
+
+  const basics = [
+    ['Any', 'Take 1 momo from the middle', 'Cannot be blocked or challenged'],
+    ['Any', 'Use 7 momo to food-poison another player. They lose one card', 'Cannot be blocked or challenged'],
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <nav className="flex flex-row justify-between items-center px-6 md:px-12 lg:px-36 py-6">
-        <Link to="/">
-          <img className="w-[120px] md:w-[200px]" src="/tumlet-logo.png" alt="Tumlet Logo" />
-        </Link>
-        <Button 
-          onClick={scrollToTable}
-          className="nav-button"
-        >
-          Character Reference
-        </Button>
-      </nav>
-      
-      <div className="px-6 md:px-12 lg:px-36 py-6">
-        <div className='flex flex-col gap-4 justify-center h-[600px] mb-[48px]'>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 lg:text-center">How to play bluff momo?</h1>
-           <iframe
-              className="w-full h-full rounded-xl"
-              src="https://www.youtube.com/embed/di6Ek8Nf4mQ?si=QPyyUvBOyPjzArWc"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-        </div>
-        
-        <h2 className="text-xl md:text-2xl font-bold mb-4">Character reference table</h2>
-        <div className="overflow-x-auto" ref={tableRef}>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="font-bold">Character</TableHead>
-                <TableHead className="font-bold">Action</TableHead>
-                <TableHead className="font-bold">Blocks</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell className="font-medium">Any</TableCell>
-                <TableCell>Take 1 momo from the middle</TableCell>
-                <TableCell>Cannot be blocked or challenged</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Any</TableCell>
-                <TableCell>Use 7 momo to food-poison another player (they lose one card)</TableCell>
-                <TableCell>Cannot be blocked or challenged</TableCell>
-              </TableRow>
-              {characters.map((char) => (
-                <TableRow key={char.id}>
-                  <TableCell className="font-medium">{char.name}</TableCell>
-                  <TableCell>{char.action}</TableCell>
-                  <TableCell>{char.blocks}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-lg md:text-xl text-gray-700 mb-4">
-            Want to play Bluff Momo with your team? We host <Link to="/corporate-game-night/" className="underline hover:text-tumlet-text/80 text-tumlet-text">corporate game nights</Link> where we bring games to your office and run the entire session.
+    <div className="min-h-screen flex flex-col font-baloo text-tumlet-text bg-white">
+      <Navbar />
+
+      <main className="flex-1 py-10 md:py-14">
+        {/* Hero */}
+        <div className={SECTION}>
+          <span className="inline-block font-outfit text-xs font-bold uppercase tracking-[0.16em] text-tumlet-primaryRed bg-tumlet-beige rounded-full px-3 py-1">
+            Rules and video
+          </span>
+          <h1 className="font-baloo font-extrabold leading-tight mt-4 mb-4 text-4xl md:text-6xl text-tumlet-text">
+            How to play Bluff Momo
+          </h1>
+          <p className="text-lg md:text-xl text-tumlet-text/70 max-w-[56ch] leading-relaxed">
+            Watch the video below, then keep the character table nearby for your first few rounds.
           </p>
-          <p className="text-lg md:text-xl text-gray-700">
-            Flying out of Nepal soon? Bluff Momo packs flat and travels well: see why it made our list of the <Link to="/blog/best-souvenirs-nepal/" className="underline hover:text-tumlet-text/80 text-tumlet-text">best souvenirs to bring home from Nepal</Link>.
-          </p>
+
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4 mt-8">
+            <Link to="/bluff-momo-manual/" className="cta-button color-red !px-8">
+              <BookOpen size={18} />
+              Read the full manual
+            </Link>
+            <button
+              type="button"
+              onClick={scrollToVideo}
+              className="font-outfit font-semibold underline underline-offset-4 text-tumlet-text hover:text-tumlet-primaryRed transition-colors"
+            >
+              Watch the tutorial
+            </button>
+          </div>
         </div>
-      </div>
-      
-      <div className="mt-auto">
-        <Footer />
-      </div>
+
+        {/* Video */}
+        <div className={`${SECTION} mt-14`} ref={videoRef}>
+          <div className="border-[3px] border-[#130D01] rounded-2xl shadow-[8px_8px_0_#130D01] overflow-hidden -rotate-[0.5deg]">
+            {playing ? (
+              <iframe
+                className="w-full aspect-video block"
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1`}
+                title="How to play Bluff Momo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setPlaying(true)}
+                aria-label="Play the How to play Bluff Momo video"
+                className="block w-full p-0 border-0 bg-transparent cursor-pointer"
+              >
+                <img
+                  src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+                  alt="How to play Bluff Momo, on Tumlet's YouTube channel"
+                  className="w-full block aspect-video object-cover"
+                />
+              </button>
+            )}
+
+            <div className="bg-tumlet-beige px-5 py-4 flex items-center justify-between gap-3">
+              <div className="text-left">
+                <div className="font-baloo font-bold text-base text-[#130D01]">How to play Bluff Momo</div>
+                <a
+                  href={`https://www.youtube.com/watch?v=${VIDEO_ID}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-outfit text-[13px] text-[#6B6B6B] hover:text-tumlet-primaryRed"
+                >
+                  Watch on YouTube →
+                </a>
+              </div>
+              {!playing && (
+                <button
+                  type="button"
+                  onClick={() => setPlaying(true)}
+                  className="flex-none bg-tumlet-primaryRed text-white font-baloo font-bold text-[13px] px-4 py-2 rounded-lg shadow-[3px_3px_0_#130D01] cursor-pointer"
+                >
+                  ▶ Watch
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Character reference */}
+        <div className={`${SECTION} mt-20`}>
+          <h2 className={H2}>Character reference</h2>
+          <p className={`${BODY} mt-2 mb-6 max-w-[56ch]`}>
+            Three copies of each character are in the deck. You can claim any of them whether or not you hold the card.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border-2 border-tumlet-text/10">
+            <table className="w-full min-w-[720px] border-collapse text-left">
+              <thead className="bg-tumlet-beige">
+                <tr>
+                  <th className="font-outfit text-sm font-bold uppercase tracking-wide px-5 py-3">Character</th>
+                  <th className="font-outfit text-sm font-bold uppercase tracking-wide px-5 py-3">Action</th>
+                  <th className="font-outfit text-sm font-bold uppercase tracking-wide px-5 py-3">Blocks</th>
+                </tr>
+              </thead>
+              <tbody>
+                {basics.map(([who, action, blocks], i) => (
+                  <tr key={i} className="border-t-2 border-tumlet-text/10 bg-tumlet-beige/40">
+                    <td className="px-5 py-4 font-bold whitespace-nowrap">{who}</td>
+                    <td className={`px-5 py-4 ${BODY}`}>{action}</td>
+                    <td className={`px-5 py-4 ${BODY}`}>{blocks}</td>
+                  </tr>
+                ))}
+                {characters.map((char) => (
+                  <tr key={char.id} className="border-t-2 border-tumlet-text/10">
+                    <td className="px-5 py-4 font-bold whitespace-nowrap">{char.name}</td>
+                    <td className={`px-5 py-4 ${BODY}`}>{char.action}</td>
+                    <td className={`px-5 py-4 ${BODY}`}>{char.blocks}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Manual */}
+        <div className={`${SECTION} mt-20`}>
+          <Link
+            to="/bluff-momo-manual/"
+            className="group flex flex-wrap items-center gap-6 rounded-xl border-2 border-tumlet-primaryYellow/60 bg-tumlet-beige p-7 md:p-9 shadow-[8px_8px_0px_0px_#F3B952] transition-transform duration-200 hover:-translate-x-1 hover:-translate-y-1"
+          >
+            <span className="flex-none w-14 h-14 rounded-full bg-tumlet-primaryRed text-white flex items-center justify-center">
+              <BookOpen size={26} />
+            </span>
+            <span className="flex-1 basis-[280px] min-w-0">
+              <span className="block font-baloo font-extrabold text-2xl">The full manual</span>
+              <span className={`block ${BODY} mt-1`}>
+                Setup, turns, bluffing, poison and a printable quick reference, page by page. Each page is narrated if
+                you would rather listen.
+              </span>
+            </span>
+            <span className="flex-none flex items-center gap-2 font-outfit font-semibold text-tumlet-primaryRed">
+              Open
+              <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
+            </span>
+          </Link>
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 };
