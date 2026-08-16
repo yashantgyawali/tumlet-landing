@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-dhokaima-aug-2026',
+    href: '/game-night/dhokaima-august-2026',
+    isLink: true,
+    when: 'Aug 2026 · Patan Dhoka',
+    title: 'The place with the best chocolate cake',
+    desc: "Dhokaima Cafe. Our biggest crowd yet at ~60, Bluff Momo running on every single table, and Race to Tundikhel's game night debut.",
+    thumbnail: '/dhokaima-august-2026-thumb.png',
+  },
+  {
     id: 'ev-terrys-jul-2026',
     href: '/game-night/terrys-july-2026',
     isLink: true,

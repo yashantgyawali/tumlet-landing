@@ -1,0 +1,15 @@
+node_modules/
+
+# Build output — Netlify rebuilds this from source on every deploy
+# (netlify.toml: command = "npm run build", publish = "dist")
+dist/
+dist-ssr/
+
+.DS_Store
+
+.env
+.env.local
+.env.*.local
+
+*.log
+npm-debug.log*
