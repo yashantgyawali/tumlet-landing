@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-tangerine-sep-2026',
+    href: '/game-night/tangerine-september-2026',
+    isLink: true,
+    when: 'Sep 2026 · Bakhundole',
+    title: 'The place that feels like Narnia',
+    desc: "Tangerine Brunch & Bar. Barely advertised and still hit ~60 players, Guess the Price came back with a chura-and-pads twist, and Skull walked in as the game of the night.",
+    thumbnail: '/tangerine-september-2026-thumb.png',
+  },
+  {
     id: 'ev-dhokaima-aug-2026',
     href: '/game-night/dhokaima-august-2026',
     isLink: true,

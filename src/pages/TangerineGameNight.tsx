@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
+const TANGERINE_MENU = 'https://www.tangerinebrunchandbar.com/menus';
 
 function setMetaTag(name: string, content: string) {
   let tag = document.querySelector(`meta[name='${name}']`);
@@ -41,93 +42,41 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   </svg>
 );
 
-const PolaroidSlot = ({
-  gridArea,
-  rotation,
-  shadowColor,
-  caption,
-  dark = true,
-  src,
-  alt,
-}: {
-  gridArea?: string;
-  rotation: string;
-  shadowColor: string;
-  caption: string;
-  dark?: boolean;
-  src?: string;
-  alt?: string;
-}) => {
-  const [hovered, setHovered] = useState(false);
-
-  return (
-    <div
-      style={{
-        background: '#f5f1ea',
-        padding: '10px 10px 48px',
-        boxShadow: '0 2px 10px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.09)',
-        transform: hovered
-          ? 'rotate(0deg) scale(1.03)'
-          : `rotate(${rotation})`,
-        transition: 'transform 0.22s ease, box-shadow 0.2s ease',
-        display: 'flex',
-        flexDirection: 'column',
-        height: 340,
-        boxSizing: 'border-box',
-        cursor: 'default',
-        zIndex: hovered ? 10 : 1,
-        position: 'relative',
-      }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div style={{
-        flex: 1,
-        overflow: 'hidden',
-        background: dark
-          ? 'linear-gradient(135deg, #1c1812 0%, #272017 100%)'
-          : 'linear-gradient(135deg, #e8dece 0%, #d0c4ae 100%)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-      }}>
-        {src
-          ? <img src={src} alt={alt || caption} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: 'grayscale(1) contrast(1.08)' }} />
-          : (
-            <span style={{
-              color: dark ? 'rgba(255,255,255,0.14)' : '#9e9080',
-              fontSize: 11,
-              fontFamily: "'Outfit', sans-serif",
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-            }}>
-              Photo coming soon
-            </span>
-          )
-        }
-      </div>
-      <p style={{
-        fontFamily: "'Permanent Marker', cursive",
-        fontSize: 13,
-        color: '#130D01',
-        textAlign: 'center',
-        margin: '14px 0 0',
-        lineHeight: 1.3,
-      }}>
-        {caption}
-      </p>
-    </div>
-  );
+const h2Style: React.CSSProperties = {
+  fontFamily: "'Baloo 2', sans-serif",
+  fontWeight: 800,
+  fontSize: 'clamp(25px, 3.4vw, 33px)',
+  margin: '52px 0 16px',
+  color: '#130D01',
+  letterSpacing: '-0.015em',
 };
 
-const MisfitsGameNight = () => {
-  useEffect(() => {
-    const title = "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night";
-    const description = 'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.';
-    const image = 'https://tumlet.com/misfits-june-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/misfits-june-2026/';
+const h3Style: React.CSSProperties = {
+  fontFamily: "'Baloo 2', sans-serif",
+  fontWeight: 700,
+  fontSize: 'clamp(19px, 2.3vw, 22px)',
+  margin: '34px 0 12px',
+  color: '#130D01',
+};
+
+const gamesPlayed = [
+  'Skull',
+  'Love Letter',
+  'Race to Tundikhel',
+  'Bluff Momo',
+  'Secret Hitler',
+  'Scout',
+  'Danger Danger',
+  'Cluedo',
+  'Magical Athlete',
+];
+
+const TangerineGameNight = () => {
+  React.useEffect(() => {
+    const title = 'Tumlet Game Night: The Place That Feels Like Narnia · Tangerine, September 2026';
+    const description = "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised and fastest-booked game night yet. Guess the Price came back with a twist, and Skull made its game night debut as the game of the night.";
+    const image = 'https://tumlet.com/tangerine-september-2026-thumb.png';
+    const url = 'https://tumlet.com/game-night/tangerine-september-2026/';
 
     document.title = title;
     setMetaTag('description', description);
@@ -152,32 +101,6 @@ const MisfitsGameNight = () => {
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-        /* Drop cap */
-        /* Gallery: simple polaroid row */
-        @media (min-width: 700px) {
-          .gn-gallery {
-            display: flex !important;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 28px;
-          }
-          .gn-gallery > div {
-            width: calc(30% - 14px);
-          }
-        }
-
-        @media (max-width: 699px) {
-          .gn-gallery {
-            display: flex !important;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-          }
-          .gn-gallery > div {
-            width: 82%;
-          }
-        }
 
         .gn-back:hover { color: #F16147 !important; }
         .gn-cta-btn:hover {
@@ -216,8 +139,8 @@ const MisfitsGameNight = () => {
         <header style={{ padding: '28px 0 0', maxWidth: 740, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 22 }}>
             {[
-              { label: 'June 2026', filled: true },
-              { label: 'Misfits, Kathmandu', filled: false },
+              { label: 'September 2026', filled: true },
+              { label: 'Tangerine Brunch & Bar', filled: false },
               { label: 'Recap', filled: false },
             ].map(tag => (
               <span key={tag.label} style={{
@@ -245,7 +168,7 @@ const MisfitsGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night: Behind the Door That Isn't a Door
+            Tumlet Game Night: The Place That Feels Like Narnia
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -266,7 +189,7 @@ const MisfitsGameNight = () => {
             <div>
               <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14 }}>Yashant Gyawali</div>
               <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#7a6e60', marginTop: 2 }}>
-                3 June 2026 · 3 min read
+                9 September 2026 · 3 min read
               </div>
             </div>
           </div>
@@ -276,16 +199,16 @@ const MisfitsGameNight = () => {
         <div style={{ margin: '36px 0 0' }}>
           <div style={{
             width: '100%',
-            height: 'clamp(240px, 44vw, 500px)',
+            aspectRatio: '3234 / 1702',
             border: '3px solid #130D01',
             borderRadius: 16,
             boxShadow: '10px 10px 0 0 #F3B952',
             overflow: 'hidden',
           }}>
             <img
-              src="/misfits-june-2026-thumb.png"
-              alt="Game night at Misfits Kathmandu, June 2026"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+              src="/tangerine-september-2026-thumb.png"
+              alt="Tumlet Game Night at Tangerine Brunch & Bar, Bakhundole, September 2026"
+              style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
             />
           </div>
         </div>
@@ -304,9 +227,9 @@ const MisfitsGameNight = () => {
           maxWidth: 680,
         }}>
           {[
-            { k: 'Date', v: 'Tue, 3 Jun 2026' },
-            { k: 'Where', v: 'Misfits, Kanti Path' },
-            { k: 'Turnout', v: '40+ players' },
+            { k: 'Date', v: 'Wed, 9 Sep 2026' },
+            { k: 'Where', v: 'Tangerine Brunch & Bar, Bakhundole' },
+            { k: 'Turnout', v: '~60 players' },
             { k: 'Entry', v: 'Free, as always' },
           ].map(item => (
             <div key={item.k} style={{ display: 'flex', gap: 10, alignItems: 'baseline', padding: '7px 0' }}>
@@ -327,58 +250,69 @@ const MisfitsGameNight = () => {
               }}>{item.v}</span>
             </div>
           ))}
-          <div style={{ gridColumn: '1 / -1', borderTop: '1.5px solid rgba(19,13,1,0.18)', marginTop: 8, paddingTop: 14 }}>
-            <a
-              href="https://www.instagram.com/misfits.ktm/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 7,
-                fontFamily: "'Outfit', sans-serif",
-                fontWeight: 700,
-                fontSize: 14,
-                color: '#130D01',
-                textDecoration: 'none',
-                opacity: 0.8,
-                transition: 'opacity 0.15s',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
-              onMouseLeave={e => (e.currentTarget.style.opacity = '0.8')}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2"/>
-                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-              </svg>
-              Follow @misfits.ktm
-            </a>
-          </div>
         </div>
 
-        {/* ── Article body: lean ── */}
+        {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
-            Nobody walks past Misfits by accident.
+            If you've ever walked past Bakhundole, you've probably seen{' '}
+            <a
+              href={TANGERINE_MENU}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#F16147', textDecoration: 'underline' }}
+            >
+              Tangerine
+            </a>{' '}
+            without really seeing it. It's the kind of place you register from the outside and keep walking past, month after month, until one day you actually go in.
           </p>
           <p style={{ marginBottom: 20 }}>
-            The entrance isn't exactly a door. It's the kind that makes you stop and wonder: wait, is this the place? We're not going to ruin it for you. But once you figure it out, pushing through feels like being let in on something.
+            That's exactly what happened to us. And once you're through the door, the place opens right up. It's got a bit of a Narnia effect: small from the street, then suddenly a whole world once you step in.
           </p>
           <p style={{ marginBottom: 20 }}>
-            That's the energy we look for when we choose where to host game nights. Once you're inside, nothing about Misfits is accidental: not the lights, the seating, the drinks, or the bathrooms. It's a space that was thought about.
+            We barely advertised this one. Slots still filled up faster than any game night we've run, and about 60 people showed up to play, matching our biggest turnout yet. Thank you to everyone who came out.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames, and Cluedo took over the tables. Then for the second half of the night, we ran something we'd been cooking: Almosttt Misfit.
+            This easily became one of our favorite game nights so far. Cute space, good crowd, and it kept getting funnier as the night went on.
+          </p>
+
+          <h2 style={h2Style}>Guess the Price, now with chura and sanitary pads</h2>
+
+          <p style={{ marginBottom: 20 }}>
+            We brought back Guess the Price, one of our most-loved games, with a twist this time around: chura and sanitary pads went into the lineup of items.
           </p>
           <p style={{ marginBottom: 20 }}>
-            It's a twist on herd mentality. You're trying to pick the least common answer, but not so uncommon you're the only one. Write something too unique? –1. Most common answer in the room? –3. Land in the sweet spot of least common? +2.
+            Only the guys in the room got to guess. Nilesh took both rounds. Still not sure if that means he does the household shopping or just got lucky twice.
           </p>
+
+          <h2 style={h2Style}>Skull steals the night</h2>
+
           <p style={{ marginBottom: 20 }}>
-            Easy to learn. Surprisingly hard to play. Exactly the kind of game that makes you second-guess everyone at your table, including yourself.
+            First time we've brought Skull to a game night, and it walked straight into game of the night. Full of bluffs, dares, and constant second-guessing, it was an instant hit at every table that picked it up.
           </p>
-          <p>
-            Big thanks to the Misfits crew for keeping the drinks coming, and to the incredible Rituza for making the night unforgettable.
+
+          <h2 style={h2Style}>Everything on the table</h2>
+
+          <p style={{ marginBottom: 20 }}>
+            Between the regulars and a few debuts, here's what got played:
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 20 }}>
+            {gamesPlayed.map(game => (
+              <span key={game} style={{
+                fontFamily: "'Baloo 2', sans-serif",
+                fontWeight: 600,
+                fontSize: 15,
+                color: '#130D01',
+                background: '#F3B952',
+                border: '2px solid #130D01',
+                borderRadius: 999,
+                padding: '6px 18px',
+                whiteSpace: 'nowrap',
+              }}>{game}</span>
+            ))}
+          </div>
+          <p style={{ marginBottom: 20 }}>
+            ...and a few more we're still trying to remember the names of.
           </p>
         </div>
 
@@ -397,13 +331,14 @@ const MisfitsGameNight = () => {
               fontSize: 21,
               margin: '0 0 18px',
               color: '#130D01',
-            }}>Why Misfits worked</h3>
+            }}>Why Tangerine worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The entry door.', rest: " Genuinely wild. Sets the tone before you've sat down." },
-                { num: '02', strong: 'The drinks.', rest: " Actually good. Players were ordering rounds, not nursing one drink all night." },
-                { num: '03', strong: 'Everything is intentional.', rest: " Designed, not decorated. Board games belong somewhere that someone thought about." },
-                { num: '04', strong: 'The staff.', rest: " Present without being overbearing. By the end they were rooting for tables." },
+                { num: '01', strong: 'Sixty people, barely any advertising.', rest: ' Slots filled up faster than any game night we\'ve run, without us pushing it.' },
+                { num: '02', strong: 'Bigger on the inside.', rest: ' A quiet spot from the street in Bakhundole that opens into a genuinely huge space once you\'re in.' },
+                { num: '03', strong: 'Guess the Price got a twist.', rest: ' Chura and sanitary pads joined the guessing lineup, guys-only round, and Nilesh swept both.' },
+                { num: '04', strong: 'Skull debuted as game of the night.', rest: ' First appearance at a game night, and it was an instant favorite.' },
+                { num: '05', strong: 'One of our favorite nights yet.', rest: ' The space, the crowd, and the games all came together.' },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -424,7 +359,7 @@ const MisfitsGameNight = () => {
           </div>
         </div>
 
-        {/* ── Gallery ── */}
+        {/* ── Photo gallery ── */}
         <div style={{ margin: '72px 0 0' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 28 }}>
             <h2 style={{
@@ -434,57 +369,40 @@ const MisfitsGameNight = () => {
               margin: 0,
               color: '#130D01',
               whiteSpace: 'nowrap',
-            }}>The night in photos</h2>
+            }}>The night, in photos</h2>
             <div style={{ flex: 1, height: 3, background: '#130D01', borderRadius: 2 }} />
-            <span style={{
-              fontFamily: "'Outfit', sans-serif",
-              fontWeight: 600,
-              fontSize: 11,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: '#7a6e60',
-              whiteSpace: 'nowrap',
-            }}>Jun 3, 2026</span>
           </div>
 
-          <div className="gn-gallery" style={{ gap: 18 }}>
-            <PolaroidSlot
-              gridArea="g1"
-              rotation="0deg"
-              shadowColor="#F3B952"
-              src="/misfits/misfits-g1.jpg"
-              caption="We took off our shoes and took over the floor."
-            />
-            <PolaroidSlot
-              gridArea="g2"
-              rotation="1.8deg"
-              shadowColor="#F16147"
-              src="/misfits/misfits-g2.jpg"
-              caption="Pushing luck to its limit."
-            />
-            <PolaroidSlot
-              gridArea="g3"
-              rotation="-2.4deg"
-              shadowColor="#130D01"
-              src="/misfits/misfits-g3.jpg"
-              caption="I will take all the time in the world."
-              dark={false}
-            />
-            <PolaroidSlot
-              gridArea="g4"
-              rotation="1.4deg"
-              shadowColor="#F3B952"
-              src="/misfits/misfits-g4.jpg"
-              caption="Oh god, how do I lie."
-            />
-            <PolaroidSlot
-              gridArea="g5"
-              rotation="0.5deg"
-              shadowColor="#F16147"
-              src="/misfits/misfits-g5.jpg"
-              caption="Wait. I just met all these people."
-              dark={false}
-            />
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 20,
+          }}>
+            {[
+              '/tangerine/tangerine-sept-2026-1.jpg',
+              '/tangerine/tangerine-sept-2026-2.jpg',
+              '/tangerine/tangerine-sept-2026-3.jpg',
+              '/tangerine/tangerine-sept-2026-4.jpg',
+              '/tangerine/tangerine-sept-2026-5.jpg',
+              '/tangerine/tangerine-sept-2026-6.jpg',
+              '/tangerine/tangerine-sept-2026-7.jpg',
+              '/tangerine/tangerine-sept-2026-8.jpg',
+            ].map(src => (
+              <div key={src} style={{
+                border: '3px solid #130D01',
+                borderRadius: 14,
+                overflow: 'hidden',
+                boxShadow: '6px 6px 0 0 #F3B952',
+                aspectRatio: '3 / 4',
+              }}>
+                <img
+                  src={src}
+                  alt="Tumlet Game Night at Tangerine Brunch & Bar, September 2026"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -562,4 +480,4 @@ const MisfitsGameNight = () => {
   );
 };
 
-export default MisfitsGameNight;
+export default TangerineGameNight;

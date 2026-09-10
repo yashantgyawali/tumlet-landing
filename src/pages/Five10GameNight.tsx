@@ -256,9 +256,9 @@ const Five10GameNight = () => {
               fontSize: 17,
               color: '#130D01',
               flex: 'none',
-            }}>T</div>
+            }}>Y</div>
             <div>
-              <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14 }}>Tumlet</div>
+              <div style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14 }}>Yashant Gyawali</div>
               <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: 13, color: '#7a6e60', marginTop: 2 }}>
                 1 April 2026 · 4 min read
               </div>
