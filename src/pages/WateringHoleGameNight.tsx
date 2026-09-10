@@ -119,8 +119,8 @@ const PolaroidSlot = ({
 
 const WateringHoleGameNight = () => {
   useEffect(() => {
-    const title = 'At the Heart of Jhamsikhel · The Watering Hole, May 2026 | Tumlet Game Night';
-    const description = "Our highest attendance yet: 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close it out. A recap of Tumlet Game Night at The Watering Hole, Jhamsikhel.";
+    const title = 'At the Heart of Jhamsikhel · Watering Hole, May 2026 | Tumlet';
+    const description = "Our highest attendance yet: 35+ players, new faces, Bluff Momo all night, a Catan group that never played Catan, at The Watering Hole, Jhamsikhel.";
     const image = 'https://tumlet.com/watering-hole-may-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/watering-hole-may-2026/';
 

@@ -73,8 +73,8 @@ const gamesPlayed = [
 
 const TangerineGameNight = () => {
   React.useEffect(() => {
-    const title = 'Tumlet Game Night: The Place That Feels Like Narnia · Tangerine, September 2026';
-    const description = "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised and fastest-booked game night yet. Guess the Price came back with a twist, and Skull made its game night debut as the game of the night.";
+    const title = 'The Place That Feels Like Narnia · Tangerine, Sep 2026 | Tumlet';
+    const description = "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised game night yet. Guess the Price got a twist, Skull won the room.";
     const image = 'https://tumlet.com/tangerine-september-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/tangerine-september-2026/';
 

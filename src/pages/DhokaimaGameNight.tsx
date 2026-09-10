@@ -60,8 +60,8 @@ const h3Style: React.CSSProperties = {
 
 const DhokaimaGameNight = () => {
   React.useEffect(() => {
-    const title = 'The Place With the Best Chocolate Cake · Dhokaima Cafe, August 2026 | Tumlet Game Night';
-    const description = "Around 60 players filled Dhokaima Cafe beside Patan Dhoka for the last game night before the tournament. Bluff Momo took over every single table, Race to Tundikhel made its game night debut, and we opened up the conference room for the first time.";
+    const title = 'Best Chocolate Cake · Dhokaima Cafe, Aug 2026 | Tumlet';
+    const description = "Around 60 players filled Dhokaima Cafe beside Patan Dhoka for our last game night before the tournament. Bluff Momo took every table, Tundikhel debuted.";
     const image = 'https://tumlet.com/dhokaima-august-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/dhokaima-august-2026/';
 

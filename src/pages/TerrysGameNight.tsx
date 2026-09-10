@@ -118,8 +118,8 @@ const PolaroidSlot = ({
 
 const TerrysGameNight = () => {
   React.useEffect(() => {
-    const title = "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night";
-    const description = "Our biggest turnout yet: 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.";
+    const title = "The Whole Roof Was Ours · Terry's, July 2026 | Tumlet";
+    const description = "Our biggest turnout yet: 50+ players took over Terry's rooftop for Saboteur, Bluff Momo, and the debut of Momo Psychi, our new bidding game.";
     const image = 'https://tumlet.com/terrys-july-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/terrys-july-2026/';
 
