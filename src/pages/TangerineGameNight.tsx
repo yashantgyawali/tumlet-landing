@@ -380,11 +380,11 @@ const TangerineGameNight = () => {
           }}>
             {[
               '/tangerine/tangerine-sept-2026-1.jpg',
-              '/tangerine/tangerine-sept-2026-2.jpg',
               '/tangerine/tangerine-sept-2026-3.jpg',
               '/tangerine/tangerine-sept-2026-4.jpg',
               '/tangerine/tangerine-sept-2026-5.jpg',
               '/tangerine/tangerine-sept-2026-6.jpg',
+              '/tangerine/tangerine-sept-2026-2.jpg',
               '/tangerine/tangerine-sept-2026-7.jpg',
               '/tangerine/tangerine-sept-2026-8.jpg',
             ].map(src => (
