@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-surface-oct-2026',
+    href: '/game-night/surface-october-2026',
+    isLink: true,
+    when: 'Oct 2026 · Baneshwor',
+    title: 'The place that designed us a menu',
+    desc: "Surface Coffee & Co. A menu made just for game night, Bluff Momo before the event even started, and a pre-Dashain luck tournament with a Makkusé prize.",
+    thumbnail: '/surface-october-2026-thumb.png',
+  },
+  {
     id: 'ev-tangerine-sep-2026',
     href: '/game-night/tangerine-september-2026',
     isLink: true,
@@ -64,7 +73,7 @@ const pastNights = [
     href: '/game-night/terrys-july-2026',
     isLink: true,
     when: 'Jul 2026 · Terry\'s Pub & Bistro',
-    title: 'The Whole Roof Was Ours',
+    title: 'The whole roof was ours',
     desc: "Terry's Pub & Bistro. Record 50+ turnout, the debut of Momo Psychi, and Saboteur crowned best game of the night.",
     thumbnail: '/terrys-july-2026-thumb.png',
   },
@@ -73,7 +82,7 @@ const pastNights = [
     href: '/game-night/watering-hole-may-2026',
     isLink: true,
     when: 'May 2026 · Jhamsikhel',
-    title: "At the Heart of Jhamsikhel",
+    title: "At the heart of Jhamsikhel",
     desc: "The Watering Hole. Record turnout, a Catan group that never played Catan, and Guess the Price (Nepali Edition) to close the night.",
     thumbnail: '/watering-hole-may-2026-thumb.webp',
   },
