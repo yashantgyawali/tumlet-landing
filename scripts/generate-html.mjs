@@ -163,6 +163,14 @@ const routes = [
     h1: "A free board game night, every month, somewhere new in Kathmandu.",
     relatedLinks: [
       {
+        href: "/game-night/surface-october-2026/",
+        label: "Game Night at Surface Coffee & Co, October 2026",
+      },
+      {
+        href: "/game-night/tangerine-september-2026/",
+        label: "Game Night at Tangerine Brunch & Bar, September 2026",
+      },
+      {
         href: "/game-night/dhokaima-august-2026/",
         label: "Game Night at Dhokaima Cafe, August 2026",
       },
@@ -187,6 +195,22 @@ const routes = [
         label: "Game Night at Better Coffee, February 2026",
       },
     ],
+  },
+  {
+    path: "/game-night/surface-october-2026",
+    title: "The Place That Designed Us a Menu · Surface, Oct 2026 | Tumlet",
+    description:
+      "Around 60 players at Surface Coffee & Co, Baneshwor, right before Dashain. Surface designed us a menu, and the final came down to coin tosses and Falas.",
+    ogImage: "https://tumlet.com/surface-october-2026-thumb.png",
+    h1: "Tumlet Game Night: The Place That Designed Us a Menu",
+  },
+  {
+    path: "/game-night/tangerine-september-2026",
+    title: "The Place That Feels Like Narnia · Tangerine, Sep 2026 | Tumlet",
+    description:
+      "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised game night yet. Guess the Price got a twist, Skull won the room.",
+    ogImage: "https://tumlet.com/tangerine-september-2026-thumb.png",
+    h1: "Tumlet Game Night: The Place That Feels Like Narnia",
   },
   {
     path: "/game-night/dhokaima-august-2026",
