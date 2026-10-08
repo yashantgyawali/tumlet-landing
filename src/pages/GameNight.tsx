@@ -303,46 +303,13 @@ const GameNight = () => {
             overflow: 'hidden',
             boxShadow: '12px 12px 0 0 #F3B952',
           }}>
-            <span style={{
-              position: 'absolute', top: 20, left: 20, zIndex: 5,
-              background: '#F3B952', color: '#130D01',
-              fontFamily: "'Baloo 2', sans-serif", fontWeight: 700, fontSize: 14,
-              letterSpacing: '0.08em', textTransform: 'uppercase',
-              padding: '10px 18px', borderRadius: 999,
-              border: '2px solid #130D01',
-              whiteSpace: 'nowrap',
-              transform: 'rotate(-3deg)',
-              boxShadow: '4px 4px 0 #130D01',
-              display: 'inline-block',
-            }}>
-              Free · Every month
-            </span>
-
-            <span style={{
-              position: 'absolute', top: 18, right: 22, zIndex: 5,
-              width: 54, height: 54, borderRadius: 14,
-              background: '#F16147', border: '2px solid #130D01',
-              boxShadow: '4px 4px 0 #130D01',
-              transform: 'rotate(8deg)',
-              display: 'grid', placeItems: 'center',
-            }} aria-hidden="true">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
-                <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="#fff" strokeWidth="2"/>
-                <circle cx="8.2" cy="8.2" r="1.7" fill="#fff"/>
-                <circle cx="15.8" cy="8.2" r="1.7" fill="#fff"/>
-                <circle cx="8.2" cy="15.8" r="1.7" fill="#fff"/>
-                <circle cx="15.8" cy="15.8" r="1.7" fill="#fff"/>
-                <circle cx="12" cy="12" r="1.7" fill="#fff"/>
-              </svg>
-            </span>
-
             <div className="gn-hero-meta" style={{ padding: '64px 28px 52px', textAlign: 'center' }}>
 
               <h1 style={{
                 fontFamily: "'Baloo 2', sans-serif", fontWeight: 800,
                 fontSize: 'clamp(36px, 5.4vw, 60px)',
                 lineHeight: 1.08, letterSpacing: '-0.01em',
-                color: '#130D01', margin: '40px auto 20px', maxWidth: 880,
+                color: '#130D01', margin: '0 auto 20px', maxWidth: 880,
               }}>
                 A <span className="gn-hl">free board game night</span>, every month, somewhere new in Kathmandu.
               </h1>
@@ -595,15 +562,6 @@ const GameNight = () => {
             transform: 'rotate(0.4deg)',
             textAlign: 'center',
           }}>
-            <span style={{
-              position: 'absolute', top: -16, right: 32,
-              background: '#F3B952', color: '#130D01',
-              padding: '7px 16px', borderRadius: 999, border: '2px solid #130D01',
-              fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 12,
-              letterSpacing: '0.12em', textTransform: 'uppercase', transform: 'rotate(3deg)',
-              whiteSpace: 'nowrap',
-            }}>We're picky</span>
-
             <div style={{ marginBottom: 16 }}><EyebrowPill>For brands</EyebrowPill></div>
 
             <h2 style={{
@@ -638,14 +596,6 @@ const GameNight = () => {
           padding: '56px 0',
           position: 'relative',
         }}>
-          <span style={{
-            position: 'absolute', top: -16, right: '5%',
-            background: '#F16147', color: '#fff',
-            padding: '7px 16px', borderRadius: 999, border: '2px solid #130D01',
-            fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 12,
-            letterSpacing: '0.12em', textTransform: 'uppercase', transform: 'rotate(4deg)',
-          }}>It's free</span>
-
           <div className="gn-signup-inner" style={{
             maxWidth: 1180, margin: '0 auto', padding: '0 24px',
             display: 'flex', alignItems: 'center', justifyContent: 'space-between',
