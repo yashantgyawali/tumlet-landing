@@ -46,13 +46,13 @@ const STEPS = [
   {
     icon: '1',
     title: 'An image appears.',
-    body: "Something in it is the last name. Look closely. It might be obvious. It might take a minute. That's the whole game.",
+    body: "The image hides a last name. Sometimes it's obvious and sometimes it takes a minute.",
     image: '/level1.webp',
   },
   {
     icon: '2',
     title: 'Type the थर.',
-    body: "No options. No hints to start. Just you and the image. Trust what you see, or think you see.",
+    body: "There are no options and no hints to start. Type what you see, or think you see.",
     image: '/bichitra-quiz.png',
   },
 ];
@@ -60,17 +60,17 @@ const STEPS = [
 const Bichitra = () => {
   useEffect(() => {
     document.title = 'Bichitra | Guess the Nepali Last Name';
-    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it. Can you find it? No options, no shortcuts. Play free online now.');
+    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it. Can you find it? There are no options. Play free online.');
     setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar puzzle, tumlet, nepali game online, guess nepali last name');
     setCanonical('https://tumlet.com/bichitra/');
     setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name');
-    setPropertyTag('og:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options: just you and the image. Play free online.');
+    setPropertyTag('og:description', 'A photo hides a Nepali last name. Can you guess it? There are no options, just you and the image. Play free online.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/bichitra/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name');
-    setMetaTag('twitter:description', 'A photo. A hidden clue. Can you guess the Nepali last name? No options: just you and the image. Play free online.');
+    setMetaTag('twitter:description', 'A photo hides a Nepali last name. Can you guess it? There are no options, just you and the image. Play free online.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
@@ -178,7 +178,7 @@ const Bichitra = () => {
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Each image hides a Nepali last name in plain sight. Sometimes it's obvious. Sometimes it's ridiculously clever. Sometimes it feels impossible. Type your guess, and if you're correct you move to the next level. If you cannot figure it out, well, we question your identity.
+            Each image hides a Nepali last name in plain sight. Sometimes it's obvious, sometimes it's clever, and sometimes it feels impossible. Type your guess, and if you're correct you move to the next level.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
@@ -199,7 +199,7 @@ const Bichitra = () => {
               className="font-extrabold leading-tight"
               style={{ fontFamily: "'Baloo 2', sans-serif", color: '#130D01', fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.01em' }}
             >
-              Simple rules. Maddening puzzles.
+              Simple rules, hard puzzles.
             </h2>
           </div>
 
@@ -258,7 +258,7 @@ const Bichitra = () => {
               Think you can guess the Nepali last name?
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              Most people need at least one hint. Prove them wrong.
+              There are no options. See how far you get.
             </p>
             <a
               href="https://bichitra.tumlet.com/"

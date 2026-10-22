@@ -53,16 +53,16 @@ const Index = () => {
 
   useEffect(() => {
     document.title = 'Tumlet | Spreading Playfulness Across Nepal';
-    setMetaTag('description', 'Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.');
+    setMetaTag('description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
     setCanonical('https://tumlet.com/');
     setPropertyTag('og:title', 'Tumlet | Spreading Playfulness Across Nepal');
-    setPropertyTag('og:description', 'Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.');
+    setPropertyTag('og:description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Tumlet | Spreading Playfulness Across Nepal');
-    setMetaTag('twitter:description', 'Play, laugh, repeat! Tumlet crafts games that spark connection, nostalgia, and pure fun for young Nepali adults.');
+    setMetaTag('twitter:description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
     
     setJsonLd({
@@ -98,7 +98,7 @@ const Index = () => {
             imageWidth={1200}
             imageHeight={382}
             imageClass=" w-[145%] self-center rounded-2xl"
-            description="Bluff momo is a card game based in the street of kathmandu, where players bluff, deceive, and outsmart their friends to steal the most momo and poison their way to victory!"
+            description="Bluff momo is a card game set on the streets of Kathmandu, where you bluff, deceive, and outsmart your friends to steal the most momo and poison your way to victory!"
             metaItems={bluffMomoMeta}
             ctaLink="https://www.instagram.com/tumlet.boardgames/"
             ctaText="DM us to order"

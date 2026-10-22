@@ -257,7 +257,7 @@ const DhokaimaGameNight = () => {
             We'd never used a conference room before. Dhokaima opened theirs up for us, and it's full of small tables, which helps when you're splitting 60 people across that many games.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Honestly though, it felt a bit too formal for a game night. We liked the rooftop at Terry's and the bar floor at Misfits better. The room worked fine. People just sit up straighter in a conference room, and that isn't really what we're going for.
+            It felt a bit too formal for a game night, though. We liked the rooftop at Terry's and the bar floor at Misfits better. The room worked fine, but people sit up straighter in a conference room, and that isn't what we're going for.
           </p>
 
           <h2 style={h2Style}>The games</h2>
@@ -265,16 +265,16 @@ const DhokaimaGameNight = () => {
           <h3 style={h3Style}>Every table, the same game</h3>
 
           <p style={{ marginBottom: 20 }}>
-            At one point we looked up and every table in the room was playing Bluff Momo. Nobody planned that, it just spread from table to table.
+            At one point we looked up and every table in the room was playing Bluff Momo. Nobody planned it. It spread from table to table.
           </p>
           <p style={{ marginBottom: 20 }}>
-            With the tournament coming up it made sense. People wanted the practice.
+            With the tournament coming up, people wanted the practice.
           </p>
 
           <h3 style={h3Style}>Race to Tundikhel's first game night</h3>
 
           <p style={{ marginBottom: 20 }}>
-            This was the first time we brought Race to Tundikhel to a game night, and it came out as the crowd's second favorite. That table got loud fast.
+            This was the first time we brought Race to Tundikhel to a game night, and it was the crowd's second favorite. That table got loud fast.
           </p>
 
           <h2 style={h2Style}>The group game</h2>
@@ -283,13 +283,13 @@ const DhokaimaGameNight = () => {
             We closed the night with Herd Mentality, the second group game. Everyone answers the same question and you only score if your answer matches the herd.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Then came a question about the worst color for underwear, and most of the tables wrote white. White. It is the best color for underwear. We're still not over it.
+            Then came a question about the worst color for underwear, and most of the tables wrote white. White is the best color for underwear. We're still not over it.
           </p>
 
           <h2 style={h2Style}>Our very first buyer was in the room</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Our very first buyer came to play. He has supported us since the beginning and we really appreciate it. Seeing him at a table in a room of 60 people was a good feeling.
+            Our very first buyer came to play. He has supported us since the beginning and we really appreciate it. It was good to see him at a table in a room of 60 people.
           </p>
         </div>
 
@@ -314,8 +314,8 @@ const DhokaimaGameNight = () => {
                 { num: '01', strong: 'Sixty in the room.', rest: ' A new turnout record, and the last game night before the tournament.' },
                 { num: '02', strong: 'A room full of people learning.', rest: ' A lot of the crowd came specifically to learn Bluff Momo before the tournament.' },
                 { num: '03', strong: 'Bluff Momo on every table.', rest: ' Nobody planned it, and it was the favorite of the night.' },
-                { num: '04', strong: 'Race to Tundikhel debuted.', rest: ' First appearance at a game night, straight to second favorite.' },
-                { num: '05', strong: 'Herd Mentality closed it out.', rest: ' And revealed that most of the room thinks white is the worst color for underwear. It is not.' },
+                { num: '04', strong: 'Race to Tundikhel debuted.', rest: ' First time at a game night, and it was second favorite.' },
+                { num: '05', strong: 'Herd Mentality closed it out.', rest: ' Most of the room thinks white is the worst color for underwear. It is not.' },
                 { num: '06', strong: 'Our first buyer showed up.', rest: ' The person who backed us earliest, at a table like everyone else.' },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
@@ -405,7 +405,7 @@ const DhokaimaGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

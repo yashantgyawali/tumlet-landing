@@ -5,18 +5,18 @@ import Footer from '../components/Footer';
 import PersonCard from '../components/PersonCard';
 
 const aboutText = [
-  "Play runs deep in our culture. We see it during Holi when we're throwing colors, in card games during Dashain, in playing Bhailo in Tihar. It's there.",
-  "And is it only during festivals? Not really.",
-  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. “कति गेम्सको त slangs पनि बुझ्दैन and can't really relate to them.” Because it was not made for Nepali people.",
+  "Play runs deep in our culture. We throw colors during Holi, play cards during Dashain, and play Bhailo in Tihar.",
+  "And it isn't only during festivals.",
+  "When we go on trips with friends, to Nagarkot or anywhere else, we often carry games. Usually UNO, Jenga, or something similar. All fun, but all foreign. \"कति गेम्सको त slangs पनि बुझ्दैन and can't really relate to them.\" They weren't made for Nepali people.",
   "This is where we see the gap.",
-  "Where are the Nepali board games? They're almost non-existent. There are a few options, but they are targeted towards kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
-  "So when it comes to board games, we hit a wall 🚧",
+  "Where are the Nepali board games? They're almost non-existent. There are a few options, but they are aimed at kids. And if you're a young Nepali living abroad, you can easily buy international games, but not a single one that feels like home.",
+  "So with board games, we hit a wall 🚧",
   "And we want to change that.",
   "We are a Nepali board game company, plain and simple.",
   "We're from here. Our games are too.",
   "We also bring games to offices and host corporate game nights for teams who want to connect and have fun together.",
-  "We pull from the way we joke. The way we argue. The way we play. We put it into cards, pieces, rules, and laughter.",
-  "We  want to make something that feels like home.",
+  "We draw on how we joke, how we argue, and how we play, and put that into cards, pieces, and rules.",
+  "We want to make something that feels like home.",
   "That's Tumlet.",
   "A Nepali board game company, trying to take you back to your childhood."
 ];
@@ -55,16 +55,16 @@ const About = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
   useEffect(() => {
     document.title = "About Us | Tumlet - Nepali board game company";
-    setMetaTag('description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
+    setMetaTag('description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
     setCanonical('https://tumlet.com/about/');
     setPropertyTag('og:title', 'About Us | Tumlet - Nepali board game company');
-    setPropertyTag('og:description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
+    setPropertyTag('og:description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/about/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'About Us | Tumlet - Nepali board game company');
-    setMetaTag('twitter:description', 'Tumlet is a Nepali board game company bringing play and connection back to Nepali homes. Learn about our story and why we make games for Nepal.');
+    setMetaTag('twitter:description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
   }, []);
 

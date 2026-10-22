@@ -512,7 +512,7 @@ function TurnPage({ onNext }: { onNext: () => void }) {
     <div className={SECTION}>
       <PageEyebrow n={3} />
       <PageTitle>Your turn</PageTitle>
-      <p className={LEAD}>On your turn you take exactly one action. Two of them nobody can touch. The rest are character actions, and those can be doubted.</p>
+      <p className={LEAD}>On your turn you take exactly one action. Two actions can't be blocked or challenged. The rest are character actions, and those can be challenged.</p>
 
       <h2 className={`${H2} mt-16`}>Basic actions</h2>
       <p className={`${BODY} mt-2 mb-6 max-w-[56ch]`}>Nobody can block these or challenge them, so there is nothing to argue about.</p>
@@ -639,7 +639,7 @@ function BluffingPage({ onNext }: { onNext: () => void }) {
 
 function PoisonPage({ onNext }: { onNext: () => void }) {
   const options = [
-    { title: 'Take it', body: <>Lose one card of your choice and move on. Boring, and often correct if you already believe they have the card.</> },
+    { title: 'Take it', body: <>Lose one card of your choice and move on. Often the right call if you already believe they have the card.</> },
     { title: 'Challenge their claim', body: <>If they were telling the truth and show भट्टीको दाई, you lose <span className="font-bold text-tumlet-text">both</span> your cards: one for the poison, one for the failed challenge.</> },
     { title: 'Claim आमा to block it', body: <>If nobody challenges you, the poison is blocked and you keep everything. But if someone challenges you to show आमा and you cannot, you lose both cards: one for the poison, one for the failed bluff.</> },
   ];
@@ -712,7 +712,7 @@ function ReferencePage({ onBack }: { onBack: () => void }) {
     <div className={`${SECTION} pb-20`}>
       <PageEyebrow n={7} />
       <PageTitle>Quick reference</PageTitle>
-      <p className={LEAD}>Everything on one screen. Put this in front of the table and stop explaining.</p>
+      <p className={LEAD}>Everything on one screen. Put this in front of the table.</p>
 
       <div className="mt-12 overflow-x-auto rounded-xl border-2 border-tumlet-text/10">
         <table className="w-full min-w-[720px] border-collapse text-left">

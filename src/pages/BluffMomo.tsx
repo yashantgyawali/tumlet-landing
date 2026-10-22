@@ -52,17 +52,17 @@ const BluffMomo = () => {
 
   useEffect(() => {
     document.title = 'Bluff Momo Rules | How to Play the Nepali Card Game';
-    setMetaTag('description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
+    setMetaTag('description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
     setMetaTag('keywords', 'bluff momo rules, how to play bluff momo, nepali card game, tumlet bluff momo');
     setCanonical('https://tumlet.com/bluff-momo-rules/');
     setPropertyTag('og:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
-    setPropertyTag('og:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
+    setPropertyTag('og:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/bluff-momo-rules/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
-    setMetaTag('twitter:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and reference every character\'s actions and blocks.');
+    setMetaTag('twitter:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
   }, []);
 

@@ -264,22 +264,22 @@ const TangerineGameNight = () => {
             >
               Tangerine
             </a>{' '}
-            without really seeing it. It's the kind of place you register from the outside and keep walking past, month after month, until one day you actually go in.
+            without really seeing it. You notice it from the outside and keep walking past, month after month, until one day you go in.
           </p>
           <p style={{ marginBottom: 20 }}>
-            That's exactly what happened to us. And once you're through the door, the place opens right up. It's got a bit of a Narnia effect: small from the street, then suddenly a whole world once you step in.
+            That's what happened to us. Once you're through the door, the place opens up. It has a Narnia effect: small from the street, much bigger inside.
           </p>
           <p style={{ marginBottom: 20 }}>
             We barely advertised this one. Slots still filled up faster than any game night we've run, and about 60 people showed up to play, matching our biggest turnout yet. Thank you to everyone who came out.
           </p>
           <p style={{ marginBottom: 20 }}>
-            This easily became one of our favorite game nights so far. Cute space, good crowd, and it kept getting funnier as the night went on.
+            This is one of our favorite game nights so far. The space is cute, the crowd was good, and it got funnier as the night went on.
           </p>
 
           <h2 style={h2Style}>Guess the Price, now with chura and sanitary pads</h2>
 
           <p style={{ marginBottom: 20 }}>
-            We brought back Guess the Price, one of our most-loved games, with a twist this time around: chura and sanitary pads went into the lineup of items.
+            We brought back Guess the Price, one of our most-loved games, with a twist this time: chura and sanitary pads went into the lineup of items.
           </p>
           <p style={{ marginBottom: 20 }}>
             Only the guys in the room got to guess. Nilesh took both rounds. Still not sure if that means he does the household shopping or just got lucky twice.
@@ -288,13 +288,13 @@ const TangerineGameNight = () => {
           <h2 style={h2Style}>Skull steals the night</h2>
 
           <p style={{ marginBottom: 20 }}>
-            First time we've brought Skull to a game night, and it walked straight into game of the night. Full of bluffs, dares, and constant second-guessing, it was an instant hit at every table that picked it up.
+            First time we've brought Skull to a game night, and it became game of the night. It has bluffs, dares and constant second-guessing, and every table that picked it up liked it.
           </p>
 
           <h2 style={h2Style}>Everything on the table</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Between the regulars and a few debuts, here's what got played:
+            Here's what got played, between the regulars and a few debuts:
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 20 }}>
             {gamesPlayed.map(game => (
@@ -335,10 +335,10 @@ const TangerineGameNight = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
                 { num: '01', strong: 'Sixty people, barely any advertising.', rest: ' Slots filled up faster than any game night we\'ve run, without us pushing it.' },
-                { num: '02', strong: 'Bigger on the inside.', rest: ' A quiet spot from the street in Bakhundole that opens into a genuinely huge space once you\'re in.' },
-                { num: '03', strong: 'Guess the Price got a twist.', rest: ' Chura and sanitary pads joined the guessing lineup, guys-only round, and Nilesh swept both.' },
-                { num: '04', strong: 'Skull debuted as game of the night.', rest: ' First appearance at a game night, and it was an instant favorite.' },
-                { num: '05', strong: 'One of our favorite nights yet.', rest: ' The space, the crowd, and the games all came together.' },
+                { num: '02', strong: 'Bigger on the inside.', rest: ' A quiet spot from the street in Bakhundole that opens into a huge space once you\'re in.' },
+                { num: '03', strong: 'Guess the Price got a twist.', rest: ' Chura and sanitary pads joined the lineup. Only the guys guessed, and Nilesh won both rounds.' },
+                { num: '04', strong: 'Skull debuted as game of the night.', rest: ' First time at a game night, and it was an instant favorite.' },
+                { num: '05', strong: 'One of our favorite nights yet.', rest: ' The space, the crowd and the games were all good.' },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -427,7 +427,7 @@ const TangerineGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

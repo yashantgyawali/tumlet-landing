@@ -121,7 +121,7 @@ const PolaroidSlot = ({
 const Five10GameNight = () => {
   useEffect(() => {
     const title = 'Hidden Gem, Hidden Parking in Thamel · Five10, Apr 2026 | Tumlet';
-    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final ever, April 1, 2026.';
+    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final we have seen, April 1, 2026.';
     const image = 'https://tumlet.com/five10-april-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/five10-april-2026/';
 
@@ -355,16 +355,16 @@ const Five10GameNight = () => {
         {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
-            It's funny how the best things start so randomly.
+            This one started by chance.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Rohil was a friend of a friend, one we'd first met at a game night, funnily enough. He'd ordered a copy of Bluff Momo, loved it, and reached out asking if we'd want our game in his new café. We said yes without much deliberation. You just know.
+            Rohil was a friend of a friend, and we had first met him at a game night. He'd ordered a copy of Bluff Momo, loved it, and reached out to ask if we'd want our game in his new café. We said yes without much deliberation.
           </p>
           <p style={{ marginBottom: 20 }}>
-            We went to meet him at Five10. Walking in felt intentional in a way most cafés in Kathmandu don't. Cozy, considered, and on a street you've probably walked past a hundred times.
+            We went to meet him at Five10. The café is cozy and carefully put together, on a street you've probably walked past a hundred times.
           </p>
           <p style={{ marginBottom: 20 }}>
-            We pitched the idea: a game night at Five10. Rohil and the team were immediately in. So we decided to do it properly.
+            We pitched a game night at Five10, and Rohil and the team were in right away. So we decided to do it properly.
           </p>
 
           {/* ── YouTube video ── */}
@@ -377,7 +377,7 @@ const Five10GameNight = () => {
               margin: '0 0 16px',
               lineHeight: 1.4,
             }}>
-              The Five10 team came up with this banger just to promote the game night.
+              The Five10 team made this video to promote the game night.
             </p>
             <div style={{
               position: 'relative',
@@ -416,7 +416,7 @@ const Five10GameNight = () => {
           }}>The Open Floor</h2>
 
           <p style={{ marginBottom: 20 }}>
-            The first half was chaos in the best way. Race to Tundikhel drew a crowd from the start. Flip 7 had players lining up in waves, round after round, and nobody wanted to stop. Firiri started quietly in a corner of the room, then became the loudest corner in Five10. Bluff Momo was everywhere, at every table, all night.
+            The first half was chaotic. Race to Tundikhel drew a crowd from the start. Flip 7 had players lining up in waves, round after round, and nobody wanted to stop. Firiri started quietly in a corner of the room and ended up the loudest corner in Five10. Bluff Momo was at every table all night.
           </p>
 
           <h2 style={{
@@ -429,11 +429,11 @@ const Five10GameNight = () => {
           }}>The Tumlet Beast Games</h2>
 
           <p style={{ marginBottom: 20 }}>
-            For the second half, we ran something different: a Tumlet-style tournament we'd been building in our heads for a while. Thirty-five players. One winner. We had to get there.
+            For the second half, we ran a Tumlet-style tournament we'd been planning in our heads for a while. Thirty-five players started, and one would win.
           </p>
 
           <p style={{ marginBottom: 8 }}>
-            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 1: The Chip Game.</strong> Something we made up that morning. Every team starts with 20 poker chips. Each round, you secretly bet however many chips you want. The team that bets the most wins the round. First to 2 points moves on. Six rounds total. Only the top 3 teams advanced.
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 1: The Chip Game.</strong> We made it up that morning. Every team starts with 20 poker chips. Each round, you secretly bet however many chips you want. The team that bets the most wins the round. First to 2 points moves on. Six rounds total. Only the top 3 teams advanced.
           </p>
 
           <p style={{ marginBottom: 8 }}>
@@ -441,19 +441,19 @@ const Five10GameNight = () => {
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 3: Poker Drink.</strong> Two shot glasses, one matcha, one water. Player 1 looks at a glass and says "matcha" or "water." Truth or bluff, their call. Player 2 picks which glass to drink from. It was nerve-wracking in practice.
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 3: Poker Drink.</strong> Two shot glasses, one matcha, one water. Player 1 looks at a glass and says "matcha" or "water." Truth or bluff, their call. Player 2 picks which glass to drink from. It was nerve-wracking to watch.
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            We had our final six. And we made them play Bluff Momo.
+            That left our final six, and we made them play Bluff Momo.
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            It was the most intense round we've ever witnessed. Six people who'd survived three rounds of elimination, sitting around a table, knowing exactly what was at stake. It was dead silent between turns. No smiles whatsoever.
+            It was the most intense round we've ever witnessed. Six people who'd survived three rounds of elimination sat around a table, knowing exactly what was at stake. It was dead silent between turns, and nobody smiled.
           </p>
 
           <p>
-            Five10 were incredible hosts throughout: a curated food menu, the right space, the right energy. The matcha, the team, the vibe: everything came together. We can't wait to go back.
+            Five10 were great hosts throughout, with a good food menu and a space that suited the night. We can't wait to go back.
           </p>
         </div>
 
@@ -475,9 +475,9 @@ const Five10GameNight = () => {
             }}>Why Five10 worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The matcha.', rest: " Cloud Coconut Matcha. You will not regret it." },
-                { num: '02', strong: 'Hidden in plain sight.', rest: " The kind of place you walk past for months before someone finally tells you about it." },
-                { num: '03', strong: 'Rohil and the team.', rest: " Genuinely warm. By the end, they were cheering for the final table along with everyone else." },
+                { num: '01', strong: 'The matcha.', rest: " Try the Cloud Coconut Matcha." },
+                { num: '02', strong: 'Hidden in plain sight.', rest: " You could walk past it for months before someone tells you about it." },
+                { num: '03', strong: 'Rohil and the team.', rest: " They were warm hosts, and by the end they were cheering for the final table along with everyone else." },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -576,10 +576,10 @@ const Five10GameNight = () => {
             margin: '0 0 10px',
             lineHeight: 1.12,
           }}>
-            Next one's already being planned.
+            We're already planning the next one.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.9 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            The next date and venue go to the WhatsApp community first.
           </p>
           <a
             href={WHATSAPP_INVITE}

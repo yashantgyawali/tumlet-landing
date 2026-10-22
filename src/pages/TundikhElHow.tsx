@@ -46,12 +46,12 @@ const STEPS = [
   {
     num: '03',
     title: 'Finally',
-    body: 'If two or more drivers pick the same number, they\'re stuck. Only unique numbers move forward. Only yellow would move 2 steps ahead if everyone else picked the same number: they\'re stuck because their numbers clashed.',
+    body: 'If two or more drivers pick the same number, they\'re stuck. Only unique numbers move forward. For example, if yellow picked 2 and everyone else picked the same number, only yellow would move 2 steps ahead. The others are stuck because their numbers clashed.',
   },
   {
     num: '04',
     title: 'Complete one loop to win',
-    body: 'First player to race all the way around Tundikhel and cross the finish wins. No dice. No luck. Just timing, bluff, and battery.',
+    body: 'The first player to race all the way around Tundikhel and cross the finish wins. There are no dice, so it comes down to timing, bluff, and battery.',
   },
 ];
 
@@ -116,7 +116,7 @@ const TundikhElHow = () => {
             How to Play Race to Tundikhel
           </h1>
           <p className="text-lg leading-relaxed" style={{ color: '#3a3225' }}>
-            Watch the video below. It's the fastest way to learn. Scroll down for a quick rules reference once you're done.
+            Watch the video below, which is the fastest way to learn. A quick rules reference follows further down.
           </p>
         </div>
 
@@ -198,7 +198,7 @@ const TundikhElHow = () => {
               Follow us for launch updates
             </h2>
             <p className="text-base leading-relaxed mb-6" style={{ color: '#130D01' }}>
-              Race to Tundikhel is coming soon. Follow us on Instagram to be first in line when it ships.
+              Race to Tundikhel is coming soon. Follow us on Instagram to hear when it ships.
             </p>
             <a
               href="https://www.instagram.com/tumlet.boardgames/"
