@@ -53,39 +53,39 @@ const STEPS = [
   {
     icon: '1',
     title: 'Open Thug and pick a category.',
-    body: 'Choose from deeply Nepali categories: थर, खाना, स्थान, brands, KTM cafés, जनावर. There\'s no shortage.',
+    body: 'Choose from Nepali categories: थर, खाना, स्थान, brands, KTM cafés, जनावर, and more.',
   },
   {
     icon: '2',
     title: 'Pass the phone around, secretly.',
-    body: 'Everyone reads the word in turn. Everyone except one person: they see "THUG" instead. They\'ve got nothing. They\'ve got to fake it.',
+    body: 'Everyone reads the word in turn, except one person, who sees "THUG" instead. The Thug doesn\'t know the word and has to fake it.',
   },
   {
     icon: '3',
     title: 'Go around: one clue each.',
-    body: 'Each player gives a single word clue about the category word. The Thug listens carefully and bluffs their way through. Watch faces. Listen closely.',
+    body: 'Each player gives a one-word clue about the category word. The Thug listens and bluffs. Everyone else watches faces and listens for clues that don\'t fit.',
   },
   {
     icon: '4',
     title: 'Vote, and find out who was lying.',
-    body: 'If the group correctly identifies the Thug, everyone wins. If the Thug survives without being caught, they win. It\'s pure social intelligence.',
+    body: 'If the group correctly identifies the Thug, everyone wins. If the Thug survives without being caught, they win.',
   },
 ];
 
 const Thug = () => {
   useEffect(() => {
     document.title = 'Thug | Social Deduction Game for Nepali Friend Groups';
-    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
+    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
     setMetaTag('keywords', 'thug game, nepali social deduction game, nepali party game, tumlet, nepali friend groups');
     setCanonical('https://tumlet.com/thug/');
     setPropertyTag('og:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
+    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/thug/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One person gets a different word. Can you figure out who? Built around Nepali culture.');
+    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
@@ -162,7 +162,7 @@ const Thug = () => {
             style={{ border: `3px solid ${ACCENT}`, background: CREAM }}
           >
             {[
-              { num: '3–99+', lbl: 'players' },
+              { num: '3-99+', lbl: 'players' },
               { num: 'Free', lbl: 'to play' },
               { num: '10 min', lbl: 'a round' },
             ].map(({ num, lbl }, i) => (
@@ -234,7 +234,7 @@ const Thug = () => {
                 Built for people who grew up Nepali.
               </h2>
               <p className="text-lg mt-3 max-w-lg mx-auto" style={{ color: CREAM }}>
-                The categories are the game. And these categories are ours.
+                The categories are the game, and they\'re all Nepali.
               </p>
             </div>
 
@@ -242,18 +242,18 @@ const Thug = () => {
               {[
                 {
                   num: '01',
-                  title: 'All categories are deeply Nepali',
-                  body: 'No generic "animals" or "countries" lists. Every category is something that makes a Nepali person lean forward: last names, foods, places, brands, things you only know if you\'re from here.',
+                  title: 'Every category is Nepali',
+                  body: 'No generic "animals" or "countries" lists. The categories are things Nepali players know well: last names, foods, places, brands, and things you only know if you\'re from here.',
                 },
                 {
                   num: '02',
                   title: 'No app required during gameplay',
-                  body: 'Thug generates the word and distributes it. After that, put the phone down and play. The social part of the game happens offline, in the room, between the people.',
+                  body: 'Thug picks the word and hands it out. After that, put the phone down and play. The rest happens in the room, between the people.',
                 },
                 {
                   num: '03',
-                  title: 'Works with any group size 3–99+',
-                  body: 'Three friends at a hostel or a huge family gathering, Thug scales either way. Any age that knows their Nepali culture can play. That\'s most of the table.',
+                  title: 'Works with any group size 3-99+',
+                  body: 'It works for three friends at a hostel or a large family gathering. Anyone who knows Nepali culture can play, whatever their age.',
                 },
               ].map(({ num, title, body }) => (
                 <div
@@ -336,7 +336,7 @@ const Thug = () => {
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ fontFamily: "'Outfit', sans-serif", color: '#130D01', letterSpacing: '0.16em' }}
             >
-              Free · No login · 3–99+ players
+              Free · No login · 3-99+ players
             </div>
             <h2
               className="font-extrabold leading-tight mb-4"
@@ -345,7 +345,7 @@ const Thug = () => {
               Someone in your group is lying right now.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              Thug is free and needs no installation. Open it, pick a category, pass the phone. The game starts the moment everyone looks at their screen.
+              Thug is free and needs no installation. Open it, pick a category, and pass the phone.
             </p>
             <a
               href="https://thug.tumlet.com/"

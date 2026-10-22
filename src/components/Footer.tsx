@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div>
             <img src="/tumlet-logo.png" alt="Tumlet" width={967} height={266} style={{ width: 140, height: 'auto', marginBottom: 16 }} />
             <p style={{ fontSize: 15, lineHeight: 1.6, color: '#6B6B6B', maxWidth: 220 }}>
-              On a mission to spread playfulness amongst Nepali youths.
+              We make games to spread playfulness among Nepali youths.
             </p>
             <div style={{ display: 'flex', gap: 20, marginTop: 24 }}>
               <a href="mailto:tumletgames@gmail.com" aria-label="Email" style={{ opacity: 0.8, transition: 'opacity 0.2s' }}

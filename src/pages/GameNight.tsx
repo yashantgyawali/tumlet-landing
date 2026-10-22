@@ -56,7 +56,7 @@ const pastNights = [
     isLink: true,
     when: 'Sep 2026 · Bakhundole',
     title: 'The place that feels like Narnia',
-    desc: "Tangerine Brunch & Bar. Barely advertised and still hit ~60 players, Guess the Price came back with a chura-and-pads twist, and Skull walked in as the game of the night.",
+    desc: "Tangerine Brunch & Bar. Barely advertised and still hit ~60 players, Guess the Price came back with a chura-and-pads twist, and Skull was the game of the night.",
     thumbnail: '/tangerine-september-2026-thumb.png',
   },
   {
@@ -109,7 +109,7 @@ const pastNights = [
     href: '/game-night/bettercoffee-february-2026',
     isLink: true,
     when: 'Feb 2026 · Sanepa',
-    title: 'Coffee, connection, and chaos',
+    title: 'Coffee and Valentine\'s chaos',
     desc: "Better Coffee, Sanepa. Our first Beast-style elimination tournament: 30+ players, Valentine's chaos, and one Bluff Momo champion.",
     thumbnail: '/bettercoffee-february-2026-thumb.png',
   },
@@ -128,7 +128,7 @@ const rules = [
   {
     num: '01',
     title: "It's free. Always.",
-    desc: "No tickets, no cover, no \"pay what you like\" guilt. Buy yourself a coffee at the venue if you want. That's it.",
+    desc: "No tickets, no cover, no \"pay what you like\" guilt. Buy a coffee at the venue if you want to.",
   },
   {
     num: '02',
@@ -392,7 +392,7 @@ const GameNight = () => {
           </blockquote>
 
           <p style={{ fontSize: 19, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            It's free because it has to be. The point was never to sell tickets. It's to spread playfulness amongst Nepali young adults, and to build a community that keeps showing up for each other.{' '}
+            It's free because the point was never to sell tickets. We want to spread playfulness among Nepali young adults and build a community that shows up for each other.{' '}
             <em style={{ fontStyle: 'italic', color: '#F16147', fontWeight: 600 }}>खेल्न आउनुस् न!</em>
           </p>
 
@@ -497,7 +497,7 @@ const GameNight = () => {
               fontSize: 'clamp(34px, 4.4vw, 48px)',
               color: '#130D01', lineHeight: 1.1, letterSpacing: '-0.01em', margin: '0 0 8px',
             }}>Past nights</h2>
-            <p style={{ fontSize: 18, color: '#3a3225', margin: 0 }}>Every game night gets its own little recap. Scroll back through the chaos.</p>
+            <p style={{ fontSize: 18, color: '#3a3225', margin: 0 }}>Every game night gets its own recap.</p>
           </div>
 
           <div style={{ display: 'grid', gap: 28, gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
@@ -572,10 +572,10 @@ const GameNight = () => {
               Want your brand at the table?
             </h2>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: '#3a3225', maxWidth: 620, margin: '0 auto 14px' }}>
-              Every game night puts <strong style={{ color: '#F16147', fontWeight: 700 }}>40+ young adults</strong> around a table for three hours. Phones down, fully there.
+              Every game night puts <strong style={{ color: '#F16147', fontWeight: 700 }}>40+ young adults</strong> around a table for three hours, phones down and playing.
             </p>
             <p style={{ fontSize: 18, lineHeight: 1.65, color: '#3a3225', maxWidth: 620, margin: '0 auto 14px' }}>
-              We're very selective about the sponsors and brands we work with. But if young adults are your people, and you can add fuel to the fun with a venue, snacks, prizes, or momo, we're all ears.
+              We're very selective about the sponsors and brands we work with. But if young adults are your people and you can help with a venue, snacks, prizes, or momo, we're all ears.
             </p>
             <div style={{ marginTop: 28, display: 'flex', justifyContent: 'center', gap: 28, flexWrap: 'wrap', alignItems: 'center' }}>
               <CtaButton href="mailto:tumletgames@gmail.com?subject=Game%20Night%20sponsorship" style={{ whiteSpace: 'nowrap', padding: '16px 32px' }}>
@@ -616,7 +616,7 @@ const GameNight = () => {
                 Be there when Kathmandu plays next.
               </h2>
               <p style={{ fontSize: 17, color: '#130D01', margin: 0 }}>
-                The date and venue drop in the WhatsApp community a week before every game night, and nowhere else.
+                We post the date and venue in the WhatsApp community a week before every game night, and nowhere else.
               </p>
             </div>
 

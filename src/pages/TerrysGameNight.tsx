@@ -119,7 +119,7 @@ const PolaroidSlot = ({
 const TerrysGameNight = () => {
   React.useEffect(() => {
     const title = "The Whole Roof Was Ours · Terry's, July 2026 | Tumlet";
-    const description = "Our biggest turnout yet: 50+ players took over Terry's rooftop for Saboteur, Bluff Momo, and the debut of Momo Psychi, our new bidding game.";
+    const description = "Our biggest turnout yet: 50+ players took over Terry's rooftop for Saboteur, Bluff Momo and the debut of Momo Psychi, our new bidding game.";
     const image = 'https://tumlet.com/terrys-july-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/terrys-july-2026/';
 
@@ -324,13 +324,13 @@ const TerrysGameNight = () => {
         {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
-            Open air, string lights, and for one Friday night, the entire Terry's roof was ours.
+            Open air, string lights, and for one Friday night, the entire Terry's roof to ourselves.
           </p>
           <p style={{ marginBottom: 20 }}>
-            No other crowd on the side judging us this time. Terry's Pub & Bistro handed over the whole roof, and we filled it with everything we could carry up the stairs.
+            There was no other crowd on the side judging us this time. Terry's Pub & Bistro gave us the whole roof, and we filled it with everything we could carry up the stairs.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Fifty-plus people showed up. Yep, that's not a typo. It's the biggest crowd we've pulled to a game night yet, comfortably past our previous record at The Watering Hole. And yet we had to say no to so many people.
+            Fifty-plus people showed up, the biggest crowd we've had at a game night, comfortably past our previous record at The Watering Hole. We still had to say no to a lot of people.
           </p>
 
           <h2 style={{
@@ -343,7 +343,7 @@ const TerrysGameNight = () => {
           }}>The games that made it to the night</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Herd Mentality, Deep Sea Adventure, Secret Hitler, Codenames, Bluff Momo, Tundikhel, Dixit, Scout, and Saboteur were all on the tables. We gauged the room, and the Saboteur table was the loudest all night, with the biggest gasp every now and then.
+            Herd Mentality, Deep Sea Adventure, Secret Hitler, Codenames, Bluff Momo, Tundikhel, Dixit, Scout and Saboteur were all on the tables. The Saboteur table was the loudest all night, with the biggest gasp every now and then.
           </p>
 
           <h2 style={{
@@ -356,17 +356,17 @@ const TerrysGameNight = () => {
           }}>Momo Psychi made its debut</h2>
 
           <p style={{ marginBottom: 20 }}>
-            We broke everyone down into groups and brought a bit of psychological tension to every table.
+            We split everyone into groups, and every table got a bit of psychological tension.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Everyone starts with 15 momo. Each round, you bid as a group, and the highest bidder wins the round. Simple enough, except every momo you bid is gone, whether you win or lose. Bid too high and you've burned your stash for nothing. Bid too low and someone else takes it, and you've still lost the momo. Win two rounds before your pile runs out, and you take the whole thing.
+            Everyone starts with 15 momo. Each round, you bid as a group, and the highest bidder wins the round. Every momo you bid is gone, whether you win or lose. Bid too high and you've burned your stash for nothing. Bid too low and someone else takes the round, and you've still lost the momo. Win two rounds before your pile runs out, and you take the whole thing.
           </p>
           <p style={{ marginBottom: 20 }}>
-            It was brutal in the best way. Watching people argue and strategize was fun to watch as a host.
+            It was brutal, and fun to watch as a host. People argued and strategized the whole time.
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            All participants got 20% off Carlsberg for the night, so pitchers kept arriving long after they should have stopped. By the last game of the night, our own memory of who actually won is, honestly, a little blurry. We're told a good time was had.
+            All participants got 20% off Carlsberg for the night, so pitchers kept arriving long after they should have stopped. By the last game, our memory of who actually won is a little blurry. We're told a good time was had.
           </p>
         </div>
 
@@ -388,11 +388,11 @@ const TerrysGameNight = () => {
             }}>Why Terry's worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The whole roof, ours.', rest: ' No shared tables, no competing groups: the biggest venue we\'ve had entirely to ourselves.' },
+                { num: '01', strong: 'The whole roof, ours.', rest: ' No shared tables, no other groups. It is the biggest venue we\'ve had entirely to ourselves.' },
                 { num: '02', strong: 'Fifty-plus and counting.', rest: ' A new turnout record, past our previous high at The Watering Hole.' },
-                { num: '03', strong: 'Momo Psychi debuted.', rest: ' A bidding game that punishes greed and hesitation in equal measure. Instant favorite.' },
+                { num: '03', strong: 'Momo Psychi debuted.', rest: ' A bidding game that punishes both greed and hesitation. Instant favorite.' },
                 { num: '04', strong: 'Saboteur was the loudest table.', rest: ' Biggest gasps of the night, every round.' },
-                { num: '05', strong: '20% off Carlsberg.', rest: ' Pitcher after pitcher. The last game got a little blurry. We regret nothing.' },
+                { num: '05', strong: '20% off Carlsberg.', rest: ' Pitcher after pitcher, and the last game got a little blurry. We regret nothing.' },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -494,7 +494,7 @@ const TerrysGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

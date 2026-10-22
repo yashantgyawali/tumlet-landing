@@ -46,17 +46,17 @@ const PRINCIPLES = [
   {
     num: '01',
     title: 'Familiar world first',
-    body: 'Before learning the rules, players should recognize the setting. Microbuses, traffic, potholes, landmarks. It should feel like a real place.',
+    body: 'Players should recognize the setting before they learn the rules: microbuses, traffic, potholes, landmarks. It should feel like a real place.',
   },
   {
     num: '02',
     title: 'Control over chance',
-    body: 'Players should feel responsible for their moves. The board has chaos, but the decisions are yours.',
+    body: 'Players should feel responsible for their moves. The board is chaotic, but the decisions are yours.',
   },
   {
     num: '03',
     title: 'Fast and replayable',
-    body: 'Quick to learn. Quick to play. Enough interaction to create tension every round.',
+    body: 'The game is quick to learn and quick to play, with enough interaction to keep every round tense.',
   },
 ];
 
@@ -74,7 +74,7 @@ const STEPS = [
   {
     icon: '3',
     title: 'Resolve the road.',
-    body: 'Landing on certain spaces triggers events. You might get a boost. You might hit a pothole. You might get blocked.',
+    body: 'Landing on certain spaces triggers events. You might get a boost, hit a pothole, or get blocked.',
   },
   {
     icon: '4',
@@ -172,8 +172,8 @@ const Tundikhel = () => {
               </h1>
 
               <p className="text-xl max-w-2xl mx-auto mb-9 leading-relaxed" style={{ color: '#2a3a2a' }}>
-                A bus race through the streets of Kathmandu. No dice. No luck. Just you, your battery, and the worst traffic in the world.{' '}
-                <em style={{ color: '#2D7A4F', fontWeight: 600 }}>Race to Tundikhel</em> is the next game from Tumlet, and we're letting you in on it early.
+                A bus race through the streets of Kathmandu. There are no dice and no luck, only you, your battery, and the worst traffic in the world.{' '}
+                <em style={{ color: '#2D7A4F', fontWeight: 600 }}>Race to Tundikhel</em> is the next game from Tumlet, and this page is an early look.
               </p>
 
               <div className="flex justify-center items-center gap-8 flex-wrap">
@@ -203,7 +203,7 @@ const Tundikhel = () => {
             {/* Stats bar */}
             <div className="grid grid-cols-3 border-t-2" style={{ background: '#FAF1E4', borderColor: '#1F5F3A' }}>
               {[
-                { num: '2–6', lbl: 'drivers' },
+                { num: '2-6', lbl: 'drivers' },
                 { num: '0', lbl: 'dice' },
                 { num: '15m', lbl: 'a round' },
               ].map(({ num, lbl }, i) => (
@@ -237,10 +237,10 @@ const Tundikhel = () => {
 
           {[
             <>We started with one rule: every Nepali should recognize the world instantly.</>,
-            <>The traffic. The potholes. The cows blocking the road. The smell of momo from a side gully. The conductor leaning out shouting "Ratnapark!"</>,
+            <>The traffic, the potholes, the cows blocking the road, the smell of momo from a side gully, the conductor leaning out shouting "Ratnapark!"</>,
             <>That everyday Kathmandu experience became the setting.</>,
             <>So we chose a simple goal: race to Tundikhel.</>,
-            <>Everyone has been stuck on that route at some point. Honking. Waiting. Moving inch by inch. We turned that shared experience into a game you can actually win.</>,
+            <>Everyone has been stuck on that route at some point, honking and waiting and moving inch by inch. We turned that shared experience into a game you can actually win.</>,
           ].map((content, i) => (
             <p key={i} className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>{content}</p>
           ))}
@@ -250,15 +250,15 @@ const Tundikhel = () => {
           </h3>
 
           {[
-            <><strong style={{ color: '#1F5F3A' }}>No dice. No luck.</strong><br />Every move is a decision. You choose how far to go. You decide when to push and when to hold back. If something goes wrong, it's not random. It's because of the choices on the table.</>,
+            <><strong style={{ color: '#1F5F3A' }}>No dice. No luck.</strong><br />Every move is a decision. You choose how far to go and when to push or hold back. If something goes wrong, it's because of the choices on the table, not chance.</>,
             <><strong style={{ color: '#1F5F3A' }}>Simple to learn.</strong><br />The goal is clear: complete one loop around Tundikhel and win. Most players understand the rules in a few minutes.</>,
-            <><strong style={{ color: '#1F5F3A' }}>Depth comes from players.</strong><br />The strategy is in reading others, timing your moves, and managing your cards. Not in memorizing rules.</>,
+            <><strong style={{ color: '#1F5F3A' }}>Depth comes from players.</strong><br />The strategy is in reading the other players, timing your moves, and managing your cards, not in memorizing rules.</>,
           ].map((content, i) => (
             <p key={i} className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>{content}</p>
           ))}
 
           <p className="mt-9 text-lg leading-relaxed" style={{ color: '#2a241a' }}>
-            We are still playtesting and refining. But this is the core of the game.
+            We are still playtesting and refining, but this is the core of the game.
           </p>
         </article>
 
@@ -341,7 +341,7 @@ const Tundikhel = () => {
                 What you'll be holding.
               </h2>
               <p className="text-lg mt-3 max-w-lg mx-auto" style={{ color: '#C8E2B4' }}>
-                Battery cards, road cards, micro-drivers, and a board that's basically Kathmandu after a strike.
+                Battery cards, road cards, micro-drivers, and a board that looks like Kathmandu after a strike.
               </p>
             </div>
 
@@ -351,14 +351,14 @@ const Tundikhel = () => {
                   src: '/tundikhel/cards-set.png',
                   alt: 'Race to Tundikhel road cards: positive, negative, and neutral events including Khaldo Filled, Cows on Road, Sawari, Dharahara, and All Ahead +1',
                   title: 'Road cards',
-                  desc: 'Positive, negative, neutral. Sawari, cows, Khaldo, Bharaldo: every Nepali traffic moment, in your hand.',
+                  desc: 'Positive, negative, and neutral events: Sawari, cows, Khaldo, Bharaldo and other Nepali traffic moments.',
                   pill: '~30 cards',
                 },
                 {
                   src: '/tundikhel/battery-charger.png',
                   alt: 'Battery and charger tokens: six-sided dial showing 1 through 6',
                   title: 'Battery dials',
-                  desc: 'The heart of the bluff. Pick your charge, hide your hand, reveal at the same time.',
+                  desc: 'This is where the bluffing happens. Pick your charge, hide your hand, and reveal at the same time.',
                   pill: '1 per driver',
                 },
               ].map(({ src, alt, title, desc, pill }) => (
@@ -461,7 +461,7 @@ const Tundikhel = () => {
               Be first to know when <em>Race to Tundikhel</em> ships.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              We're following the same path we did with Bluff Momo: small batches, hand-packed, signed copies for the first run. Follow us on Instagram and you'll be in the front of the line.
+              We're using the same approach as Bluff Momo: small batches, hand-packed, and signed copies for the first run. Follow us on Instagram to get in line early.
             </p>
             <a
               href="https://www.instagram.com/tumlet.boardgames/"

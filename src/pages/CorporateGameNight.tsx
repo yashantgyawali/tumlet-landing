@@ -46,7 +46,7 @@ const games = [
   {
     name: "Bluff Momo",
     emoji: "🥟",
-    description: "Bluff, deceive, and outsmart your way to victory. Based in the streets of Kathmandu.",
+    description: "Bluff, deceive, and outsmart the table. Set in the streets of Kathmandu.",
     category: "Bluffing",
     bestFor: "Competitive groups",
     videoUrl: "https://www.youtube.com/watch?v=di6Ek8Nf4mQ",
@@ -62,7 +62,7 @@ const games = [
   {
     name: "Danger Danger",
     emoji: "⚡",
-    description: "Think fast, act faster. High-pressure rounds that get everyone screaming.",
+    description: "Fast, high-pressure rounds that get everyone screaming.",
     category: "Fast-paced",
     bestFor: "High-energy groups",
     videoUrl: "https://www.youtube.com/watch?v=IRk1hsFjlww",
@@ -78,7 +78,7 @@ const games = [
   {
     name: "Dixit",
     emoji: "🎨",
-    description: "Tell stories through surreal art. Be creative enough to fool some, but not all.",
+    description: "Tell stories about surreal art. Be clear enough that some players guess it, but not all.",
     category: "Creative",
     bestFor: "Imaginative teams",
     videoUrl: "https://www.youtube.com/watch?v=Qi4MoW6NuaQ&t=15s",
@@ -94,21 +94,21 @@ const games = [
   {
     name: "Codenames",
     emoji: "🕵️",
-    description: "Give one-word clues. Hope your team gets all your words. Classic smart chaos.",
+    description: "Give one-word clues and hope your team guesses your words.",
     category: "Wordplay",
     bestFor: "Wordsmiths",
   },
   {
     name: "Ticket to Ride",
     emoji: "🚂",
-    description: "Claim train routes across the map. Block your frenemies. Chill but sneaky.",
+    description: "Claim train routes across the map. Block your frenemies. Relaxed but sneaky.",
     category: "Strategy",
     bestFor: "Planners",
   },
   {
     name: "That's Not a Hat",
     emoji: "🎩",
-    description: "Remember what gift you got? No? Bluff anyway. A hilarious memory game.",
+    description: "Remember what gift you got? No? Bluff anyway. A memory game.",
     category: "Memory",
     bestFor: "Forgetful friends",
   },
@@ -129,7 +129,7 @@ const games = [
   {
     name: "Flip 7",
     emoji: "🃏",
-    description: "Keep flipping cards. Push your luck. Hit 8 and you're out. Simple, addictive, ruthless.",
+    description: "Keep flipping cards. Push your luck. Hit 8 and you're out. Simple and ruthless.",
     category: "Push Your Luck",
     bestFor: "Risk-takers",
   },
@@ -167,7 +167,7 @@ const steps = [
   {
     num: "01",
     title: "You pick",
-    desc: "Choose games from our collection. Or let us surprise you with a curated mix.",
+    desc: "Choose games from our collection. Or let us pick a mix for you.",
     accent: "#F3B952",
   },
   {
@@ -186,7 +186,7 @@ const steps = [
 
 const testimonials: MiniTestimonial[] = [
   {
-    quote: "Bluff Momo was the real MVP—turns out we work with far more convincing bluffers than we thought!",
+    quote: "Bluff Momo was the real MVP. Turns out we work with far more convincing bluffers than we thought!",
     name: "Shraddha Pradhan",
     location: "HR Executive @ DHL Express",
     initials: "SP",
@@ -230,8 +230,8 @@ const CorporateGameNight = () => {
   const [ctaBottomHovered, setCtaBottomHovered] = useState(false);
 
   useEffect(() => {
-    const title = 'Corporate Game Night | Tumlet - Team Building with Board Games';
-    const description = 'Host a fun corporate game night with Tumlet. We bring board games to your office, set everything up, and run the entire 3-hour session for your team.';
+    const title = 'Corporate Game Night with Board Games | Tumlet';
+    const description = 'Tumlet brings board games to your office, sets everything up, and runs a 3-hour game night for your team.';
     const image = 'https://tumlet.com/unfurl.png';
     const url = 'https://tumlet.com/corporate-game-night';
 
@@ -359,7 +359,7 @@ const CorporateGameNight = () => {
               color: '#130D01',
               margin: 0,
             }}>
-              Three steps. Zero effort from you.
+              Three steps. We do the work.
             </h2>
           </div>
 
@@ -608,11 +608,11 @@ const CorporateGameNight = () => {
           </h2>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            We love hosting game nights. We genuinely believe games are one of the best ways for people to connect, and we've seen teams open up, build real psychological safety, and learn more about their teammates just by sharing a table and playing together.
+            We love hosting game nights. We believe games are one of the best ways for people to connect. We've seen teams open up, build psychological safety, and learn more about their teammates just by sharing a table and playing together.
           </p>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            We create intentional, inclusive spaces where everyone gets a voice. There's a loud table, a table full of introverts, a table of pure strategists, and a table that would rather just talk. No matter who's in the room, we make sure everyone has fun in their own way.
+            We set up the room so everyone gets a voice. There's a loud table, a table full of introverts, a table of pure strategists, and a table that would rather just talk.
           </p>
 
           <blockquote style={{
@@ -629,11 +629,11 @@ const CorporateGameNight = () => {
           </blockquote>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 22 }}>
-            We end every night with a curated experience where every single person plays one game, all together: sometimes a friendly competition, sometimes a team game they have to work together to complete.
+            We end every night with one game that everyone plays together: sometimes a friendly competition, sometimes a team game they have to work together to complete.
           </p>
 
           <p style={{ fontFamily: "'Baloo 2', sans-serif", fontSize: 18, lineHeight: 1.7, color: '#2a241a', marginBottom: 0 }}>
-            Either way, we design the night so your team can cool off and build real psychological safety together.
+            Either way, the night is built so your team can cool off and build psychological safety together.
           </p>
 
           <p style={{ marginTop: 36, color: '#130D01', fontWeight: 700, fontSize: 19, marginBottom: 0, fontFamily: "'Baloo 2', sans-serif" }}>
@@ -672,7 +672,7 @@ const CorporateGameNight = () => {
               marginBottom: 14,
               lineHeight: 1.15,
             }}>
-              Email us. Pick a date. We'll handle the rest.
+              Email us a date and we'll handle the rest.
             </h3>
             <p style={{
               fontSize: 17,
@@ -681,7 +681,7 @@ const CorporateGameNight = () => {
               marginBottom: 24,
               marginTop: 0,
             }}>
-              tumletgames@gmail.com: include your office name, team size, and preferred date.
+              Email tumletgames@gmail.com with your office name, team size, and preferred date.
             </p>
             <button
               onClick={handleContact}

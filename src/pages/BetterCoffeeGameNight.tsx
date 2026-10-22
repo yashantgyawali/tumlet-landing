@@ -120,8 +120,8 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const BetterCoffeeGameNight = () => {
   useEffect(() => {
-    const title = 'Coffee, Connection, and Chaos · Better Coffee, Feb 2026 | Tumlet';
-    const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked: Skull, Codenames, CATAN, and our first Beast-style tournament on Valentine\'s Day.';
+    const title = 'Coffee and Chaos · Better Coffee, Feb 2026 | Tumlet';
+    const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked: Skull, Codenames, CATAN and our first Beast-style tournament on Valentine\'s Day.';
     const image = 'https://tumlet.com/bettercoffee-february-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/bettercoffee-february-2026/';
 
@@ -237,7 +237,7 @@ const BetterCoffeeGameNight = () => {
             color: '#130D01',
             margin: '0 0 24px',
           }}>
-            Tumlet Game Night: Coffee, Connection, and Chaos
+            Tumlet Game Night: Coffee and Chaos
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
@@ -350,10 +350,10 @@ const BetterCoffeeGameNight = () => {
 
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
-            Game &apos;night&apos; at a coffee place sounds strange. Usually, when the sun goes down, coffee gets swapped for a glass of wine or a bottle of beer. But stepping into Better Coffee, that rule just didn&apos;t apply.
+            Game &apos;night&apos; at a coffee place sounds strange. Usually, when the sun goes down, coffee gets swapped for a glass of wine or a bottle of beer. At Better Coffee, that rule didn&apos;t apply.
           </p>
           <p style={{ marginBottom: 20 }}>
-            We&apos;d had a talk with the owner, Raju dai, and it was immediately clear: this place is different. It&apos;s a space where everything is intentional. We spent the lead-up hearing stories about coffee production across Nepal, and that same passion clearly bleeds into how they treat their customers. They already had a shelf stocked with favorites like Uno and Jenga, so we knew we were in the right place. We couldn&apos;t say no.
+            We&apos;d had a talk with the owner, Raju dai, and it was clear right away that this place is different. Everything in it is intentional. In the lead-up we heard stories about coffee production across Nepal, and the same passion shows in how they treat their customers. They already had a shelf stocked with favorites like Uno and Jenga, so we knew we were in the right place. We couldn&apos;t say no.
           </p>
 
           <h2 style={{
@@ -366,10 +366,10 @@ const BetterCoffeeGameNight = () => {
           }}>The First Half: Building the Beast</h2>
 
           <p style={{ marginBottom: 20 }}>
-            The night started off with the usual hum of a great game night. Our friends at Board Game Nepal showed up with a fresh set of games, and Skull was an instant hit.
+            The night started with the usual hum of a game night. Our friends at Board Game Nepal showed up with a fresh set of games, and Skull was an instant hit.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Across the room, the energy was electric. Codenames, Bluff Momo, Tundikhel, Firiri, Dixit, and CATAN were all in heavy rotation. One group was so passionate about CATAN that they dove into a full, dedicated round the moment they sat down.
+            Across the room, Codenames, Bluff Momo, Tundikhel, Firiri, Dixit and CATAN were all in heavy rotation. One group sat down and started a full round of CATAN right away.
           </p>
 
           <h2 style={{
@@ -382,11 +382,11 @@ const BetterCoffeeGameNight = () => {
           }}>The Tumlet Beast Games</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Then, we turned up the heat. We went from 30+ people to one winner in a series of high-stakes, &quot;Beast-style&quot; elimination rounds. Since it was February 14th, we decided to be a little weird, a little crazy, and absolutely lean into the Valentine&apos;s chaos.
+            Then we turned up the heat. We went from 30+ people to one winner in a series of &quot;Beast-style&quot; elimination rounds. Since it was February 14th, we got a little weird and leaned into the Valentine&apos;s chaos.
           </p>
 
           <p style={{ marginBottom: 8 }}>
-            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 1: Pure Luck.</strong> Sarina and I wrote up a list of arbitrary &quot;out&quot; prompts that morning. Wearing slippers? Out. Wearing a hint of red? Out (Sorry!). It was ruthless, but it cut our crowd down by five people in minutes.
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>Round 1: Pure Luck.</strong> Sarina and I wrote up a list of arbitrary &quot;out&quot; prompts that morning. Wearing slippers? Out. Wearing a hint of red? Out (Sorry!). It was ruthless, and it cut the crowd by five people in minutes.
           </p>
 
           <p style={{ marginBottom: 8 }}>
@@ -402,7 +402,7 @@ const BetterCoffeeGameNight = () => {
             <li style={{ marginBottom: 8 }}><strong style={{ fontWeight: 700, color: '#130D01' }}>Gotta:</strong> Using Bluff Momo pieces to complete four rounds.</li>
           </ul>
           <p style={{ marginBottom: 20 }}>
-            It was intense (even for the judge), but it was fair and square.
+            It was intense, even for the judge, but it was fair.
           </p>
 
           <p style={{ marginBottom: 8 }}>
@@ -410,11 +410,11 @@ const BetterCoffeeGameNight = () => {
           </p>
 
           <p style={{ marginBottom: 20 }}>
-            <strong style={{ fontWeight: 700, color: '#130D01' }}>The Final:</strong> The last standing survivors faced off in a final, heart-pounding round of Bluff Momo.
+            <strong style={{ fontWeight: 700, color: '#130D01' }}>The Final:</strong> The last players standing faced off in a final round of Bluff Momo.
           </p>
 
           <p>
-            We had such a blast at Better Coffee. It was the start of our &quot;Beast&quot; style games, and it set a high bar for everything we&apos;ve done since. Thank you to Raju dai and to everyone who showed up, embraced the madness, and played along with us.
+            We had a great time at Better Coffee. It was the start of our &quot;Beast&quot; style games, and we&apos;ve measured every one since against it. Thank you to Raju dai and to everyone who showed up and played along.
           </p>
         </div>
 
@@ -435,9 +435,9 @@ const BetterCoffeeGameNight = () => {
             }}>Why Better Coffee worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The Passion:', rest: ' Raju dai and the team deeply care about the experience. It shows in the coffee and the space they\'ve built.' },
-                { num: '02', strong: 'The Vibe:', rest: " It proved that you don't need a bar to have a wild game night. A great coffee shop can be just as electric." },
-                { num: '03', strong: 'The Community:', rest: ' Whether you were there for the coffee or the competition, everyone showed up to have a good time.' },
+                { num: '01', strong: 'The Passion:', rest: ' Raju dai and the team care about the experience. It shows in the coffee and the space they\'ve built.' },
+                { num: '02', strong: 'The Vibe:', rest: " You don't need a bar to have a wild game night. A coffee shop works just as well." },
+                { num: '03', strong: 'The Community:', rest: ' Whether you came for the coffee or the competition, everyone was there to have a good time.' },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -485,14 +485,14 @@ const BetterCoffeeGameNight = () => {
               rotation="1.8deg"
               src="/bettercoffee/g1.png"
               alt="Players gathered around a pallet table playing Uno at Better Coffee"
-              caption="Uno, biscuits, and nowhere to be."
+              caption="Uno, biscuits, nowhere to be."
               dark={false}
             />
             <PolaroidSlot
               rotation="-0.6deg"
               src="/bettercoffee/g2.png"
               alt="Players celebrating with Bluff Momo at Better Coffee"
-              caption="The final table energy was unreal."
+              caption="The final table, still loud."
             />
             <PolaroidSlot
               rotation="2.2deg"
@@ -537,7 +537,7 @@ const BetterCoffeeGameNight = () => {
             Next one&apos;s already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.9 }}>
-            Join the WhatsApp community: that&apos;s where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

@@ -125,7 +125,7 @@ const PolaroidSlot = ({
 const MisfitsGameNight = () => {
   useEffect(() => {
     const title = "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet";
-    const description = 'A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.';
+    const description = '40+ players, a door that is not quite a door, and our new game Almosttt Misfit. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.';
     const image = 'https://tumlet.com/misfits-june-2026-thumb.png';
     const url = 'https://tumlet.com/game-night/misfits-june-2026/';
 
@@ -363,22 +363,22 @@ const MisfitsGameNight = () => {
             Nobody walks past Misfits by accident.
           </p>
           <p style={{ marginBottom: 20 }}>
-            The entrance isn't exactly a door. It's the kind that makes you stop and wonder: wait, is this the place? We're not going to ruin it for you. But once you figure it out, pushing through feels like being let in on something.
+            The entrance isn't exactly a door. It makes you stop and wonder: wait, is this the place? We're not going to ruin it for you. Once you figure it out, pushing through feels like being let in on something.
           </p>
           <p style={{ marginBottom: 20 }}>
-            That's the energy we look for when we choose where to host game nights. Once you're inside, nothing about Misfits is accidental: not the lights, the seating, the drinks, or the bathrooms. It's a space that was thought about.
+            That's what we look for when we choose where to host game nights. Inside, nothing about Misfits is accidental: not the lights, the seating, the drinks or the bathrooms. Someone thought about this space.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames, and Cluedo took over the tables. Then for the second half of the night, we ran something we'd been cooking: Almosttt Misfit.
+            Forty-something players came through the door. Bluff Momo, Secret Hitler, Codenames and Cluedo took over the tables. For the second half of the night, we ran a game we'd been working on: Almosttt Misfit.
           </p>
           <p style={{ marginBottom: 20 }}>
-            It's a twist on herd mentality. You're trying to pick the least common answer, but not so uncommon you're the only one. Write something too unique? –1. Most common answer in the room? –3. Land in the sweet spot of least common? +2.
+            It's a twist on herd mentality. You're trying to pick the least common answer, but not so uncommon that you're the only one. Write something too unique? -1. Most common answer in the room? -3. Land on the least common answer that others also wrote? +2.
           </p>
           <p style={{ marginBottom: 20 }}>
-            Easy to learn. Surprisingly hard to play. Exactly the kind of game that makes you second-guess everyone at your table, including yourself.
+            It's easy to learn and hard to play, and you end up second-guessing everyone at your table, including yourself.
           </p>
           <p>
-            Big thanks to the Misfits crew for keeping the drinks coming, and to the incredible Rituza for making the night unforgettable.
+            Big thanks to the Misfits crew for keeping the drinks coming, and to Rituza for making the night great.
           </p>
         </div>
 
@@ -400,10 +400,10 @@ const MisfitsGameNight = () => {
             }}>Why Misfits worked</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
-                { num: '01', strong: 'The entry door.', rest: " Genuinely wild. Sets the tone before you've sat down." },
-                { num: '02', strong: 'The drinks.', rest: " Actually good. Players were ordering rounds, not nursing one drink all night." },
+                { num: '01', strong: 'The entry door.', rest: " Wild. It sets the tone before you've sat down." },
+                { num: '02', strong: 'The drinks.', rest: " Good. Players were ordering rounds, not nursing one drink all night." },
                 { num: '03', strong: 'Everything is intentional.', rest: " Designed, not decorated. Board games belong somewhere that someone thought about." },
-                { num: '04', strong: 'The staff.', rest: " Present without being overbearing. By the end they were rooting for tables." },
+                { num: '04', strong: 'The staff.', rest: " Around when you needed them, never overbearing. By the end they were rooting for tables." },
               ].map(item => (
                 <div key={item.num} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
                   <span style={{
@@ -509,7 +509,7 @@ const MisfitsGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

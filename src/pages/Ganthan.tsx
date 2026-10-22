@@ -63,31 +63,31 @@ const STEPS = [
   {
     icon: '3',
     title: 'Ask your family member and really listen.',
-    body: 'Put the question out there. Then stop talking. The best part of Ganthan is what happens after you ask.',
+    body: 'Ask the question, then stop talking. The best part is what they say next.',
   },
 ];
 
 const Ganthan = () => {
   useEffect(() => {
-    document.title = 'Ganthan | Meaningful Conversation Prompts for Nepali Families';
-    setMetaTag('description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
+    document.title = 'Ganthan | Conversation Prompts for Nepali Families';
+    setMetaTag('description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
     setMetaTag('keywords', 'ganthan, nepali family conversations, conversation prompts, nepali diaspora, bilingual questions, tumlet');
     setCanonical('https://tumlet.com/ganthan/');
-    setPropertyTag('og:title', 'Ganthan | Meaningful Conversation Prompts for Nepali Families');
-    setPropertyTag('og:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
+    setPropertyTag('og:title', 'Ganthan | Conversation Prompts for Nepali Families');
+    setPropertyTag('og:description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/ganthan/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Ganthan | Meaningful Conversation Prompts for Nepali Families');
-    setMetaTag('twitter:description', 'Ganthan gives Nepali families meaningful questions to go beyond daily check-ins. Talk to your aama-baba about memories and stories. Free and bilingual.');
+    setMetaTag('twitter:title', 'Ganthan | Conversation Prompts for Nepali Families');
+    setMetaTag('twitter:description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Ganthan',
-      description: 'Ganthan gives Nepali families meaningful conversation prompts to go beyond daily check-ins. Bilingual questions in Nepali and English.',
+      description: 'Ganthan gives Nepali families conversation prompts that go beyond daily check-ins. Bilingual questions in Nepali and English.',
       url: 'https://ganthan.tumlet.com/',
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Any',
@@ -115,7 +115,7 @@ const Ganthan = () => {
             className="font-extrabold mb-5 leading-tight"
             style={{ fontFamily: "'Baloo 2', sans-serif", color: INK, fontSize: 'clamp(32px, 5vw, 58px)', letterSpacing: '-0.01em' }}
           >
-            Ganthan: conversations worth having with your family
+            Ganthan: conversation questions for you and your family
           </h1>
 
           <p
@@ -188,23 +188,23 @@ const Ganthan = () => {
           </h2>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            There's a particular kind of emptiness after hanging up and realizing you didn't really learn anything new about the person you just spoke to. You talked about the weather, dinner, work... but not about what they dreamed of when they were twenty, what scared them growing up, or the stories they've quietly carried for years.
+            You hang up and realize you learned nothing new about the person you just spoke to. You talked about the weather, dinner, and work, but not about what they dreamed of at twenty, what scared them growing up, or the stories they've quietly carried for years.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Ganthan (गन्थन — "to weave" or "to connect") was built on a simple belief: the right question can unlock conversations you've never had.
+            Ganthan (गन्थन, meaning "to weave" or "to connect") is built on one belief: the right question can start conversations you've never had.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            Inside are thoughtful prompts that families can answer in Nepali or English. Questions about childhood, first jobs, friendships, regrets, traditions, tiny moments, and the people your parents were before they became your parents.
+            Ganthan has prompts that families can answer in Nepali or English. They ask about childhood, first jobs, friendships, regrets, traditions, tiny moments, and the people your parents were before they became your parents.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            They're not meant to be finished in one sitting. They're meant to become part of your calls. Over time, they help you start asking these kinds of questions without needing Ganthan at all.
+            You don't need to finish them in one sitting. Use them in your calls, and over time you'll start asking these questions without Ganthan.
           </p>
 
           <p className="text-lg leading-relaxed mb-5" style={{ color: '#2a241a' }}>
-            We genuinely hope Ganthan helps you leave every conversation knowing the people you love just a little better than you did before.
+            We hope Ganthan helps you know the people you love a little better after each call.
           </p>
         </article>
 
@@ -264,7 +264,7 @@ const Ganthan = () => {
               Call your family. Then actually talk to them.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: '#130D01' }}>
-              Ganthan is free, always. Open it before your next call and let one question do what a hundred "k chha?" conversations never quite managed.
+              Ganthan is free. Open it before your next call and try one question instead of another "k chha?".
             </p>
             <a
               href="https://ganthan.tumlet.com/"

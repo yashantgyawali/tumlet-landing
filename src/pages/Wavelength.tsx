@@ -163,13 +163,13 @@ const Wavelength: React.FC = () => {
     setMetaTag('keywords', 'wavelength, tumlet party game, nepali party game, board game online, dial game, group game nepal');
     setCanonical('https://tumlet.com/wavelength/');
     setPropertyTag('og:title', "Wavelength | Read your friends' minds | Tumlet");
-    setPropertyTag('og:description', "A team party game about how alike you really think. One clue, one dial, one shared brain. Play free online.");
+    setPropertyTag('og:description', "A team party game about how alike you really think. One player gives a clue and the team guesses on the dial. Play free online.");
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/wavelength/');
     setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', "Wavelength | Read your friends' minds | Tumlet");
-    setMetaTag('twitter:description', "A team party game about how alike you really think. One clue, one dial, one shared brain. Play free online.");
+    setMetaTag('twitter:description', "A team party game about how alike you really think. One player gives a clue and the team guesses on the dial. Play free online.");
     setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
 
     setJsonLd({
@@ -242,7 +242,7 @@ const Wavelength: React.FC = () => {
             className="font-semibold mb-7 leading-snug"
             style={{ color: MUTED, fontFamily: "'Outfit', sans-serif", fontSize: 'clamp(18px, 2.5vw, 24px)' }}
           >
-            One player sees a secret spot on the dial and gives a clue. Everyone else argues, debates, and spins.
+            One player sees a secret spot on the dial and gives a clue. Everyone else debates the clue and spins the dial.
           </p>
 
           <div className="flex justify-center items-center gap-8 flex-wrap mb-12">
@@ -278,7 +278,7 @@ const Wavelength: React.FC = () => {
             style={{ border: `3px solid ${ACCENT}`, background: CREAM }}
           >
             {[
-              { num: '2–12', lbl: 'players' },
+              { num: '2-12', lbl: 'players' },
               { num: '13+', lbl: 'age' },
               { num: '10 min', lbl: 'a round' },
             ].map(({ num, lbl }, i) => (
@@ -310,7 +310,7 @@ const Wavelength: React.FC = () => {
               Three turns and you're playing.
             </h2>
             <p className="text-lg mt-4 mx-auto" style={{ maxWidth: 560, color: '#2a241a' }}>
-              Think of the dial as a scale between two opposites. Somewhere on it is a hidden target. Your job as a team: find it.
+              The dial is a scale between two opposites, with a hidden target somewhere on it. Your team has to find the target.
             </p>
           </div>
 
@@ -322,7 +322,7 @@ const Wavelength: React.FC = () => {
               {
                 visual: <Dial mini target={70} mystery poleL="" poleR="" />,
                 title: 'One player gets a secret',
-                body: (<>The dial shows a spectrum, like <b style={{ color: ACCENT }}>overrated ↔ underrated</b>. One teammate, the <b style={{ color: ACCENT }}>Psychic</b>, secretly sees where the target sits. Nobody else can.</>),
+                body: (<>The dial shows a spectrum, like <b style={{ color: ACCENT }}>overrated ↔ underrated</b>. One teammate, the <b style={{ color: ACCENT }}>Psychic</b>, secretly sees where the target sits. Nobody else can see it.</>),
               },
               {
                 visual: (
@@ -351,7 +351,7 @@ const Wavelength: React.FC = () => {
                   </div>
                 ),
                 title: 'They drop one clue',
-                body: (<>The Psychic names <b style={{ color: ACCENT }}>one thing</b> that fits that exact spot on the scale. Just a word or a phrase: no pointing, no winking.</>),
+                body: (<>The Psychic names <b style={{ color: ACCENT }}>one thing</b> that fits that exact spot on the scale. The clue can be a word or a phrase, with no pointing or winking.</>),
               },
               {
                 visual: <Dial mini target={70} needle={78} score={3} />,
@@ -400,7 +400,7 @@ const Wavelength: React.FC = () => {
               The spectrums you'll fight over.
             </h2>
             <p className="text-lg mt-4 mx-auto" style={{ maxWidth: 560, color: '#2a241a' }}>
-              The dial is split between two extremes. Where does it land? Nobody agrees. That's the whole point.
+              Each dial sits between two extremes, and nobody agrees on where the target lands.
             </p>
           </div>
 
@@ -463,7 +463,7 @@ const Wavelength: React.FC = () => {
               className="text-xs font-bold uppercase tracking-widest mb-4"
               style={{ fontFamily: "'Outfit', sans-serif", color: INK, letterSpacing: '0.16em' }}
             >
-              Free · No download · 2–12 players
+              Free · No download · 2-12 players
             </div>
             <h2
               className="font-extrabold leading-tight mb-4"
@@ -472,7 +472,7 @@ const Wavelength: React.FC = () => {
               Gather the group. Spin the dial.
             </h2>
             <p className="text-lg leading-relaxed mb-7" style={{ color: INK }}>
-              No app to download, no setup. Open it on one phone or the TV, pass it around, and find out who's actually on your wavelength.
+              There is no app to download and no setup. Open it on one phone or the TV, pass it around, and see who is on your wavelength.
             </p>
             <a
               href="https://wavelength.tumlet.com/"

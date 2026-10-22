@@ -282,7 +282,7 @@ const BlogPost = () => {
               marginBottom: '22px',
               marginTop: 0,
             }}>
-              If this resonated, follow us. We hand-pack and sign the first run of every game.
+              If you liked this, follow us. We hand-pack and sign the first run of every game.
             </p>
             <a
               href="https://www.instagram.com/tumlet.boardgames/"

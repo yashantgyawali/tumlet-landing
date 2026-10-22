@@ -277,10 +277,10 @@ const SurfaceGameNight = () => {
         {/* ── Article body ── */}
         <div style={{ maxWidth: 680, margin: '52px auto 0', fontSize: 18, lineHeight: 1.72, color: '#2a241a' }}>
           <p style={{ marginBottom: 20 }}>
-            Surface is run by young people with a crazy eye for design, and they proved it before the first game started. They made us a menu just for game night and put it in a cute little standee.
+            Surface is run by young people with a great eye for design, and it showed before the first game started. They made us a menu just for game night and put it in a cute little standee.
           </p>
           <p style={{ marginBottom: 20 }}>
-            The front says Game Night at Surface, Surface × Tumlet Board Games, and "The tables are full. The games are on." It has our logo, a collage of our characters behind it, and the café's coordinates printed down the side. As for the food: all sorts of fries.
+            The front says Game Night at Surface, Surface × Tumlet Board Games, and "The tables are full. The games are on." It has our logo, a collage of our characters behind it, and the café's coordinates printed down the side. The food is all sorts of fries.
           </p>
 
           <figure style={{ margin: '36px auto 40px', maxWidth: 340 }}>
@@ -311,19 +311,19 @@ const SurfaceGameNight = () => {
           </figure>
 
           <p style={{ marginBottom: 20 }}>
-            This one was right before Dashain, and around 60 people came out to play.
+            This one was right before Dashain, and around 60 people came to play.
           </p>
 
           <h2 style={h2Style}>A cake called Matilda</h2>
 
           <p style={{ marginBottom: 20 }}>
-            Surface was Sarina's find. She was there with friends one day when she spotted a huge chocolate cake called Matilda, named after the movie, and had to try it. She and Yashant decided game night had to happen here, so they reached out to the café, and the people behind it were super sweet. We'd planned it for a month earlier, but one of the owners was outside the Valley and something came up on our side too, so we waited, and we made it happen.
+            Surface was Sarina's find. She was there with friends one day when she spotted a huge chocolate cake called Matilda, named after the movie, and had to try it. She and Yashant decided game night had to happen here, so they reached out to the café, and the people behind it were really kind. We'd planned it for a month earlier, but one of the owners was outside the Valley and something came up on our side too, so we waited and made it happen.
           </p>
 
           <h2 style={h2Style}>Sixty players down to one, on pure luck</h2>
 
           <p style={{ marginBottom: 20 }}>
-            We wanted the night to feel like Dashain was around the corner. So for the second half, when the whole room plays one game together, we went Beast-style again: around 60 people down to a single winner. This time every round was ridiculously luck-based.
+            We wanted the night to feel like Dashain was around the corner. So for the second half, when the whole room plays one game together, we went Beast-style again: around 60 people down to a single winner. This time every round was luck-based.
           </p>
 
           <h3 style={h3Style}>Round 1: empty your pockets</h3>
@@ -355,7 +355,7 @@ const SurfaceGameNight = () => {
             >
               Makkusé
             </a>{' '}
-            sponsored the prize: their Dashain set, which comes in a really cute box shaped like a changa (kite), with their signature pustakari inside. The winner took that home. We also had an unlucky pustakari box, which went to whoever had the worst luck in Falas.
+            sponsored the prize: their Dashain set, which comes in a cute box shaped like a changa (kite), with their signature pustakari inside. The winner took that home. We also had an unlucky pustakari box, which went to whoever had the worst luck in Falas.
           </p>
 
           <figure style={{ margin: '36px auto 40px', maxWidth: 300 }}>
@@ -439,8 +439,8 @@ const SurfaceGameNight = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {[
                 { num: '01', strong: 'A cute, intentional space.', rest: ' Every corner feels thought through.' },
-                { num: '02', strong: 'Fun, kind people.', rest: ' The staff smiled every single time you looked at them.' },
-                { num: '03', strong: 'The design team is crazy good.', rest: ' They designed the game night menu with our characters and our logo on it.' },
+                { num: '02', strong: 'Fun, kind people.', rest: ' The staff smiled every time you looked at them.' },
+                { num: '03', strong: 'The design team is very good.', rest: ' They designed the game night menu with our characters and our logo on it.' },
                 { num: '04', strong: 'Easy for bikes, tight for cars.', rest: " There's underground parking, but it isn't very spacious and it's usually full. Bikes have plenty of room." },
                 { num: '05', strong: "It's split into zones.", rest: " Walls, glass and pillars divide the café, and each part has its own vibe. We usually like one open floor for game night, so it wasn't built for how we run things. We made it work anyway, so kudos to the Surface team, and to us." },
               ].map(item => (
@@ -569,7 +569,7 @@ const SurfaceGameNight = () => {
             Next one's already being planned.
           </h2>
           <p style={{ fontSize: 17, color: '#fff', margin: '0 0 28px', opacity: 0.95 }}>
-            Join the WhatsApp community: that's where the next date and venue drop first, and nowhere else.
+            Join the WhatsApp community. The next date and venue are posted there first, and nowhere else.
           </p>
           <a
             href={WHATSAPP_INVITE}

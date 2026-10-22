@@ -39,16 +39,16 @@ const BlogIndex = () => {
 
   useEffect(() => {
     document.title = 'Tumlet Blog | Stories from Nepal\'s board game scene';
-    setMetaTag('description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setMetaTag('description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
     setCanonical('https://tumlet.com/blog/');
     setPropertyTag('og:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
-    setPropertyTag('og:description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setPropertyTag('og:description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
     setPropertyTag('og:type', 'website');
     setPropertyTag('og:url', 'https://tumlet.com/blog/');
     setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
-    setMetaTag('twitter:description', 'Stories, insights, and discoveries from the world of Nepali games and play. Read about board game culture in Nepal and beyond.');
+    setMetaTag('twitter:description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
     setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
   }, []);
 
@@ -90,7 +90,7 @@ const BlogIndex = () => {
             lineHeight: 1.5,
             margin: 0,
           }}>
-            Stories, insights, and discoveries from the world of Nepali games and play.
+            Stories about Nepali games and play.
           </p>
         </section>
 
@@ -188,7 +188,7 @@ const BlogIndex = () => {
           {blogPosts.length === 0 && (
             <div style={{ textAlign: 'center', padding: '64px 0' }}>
               <h2 style={{ fontFamily: "'Baloo 2', system-ui, sans-serif", fontWeight: 700, fontSize: '24px', color: '#130D01', marginBottom: '16px' }}>No blog posts yet</h2>
-              <p style={{ fontFamily: "'Outfit', system-ui, sans-serif", color: '#6B6B6B' }}>Check back soon for our first articles!</p>
+              <p style={{ fontFamily: "'Outfit', system-ui, sans-serif", color: '#6B6B6B' }}>Our first articles are coming soon.</p>
             </div>
           )}
         </section>
