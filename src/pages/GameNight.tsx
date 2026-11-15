@@ -130,7 +130,7 @@ const tickerItems = [
   'No experience needed ✦',
   'New venue every month ✦',
   'We teach the rules ✦',
-  'Come solo, leave with a squad ✦',
+  'Come alone or bring friends ✦',
 ];
 
 const rules = [
@@ -146,7 +146,7 @@ const rules = [
   },
   {
     num: '03',
-    title: 'Come solo, leave with a squad.',
+    title: 'Lots of people come alone.',
     desc: 'Half the room shows up alone. The table does the introductions. You just have to sit down and play.',
   },
 ];
