@@ -57,7 +57,7 @@ const pastNights = [
     when: 'Nov 2026 · Labim Mall',
     title: 'We took it to The Lab',
     desc: "The Lab, a cocktail and vinyl bar. Our biggest turnout yet at 65+, Board Game Nepal in the house, and Poker Momo came back for the second half.",
-    thumbnail: '/the-lab-november-2026-thumb.png',
+    thumbnail: '/the-lab-november-2026-thumb.webp',
   },
   {
     id: 'ev-surface-oct-2026',
@@ -75,7 +75,7 @@ const pastNights = [
     when: 'Sep 2026 · Bakhundole',
     title: 'The place that feels like Narnia',
     desc: "Tangerine Brunch & Bar. Barely advertised and still hit ~60 players, Guess the Price came back with a chura-and-pads twist, and Skull was the game of the night.",
-    thumbnail: '/tangerine-september-2026-thumb.png',
+    thumbnail: '/tangerine-september-2026-thumb.webp',
   },
   {
     id: 'ev-dhokaima-aug-2026',
@@ -84,7 +84,7 @@ const pastNights = [
     when: 'Aug 2026 · Patan Dhoka',
     title: 'The place with the best chocolate cake',
     desc: "Dhokaima Cafe. Our biggest crowd yet at ~60, Bluff Momo running on every single table, and Race to Tundikhel's game night debut.",
-    thumbnail: '/dhokaima-august-2026-thumb.png',
+    thumbnail: '/dhokaima-august-2026-thumb.webp',
   },
   {
     id: 'ev-terrys-jul-2026',
@@ -93,7 +93,7 @@ const pastNights = [
     when: 'Jul 2026 · Terry\'s Pub & Bistro',
     title: 'The whole roof was ours',
     desc: "Terry's Pub & Bistro. Record 50+ turnout, the debut of Momo Psychi, and Saboteur crowned best game of the night.",
-    thumbnail: '/terrys-july-2026-thumb.png',
+    thumbnail: '/terrys-july-2026-thumb.webp',
   },
   {
     id: 'ev-watering-hole-jun-2026',
@@ -111,7 +111,7 @@ const pastNights = [
     when: 'Jun 2026 · Kanti Path',
     title: "The place with a door that isn't a door",
     desc: "Misfits Kathmandu. A crazy door, intentional drinks, and 40+ players who stayed till the venue pulled the lights.",
-    thumbnail: '/misfits-june-2026-thumb.png',
+    thumbnail: '/misfits-june-2026-thumb.webp',
   },
   {
     id: 'ev-five10-apr-2026',

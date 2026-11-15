@@ -126,7 +126,7 @@ const MisfitsGameNight = () => {
   useEffect(() => {
     const title = "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet";
     const description = '40+ players, a door that is not quite a door, and our new game Almosttt Misfit. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.';
-    const image = 'https://tumlet.com/misfits-june-2026-thumb.png';
+    const image = 'https://tumlet.com/misfits-june-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/misfits-june-2026/';
 
     document.title = title;
@@ -283,7 +283,7 @@ const MisfitsGameNight = () => {
             overflow: 'hidden',
           }}>
             <img
-              src="/misfits-june-2026-thumb.png"
+              src="/misfits-june-2026-thumb.webp"
               alt="Game night at Misfits Kathmandu, June 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
@@ -452,21 +452,21 @@ const MisfitsGameNight = () => {
               gridArea="g1"
               rotation="0deg"
               shadowColor="#F3B952"
-              src="/misfits/misfits-g1.jpg"
+              src="/misfits/misfits-g1.webp"
               caption="We took off our shoes and took over the floor."
             />
             <PolaroidSlot
               gridArea="g2"
               rotation="1.8deg"
               shadowColor="#F16147"
-              src="/misfits/misfits-g2.jpg"
+              src="/misfits/misfits-g2.webp"
               caption="Pushing luck to its limit."
             />
             <PolaroidSlot
               gridArea="g3"
               rotation="-2.4deg"
               shadowColor="#130D01"
-              src="/misfits/misfits-g3.jpg"
+              src="/misfits/misfits-g3.webp"
               caption="I will take all the time in the world."
               dark={false}
             />
@@ -474,14 +474,14 @@ const MisfitsGameNight = () => {
               gridArea="g4"
               rotation="1.4deg"
               shadowColor="#F3B952"
-              src="/misfits/misfits-g4.jpg"
+              src="/misfits/misfits-g4.webp"
               caption="Oh god, how do I lie."
             />
             <PolaroidSlot
               gridArea="g5"
               rotation="0.5deg"
               shadowColor="#F16147"
-              src="/misfits/misfits-g5.jpg"
+              src="/misfits/misfits-g5.webp"
               caption="Wait. I just met all these people."
               dark={false}
             />

@@ -217,7 +217,7 @@ const routes = [
     title: "We Took It to The Lab · The Lab, Nov 2026 | Tumlet",
     description:
       "65+ players at The Lab, a cocktail and vinyl bar in Labim Mall. Our biggest game night yet, Poker Momo came back, and Magical Athlete won the crowd.",
-    ogImage: "https://tumlet.com/the-lab-november-2026-thumb.png",
+    ogImage: "https://tumlet.com/the-lab-november-2026-thumb.webp",
     h1: "Tumlet Game Night: We Took It to The Lab",
   },
   {
@@ -233,7 +233,7 @@ const routes = [
     title: "The Place That Feels Like Narnia · Tangerine, Sep 2026 | Tumlet",
     description:
       "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised game night yet. Guess the Price got a twist, Skull won the room.",
-    ogImage: "https://tumlet.com/tangerine-september-2026-thumb.png",
+    ogImage: "https://tumlet.com/tangerine-september-2026-thumb.webp",
     h1: "Tumlet Game Night: The Place That Feels Like Narnia",
   },
   {
@@ -242,7 +242,7 @@ const routes = [
       "The Place With the Best Chocolate Cake · Dhokaima Cafe, August 2026 | Tumlet Game Night",
     description:
       "Around 60 players filled Dhokaima Cafe beside Patan Dhoka for the last game night before the tournament. Bluff Momo took over every single table, Race to Tundikhel made its game night debut, and we opened up the conference room for the first time.",
-    ogImage: "https://tumlet.com/dhokaima-august-2026-thumb.png",
+    ogImage: "https://tumlet.com/dhokaima-august-2026-thumb.webp",
     h1: "Tumlet Game Night: The Place With the Best Chocolate Cake",
   },
   {
@@ -251,7 +251,7 @@ const routes = [
       "The Whole Roof Was Ours · Terry's Pub & Bistro, July 2026 | Tumlet Game Night",
     description:
       "Our biggest turnout yet — 50+ players took over Terry's rooftop for a full night of Saboteur, Bluff Momo, and the debut of Momo Psychi, our new high-stakes bidding game. A recap of Tumlet Game Night at Terry's Pub & Bistro, July 2026.",
-    ogImage: "https://tumlet.com/terrys-july-2026-thumb.png",
+    ogImage: "https://tumlet.com/terrys-july-2026-thumb.webp",
     h1: "Tumlet Game Night — The Whole Roof Was Ours",
   },
   {
@@ -278,7 +278,7 @@ const routes = [
       "Behind the Door That Isn't a Door · Misfits, June 2026 | Tumlet Game Night",
     description:
       "A crazy door, intentional drinks, staff you actually like, and a game night that went all the way. A recap of Tumlet Game Night at Misfits Kathmandu, June 2026.",
-    ogImage: "https://tumlet.com/misfits-june-2026-thumb.png",
+    ogImage: "https://tumlet.com/misfits-june-2026-thumb.webp",
     h1: "Tumlet Game Night — Behind the Door That Isn't a Door",
   },
   {

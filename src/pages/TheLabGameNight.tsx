@@ -84,7 +84,7 @@ const TheLabGameNight = () => {
   React.useEffect(() => {
     const title = 'We Took It to The Lab · The Lab, Nov 2026 | Tumlet';
     const description = '65+ players at The Lab, a cocktail and vinyl bar in Labim Mall. Our biggest game night yet, Poker Momo came back, and Magical Athlete won the crowd.';
-    const image = 'https://tumlet.com/the-lab-november-2026-thumb.png';
+    const image = 'https://tumlet.com/the-lab-november-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/the-lab-november-2026/';
 
     document.title = title;
@@ -213,7 +213,7 @@ const TheLabGameNight = () => {
             overflow: 'hidden',
           }}>
             <img
-              src="/the-lab-november-2026-thumb.png"
+              src="/the-lab-november-2026-thumb.webp"
               alt="Tumlet Game Night at The Lab, Labim Mall, 4 November 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />

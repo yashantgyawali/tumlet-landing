@@ -62,7 +62,7 @@ const DhokaimaGameNight = () => {
   React.useEffect(() => {
     const title = 'Best Chocolate Cake · Dhokaima Cafe, Aug 2026 | Tumlet';
     const description = "Around 60 players filled Dhokaima Cafe beside Patan Dhoka for our last game night before the tournament. Bluff Momo took every table, Tundikhel debuted.";
-    const image = 'https://tumlet.com/dhokaima-august-2026-thumb.png';
+    const image = 'https://tumlet.com/dhokaima-august-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/dhokaima-august-2026/';
 
     document.title = title;
@@ -193,7 +193,7 @@ const DhokaimaGameNight = () => {
             overflow: 'hidden',
           }}>
             <img
-              src="/dhokaima-august-2026-thumb.png"
+              src="/dhokaima-august-2026-thumb.webp"
               alt="Game night at Dhokaima Cafe, Patan Dhoka, August 2026"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
             />
