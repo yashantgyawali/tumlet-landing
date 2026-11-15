@@ -75,7 +75,7 @@ const TangerineGameNight = () => {
   React.useEffect(() => {
     const title = 'The Place That Feels Like Narnia · Tangerine, Sep 2026 | Tumlet';
     const description = "Around 60 players packed into Tangerine Brunch & Bar in Bakhundole, our least-advertised game night yet. Guess the Price got a twist, Skull won the room.";
-    const image = 'https://tumlet.com/tangerine-september-2026-thumb.png';
+    const image = 'https://tumlet.com/tangerine-september-2026-thumb.webp';
     const url = 'https://tumlet.com/game-night/tangerine-september-2026/';
 
     document.title = title;
@@ -206,7 +206,7 @@ const TangerineGameNight = () => {
             overflow: 'hidden',
           }}>
             <img
-              src="/tangerine-september-2026-thumb.png"
+              src="/tangerine-september-2026-thumb.webp"
               alt="Tumlet Game Night at Tangerine Brunch & Bar, Bakhundole, September 2026"
               style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }}
             />
