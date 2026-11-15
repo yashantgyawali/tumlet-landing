@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-the-lab-nov-2026',
+    href: '/game-night/the-lab-november-2026',
+    isLink: true,
+    when: 'Nov 2026 · Labim Mall',
+    title: 'We took it to The Lab',
+    desc: "The Lab, a cocktail and vinyl bar. Our biggest turnout yet at 65+, Board Game Nepal in the house, and Poker Momo came back for the second half.",
+    thumbnail: '/the-lab-november-2026-thumb.png',
+  },
+  {
     id: 'ev-surface-oct-2026',
     href: '/game-night/surface-october-2026',
     isLink: true,
