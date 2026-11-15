@@ -396,7 +396,7 @@ const KcalGameNight = () => {
           <h2 style={h2Style}>The afternoon: every game on the shelf</h2>
 
           <p style={p}>
-            People started coming in at 1:00 PM, and we sat them down with board games. First up was Knar. Our favorite game master, Shaq from <a href={SHAQ_URL} {...ext} style={linkStyle}>Game Nights With Shaq</a>, explained the rules maybe four times, once for every new player who joined their table.
+            People started coming in at 1:00 PM, and we sat them down with board games. First up was Knarr. Our favorite game master, Shaq from <a href={SHAQ_URL} {...ext} style={linkStyle}>Game Nights With Shaq</a>, explained the rules maybe four times, once for every new player who joined their table.
           </p>
           <p style={p}>
             That's Not a Hat had people grabbing their heads and laughing out loud. The Secret Hitler table kept accusing and defending each other at the top of their lungs. Another table was all bluffs and challenges over <Link to="/bluff-momo-rules" style={linkStyle}>Bluff Momo</Link>. One group sat down on the floor mat and <Link to="/tundikhel" style={linkStyle}>raced to Tundikhel</Link>, and right outside, another loud group was singing (in the weirdest tones, of course) while playing Firiri.
