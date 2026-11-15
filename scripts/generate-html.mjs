@@ -163,6 +163,10 @@ const routes = [
     h1: "A free board game night, every month, somewhere new in Kathmandu.",
     relatedLinks: [
       {
+        href: "/game-night/the-lab-november-2026/",
+        label: "Game Night at The Lab, November 2026",
+      },
+      {
         href: "/game-night/surface-october-2026/",
         label: "Game Night at Surface Coffee & Co, October 2026",
       },
@@ -195,6 +199,14 @@ const routes = [
         label: "Game Night at Better Coffee, February 2026",
       },
     ],
+  },
+  {
+    path: "/game-night/the-lab-november-2026",
+    title: "We Took It to The Lab · The Lab, Nov 2026 | Tumlet",
+    description:
+      "65+ players at The Lab, a cocktail and vinyl bar in Labim Mall. Our biggest game night yet, Poker Momo came back, and Magical Athlete won the crowd.",
+    ogImage: "https://tumlet.com/the-lab-november-2026-thumb.png",
+    h1: "Tumlet Game Night: We Took It to The Lab",
   },
   {
     path: "/game-night/surface-october-2026",
