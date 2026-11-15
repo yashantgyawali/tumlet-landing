@@ -29,6 +29,7 @@ import DhokaimaGameNight from "./pages/DhokaimaGameNight";
 import TangerineGameNight from "./pages/TangerineGameNight";
 import SurfaceGameNight from "./pages/SurfaceGameNight";
 import TheLabGameNight from "./pages/TheLabGameNight";
+import KcalGameNight from "./pages/KcalGameNight";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/game-night/tangerine-september-2026" element={<TangerineGameNight />} />
           <Route path="/game-night/surface-october-2026" element={<SurfaceGameNight />} />
           <Route path="/game-night/the-lab-november-2026" element={<TheLabGameNight />} />
+          <Route path="/game-night/kcal-november-2026" element={<KcalGameNight />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

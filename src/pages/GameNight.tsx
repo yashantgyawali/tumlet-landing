@@ -42,6 +42,15 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 
 const pastNights = [
   {
+    id: 'ev-kcal-nov-2026',
+    href: '/game-night/kcal-november-2026',
+    isLink: true,
+    when: 'Nov 2026 · Kupondole',
+    title: 'Nostalgic game night at KCAL',
+    desc: "KCAL x Tumlet. The games we grew up with: guess the price, chungi, a sack, spoon and math relay, Machha Machha Bhyaguta, and a Name Place Animal Thing final.",
+    thumbnail: '/kcal-november-2026-thumb.png',
+  },
+  {
     id: 'ev-the-lab-nov-2026',
     href: '/game-night/the-lab-november-2026',
     isLink: true,

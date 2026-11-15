@@ -163,6 +163,10 @@ const routes = [
     h1: "A free board game night, every month, somewhere new in Kathmandu.",
     relatedLinks: [
       {
+        href: "/game-night/kcal-november-2026/",
+        label: "Nostalgic Game Night at KCAL, November 2026",
+      },
+      {
         href: "/game-night/the-lab-november-2026/",
         label: "Game Night at The Lab, November 2026",
       },
@@ -199,6 +203,14 @@ const routes = [
         label: "Game Night at Better Coffee, February 2026",
       },
     ],
+  },
+  {
+    path: "/game-night/kcal-november-2026",
+    title: "Nostalgic Game Night · KCAL, Nov 2026 | Tumlet",
+    description:
+      "KCAL x Tumlet in Kupondole: a game night built on the games Nepali kids played in the early 2000s. Guess the price, chungi, a sack, spoon and math relay, and a Name Place Animal Thing final.",
+    ogImage: "https://tumlet.com/kcal-november-2026-thumb.png",
+    h1: "KCAL x Tumlet: Nostalgic Game Night",
   },
   {
     path: "/game-night/the-lab-november-2026",
