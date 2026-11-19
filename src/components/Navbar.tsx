@@ -20,6 +20,9 @@ const Navbar: React.FC = () => {
             Our online games <ChevronDown size={16} />
           </button>
           <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 min-w-[160px]">
+            <Link to="/ladbad/" className="block px-4 py-2 hover:bg-gray-100">
+              Ladbad
+            </Link>
             <Link to="/bichitra/" className="block px-4 py-2 hover:bg-gray-100">
               Bichitra
             </Link>
@@ -90,6 +93,9 @@ const Navbar: React.FC = () => {
             <div className="font-medium text-gray-800 text-lg px-4 py-3">
               Our online games
             </div>
+            <Link to="/ladbad/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
+              Ladbad
+            </Link>
             <Link to="/bichitra/" className="px-4 py-3 hover:bg-gray-100 rounded-lg text-lg pl-10">
               Bichitra
             </Link>

@@ -155,6 +155,14 @@ const routes = [
     h1: "wavelength",
   },
   {
+    path: "/ladbad",
+    title: "Ladbad | Guess the Gibberish, Nepali Edition | Tumlet",
+    description:
+      "Read silly English out loud until it turns into Nepali. Ladbad is a free Nepali gibberish party game you play in teams on your phones.",
+    ogImage: "https://tumlet.com/ladbad-logo.png",
+    h1: "Ladbad: guess the gibberish, Nepali edition",
+  },
+  {
     path: "/game-night",
     title: "Board Game Night: free, every month, all around Kathmandu | Tumlet",
     description:
@@ -300,6 +308,7 @@ const routes = [
 
 const PRIMARY_LINKS = [
   { href: "/", label: "Home" },
+  { href: "/ladbad/", label: "Ladbad" },
   { href: "/bichitra/", label: "Bichitra" },
   { href: "/ganthan/", label: "Ganthan" },
   { href: "/thug/", label: "Thug" },
@@ -444,7 +453,8 @@ function renderSeoBody({ h1, description, relatedLinks = [] }) {
           description,
         )}</p>
         <p style="font-size:16px;color:#4B5563;max-width:640px;">
-          Explore Tumlet's online games — <a href="/bichitra/" style="color:#F16147;">Bichitra</a>,
+          Explore Tumlet's online games — <a href="/ladbad/" style="color:#F16147;">Ladbad</a>,
+          <a href="/bichitra/" style="color:#F16147;">Bichitra</a>,
           <a href="/ganthan/" style="color:#F16147;">Ganthan</a> and
           <a href="/thug/" style="color:#F16147;">Thug</a> — or race through Kathmandu with
           <a href="/tundikhel/" style="color:#F16147;">Race to Tundikhel</a>.
