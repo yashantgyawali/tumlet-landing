@@ -154,8 +154,8 @@ const Ladbad: React.FC = () => {
             <img
               src="/ladbad-logo.png"
               alt="लडबड (Ladbad)"
-              width={560}
-              height={423}
+              width={1036}
+              height={669}
               className="mb-6"
               style={{ width: 'min(340px, 80%)', height: 'auto' }}
             />
