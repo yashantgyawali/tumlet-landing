@@ -45,6 +45,7 @@ const Footer: React.FC = () => {
               Our games
             </div>
             {[
+              { label: 'Ladbad', to: '/ladbad/' },
               { label: 'Bichitra', to: '/bichitra/' },
               { label: 'Ganthan', to: '/ganthan/' },
               { label: 'Thug', to: '/thug/' },

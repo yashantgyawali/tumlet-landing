@@ -19,6 +19,7 @@ import Thug from "./pages/Thug";
 import Tundikhel from "./pages/Tundikhel";
 import TundikhElHow from "./pages/TundikhElHow";
 import Wavelength from "./pages/Wavelength";
+import Ladbad from "./pages/Ladbad";
 import GameNight from "./pages/GameNight";
 import MisfitsGameNight from "./pages/MisfitsGameNight";
 import Five10GameNight from "./pages/Five10GameNight";
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/tundikhel" element={<Tundikhel />} />
           <Route path="/tundikhel-how" element={<TundikhElHow />} />
           <Route path="/wavelength" element={<Wavelength />} />
+          <Route path="/ladbad" element={<Ladbad />} />
           <Route path="/game-night" element={<GameNight />} />
           <Route path="/game-night/watering-hole-may-2026" element={<WateringHoleGameNight />} />
           <Route path="/game-night/misfits-june-2026" element={<MisfitsGameNight />} />
