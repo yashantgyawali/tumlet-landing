@@ -3,6 +3,18 @@ import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getAllBlogPosts } from '../data/blogPosts';
+import { pastNights } from '../data/gameNights';
+
+type BlogListItem = {
+  key: string;
+  href: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  publishedAt: string;
+  readTime: string;
+};
 
 function setMetaTag(name: string, content: string) {
   let tag = document.querySelector(`meta[name='${name}']`);
@@ -35,7 +47,28 @@ function setCanonical(url: string) {
 }
 
 const BlogIndex = () => {
-  const blogPosts = getAllBlogPosts();
+  const blogPosts: BlogListItem[] = [
+    ...getAllBlogPosts().map((post) => ({
+      key: post.slug,
+      href: `/blog/${post.slug}/`,
+      title: post.title,
+      excerpt: post.excerpt,
+      category: post.category,
+      author: post.author,
+      publishedAt: post.publishedAt,
+      readTime: post.readTime,
+    })),
+    ...pastNights.map((night) => ({
+      key: night.id,
+      href: night.href,
+      title: night.title,
+      excerpt: night.desc,
+      category: 'Game Night',
+      author: 'Yashant',
+      publishedAt: night.publishedAt,
+      readTime: night.readTime,
+    })),
+  ].sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
   useEffect(() => {
     document.title = 'Tumlet Blog | Stories from Nepal\'s board game scene';
@@ -98,7 +131,7 @@ const BlogIndex = () => {
         <section className="max-w-[760px] mx-auto px-6 pb-24">
           {blogPosts.map((post, index) => (
             <article
-              key={post.slug}
+              key={post.key}
               style={{
                 paddingBottom: '40px',
                 marginBottom: '40px',
@@ -121,7 +154,7 @@ const BlogIndex = () => {
                 </span>
               </div>
 
-              <Link to={`/blog/${post.slug}/`} style={{ textDecoration: 'none' }}>
+              <Link to={post.href} style={{ textDecoration: 'none' }}>
                 <h2 style={{
                   fontFamily: "'Baloo 2', system-ui, sans-serif",
                   fontWeight: 700,
@@ -170,7 +203,7 @@ const BlogIndex = () => {
               </div>
 
               <Link
-                to={`/blog/${post.slug}/`}
+                to={post.href}
                 style={{
                   fontFamily: "'Outfit', system-ui, sans-serif",
                   fontWeight: 500,
