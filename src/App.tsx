@@ -8,6 +8,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import BluffMomo from "./pages/BluffMomo";
 import BluffMomoManual from "./pages/BluffMomoManual";
+import BluffMomoTwoPlayer from "./pages/BluffMomoTwoPlayer";
 import BlogIndex from "./pages/BlogIndex";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
@@ -49,6 +50,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/bluff-momo-rules" element={<BluffMomo />} />
           <Route path="/bluff-momo-manual" element={<BluffMomoManual />} />
+          {/* Unlisted: reachable by URL only, not linked anywhere or in the sitemap */}
+          <Route path="/bluff-momo-rules-2-player-variant" element={<BluffMomoTwoPlayer />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<Blog />} />
           <Route path="/bichitra" element={<Bichitra />} />
