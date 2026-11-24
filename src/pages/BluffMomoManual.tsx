@@ -279,7 +279,7 @@ function StartPage({ onNext }: { onNext: () => void }) {
         <div className="flex-1 basis-[220px] flex justify-center">
           <img
             src={`${ASSET}/images/hante-no-bg.png`}
-            alt="हन्त, grabbing a whole bowl of momo"
+            alt="हन्ते, grabbing a whole bowl of momo"
             className="w-full max-w-[300px] h-auto object-contain"
           />
         </div>
@@ -545,7 +545,7 @@ function TurnPage({ onNext }: { onNext: () => void }) {
 
 function CharactersPage({ onNext }: { onNext: () => void }) {
   const characters = [
-    { img: 'hante-no-bg', name: 'हन्त', action: 'Take 3 momo from the middle pile in one move.', blocks: 'Nothing.' },
+    { img: 'hante-no-bg', name: 'हन्ते', action: 'Take 3 momo from the middle pile in one move.', blocks: 'Nothing.' },
     { img: 'chor-no-bg', name: 'चोर', action: 'Steal 2 momo from any player.', blocks: 'चोर\'s attempt to steal your momo.' },
     { img: 'bhattikodai-no-bg', name: 'भट्टीको दाई', action: 'Use 3 momo to poison any player. They lose one card.', blocks: 'Nothing.' },
     { img: 'aama-no-bg', name: 'आमा', action: 'None.', blocks: 'भट्टीको दाई\'s poison attempt.' },
@@ -584,7 +584,7 @@ function BluffingPage({ onNext }: { onNext: () => void }) {
     ['चोर steals 2 momo', 'चोर or मन्त्री'],
     ['भट्टीको दाई poisons you for 3 momo', 'आमा'],
     ['मन्त्री looks at one of your cards', 'मन्त्री'],
-    ['हन्त takes 3 momo', 'Nobody. Challenge it or let it go'],
+    ['हन्ते takes 3 momo', 'Nobody. Challenge it or let it go'],
     ['चुपचाप move, or food-poison with 7 momo', 'Nobody, and no challenge either'],
   ];
   return (
@@ -691,7 +691,7 @@ function PoisonPage({ onNext }: { onNext: () => void }) {
 
 function ReferencePage({ onBack }: { onBack: () => void }) {
   const rows = [
-    ['हन्त', 'Take 3 momo from the middle pile in one move', 'Nothing', false],
+    ['हन्ते', 'Take 3 momo from the middle pile in one move', 'Nothing', false],
     ['चोर', 'Steal 2 momo from any player', 'चोर\'s attempt to steal your momo', false],
     ['भट्टीको दाई', 'Use 3 momo to poison any player. They lose one card', 'Nothing', false],
     ['आमा', 'None', 'भट्टीको दाई\'s poison attempt', false],

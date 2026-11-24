@@ -327,7 +327,7 @@ function Setup() {
             title: 'Split the deck into three sets',
             body: (
               <>
-                Sort the 15 cards into three sets, each with one of every character: हन्त, चोर, भट्टीको दाई, आमा and
+                Sort the 15 cards into three sets, each with one of every character: हन्ते, चोर, भट्टीको दाई, आमा and
                 मन्त्री. Give one set to each player, face-up so you can see your own. Shuffle the third set and put it
                 face-down in the middle. This is <span className="font-bold text-tumlet-text">the court</span>.
               </>
@@ -435,7 +435,7 @@ function Losing() {
 function Turn() {
   const rows = [
     ['चुपचाप move', 'Take 1 momo from the middle pile.', 'No change'],
-    ['हन्त', 'Take 3 momo from the middle pile.', 'No change'],
+    ['हन्ते', 'Take 3 momo from the middle pile.', 'No change'],
     ['चोर', 'Steal 2 momo from your opponent.', 'No change'],
     ['भट्टीको दाई', 'Pay 3 momo and name a character to poison.', 'Changed, see section 5'],
     ['आमा', 'Blocks भट्टीको दाई.', 'Changed, see section 6'],
@@ -535,9 +535,9 @@ function Poison() {
 
       <div className="mt-10">
         <Callout tone="yellow" icon={<Lightbulb size={20} />}>
-          <span className="font-bold">Example.</span> You pay 3 momo and poison your opponent's हन्त. Nobody challenges
-          and nobody blocks. Your opponent says "I don't have हन्त." They took 3 momo with हन्त two turns ago, so you
-          challenge. They show their hand: हन्त and आमा. They lose the हन्त face-up plus one more card, and draw two new
+          <span className="font-bold">Example.</span> You pay 3 momo and poison your opponent's हन्ते. Nobody challenges
+          and nobody blocks. Your opponent says "I don't have हन्ते." They took 3 momo with हन्ते two turns ago, so you
+          challenge. They show their hand: हन्ते and आमा. They lose the हन्ते face-up plus one more card, and draw two new
           cards from their draw pile.
         </Callout>
       </div>
@@ -682,7 +682,7 @@ function Reference() {
     ['Setup', 'Three sets of one of each character. One set each, one set is the court. Deal 1 from the court, choose 1 from your set, return 1 to the court, stack 3 as your draw pile. 2 momo each.'],
     ['Lives', '5 per player. 2 in hand, 3 in the draw pile.'],
     ['Losing a card', 'Discard from hand, draw the top card of your draw pile. Out when all 5 are gone.'],
-    ['चुपचाप move, हन्त, चोर', 'No change.'],
+    ['चुपचाप move, हन्ते, चोर', 'No change.'],
     ['भट्टीको दाई', 'Pay 3 and name a character. Hit: it is revealed face-up and lost. Miss: nothing. A "no" can be challenged. Caught lying: lose 2.'],
     ['आमा', 'Blocks poison, except poison that names आमा. That needs a claim of two आमा. Caught bluffing: lose 2.'],
     ['मन्त्री', 'Swaps with the court only. Never touches a draw pile.'],
