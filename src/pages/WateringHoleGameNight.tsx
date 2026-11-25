@@ -1,40 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
 const ACCENT = '#F16147';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true" style={{ flex: 'none' }}>
@@ -118,25 +88,6 @@ const PolaroidSlot = ({
 };
 
 const WateringHoleGameNight = () => {
-  useEffect(() => {
-    const title = 'At the Heart of Jhamsikhel · Watering Hole, May 2026 | Tumlet';
-    const description = "Our highest attendance yet: 35+ players, new faces, Bluff Momo all night, and a Catan group that never played Catan, at The Watering Hole, Jhamsikhel.";
-    const image = 'https://tumlet.com/watering-hole-may-2026-thumb.webp';
-    const url = 'https://tumlet.com/game-night/watering-hole-may-2026/';
-
-    document.title = title;
-    setMetaTag('description', description);
-    setCanonical(url);
-    setPropertyTag('og:title', title);
-    setPropertyTag('og:description', description);
-    setPropertyTag('og:type', 'article');
-    setPropertyTag('og:url', url);
-    setPropertyTag('og:image', image);
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', title);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', image);
-  }, []);
 
   return (
     <div style={{
@@ -145,7 +96,7 @@ const WateringHoleGameNight = () => {
       fontFamily: "'Baloo 2', system-ui, sans-serif",
       overflowX: 'hidden',
     }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
         @media (min-width: 700px) {
@@ -194,7 +145,7 @@ const WateringHoleGameNight = () => {
             align-items: center;
           }
         }
-      `}</style>
+      ` }} />
 
       <Navbar />
 

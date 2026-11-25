@@ -100,6 +100,20 @@ const MIN_SLOT = 240;
 const DWELL_MS = 5500;  // how long a pair sits still before the next card slides in
 const SLIDE_MS = 750;
 
+// useLayoutEffect warns when pages are pre-rendered on the server, where it
+// can't run anyway; useEffect is the no-op stand-in there.
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+// Layout before the first measurement. Two cards fit once the viewport box is
+// about 542px wide (2 × MIN_SLOT + GAP + 2 × EDGE_TIGHT), roughly a 600px screen.
+const UNMEASURED_CSS = `
+.tc-viewport { padding: 10px ${EDGE_PEEK}px 20px; }
+.tc-slot { flex: 0 0 100%; }
+@media (min-width: 600px) {
+  .tc-viewport { padding: 10px ${EDGE_TIGHT}px 20px; }
+  .tc-slot { flex: 0 0 calc((100% - ${GAP}px) / 2); }
+}`;
+
 export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTestimonial[]; visibleCount?: number }) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const [slotW, setSlotW] = useState(0);
@@ -108,17 +122,19 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
   const [index, setIndex] = useState(0);
   const [sliding, setSliding] = useState(true);
   const [paused, setPaused] = useState(false);
-  const [reduced] = useState(
-    () => typeof window !== "undefined" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
-  );
+  // Read after mount: the pre-rendered HTML can't know the visitor's setting,
+  // and the first browser render has to match it.
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    setReduced(!!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
+  }, []);
 
   // Slot width drives the translate distance, so measure it instead of guessing.
-  // useLayoutEffect (not useEffect) so the real width is committed before the
-  // browser paints — otherwise cards briefly render at their initial 0px slot
-  // width, collapsing into a tall, narrow column and pushing everything below
-  // the carousel down and then back up a moment later, which reads as the
-  // page scrolling on its own on mobile.
-  useLayoutEffect(() => {
+  // A layout effect (not useEffect) so the real width is committed before the
+  // browser paints. Until it is measured (slotW === 0, which includes the
+  // pre-rendered HTML), UNMEASURED_CSS lays the cards out one-up on phones and
+  // two-up on wider screens, so nothing collapses or jumps.
+  useIsomorphicLayoutEffect(() => {
     const el = viewportRef.current;
     if (!el) return;
     const measure = () => {
@@ -170,6 +186,7 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
   const activeDot = index % items.length;
   const fade = perView > 1 ? FADE_TIGHT : FADE_PEEK;
   const mask = `linear-gradient(to right, transparent 0, #000 ${fade}px, #000 calc(100% - ${fade}px), transparent 100%)`;
+  const measured = slotW > 0;
 
   return (
     <div
@@ -177,18 +194,19 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
       onMouseLeave={() => setPaused(false)}
       style={{ maxWidth: 320 * 2 + GAP + EDGE_TIGHT * 2, margin: "0 auto" }}
     >
+      <style dangerouslySetInnerHTML={{ __html: UNMEASURED_CSS }} />
       <div
         ref={viewportRef}
+        className={measured ? undefined : "tc-viewport"}
         style={{
           // The mask only hides the off-frame cards from view; the track still overflows
           // in layout. Left unclipped that widens the mobile layout viewport to the full
           // track, so every slide re-lays out the whole page. Clip it. The padding here is
           // wider than the 9px hover shadow, so nothing visible gets cut off.
           overflow: "hidden",
-          padding: `10px ${edge}px 20px`,
+          padding: measured ? `10px ${edge}px 20px` : undefined,
           maskImage: mask,
           WebkitMaskImage: mask,
-          overflow: "hidden",
         }}
       >
         <div
@@ -202,7 +220,11 @@ export function TestimonialCarousel({ items, visibleCount = 2 }: { items: MiniTe
           {track.map((t, i) => {
             const original = i % items.length;
             return (
-              <div key={i} style={{ flex: `0 0 ${slotW}px`, minWidth: 0 }}>
+              <div
+                key={i}
+                className={measured ? undefined : "tc-slot"}
+                style={{ flex: measured ? `0 0 ${slotW}px` : undefined, minWidth: 0 }}
+              >
                 <TestimonialMiniCard
                   {...t}
                   shadowColor={shadowColors[original % 3]}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -21,52 +21,8 @@ const aboutText = [
   "A Nepali board game company, trying to take you back to your childhood."
 ];
 
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
 const About = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
-  useEffect(() => {
-    document.title = "About Us | Tumlet - Nepali board game company";
-    setMetaTag('description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
-    setCanonical('https://tumlet.com/about/');
-    setPropertyTag('og:title', 'About Us | Tumlet - Nepali board game company');
-    setPropertyTag('og:description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/about/');
-    setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'About Us | Tumlet - Nepali board game company');
-    setMetaTag('twitter:description', 'Tumlet is a Nepali board game company. Read our story and why we make games for Nepal.');
-    setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-white" style={{ fontFamily: "'Baloo 2', system-ui, sans-serif", color: '#130D01' }}>
@@ -76,7 +32,7 @@ const About = () => {
 
         {/* ── FOUNDER CARDS ── */}
         <section style={{ maxWidth: 900, margin: '0 auto', padding: '64px 24px 0' }}>
-          <style>{`
+          <style dangerouslySetInnerHTML={{ __html: `
             .founder-cards-row {
               display: flex;
               justify-content: center;
@@ -122,7 +78,7 @@ const About = () => {
                 z-index: 10;
               }
             }
-          `}</style>
+          ` }} />
           <div className="founder-cards-row">
 
             {/* Yashant card */}

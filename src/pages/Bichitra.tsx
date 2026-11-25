@@ -1,46 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const STEPS = [
   {
@@ -58,33 +18,6 @@ const STEPS = [
 ];
 
 const Bichitra = () => {
-  useEffect(() => {
-    document.title = 'Bichitra | Guess the Nepali Last Name';
-    setMetaTag('description', 'Bichitra is a Nepali last name puzzle from Tumlet. A photo hides a थर somewhere inside it. Can you find it? There are no options. Play free online.');
-    setMetaTag('keywords', 'bichitra, nepali last name quiz, nepali thar puzzle, tumlet, nepali game online, guess nepali last name');
-    setCanonical('https://tumlet.com/bichitra/');
-    setPropertyTag('og:title', 'Bichitra | Guess the Nepali Last Name');
-    setPropertyTag('og:description', 'A photo hides a Nepali last name. Can you guess it? There are no options, just you and the image. Play free online.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/bichitra/');
-    setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Bichitra | Guess the Nepali Last Name');
-    setMetaTag('twitter:description', 'A photo hides a Nepali last name. Can you guess it? There are no options, just you and the image. Play free online.');
-    setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
-
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Bichitra',
-      description: 'A Nepali last name puzzle. A photo hides a थर somewhere inside it: no options, type your guess and find it.',
-      url: 'https://bichitra.tumlet.com/',
-      applicationCategory: 'Game',
-      operatingSystem: 'Web',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      creator: { '@type': 'Organization', name: 'Tumlet', url: 'https://tumlet.com' },
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>

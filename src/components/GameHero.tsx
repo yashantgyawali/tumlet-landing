@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import YouTubeFacade from '@/components/YouTubeFacade';
 
 interface GameMetaItem {
   icon: string;
@@ -54,7 +55,8 @@ const GameHero: React.FC<GameHeroProps> = ({
 }) => {
   // Check if link is external
   const isExternalLink = ctaLink.startsWith('http');
-  
+  const youtubeId = youtubeEmbedUrl?.match(/youtube\.com\/embed\/([\w-]{11})/)?.[1];
+
   return (
     <div className="w-full">
       <div className={`flex flex-col items-center gap-12 p-6 sm:p-12 md:p-24 rounded-2xl border-0 sm:border-4 ${backgroundClass}`}>
@@ -106,14 +108,22 @@ const GameHero: React.FC<GameHeroProps> = ({
         </div>
           {youtubeEmbedUrl && (
           <div className="w-full aspect-video mt-8">
-            <iframe
-              className="w-full h-full rounded-xl"
-              src={youtubeEmbedUrl}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {youtubeId ? (
+              <YouTubeFacade
+                videoId={youtubeId}
+                title={h1Title ?? 'Gameplay video'}
+                className="w-full h-full rounded-xl"
+              />
+            ) : (
+              <iframe
+                className="w-full h-full rounded-xl"
+                src={youtubeEmbedUrl}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
           </div>
         )}
       </div>

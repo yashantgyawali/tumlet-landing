@@ -2,10 +2,20 @@
   command = "npm run build"
   publish = "dist"
 
+# Every page is pre-rendered to its own index.html (scripts/prerender.mjs), so
+# there is no catch-all rewrite. Unknown URLs get dist/404.html with a real
+# 404 status instead of the homepage.
+
+# Old URLs from pages that were renamed or removed.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/bluff-momo"
+  to = "/bluff-momo-rules/"
+  status = 301
+
+[[redirects]]
+  from = "/farak"
+  to = "/"
+  status = 301
 
 # Cache hashed assets forever (filenames include a content hash from Vite)
 [[headers]]

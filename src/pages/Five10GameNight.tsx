@@ -1,41 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import YouTubeFacade from '../components/YouTubeFacade';
 
 const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
 
 const FIVE10_BLUE = '#F16147';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const WaIcon = ({ color = '#fff' }: { color?: string }) => (
   <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true" style={{ flex: 'none' }}>
@@ -119,25 +90,6 @@ const PolaroidSlot = ({
 };
 
 const Five10GameNight = () => {
-  useEffect(() => {
-    const title = 'Hidden Gem, Hidden Parking in Thamel · Five10, Apr 2026 | Tumlet';
-    const description = 'Matcha, momo, and a Tumlet-style Beast Games tournament at Five10 Thamel. A recap of the most intense Bluff Momo final we have seen, April 1, 2026.';
-    const image = 'https://tumlet.com/five10-april-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/five10-april-2026/';
-
-    document.title = title;
-    setMetaTag('description', description);
-    setCanonical(url);
-    setPropertyTag('og:title', title);
-    setPropertyTag('og:description', description);
-    setPropertyTag('og:type', 'article');
-    setPropertyTag('og:url', url);
-    setPropertyTag('og:image', image);
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', title);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', image);
-  }, []);
 
   return (
     <div style={{
@@ -146,7 +98,7 @@ const Five10GameNight = () => {
       fontFamily: "'Baloo 2', system-ui, sans-serif",
       overflowX: 'hidden',
     }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
         @media (min-width: 700px) {
@@ -178,7 +130,7 @@ const Five10GameNight = () => {
           transform: translate(-3px, -3px) !important;
           box-shadow: 9px 9px 0 0 #130D01 !important;
         }
-      `}</style>
+      ` }} />
 
       <Navbar />
 
@@ -388,11 +340,9 @@ const Five10GameNight = () => {
               boxShadow: `8px 8px 0 0 ${FIVE10_BLUE}`,
               overflow: 'hidden',
             }}>
-              <iframe
-                src="https://www.youtube.com/embed/p6eOBsjCgxk"
+              <YouTubeFacade
+                videoId="p6eOBsjCgxk"
                 title="Five10 Game Night Promo"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
                 style={{
                   position: 'absolute',
                   top: 0,

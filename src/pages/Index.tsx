@@ -1,48 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import GameHero from '../components/GameHero';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const Index = () => {
   const bluffMomoMeta = [
@@ -51,37 +11,6 @@ const Index = () => {
     { icon: "/time.svg", text: "11 minutes" }
   ];
 
-  useEffect(() => {
-    document.title = 'Tumlet | Spreading Playfulness Across Nepal';
-    setMetaTag('description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
-    setCanonical('https://tumlet.com/');
-    setPropertyTag('og:title', 'Tumlet | Spreading Playfulness Across Nepal');
-    setPropertyTag('og:description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/');
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Tumlet | Spreading Playfulness Across Nepal');
-    setMetaTag('twitter:description', 'Tumlet makes games for young Nepali adults. Play with friends, bring back childhood memories, and have fun.');
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-    
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Tumlet',
-      description: 'Nepali board game company spreading playfulness across Nepal',
-      url: 'https://tumlet.com',
-      logo: 'https://tumlet.com/tumlet-logo.png',
-      sameAs: [
-        'https://www.instagram.com/tumlet.boardgames/'
-      ],
-      foundingDate: '2022',
-      foundingLocation: {
-        '@type': 'Place',
-        name: 'Kathmandu, Nepal'
-      }
-    });
-  }, []); // Added empty dependency array
 
   return (
     <div className="min-h-screen flex flex-col">
