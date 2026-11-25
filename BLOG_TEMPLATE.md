@@ -2,41 +2,39 @@
 
 ## How to Add a New Blog Post
 
-1. **Update the data file**: Add your new blog post to `src/data/blogPosts.ts`
+1. **Create the post**: add `src/blogs/your-new-post-slug/index.mdx` and put its images in
+   `public/blogs/your-new-post-slug/`. The frontmatter drives everything else:
 
-```typescript
-'your-new-post-slug': {
-  slug: 'your-new-post-slug',
-  title: "Your Blog Post Title",
-  excerpt: "A brief description of your blog post that appears in the preview.",
-  content: `
-Your blog content goes here. You can use markdown-style headings with ## for section headers.
+```mdx
+---
+title: "Your blog post title"
+slug: your-new-post-slug
+excerpt: "One or two sentences. Shown on the blog page and used as the search description."
+publishedAt: "2026-01-15"
+author: Yashant
+readTime: 5 min read
+category: Board Games
+coverImage: /blogs/your-new-post-slug/hero.png
+featured: false
+tags: ['Board Games', 'Nepal']
+# Optional:
+# updatedAt: "2026-02-01"   # after a real edit; used in the sitemap
+# seoTitle: "..."           # search title, if it should differ from `title` (keep under 60 characters)
+# seoDescription: "..."     # search description, if it should differ from `excerpt`
+---
 
-## First Section
-
-Your paragraph content here. The system will automatically format this with proper typography.
-
-## Second Section
-
-More content here. The typography system includes:
-
-- Proper line heights for readability
-- Responsive font sizes
-- Good contrast and spacing
-- Print-friendly styles
-  `,
-  publishedAt: '2024-01-15', // Use ISO date format
-  author: 'Your Name',
-  readTime: '5 min read', // Estimate based on word count
-  category: 'Your Category',
-  featured: true, // Optional: mark as featured
-  tags: ['tag1', 'tag2', 'tag3'] // Optional: for future search functionality
-}
+Your post, in Markdown. Use ## for section headers.
 ```
 
-2. **URL Structure**: Your blog post will be available at `tumlet.com/blog/your-new-post-slug`
+2. **That's it for SEO.** Don't add `<Helmet>` or meta tags to the post, and don't edit a
+   sitemap. On `npm run build` the post is pre-rendered to real HTML with its title,
+   description, canonical URL, link-preview image and BlogPosting structured data, and it is
+   added to `sitemap.xml`. The search title is "`title` | Tumlet Blog" when that fits in 60
+   characters, otherwise `title` alone, unless you set `seoTitle`.
 
-3. **Typography Features**: The blog system includes:
+3. **URL Structure**: Your blog post will be available at `tumlet.com/blog/your-new-post-slug/`
+
+4. **Typography Features**: The blog system includes:
    - Responsive typography that scales with screen size
    - Optimized line heights for readability
    - Proper heading hierarchy

@@ -1,46 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const ACCENT = '#F16147';
 const INK = '#130D01';
@@ -73,34 +33,6 @@ const STEPS = [
 ];
 
 const Thug = () => {
-  useEffect(() => {
-    document.title = 'Thug | Social Deduction Game for Nepali Friend Groups';
-    setMetaTag('description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
-    setMetaTag('keywords', 'thug game, nepali social deduction game, nepali party game, tumlet, nepali friend groups');
-    setCanonical('https://tumlet.com/thug/');
-    setPropertyTag('og:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setPropertyTag('og:description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/thug/');
-    setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Thug | Social Deduction Game for Nepali Friend Groups');
-    setMetaTag('twitter:description', 'Thug is a free social deduction game for Nepali friend groups. One player gets a different word. Can you find out who? Built around Nepali culture.');
-    setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
-
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Thug',
-      description: 'A free social deduction game for Nepali friend groups. One person gets a different word and must bluff their way through.',
-      url: 'https://thug.tumlet.com/',
-      applicationCategory: 'Game',
-      operatingSystem: 'Any',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      numberOfPlayers: { '@type': 'QuantitativeValue', minValue: 3, maxValue: 10 },
-      creator: { '@type': 'Organization', name: 'Tumlet', url: 'https://tumlet.com' },
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>

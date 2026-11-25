@@ -1,46 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const PRINCIPLES = [
   {
@@ -84,34 +44,6 @@ const STEPS = [
 ];
 
 const Tundikhel = () => {
-  useEffect(() => {
-    document.title = 'Race to Tundikhel: A new board game from Tumlet | tumlet.com/tundikhel';
-    setMetaTag('description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
-    setMetaTag('keywords', 'race to tundikhel, tundikhel board game, nepali board game, kathmandu game, tumlet');
-    setCanonical('https://tumlet.com/tundikhel/');
-    setPropertyTag('og:title', 'Race to Tundikhel: A new board game from Tumlet');
-    setPropertyTag('og:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/tundikhel/');
-    setPropertyTag('og:image', 'https://tumlet.com/tundikhel/hero-art.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Race to Tundikhel: A new board game from Tumlet');
-    setMetaTag('twitter:description', 'Race to Tundikhel is a new Nepali board game from Tumlet. No dice, no luck: just micro-driver chaos through the streets of Kathmandu. Coming soon.');
-    setMetaTag('twitter:image', 'https://tumlet.com/tundikhel/hero-art.png');
-
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Game',
-      name: 'Race to Tundikhel',
-      description: 'A Nepali board game where players race micro-buses through the streets of Kathmandu to reach Tundikhel first. No dice: pure bluff and battery management.',
-      url: 'https://tumlet.com/tundikhel/',
-      image: 'https://tumlet.com/tundikhel/hero-art.png',
-      numberOfPlayers: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 6 },
-      typicalAgeRange: '10+',
-      creator: { '@type': 'Organization', name: 'Tumlet', url: 'https://tumlet.com' },
-      gameLocation: { '@type': 'Place', name: 'Tundikhel, Kathmandu, Nepal' },
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>

@@ -1,46 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const PLAY_URL = 'https://ladbad.tumlet.com/';
 const PRACTICE_URL = 'https://ladbad.tumlet.com/practice/';
@@ -50,10 +10,6 @@ const BORDER = '#5A2416';
 const CORAL = '#FF7B6B';
 const INK = '#130D01';
 const MUTED = '#6B5E4E';
-
-const TITLE = 'Ladbad | Guess the Gibberish, Nepali Edition | Tumlet';
-const DESCRIPTION =
-  'Read silly English out loud until it turns into Nepali. Ladbad is a free Nepali gibberish party game you play in teams on your phones.';
 
 const CARDS = [
   { label: '#1 - Nepali poem', decoy: 'Moon? A mad Anne!', np: 'मुना मदन', rom: 'Muna Madan' },
@@ -101,39 +57,10 @@ const GibberishCard: React.FC<(typeof CARDS)[number]> = ({ label, decoy, np, rom
 };
 
 const Ladbad: React.FC = () => {
-  useEffect(() => {
-    document.title = TITLE;
-    setMetaTag('description', DESCRIPTION);
-    setMetaTag('keywords', 'ladbad, लडबड, nepali gibberish game, guess the gibberish nepali, nepali party game, tumlet, nepali game online');
-    setCanonical('https://tumlet.com/ladbad/');
-    setPropertyTag('og:title', TITLE);
-    setPropertyTag('og:description', DESCRIPTION);
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/ladbad/');
-    setPropertyTag('og:image', 'https://tumlet.com/ladbad-logo.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', TITLE);
-    setMetaTag('twitter:description', DESCRIPTION);
-    setMetaTag('twitter:image', 'https://tumlet.com/ladbad-logo.png');
-
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Ladbad',
-      alternateName: 'लडबड',
-      description: 'A Nepali gibberish party game for phones. Read silly English out loud until your team hears the Nepali hiding inside it.',
-      url: PLAY_URL,
-      applicationCategory: 'Game',
-      operatingSystem: 'Web',
-      inLanguage: ['en', 'ne'],
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      creator: { '@type': 'Organization', name: 'Tumlet', url: 'https://tumlet.com' },
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#FFFFFF', color: INK, fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .lb-outline {
           font-family: 'Baloo 2', sans-serif; font-weight: 800; line-height: 1.15;
           color: ${CORAL}; -webkit-text-stroke: 5px ${INK}; paint-order: stroke fill;
@@ -142,7 +69,7 @@ const Ladbad: React.FC = () => {
         .lb-card:hover { transform: translateY(-4px) rotate(-0.6deg); }
         .lb-btn { transition: transform 0.15s ease; }
         .lb-btn:hover { transform: translate(-3px, -3px); }
-      `}</style>
+      ` }} />
 
       <Navbar />
 

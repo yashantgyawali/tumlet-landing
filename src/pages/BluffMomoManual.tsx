@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Rocket,
@@ -31,36 +31,6 @@ const PAGES = [
   { slug: 'reference', label: 'Quick reference', Icon: ListChecks },
 ] as const;
 
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
 const CARD = 'bg-white rounded-xl border-2 border-tumlet-text/10 p-6 md:p-7';
 const CARD_POP = `${CARD} shadow-[6px_6px_0px_0px_#F3B952]`;
 const SECTION = 'px-6 md:px-12 lg:px-24 max-w-5xl mx-auto';
@@ -75,21 +45,6 @@ function BluffMomoManual() {
   const [dur, setDur] = useState(0);
   const [missing, setMissing] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    document.title = 'Bluff Momo Manual | The Full Rulebook, Explained';
-    setMetaTag('description', 'A plain-English, page-by-page guide to Bluff Momo: setup, turns, characters, bluffing, poison, and a quick reference sheet.');
-    setMetaTag('keywords', 'bluff momo manual, bluff momo rulebook, how to play bluff momo, nepali card game, tumlet');
-    setCanonical('https://tumlet.com/bluff-momo-manual/');
-    setPropertyTag('og:title', 'Bluff Momo Manual | The Full Rulebook, Explained');
-    setPropertyTag('og:description', 'A plain-English, page-by-page guide to Bluff Momo: setup, turns, characters, bluffing, poison, and a quick reference sheet.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/bluff-momo-manual/');
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Bluff Momo Manual | The Full Rulebook, Explained');
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-  }, []);
 
   const goTo = (i: number) => {
     audioRef.current?.pause();

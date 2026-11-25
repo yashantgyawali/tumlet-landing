@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -6,36 +6,6 @@ import Footer from '../components/Footer';
 const WHATSAPP_INVITE = 'https://chat.whatsapp.com/HCy2Bf3v579CB1oKHtVqqE';
 
 const BETTER_COFFEE_TEAL = '#2D5A52';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const PolaroidSlot = ({
   rotation,
@@ -119,25 +89,6 @@ const WaIcon = ({ color = '#fff' }: { color?: string }) => (
 );
 
 const BetterCoffeeGameNight = () => {
-  useEffect(() => {
-    const title = 'Coffee and Chaos · Better Coffee, Feb 2026 | Tumlet';
-    const description = 'Game night at a coffee shop? At Better Coffee Sanepa it worked: Skull, Codenames, CATAN and our first Beast-style tournament on Valentine\'s Day.';
-    const image = 'https://tumlet.com/bettercoffee-february-2026-thumb.png';
-    const url = 'https://tumlet.com/game-night/bettercoffee-february-2026/';
-
-    document.title = title;
-    setMetaTag('description', description);
-    setCanonical(url);
-    setPropertyTag('og:title', title);
-    setPropertyTag('og:description', description);
-    setPropertyTag('og:type', 'article');
-    setPropertyTag('og:url', url);
-    setPropertyTag('og:image', image);
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', title);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', image);
-  }, []);
 
   return (
     <div style={{
@@ -146,7 +97,7 @@ const BetterCoffeeGameNight = () => {
       fontFamily: "'Baloo 2', system-ui, sans-serif",
       overflowX: 'hidden',
     }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
         @media (min-width: 700px) {
@@ -178,7 +129,7 @@ const BetterCoffeeGameNight = () => {
           transform: translate(-3px, -3px) !important;
           box-shadow: 9px 9px 0 0 #130D01 !important;
         }
-      `}</style>
+      ` }} />
 
       <Navbar />
 

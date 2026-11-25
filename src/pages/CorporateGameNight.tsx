@@ -1,38 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MarqueeGallery } from '@/components/ui/MarqueeGallery';
 import { TestimonialCarousel, MiniTestimonial } from '@/components/ui/TestimonialTrio';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 type MediaItem = {
   type: 'image' | 'video';
@@ -228,26 +198,6 @@ const sampleMedia: MediaItem[] = [
 const CorporateGameNight = () => {
   const [ctaHovered, setCtaHovered] = useState(false);
   const [ctaBottomHovered, setCtaBottomHovered] = useState(false);
-
-  useEffect(() => {
-    const title = 'Corporate Game Night with Board Games | Tumlet';
-    const description = 'Tumlet brings board games to your office, sets everything up, and runs a 3-hour game night for your team.';
-    const image = 'https://tumlet.com/unfurl.png';
-    const url = 'https://tumlet.com/corporate-game-night';
-
-    document.title = title;
-    setMetaTag('description', description);
-    setCanonical(url);
-    setPropertyTag('og:title', title);
-    setPropertyTag('og:description', description);
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', url);
-    setPropertyTag('og:image', image);
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', title);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', image);
-  }, []);
 
   const handleContact = () => {
     const subject = encodeURIComponent("Corporate Game Night Inquiry");

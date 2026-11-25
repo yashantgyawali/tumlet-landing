@@ -1,36 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const STEPS = [
   {
@@ -57,22 +27,6 @@ const STEPS = [
 
 const TundikhElHow = () => {
   const rulesRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    document.title = 'How to Play Race to Tundikhel | Instruction Video & Rules';
-    setMetaTag('description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet. No dice, no luck, just bluff and battery.');
-    setMetaTag('keywords', 'how to play race to tundikhel, tundikhel rules, nepali board game instructions, tumlet');
-    setCanonical('https://tumlet.com/tundikhel-how/');
-    setPropertyTag('og:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
-    setPropertyTag('og:description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/tundikhel-how/');
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'How to Play Race to Tundikhel | Instruction Video & Rules');
-    setMetaTag('twitter:description', 'Watch the instruction video and learn how to play Race to Tundikhel, the Nepali board game by Tumlet.');
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>

@@ -1,46 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.querySelector("script[type='application/ld+json']");
-  if (!script) {
-    script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
 
 const ACCENT = '#F16147';
 const INK = '#130D01';
@@ -68,33 +28,6 @@ const STEPS = [
 ];
 
 const Ganthan = () => {
-  useEffect(() => {
-    document.title = 'Ganthan | Conversation Prompts for Nepali Families';
-    setMetaTag('description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
-    setMetaTag('keywords', 'ganthan, nepali family conversations, conversation prompts, nepali diaspora, bilingual questions, tumlet');
-    setCanonical('https://tumlet.com/ganthan/');
-    setPropertyTag('og:title', 'Ganthan | Conversation Prompts for Nepali Families');
-    setPropertyTag('og:description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/ganthan/');
-    setPropertyTag('og:image', 'https://tumlet.com/tumlet-logo.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Ganthan | Conversation Prompts for Nepali Families');
-    setMetaTag('twitter:description', 'Ganthan gives Nepali families questions that go beyond daily check-ins. Ask your aama-baba about memories and stories. Free and bilingual.');
-    setMetaTag('twitter:image', 'https://tumlet.com/tumlet-logo.png');
-
-    setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Ganthan',
-      description: 'Ganthan gives Nepali families conversation prompts that go beyond daily check-ins. Bilingual questions in Nepali and English.',
-      url: 'https://ganthan.tumlet.com/',
-      applicationCategory: 'LifestyleApplication',
-      operatingSystem: 'Any',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      creator: { '@type': 'Organization', name: 'Tumlet', url: 'https://tumlet.com' },
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>

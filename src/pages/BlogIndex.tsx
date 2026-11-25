@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getAllBlogPosts } from '../data/blogPosts';
@@ -18,36 +18,6 @@ type BlogListItem = {
   readTime: string;
   image: string;
 };
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const CategoryPill = ({ category }: { category: string }) => {
   const isGameNight = category === 'Game Night';
@@ -86,6 +56,7 @@ const PostMeta = ({ post }: { post: BlogListItem }) => (
       year: 'numeric',
       month: 'long',
       day: 'numeric',
+      timeZone: 'UTC',
     })}</span>
     <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#cbcbcb', display: 'inline-block', flexShrink: 0 }} />
     <span>{post.readTime}</span>
@@ -122,24 +93,9 @@ const BlogIndex = () => {
   const featured = blogPosts.find((post) => post.key === FEATURED_SLUG) || blogPosts[0];
   const rest = blogPosts.filter((post) => post !== featured);
 
-  useEffect(() => {
-    document.title = 'Tumlet Blog | Stories from Nepal\'s board game scene';
-    setMetaTag('description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
-    setCanonical('https://tumlet.com/blog/');
-    setPropertyTag('og:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
-    setPropertyTag('og:description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/blog/');
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Tumlet Blog | Stories from Nepal\'s board game scene');
-    setMetaTag('twitter:description', 'Stories about Nepali games and play. Read about board game culture in Nepal and beyond.');
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .blog-featured-card { display: flex; flex-direction: column; }
         .blog-featured-media { width: 100%; }
         .blog-featured-media img { aspect-ratio: 16 / 10; }
@@ -166,7 +122,7 @@ const BlogIndex = () => {
           -webkit-box-orient: vertical;
           overflow: hidden;
         }
-      `}</style>
+      ` }} />
       <Navbar />
       <main className="flex-1">
         {/* Hero */}

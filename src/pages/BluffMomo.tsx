@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
@@ -11,36 +11,6 @@ interface CharacterInfo {
   blocks: string;
 }
 
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
 const VIDEO_ID = 'di6Ek8Nf4mQ';
 const SECTION = 'px-6 md:px-12 lg:px-24 max-w-5xl mx-auto';
 const H2 = 'font-baloo font-extrabold text-2xl md:text-3xl text-tumlet-text';
@@ -49,22 +19,6 @@ const BODY = 'text-tumlet-text/80 leading-relaxed';
 const BluffMomo = () => {
   const videoRef = useRef<HTMLDivElement>(null);
   const [playing, setPlaying] = useState(false);
-
-  useEffect(() => {
-    document.title = 'Bluff Momo Rules | How to Play the Nepali Card Game';
-    setMetaTag('description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
-    setMetaTag('keywords', 'bluff momo rules, how to play bluff momo, nepali card game, tumlet bluff momo');
-    setCanonical('https://tumlet.com/bluff-momo-rules/');
-    setPropertyTag('og:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
-    setPropertyTag('og:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', 'https://tumlet.com/bluff-momo-rules/');
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', 'Bluff Momo Rules | How to Play the Nepali Card Game');
-    setMetaTag('twitter:description', 'Learn how to play Bluff Momo, the Nepali bluffing card game by Tumlet. Watch the gameplay video and look up each character\'s actions and blocks.');
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-  }, []);
 
   const scrollToVideo = () => {
     videoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });

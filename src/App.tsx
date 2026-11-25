@@ -1,83 +1,38 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Analytics from "./components/Analytics";
+import HeadManager from "./components/HeadManager";
 import ScrollToTop from "./components/ScrollToTop";
-import Index from "./pages/Index";
-import BluffMomo from "./pages/BluffMomo";
-import BluffMomoManual from "./pages/BluffMomoManual";
-import BluffMomoTwoPlayer from "./pages/BluffMomoTwoPlayer";
-import BlogIndex from "./pages/BlogIndex";
-import Blog from "./pages/Blog";
-import NotFound from "./pages/NotFound";
-import Bichitra from "./pages/Bichitra";
-import About from "./pages/About";
-import Ganthan from "./pages/Ganthan";
-import CorporateGameNight from "./pages/CorporateGameNight";
-import Thug from "./pages/Thug";
-import Tundikhel from "./pages/Tundikhel";
-import TundikhElHow from "./pages/TundikhElHow";
-import Wavelength from "./pages/Wavelength";
-import Ladbad from "./pages/Ladbad";
-import GameNight from "./pages/GameNight";
-import MisfitsGameNight from "./pages/MisfitsGameNight";
-import Five10GameNight from "./pages/Five10GameNight";
-import WateringHoleGameNight from "./pages/WateringHoleGameNight";
-import BetterCoffeeGameNight from "./pages/BetterCoffeeGameNight";
-import TerrysGameNight from "./pages/TerrysGameNight";
-import DhokaimaGameNight from "./pages/DhokaimaGameNight";
-import TangerineGameNight from "./pages/TangerineGameNight";
-import SurfaceGameNight from "./pages/SurfaceGameNight";
-import TheLabGameNight from "./pages/TheLabGameNight";
-import KcalGameNight from "./pages/KcalGameNight";
+import { ROUTES } from "./routes";
 
 const queryClient = new QueryClient();
 
-// Replace with your actual Google Analytics tracking ID
 const GA_TRACKING_ID = "G-CXY6SHNGBH";
 
+// Created once, outside render, so React keeps the same lazy component.
+const PAGES = ROUTES.map((route) => ({ path: route.path, Component: lazy(route.load) }));
+
+// The router is supplied by the entry point: BrowserRouter in the browser
+// (src/main.tsx) and StaticRouter when pre-rendering (src/entry-server.tsx).
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Analytics trackingId={GA_TRACKING_ID} />
+      <ScrollToTop />
+      <Analytics trackingId={GA_TRACKING_ID} />
+      <HeadManager />
+      <Suspense fallback={null}>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/bluff-momo-rules" element={<BluffMomo />} />
-          <Route path="/bluff-momo-manual" element={<BluffMomoManual />} />
-          {/* Unlisted: reachable by URL only, not linked anywhere or in the sitemap */}
-          <Route path="/bluff-momo-rules-2-player-variant" element={<BluffMomoTwoPlayer />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog/:slug" element={<Blog />} />
-          <Route path="/bichitra" element={<Bichitra />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/ganthan" element={<Ganthan />} />
-          <Route path="/corporate-game-night" element={<CorporateGameNight />} />
-          <Route path="/thug" element={<Thug />} />
-          <Route path="/tundikhel" element={<Tundikhel />} />
-          <Route path="/tundikhel-how" element={<TundikhElHow />} />
-          <Route path="/wavelength" element={<Wavelength />} />
-          <Route path="/ladbad" element={<Ladbad />} />
-          <Route path="/game-night" element={<GameNight />} />
-          <Route path="/game-night/watering-hole-may-2026" element={<WateringHoleGameNight />} />
-          <Route path="/game-night/misfits-june-2026" element={<MisfitsGameNight />} />
-          <Route path="/game-night/five10-april-2026" element={<Five10GameNight />} />
-          <Route path="/game-night/bettercoffee-february-2026" element={<BetterCoffeeGameNight />} />
-          <Route path="/game-night/terrys-july-2026" element={<TerrysGameNight />} />
-          <Route path="/game-night/dhokaima-august-2026" element={<DhokaimaGameNight />} />
-          <Route path="/game-night/tangerine-september-2026" element={<TangerineGameNight />} />
-          <Route path="/game-night/surface-october-2026" element={<SurfaceGameNight />} />
-          <Route path="/game-night/the-lab-november-2026" element={<TheLabGameNight />} />
-          <Route path="/game-night/kcal-november-2026" element={<KcalGameNight />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {PAGES.map(({ path, Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
         </Routes>
-      </BrowserRouter>
+      </Suspense>
     </TooltipProvider>
   </QueryClientProvider>
 );

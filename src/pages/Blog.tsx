@@ -5,47 +5,9 @@ import Footer from '../components/Footer';
 import { getBlogPost } from '../data/blogPosts';
 import { BlogTypography, blogTypographyStyles } from '../components/BlogTypography';
 import { MDXProvider } from '@mdx-js/react';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
-
-function setJsonLd(structuredData: object) {
-  let script = document.getElementById('blog-jsonld');
-  if (!script) {
-    script = document.createElement('script');
-    (script as HTMLScriptElement).type = 'application/ld+json';
-    script.id = 'blog-jsonld';
-    document.head.appendChild(script);
-  }
-  script.textContent = JSON.stringify(structuredData);
-}
+import { applyHead } from '@/seo/head';
+import { blogPostMeta } from '@/seo/blog';
+import { NOT_FOUND_META } from '@/seo/pages';
 
 const Dot = () => (
   <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#cbcbcb', display: 'inline-block', flexShrink: 0 }} />
@@ -56,50 +18,10 @@ const BlogPost = () => {
   const post = slug ? getBlogPost(slug) : undefined;
   const [ctaHovered, setCtaHovered] = useState(false);
 
+  // Head tags come from the post's frontmatter (src/seo/blog.ts), the same
+  // data the build uses to pre-render this page.
   useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | Tumlet Blog`;
-      setMetaTag('description', post.excerpt);
-      setCanonical(`https://tumlet.com/blog/${post.slug}/`);
-      setPropertyTag('og:title', post.title);
-      setPropertyTag('og:description', post.excerpt);
-      setPropertyTag('og:type', 'article');
-      setPropertyTag('og:url', `https://tumlet.com/blog/${post.slug}/`);
-      const ogImage = post.slug === 'best-nepali-board-games'
-        ? 'https://tumlet.com/blogs/best-nepali-board-games/unfurl.png'
-        : (post.coverImage ? `https://tumlet.com${post.coverImage}` : 'https://tumlet.com/unfurl.png');
-      setPropertyTag('og:image', ogImage);
-      setMetaTag('twitter:card', 'summary_large_image');
-      setMetaTag('twitter:title', post.title);
-      setMetaTag('twitter:description', post.excerpt);
-      setMetaTag('twitter:image', ogImage);
-      setJsonLd({
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: post.title,
-        description: post.excerpt,
-        image: ogImage,
-        author: {
-          '@type': 'Person',
-          name: post.author,
-        },
-        datePublished: post.publishedAt,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': `https://tumlet.com/blog/${post.slug}/`,
-        },
-        url: `https://tumlet.com/blog/${post.slug}/`,
-        publisher: {
-          '@type': 'Organization',
-          name: 'Tumlet',
-          logo: {
-            '@type': 'ImageObject',
-            url: ogImage,
-          },
-        },
-        keywords: post.tags ? post.tags.join(', ') : '',
-      });
-    }
+    applyHead(post ? blogPostMeta(post) : NOT_FOUND_META);
   }, [post]);
 
   if (!post) {
@@ -121,7 +43,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#ffffff', color: '#130D01', fontFamily: "'Baloo 2', system-ui, sans-serif" }}>
-      <style>{blogTypographyStyles}</style>
+      <style dangerouslySetInnerHTML={{ __html: blogTypographyStyles }} />
       <Navbar />
 
       {/* Article */}
@@ -210,7 +132,7 @@ const BlogPost = () => {
                   {post.author} · Tumlet
                 </div>
                 <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '12px', color: '#6B6B6B', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                  {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} · {post.readTime}
+                  {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })} · {post.readTime}
                 </div>
               </div>
             </div>

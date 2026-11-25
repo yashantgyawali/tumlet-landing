@@ -1,46 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, Lightbulb, CheckCircle2, XCircle, Flame, Shield, BookOpen } from 'lucide-react';
 import Navbar from '../components/Navbar';
 
-// Unlisted page: reachable by URL only. Do not add it to the navbar, footer,
-// sitemap.xml or scripts/generate-html.mjs, and do not link to it from other pages.
+// Unlisted page: reachable by URL only. Do not add it to the navbar or footer,
+// and do not link to it from other pages. src/seo/pages.ts marks it noindex,
+// which also keeps it out of sitemap.xml.
 
 const ASSET = '/bluff-momo-manual';
-const PAGE_URL = 'https://tumlet.com/bluff-momo-rules-2-player-variant/';
-const TITLE = 'Bluff Momo 2-Player Variant | Rules Manual';
-const DESC =
-  'How to play Bluff Momo with two players: five cards each, a hand of two, a draw pile of three, named poison and the double आमा block.';
-
-function setMetaTag(name: string, content: string) {
-  let tag = document.querySelector(`meta[name='${name}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('name', name);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setPropertyTag(property: string, content: string) {
-  let tag = document.querySelector(`meta[property='${property}']`);
-  if (!tag) {
-    tag = document.createElement('meta');
-    tag.setAttribute('property', property);
-    document.head.appendChild(tag);
-  }
-  tag.setAttribute('content', content);
-}
-
-function setCanonical(url: string) {
-  let link = document.querySelector("link[rel='canonical']");
-  if (!link) {
-    link = document.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    document.head.appendChild(link);
-  }
-  link.setAttribute('href', url);
-}
 
 const CARD = 'bg-white rounded-xl border-2 border-tumlet-text/10 p-6 md:p-7';
 const CARD_POP = `${CARD} shadow-[6px_6px_0px_0px_#F3B952]`;
@@ -64,19 +31,6 @@ const CHAPTERS = [
 ];
 
 function BluffMomoTwoPlayer() {
-  useEffect(() => {
-    document.title = TITLE;
-    setMetaTag('description', DESC);
-    setCanonical(PAGE_URL);
-    setPropertyTag('og:title', TITLE);
-    setPropertyTag('og:description', DESC);
-    setPropertyTag('og:type', 'website');
-    setPropertyTag('og:url', PAGE_URL);
-    setPropertyTag('og:image', 'https://tumlet.com/unfurl.png');
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', TITLE);
-    setMetaTag('twitter:image', 'https://tumlet.com/unfurl.png');
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col font-baloo text-tumlet-text bg-white">

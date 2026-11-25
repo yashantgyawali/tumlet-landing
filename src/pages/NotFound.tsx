@@ -70,7 +70,7 @@ const AnimatedDice = () => {
         </div>
       </div>
 
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         .perspective-1000 {
           perspective: 1000px;
         }
@@ -120,7 +120,7 @@ const AnimatedDice = () => {
             transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
           }
         }
-      `}</style>
+      ` }} />
     </div>
   );
 };

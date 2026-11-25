@@ -7,10 +7,14 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   server: {
     host: "::",
     port: 8080,
+  },
+  build: {
+    // scripts/prerender.mjs reads the manifest to preload each page's chunk.
+    manifest: !isSsrBuild,
   },
   plugins: [
     mdx({

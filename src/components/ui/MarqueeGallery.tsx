@@ -104,7 +104,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
           </div>
         ))}
       </div>
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -115,7 +115,7 @@ export const MarqueeGallery: React.FC<MarqueeGalleryProps> = ({ items, height = 
         .paused {
           animation-play-state: paused !important;
         }
-      `}</style>
+      ` }} />
     </div>
   );
 };
