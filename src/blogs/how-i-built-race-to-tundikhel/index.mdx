@@ -1,0 +1,155 @@
+---
+title: "Design Story of 'Race to Tundikhel'"
+slug: how-i-built-race-to-tundikhel
+excerpt: "How a racing-game itch, a clip from Beast Games, and a Dixit voting dial turned into Race to Tundikhel, Tumlet's second game."
+publishedAt: "2026-05-23"
+author: Yashant
+readTime: 6 min read
+category: Game Design
+featured: true
+coverImage: /blogs/how-i-built-race-to-tundikhel/hero.png
+images:
+  - /blogs/how-i-built-race-to-tundikhel/hero.png
+  - /blogs/how-i-built-race-to-tundikhel/beast-games.png
+  - /blogs/how-i-built-race-to-tundikhel/early-prototype.png
+  - /blogs/how-i-built-race-to-tundikhel/voting-dial-dixit.png
+  - /blogs/how-i-built-race-to-tundikhel/tundikhel-traffic.png
+  - /blogs/how-i-built-race-to-tundikhel/charger-design.png
+  - /blogs/how-i-built-race-to-tundikhel/cover-photo.png
+tags: ['Board Games', 'Board Game Design', 'Design Process', 'Nepal', 'Game Design']
+---
+
+import { Helmet } from 'react-helmet';
+
+<Helmet>
+  <title>Design Story of 'Race to Tundikhel'</title>
+  <meta name="description" content="How a racing-game itch, a clip from Beast Games, and a Dixit voting dial turned into Race to Tundikhel, Tumlet's second game." />
+  <meta property="og:title" content="Design Story of 'Race to Tundikhel'" />
+  <meta property="og:description" content="How a racing-game itch, a clip from Beast Games, and a Dixit voting dial turned into Race to Tundikhel, Tumlet's second game." />
+  <meta property="og:image" content="https://tumlet.com/blogs/how-i-built-race-to-tundikhel/hero.png" />
+  <meta property="og:url" content="https://tumlet.com/blog/how-i-built-race-to-tundikhel" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Design Story of 'Race to Tundikhel'" />
+  <meta name="twitter:description" content="How a racing-game itch, a clip from Beast Games, and a Dixit voting dial turned into Race to Tundikhel, Tumlet's second game." />
+  <meta name="twitter:image" content="https://tumlet.com/blogs/how-i-built-race-to-tundikhel/hero.png" />
+</Helmet>
+
+## The name came before the game.
+
+I had been wanting to make a racing game for a while. Partly because Ludo is a big part of Nepali culture. I've caught my mom playing it online. It is easy, the rules are simple, and most of it is luck. But there is just enough control to make your decisions feel like they matter.
+
+And I've always wanted to create my version of Ludo.
+
+I personally enjoy games with more control. My version meant that it would be less luck-dependent and more reliant on the decisions the players make throughout the game.
+
+As soon as we released Bluff Momo, the idea of a racing game was always floating in my head. Tundikhel, for some reason, was a place that kept coming to me. It has one perfect loop, it's chaotic, and it's a known place — an obvious fit for a board game.
+
+And so there was this idea for a game called Race to Tundikhel.
+
+## The mechanic that clicked
+
+I am not a fan of games that rely on luck. Most of the racing board games I had played came down to rolling dice. Roll high, move far. Roll low, and you're stuck. And it's usually the theme that does the heavy lifting to keep the game alive.
+
+I did not want that. I wanted Tundikhel to be fun, even with a quick abstract sketch on a paper.
+
+The first version I tried actually had more than 1 dice. You roll all your dice in private. Lie about what you rolled, and if you are not caught, you move that many spaces. It sounded great. It plays well as well. However, the game overall didn't feel like you're racing; it became more about lying. So I threw that idea away.
+
+This was around the same time I was watching Beast Games S01. And in one of the games, there were 3 contestants competing for an island. They had to race to the finish line.
+
+![Beast Games S01E05, 3 players competing for an island](/blogs/how-i-built-race-to-tundikhel/beast-games.png)
+
+*Beast Games S01E05, 3 players competing for an island*
+
+They each picked a number: one, three, or five. But if two or more picked the same number, they were stuck. Only the unique number moved the number of steps they picked.
+
+That was the click for me.
+
+I knew right away we had to use this for Tundikhel. I drew Tundikhel on A4-sized paper. None of the lines was straight. It looked like the worst map ever drawn. But I took it to my friends and explained the rules. We played for hours.
+
+It was so much fun.
+
+You want to pick a high number to move further. But everyone else wants the same thing. So if two of you pick six, both of you are stuck. You have to outguess the people sitting next to you. You control your own luck. That is the whole idea.
+
+## And then the game got boring…
+
+The core movement worked. But the game got repetitive, fast. You do the same moves again and again and again and again. We needed ways to mess with each other.
+
+And this is when the theme started taking shape.
+
+Ashish came up with potholes (Khaldo). The idea was simple. You can secretly place a pothole on a block. When someone steps on it, they get sent back. Not all the way to the start, but far enough to hurt. We tested it. It worked.
+
+Then we added more components.
+
+- **Traffic lights:** Block other players for a few rounds.
+- **Dhulo:** Send everyone back the number of blocks they picked for the round.
+
+![Early prototype of Tundikhel](/blogs/how-i-built-race-to-tundikhel/early-prototype.png)
+
+*Early prototype of Tundikhel*
+
+With all these components, it wasn't a straight race anymore. You also had to think about where the other players are heading and what you can do to hold them.
+
+## Catching up mechanism
+
+There was still one final thing. If you fell behind early, the game was over for you. The leaders would just keep cruising.
+
+And we had to think of a catch-up mechanism.
+
+Therefore, we added 'Push your luck' spots on the board. These are spots where you can take a gamble. The catch is that the outcomes are mostly negative. If you are in the lead, you do not want to risk it. But if you are dead last, you have nothing to lose. The odds are bad, but there is a chance the trailing player swaps positions with the player in front.
+
+It is not a guaranteed comeback. It is a small window, a hope that you are still in the game. It keeps the game alive for the people who are losing.
+
+## The voting dial
+
+I had decided early that I did not want any dice in the game. So the pick-a-number mechanic needed a real physical component.
+
+I had been playing Dixit around then. The voting dial in Dixit is beautiful. You secretly lock in a number and reveal it at once. I loved it.
+
+![Image credits: MyBoardGames YouTube](/blogs/how-i-built-race-to-tundikhel/voting-dial-dixit.png)
+
+*Image credits: MyBoardGames YouTube*
+
+And that became our component. Each player holds a voting dial made of two cardboard discs that rotate. Everyone picks their number in secret. Everyone reveals at the same time.
+
+## The theme that wraps everything together
+
+![Image credits: Routine of Nepal Banda](/blogs/how-i-built-race-to-tundikhel/tundikhel-traffic.png)
+
+*Image credits: Routine of Nepal Banda*
+
+We had a mechanic. We had a board. We needed a theme to wrap it all together. To make it Nepali. And you people go, "This is for me."
+
+Sarina came up with the theme. The actual Tundikhel loop holds a lot of traffic, the microbuses, and the noise. We've all been a part of that chaos.
+
+So we decided on the theme.
+
+> All the players are microbus drivers, competing to make a loop around Tundikhel.
+
+Super simple to explain. But with a psychological twist that goes beyond rolling a dice.
+
+## The final design
+
+We worked with our favorite illustrator, Krisha Joshi. We asked for a Nepali van on the cover with a driver. It came out exactly how we wanted.
+
+Then we had to make the voting dial fit the theme. That was the harder part.
+
+We landed on the idea of charging stations. Each number on the dial is a charger. Number one charges you enough for one block. Number six charges you for six blocks. Bigger number, more powerful charger. The conflict made instant sense. If two players go for the same charger, neither of them gets to charge. They fight over it. Nobody moves.
+
+The mental model makes sense. You are not picking a number anymore. You are picking a charger. And chargers do not work when two vans want them at the same time.
+
+![Charger design for the voting dial](/blogs/how-i-built-race-to-tundikhel/charger-design.png)
+
+For the design, I took help from my friend, Pranjal, from Aircharge. With a bit of help from him, I landed on an electric charger that works the best for a voting dial.
+
+## Where we are now?
+
+![Race to Tundikhel Cover Photo](/blogs/how-i-built-race-to-tundikhel/cover-photo.png)
+
+*Race to Tundikhel Cover Photo*
+
+We are releasing Race to Tundikhel in September 2026, for Dashain. We are finalizing the design and the packaging right now. This will be the second game from Tumlet after Bluff Momo.
+
+It took a lot of testing and a lot of help to get here. A lot of bad drawings, ugly prototypes, and arguments about whether a mechanic was fun. But it feels like a real game now. The game plays fast. There is enough sabotage to make it a little mean. And it feels very Nepali.
+
+I am excited for you all to try it.
